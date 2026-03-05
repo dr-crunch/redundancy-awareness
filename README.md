@@ -114,7 +114,7 @@ The **Governmentality 2025** project is deployed across several thematic reposit
 **Econ (Economic Research)**
 
 * **Description**: This repo documents edge-subjects such as: opportunity costs, lost efficiencies, and the fiduciary duty to use data-driven decision tools in fiscal policy.
-* **GitHub Landing Page**: [https://github.com/dr-wojak/econ](https://github.com/dr-wojak/econ)
+* **GitHub Landing Page**: [https://github.com/dr-wojak/econ](https://github.com/dr-wojak/econ#economics-research-repository)
 * See examples such as:
 
   - [Externalities in Economies with Imperfect Information and Incomplete Markets](https://drive.google.com/open?id=1vvNpE6C-KuxyX3KTAf05d1fceG0EHKR-&usp=drive_copy) -Bruce C. Greenwald, Joseph E. Stiglitz
