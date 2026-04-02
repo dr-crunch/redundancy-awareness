@@ -8,20 +8,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <meta name="description" content="Deontological Differences — the ontology of dissemination. How the Meinhardt Initiative corpus reaches each of its audiences: legal, civic, academic, institutional, EU, media." />
-<!-- Open Graph / Facebook, LinkedIn, Discord, etc. -->
 <meta property="og:title" content="Meinhardt Initiative · Epistemological Audit · Interregnum Nullificans" />
 <meta property="og:description" content="How the Meinhardt Initiative corpus reaches each of its audiences: legal, civic, academic, institutional, EU, media." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://dr-crunch.github.io/redundancy-awareness/deontological-differences.html" />
+<meta property="og:url" content="https://dr-crunch.github.io/redundancy-awareness/epistemological-audit.html" />
 <meta property="og:site_name" content="Deontological Differences — the ontology of dissemination. " />
-<meta property="og:image" content="https://dr-crunch.github.io/redundancy-awareness/og-image-deontology.jpg" />
+<meta property="og:image" content="https://dr-crunch.github.io/redundancy-awareness/og-image-epistemology.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<!-- Twitter / X Cards -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Deontological Differences" />
-<meta name="twitter:description" content="The ontology of dissemination..." />
-<meta name="twitter:image" content="https://dr-crunch.github.io/redundancy-awareness/og-image-deontology.jpg" />
+<meta name="twitter:title" content="Epistemological Audit" />
+<meta name="twitter:description" content="Deontological Differences" />
+<meta name="twitter:image" content="https://dr-crunch.github.io/redundancy-awareness/og-image-epistemology.jpg" />
 <style>
 :root {
 --ink: #0c0b09;
@@ -75,7 +73,6 @@ pointer-events: none;
 z-index: 0;
 opacity: 0.5;
 }
-/* ALERT STRIP */
 .alert-strip {
 background: var(--purple-bg);
 border-bottom: 1px solid var(--purple-dim);
@@ -110,7 +107,6 @@ position: relative; overflow: hidden;
 .btn-purple:hover { border-color: var(--purple); box-shadow: 0 0 12px rgba(139,131,232,0.2); }
 .btn-green { background: var(--green-bg); border-color: var(--green-dim); color: var(--green); }
 .btn-green:hover { border-color: var(--green); box-shadow: 0 0 12px rgba(47,184,130,0.15); }
-/* HEADER */
 header {
 position: relative; z-index: 1; padding: 64px 32px 48px;
 max-width: 960px; margin: 0 auto; border-bottom: 1px solid var(--rule);
@@ -142,7 +138,6 @@ border-left: 2px solid var(--purple); padding-left: 20px; margin-bottom: 32px;
 .meta-value { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--parchment); }
 .meta-value.purple { color: var(--purple); }
 .meta-value.live { color: var(--terra); }
-/* MACHOL */
 .machol {
 position: relative; z-index: 1; max-width: 960px; margin: 0 auto;
 padding: 40px 32px; border-bottom: 1px solid var(--rule);
@@ -152,7 +147,6 @@ display: flex; gap: 24px; align-items: flex-start;
 .machol-body blockquote { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; font-style: italic; color: var(--parchment); line-height: 1.5; margin-bottom: 8px; }
 .machol-attribution { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--purple); text-transform: uppercase; }
 .machol-note { margin-top: 14px; font-size: 16px; color: var(--parchment-dim); max-width: 580px; line-height: 1.7; font-family: 'EB Garamond', serif; }
-/* SECTIONS */
 .hypotheses {
 position: relative; z-index: 1; max-width: 960px; margin: 0 auto;
 padding: 40px 32px; border-bottom: 1px solid var(--rule);
@@ -176,7 +170,6 @@ font-style: italic; opacity: 0.07; color: var(--parchment); line-height: 1;
 .hyp-title { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--parchment-dim); margin-bottom: 8px; }
 .hyp-body { font-size: 15px; font-weight: 400; color: var(--parchment); line-height: 1.6; font-family: 'EB Garamond', serif; }
 .hyp-remedy { margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--purple); letter-spacing: 0.05em; }
-/* MAP SECTION */
 .map-section {
 position: relative; z-index: 1; max-width: 960px; margin: 0 auto;
 padding: 40px 32px; border-bottom: 1px solid var(--rule);
@@ -191,7 +184,6 @@ border-radius: 6px; padding: 24px 16px; overflow-x: auto;
 .svg-container svg { display: block; max-width: 100%; height: auto; }
 .svg-container g[data-href] { cursor: pointer; transition: opacity 0.15s; }
 .svg-container g[data-href]:hover { opacity: 0.82; filter: brightness(1.15); }
-/* AXIOM */
 .axiom-bar {
 position: relative; z-index: 1; max-width: 960px; margin: 0 auto;
 padding: 40px 32px; border-bottom: 1px solid var(--rule);
@@ -202,7 +194,6 @@ display: grid; grid-template-columns: 3px 1fr; gap: 24px; align-items: start;
 .axiom-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(139,131,232,0.4); }
 .axiom-text { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.5vw, 26px); font-weight: 300; font-style: italic; color: var(--parchment); line-height: 1.45; }
 .axiom-plain { font-family: 'EB Garamond', serif; font-size: 16px; color: var(--parchment-dim); line-height: 1.72; max-width: 640px; }
-/* TURTLE BLOCK */
 .turtle-section {
 position: relative; z-index: 1; max-width: 960px; margin: 0 auto;
 padding: 40px 32px; border-bottom: 1px solid var(--rule);
@@ -220,7 +211,6 @@ font-size: 12px; line-height: 1.85; overflow-x: auto; margin-top: 20px;
 .ttl-lit { color: var(--terra); }
 .ttl-comment { color: rgba(158,152,135,0.45); font-style: italic; }
 .ttl-type { color: var(--blue); }
-/* KEYWORDS */
 .keywords-section {
 position: relative; z-index: 1; max-width: 960px; margin: 0 auto;
 padding: 40px 32px; border-bottom: 1px solid var(--rule);
@@ -236,7 +226,6 @@ border-radius: 4px; padding: 24px; word-break: break-word;
 .keyword-blob .k-mech { color: var(--amber); }
 .keyword-blob .k-eu { color: var(--terra); }
 .keyword-blob .k-onto { color: var(--teal); }
-/* FOOTER */
 footer {
 position: relative; z-index: 1; max-width: 960px; margin: 0 auto;
 padding: 32px; display: flex; justify-content: space-between;
@@ -246,7 +235,6 @@ align-items: center; flex-wrap: wrap; gap: 16px;
 .footer-left a { color: var(--parchment-dim); text-decoration: none; transition: color 0.15s; }
 .footer-left a:hover { color: var(--parchment); }
 .footer-right { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(158,152,135,0.4); text-align: right; }
-/* TOOLTIP */
 .tooltip {
 position: fixed; background: var(--surface2); border: 1px solid var(--rule-strong);
 border-radius: 4px; padding: 8px 14px; font-family: 'IBM Plex Mono', monospace;
@@ -282,8 +270,8 @@ Deontological Differences<span>·</span>Ontology of Dissemination<span>·</span>
 <a href="https://dr-crunch.github.io/nullification-loops/" class="btn btn-green" target="_blank" rel="noopener">
 <span>◎</span> Main Record
 </a>
-<a href="https://dr-crunch.github.io/redundancy-awareness/epistemological-audit" class="btn btn-purple">
-<span>✦</span> Epistemological Audit
+<a href="https://github.com/dr-crunch/nullification-loops" class="btn btn-purple" target="_blank" rel="noopener">
+<span>✦</span> Repository
 </a>
 </div>
 </div>
@@ -300,7 +288,7 @@ Dissemination is not neutral broadcast. Each audience — legal practitioner, EU
 <div class="meta-item"><span class="meta-label">Serialisation</span><span class="meta-value">RDF / Turtle</span></div>
 <div class="meta-item"><span class="meta-label">Graph schema</span><span class="meta-value">Directed · Labelled</span></div>
 <div class="meta-item"><span class="meta-label">Corpus</span><span class="meta-value">2006 – 2026</span></div>
-<div class="meta-item"><span class="meta-label">Technical Definition</span><span class="meta-value live">Machine Readable Institutional Critique</span></div>
+<div class="meta-item"><span class="meta-label">Hard deadline</span><span class="meta-value live">July 1st, 2026</span></div>
 </div>
 </header>
 <!-- MACHOL -->
@@ -318,27 +306,27 @@ Formalising the hashtags as an ontology converts the work from narrative argumen
 <section class="hypotheses">
 <div class="section-label">Five deontological differences — the same corpus, five distinct obligations on receipt</div>
 <div class="hyp-grid">
-<div id="channel-legal" class="hyp-card" data-letter="I">
+<div class="hyp-card" data-letter="I">
 <div class="hyp-title">I · Legal Channel</div>
 <div class="hyp-body">Courts, ombudsmen, and pre-litigation notices receive the corpus as evidence. The obligation on receipt is procedural: reasons must be given for any disposal. Silence is no longer available as a response. Each act becomes independently reviewable.</div>
 <div class="hyp-remedy">→ :violates :RightToBeHeard · :triggers :Maladministration</div>
 </div>
-<div id="channel-eu" class="hyp-card" data-letter="II">
+<div class="hyp-card" data-letter="II">
 <div class="hyp-title">II · EU / Institutional Channel</div>
 <div class="hyp-body">European Ombudsman, CJEU, PETI, Défenseur des Droits, and the Council Presidency receive the corpus as a Member State failure record. The obligation is treaty-grounded. Ireland's assumption of the Presidency on 1 July 2026 makes continued silence structurally costly.</div>
-<div class="hyp-remedy">→ :exhibitsFailure :NullificationLoop · Article 4(3) TEU</div>
+<div class="hyp-remedy">→ :exhibitsFailure :NullificationLoop · Art. 4(3) TEU</div>
 </div>
-<div id="channel-academic" class="hyp-card" data-letter="III">
+<div class="hyp-card" data-letter="III">
 <div class="hyp-title">III · Academic / Research Channel</div>
 <div class="hyp-body">The corpus reaches governance researchers, O.R. methodologists, and cybernetics scholars as a live case study of Nullification Loop dynamics and Viable System Model failure. Bateson's deutero-binding made empirically visible. The obligation here is epistemic: the data must be engaged, not filed.</div>
 <div class="hyp-remedy">→ :documents :StateCapacityFailure · Beer/VSM · Bateson</div>
 </div>
-<div id="channel-civic" class="hyp-card" data-letter="IV">
+<div class="hyp-card" data-letter="IV">
 <div class="hyp-title">IV · Civic / Petition Channel</div>
 <div class="hyp-body">Citizens, councillors, TDs, MEPs, and civic petitioners receive the corpus as a public record of institutional avoidance. The obligation is democratic: elected representatives who are formally notified cannot subsequently claim ignorance. Receipt creates a duty of enquiry.</div>
-<div class="hyp-remedy">→ :amplifies :CivicSignal · Article 15.10 Bunreacht</div>
+<div class="hyp-remedy">→ :amplifies :CivicSignal · Art. 15.10 Bunreacht</div>
 </div>
-<div id="channel-media" class="hyp-card" data-letter="V">
+<div class="hyp-card" data-letter="V">
 <div class="hyp-title">V · Media / Press Channel</div>
 <div class="hyp-body">Journalists and media investigators receive the corpus as a documented, timestamped, CC0 evidentiary record. Every claim is grounded; every reference number is real. The obligation is evidential: the materials withstand scrutiny. Signal-to-silence timeline is publication-ready.</div>
 <div class="hyp-remedy">→ :suppresses :CivicSignal · :documents :DesignedForgetting</div>
@@ -346,7 +334,7 @@ Formalising the hashtags as an ontology converts the work from narrative argumen
 </div>
 </section>
 <!-- AXIOM -->
-<div id="owl-axiom-1" class="axiom-bar">
+<div class="axiom-bar">
 <div class="axiom-rule"></div>
 <div class="axiom-body">
 <div class="axiom-label">OWL Axiom 1 — the master chain</div>
@@ -361,7 +349,21 @@ Formalising the hashtags as an ontology converts the work from narrative argumen
 <div class="map-note">OWL 2 DL · click nodes to navigate · hover for description</div>
 </div>
 <div class="svg-container" id="svgContainer">
-<svg width="100%" viewBox="0 0 680 1080" xmlns="http://www.w3.org/2000/svg" style="font-family:'IBM Plex Mono',monospace;">
+<!-- ═══════════════════════════════════════════════════════════════════
+     CHANGE LOG (vs. original):
+     - Failure mode rects: height 46 → 58 (y=216..274 now y=216..274)
+     - Failure mode t1 text y: 232 → 236
+     - Failure mode t2 text y: 248 → 256
+     - Loop connector label: y=285 → y=297
+     - Tier 3 section label: y=310 → y=322
+     - Tier 3 connector start y1: 262 → 274
+     - Tier 3 property node y: 322 → 334, text y adjusted (+12)
+     - Tier 4 section label y: 388 → 400
+     - Tier 4 connector start y1: 362 → 374, y2: 400 → 412
+     - Tier 4 channel rects y: 400 → 412, text y adjusted
+     - Tier 5+ cascade: all y values shifted +12
+     ═══════════════════════════════════════════════════════════════════ -->
+<svg width="100%" viewBox="0 0 680 1104" xmlns="http://www.w3.org/2000/svg" style="font-family:'IBM Plex Mono',monospace;">
 <defs>
 <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
 <path d="M2 1L8 5L2 9" fill="none" stroke="#4a4540" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -382,389 +384,355 @@ Formalising the hashtags as an ontology converts the work from narrative argumen
 <path d="M2 1L8 5L2 9" fill="none" stroke="#854f0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </marker>
 <style>
-/* TOP — :Entity root */
 .node-entity rect { fill:#14121a; stroke:#534ab7; stroke-width:1; }
 .node-entity text.t1 { fill:#b0aaf0; font-size:13px; font-weight:500; }
 .node-entity text.t2 { fill:#7f77dd; font-size:10px; }
-/* Failure Modes — terra/coral */
 .node-fail rect { fill:#1f1109; stroke:#993d1d; stroke-width:0.8; }
 .node-fail text.t1 { fill:#e8856a; font-size:12px; font-weight:500; }
 .node-fail text.t2 { fill:#993d1d; font-size:10px; }
-/* Legal Constructs — blue */
 .node-legal rect { fill:#0c1929; stroke:#185fa5; stroke-width:0.8; }
 .node-legal text.t1 { fill:#7ab8e8; font-size:12px; font-weight:500; }
 .node-legal text.t2 { fill:#4a9fe0; font-size:10px; }
-/* Information Objects — green */
 .node-info rect { fill:#0d1f1a; stroke:#0f6e56; stroke-width:0.8; }
 .node-info text.t1 { fill:#7dd9b8; font-size:12px; font-weight:500; }
 .node-info text.t2 { fill:#2fb882; font-size:10px; }
-/* Actors / State — amber */
 .node-actor rect { fill:#1e1509; stroke:#854f0b; stroke-width:0.8; }
 .node-actor text.t1 { fill:#d4a464; font-size:12px; font-weight:500; }
 .node-actor text.t2 { fill:#c9881f; font-size:10px; }
-/* Dissemination channels — purple */
 .node-channel rect { fill:#1a1830; stroke:#7f77dd; stroke-width:0.8; }
 .node-channel text.t1 { fill:#c0bcf8; font-size:12px; font-weight:500; }
 .node-channel text.t2 { fill:#8b83e8; font-size:10px; }
-/* Campaign / Economic */
 .node-campaign rect { fill:#0a1e20; stroke:#156e72; stroke-width:0.8; }
 .node-campaign text.t1 { fill:#7ad4d8; font-size:12px; font-weight:500; }
 .node-campaign text.t2 { fill:#2ab8c0; font-size:10px; }
-/* Connectors */
 .conn { stroke:#2a2720; stroke-width:1; fill:none; }
 .conn-purple { stroke:#3d3870; stroke-width:1; fill:none; stroke-dasharray:4 3; }
 .conn-red { stroke:#5a2010; stroke-width:1; fill:none; }
 .conn-green { stroke:#0e3820; stroke-width:1; fill:none; }
 .conn-blue { stroke:#0c2040; stroke-width:1; fill:none; }
 .conn-amber { stroke:#3a2205; stroke-width:1; fill:none; }
-/* Property labels */
 .prop-label { fill:#3a3528; font-size:9px; font-style:italic; }
-/* Section dividers */
 .section-label { fill:#4a4540; font-size:10px; letter-spacing:0.15em; text-transform:uppercase; }
 .legend-text { fill:#6e6b62; font-size:10px; }
 </style>
 </defs>
-<!-- ══════════════════════════════════════════
-TIER 0 — ROOT: :Entity (the corpus itself)
-══════════════════════════════════════════ -->
+
+<!-- TIER 0 — ROOT -->
 <g class="node-entity" data-href="https://github.com/dr-crunch/nullification-loops" onclick="navigate(this)">
 <rect x="215" y="20" width="250" height="52" rx="10"/>
 <text x="340" y="38" class="t1" text-anchor="middle" dominant-baseline="central">:Entity · Meinhardt Corpus</text>
 <text x="340" y="56" class="t2" text-anchor="middle" dominant-baseline="central">meinhardt.org/ontology# · OWL 2 DL root</text>
 </g>
-<!-- ══════════════════════════════════════════
-TIER 1 — Top-Level OWL Classes
-══════════════════════════════════════════ -->
+
+<!-- TIER 1 — Top-Level OWL Classes -->
 <text x="340" y="100" text-anchor="middle" class="section-label">— top-level owl classes —</text>
-<!-- Connectors root → tier 1 -->
 <line class="conn" x1="260" y1="72" x2="100" y2="120" marker-end="url(#arrow)"/>
 <line class="conn" x1="300" y1="72" x2="240" y2="120" marker-end="url(#arrow)"/>
 <line class="conn" x1="340" y1="72" x2="340" y2="120" marker-end="url(#arrow)"/>
 <line class="conn" x1="380" y1="72" x2="450" y2="120" marker-end="url(#arrow)"/>
 <line class="conn" x1="420" y1="72" x2="590" y2="120" marker-end="url(#arrow)"/>
-<!-- :Actor -->
+
 <g class="node-actor" data-href="https://github.com/dr-crunch/nullification-loops" onclick="navigate(this)">
 <rect x="20" y="120" width="160" height="46" rx="7"/>
 <text x="100" y="138" class="t1" text-anchor="middle" dominant-baseline="central">:Actor</text>
 <text x="100" y="154" class="t2" text-anchor="middle" dominant-baseline="central">StateBody · Individual</text>
 </g>
-<!-- :Process -->
 <g class="node-fail" data-href="https://github.com/dr-crunch/nullification-loops" onclick="navigate(this)">
 <rect x="190" y="120" width="160" height="46" rx="7"/>
 <text x="270" y="138" class="t1" text-anchor="middle" dominant-baseline="central">:Process</text>
 <text x="270" y="154" class="t2" text-anchor="middle" dominant-baseline="central">Admin · O.R. · Failure</text>
 </g>
-<!-- :FailureMode -->
 <g class="node-fail" data-href="https://dr-crunch.github.io/nullification-loops/" onclick="navigate(this)">
 <rect x="260" y="120" width="160" height="46" rx="7"/>
 <text x="340" y="138" class="t1" text-anchor="middle" dominant-baseline="central">:FailureMode</text>
 <text x="340" y="154" class="t2" text-anchor="middle" dominant-baseline="central">Procedural · Structural</text>
 </g>
-<!-- :LegalConstruct -->
 <g class="node-legal" data-href="https://github.com/dr-wojak/legal" onclick="navigate(this)">
 <rect x="360" y="120" width="180" height="46" rx="7"/>
 <text x="450" y="138" class="t1" text-anchor="middle" dominant-baseline="central">:LegalConstruct</text>
 <text x="450" y="154" class="t2" text-anchor="middle" dominant-baseline="central">Right · Obligation · Violation</text>
 </g>
-<!-- :InformationObject -->
 <g class="node-info" data-href="https://drive.google.com/drive/u/0/folders/12o4-OPXJ0W5E8pxF9pN-VKUeODagy17g" onclick="navigate(this)">
 <rect x="500" y="120" width="160" height="46" rx="7"/>
 <text x="580" y="138" class="t1" text-anchor="middle" dominant-baseline="central">:InformationObject</text>
 <text x="580" y="154" class="t2" text-anchor="middle" dominant-baseline="central">Submission · Signal · Doc</text>
 </g>
-<!-- ══════════════════════════════════════════
-TIER 2 — Failure Mode sub-classes (the Loop)
-══════════════════════════════════════════ -->
+
+<!-- TIER 2 — Failure Mode instances (FIXED: height 46→58, text repositioned) -->
 <text x="340" y="196" text-anchor="middle" class="section-label">— failure mode instances · the nullification loop —</text>
-<!-- Connectors tier1 fail → tier2 -->
 <line class="conn-red" x1="290" y1="166" x2="80" y2="216" marker-end="url(#arrow-red)"/>
 <line class="conn-red" x1="320" y1="166" x2="210" y2="216" marker-end="url(#arrow-red)"/>
 <line class="conn-red" x1="340" y1="166" x2="340" y2="216" marker-end="url(#arrow-red)"/>
 <line class="conn-red" x1="360" y1="166" x2="470" y2="216" marker-end="url(#arrow-red)"/>
 <line class="conn-red" x1="390" y1="166" x2="590" y2="216" marker-end="url(#arrow-red)"/>
-<!-- Acknowledgement as Closure -->
+
+<!-- :Acknowledgement as Closure — height 58 -->
 <g class="node-fail" data-href="https://dr-crunch.github.io/nullification-loops/" onclick="navigate(this)">
-<rect x="20" y="216" width="120" height="46" rx="6"/>
-<text x="80" y="232" class="t1" text-anchor="middle" dominant-baseline="central">:Acknowledgement</text>
-<text x="80" y="248" class="t2" text-anchor="middle" dominant-baseline="central">AsClosure</text>
+<rect x="20" y="216" width="120" height="58" rx="6"/>
+<text x="80" y="236" class="t1" text-anchor="middle" dominant-baseline="central">:Acknowledgement</text>
+<text x="80" y="256" class="t2" text-anchor="middle" dominant-baseline="central">AsClosure</text>
 </g>
-<!-- Remit Displacement -->
+<!-- :Remit Displacement — height 58 -->
 <g class="node-fail" data-href="https://dr-crunch.github.io/nullification-loops/" onclick="navigate(this)">
-<rect x="150" y="216" width="120" height="46" rx="6"/>
-<text x="210" y="232" class="t1" text-anchor="middle" dominant-baseline="central">:RemitDisplacement</text>
-<text x="210" y="248" class="t2" text-anchor="middle" dominant-baseline="central">JurisEvaporation</text>
+<rect x="150" y="216" width="120" height="58" rx="6"/>
+<text x="210" y="236" class="t1" text-anchor="middle" dominant-baseline="central">:RemitDisplacement</text>
+<text x="210" y="256" class="t2" text-anchor="middle" dominant-baseline="central">JurisEvaporation</text>
 </g>
-<!-- Deferral Without Destination -->
+<!-- :Deferral Without Destination — height 58 -->
 <g class="node-fail" data-href="https://dr-crunch.github.io/nullification-loops/" onclick="navigate(this)">
-<rect x="280" y="216" width="120" height="46" rx="6"/>
-<text x="340" y="232" class="t1" text-anchor="middle" dominant-baseline="central">:DeferralWithout</text>
-<text x="340" y="248" class="t2" text-anchor="middle" dominant-baseline="central">Destination</text>
+<rect x="280" y="216" width="120" height="58" rx="6"/>
+<text x="340" y="236" class="t1" text-anchor="middle" dominant-baseline="central">:DeferralWithout</text>
+<text x="340" y="256" class="t2" text-anchor="middle" dominant-baseline="central">Destination</text>
 </g>
-<!-- Sufficiency Assertion -->
+<!-- :Sufficiency Assertion — height 58 -->
 <g class="node-fail" data-href="https://dr-crunch.github.io/nullification-loops/" onclick="navigate(this)">
-<rect x="410" y="216" width="120" height="46" rx="6"/>
-<text x="470" y="232" class="t1" text-anchor="middle" dominant-baseline="central">:SufficiencyAssertion</text>
-<text x="470" y="248" class="t2" text-anchor="middle" dominant-baseline="central">WithoutAudit</text>
+<rect x="410" y="216" width="120" height="58" rx="6"/>
+<text x="470" y="236" class="t1" text-anchor="middle" dominant-baseline="central">:SufficiencyAssertion</text>
+<text x="470" y="256" class="t2" text-anchor="middle" dominant-baseline="central">WithoutAudit</text>
 </g>
-<!-- Record Suppression -->
+<!-- :Record Suppression — height 58 -->
 <g class="node-fail" data-href="https://dr-crunch.github.io/nullification-loops/" onclick="navigate(this)">
-<rect x="540" y="216" width="120" height="46" rx="6"/>
-<text x="600" y="232" class="t1" text-anchor="middle" dominant-baseline="central">:RecordSuppression</text>
-<text x="600" y="248" class="t2" text-anchor="middle" dominant-baseline="central">DesignedForgetting</text>
+<rect x="540" y="216" width="120" height="58" rx="6"/>
+<text x="600" y="236" class="t1" text-anchor="middle" dominant-baseline="central">:RecordSuppression</text>
+<text x="600" y="256" class="t2" text-anchor="middle" dominant-baseline="central">DesignedForgetting</text>
 </g>
-<!-- Loop connector label -->
-<text x="340" y="285" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#3a2810">:producesFailure → :NullificationLoop → :triggers → :Maladministration → :violates → :RightToBeHeard</text>
-<!-- ══════════════════════════════════════════
-TIER 3 — OWL Object Properties (Edges)
-══════════════════════════════════════════ -->
-<text x="340" y="310" text-anchor="middle" class="section-label">— owl object properties · dissemination relations —</text>
-<!-- Property nodes in a row -->
-<line class="conn" x1="340" y1="262" x2="80" y2="322" marker-end="url(#arrow)"/>
-<line class="conn" x1="340" y1="262" x2="200" y2="322" marker-end="url(#arrow)"/>
-<line class="conn" x1="340" y1="262" x2="340" y2="322" marker-end="url(#arrow)"/>
-<line class="conn" x1="340" y1="262" x2="480" y2="322" marker-end="url(#arrow)"/>
-<line class="conn" x1="340" y1="262" x2="600" y2="322" marker-end="url(#arrow)"/>
+
+<!-- Loop connector label — pushed down to clear taller rects -->
+<text x="340" y="297" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#3a2810">:producesFailure → :NullificationLoop → :triggers → :Maladministration → :violates → :RightToBeHeard</text>
+
+<!-- TIER 3 — OWL Object Properties -->
+<text x="340" y="322" text-anchor="middle" class="section-label">— owl object properties · dissemination relations —</text>
+<line class="conn" x1="340" y1="274" x2="80" y2="334" marker-end="url(#arrow)"/>
+<line class="conn" x1="340" y1="274" x2="200" y2="334" marker-end="url(#arrow)"/>
+<line class="conn" x1="340" y1="274" x2="340" y2="334" marker-end="url(#arrow)"/>
+<line class="conn" x1="340" y1="274" x2="480" y2="334" marker-end="url(#arrow)"/>
+<line class="conn" x1="340" y1="274" x2="600" y2="334" marker-end="url(#arrow)"/>
+
 <g class="node-actor">
-<rect x="20" y="322" width="120" height="40" rx="5"/>
-<text x="80" y="340" class="t1" text-anchor="middle" dominant-baseline="central">:ignores</text>
-<text x="80" y="354" class="t2" text-anchor="middle" dominant-baseline="central">Actor → Submission</text>
-</g>
-<g class="node-actor">
-<rect x="148" y="322" width="120" height="40" rx="5"/>
-<text x="208" y="340" class="t1" text-anchor="middle" dominant-baseline="central">:suppresses</text>
-<text x="208" y="354" class="t2" text-anchor="middle" dominant-baseline="central">Actor → InfoObject</text>
+<rect x="20" y="334" width="120" height="40" rx="5"/>
+<text x="80" y="352" class="t1" text-anchor="middle" dominant-baseline="central">:ignores</text>
+<text x="80" y="366" class="t2" text-anchor="middle" dominant-baseline="central">Actor → Submission</text>
 </g>
 <g class="node-actor">
-<rect x="276" y="322" width="128" height="40" rx="5"/>
-<text x="340" y="340" class="t1" text-anchor="middle" dominant-baseline="central">:producesFailure</text>
-<text x="340" y="354" class="t2" text-anchor="middle" dominant-baseline="central">Process → FailMode</text>
+<rect x="148" y="334" width="120" height="40" rx="5"/>
+<text x="208" y="352" class="t1" text-anchor="middle" dominant-baseline="central">:suppresses</text>
+<text x="208" y="366" class="t2" text-anchor="middle" dominant-baseline="central">Actor → InfoObject</text>
+</g>
+<g class="node-actor">
+<rect x="276" y="334" width="128" height="40" rx="5"/>
+<text x="340" y="352" class="t1" text-anchor="middle" dominant-baseline="central">:producesFailure</text>
+<text x="340" y="366" class="t2" text-anchor="middle" dominant-baseline="central">Process → FailMode</text>
 </g>
 <g class="node-legal">
-<rect x="412" y="322" width="120" height="40" rx="5"/>
-<text x="472" y="340" class="t1" text-anchor="middle" dominant-baseline="central">:violates</text>
-<text x="472" y="354" class="t2" text-anchor="middle" dominant-baseline="central">Actor → LegalConst</text>
+<rect x="412" y="334" width="120" height="40" rx="5"/>
+<text x="472" y="352" class="t1" text-anchor="middle" dominant-baseline="central">:violates</text>
+<text x="472" y="366" class="t2" text-anchor="middle" dominant-baseline="central">Actor → LegalConst</text>
 </g>
 <g class="node-campaign">
-<rect x="540" y="322" width="120" height="40" rx="5"/>
-<text x="600" y="340" class="t1" text-anchor="middle" dominant-baseline="central">:amplifies</text>
-<text x="600" y="354" class="t2" text-anchor="middle" dominant-baseline="central">Campaign → Signal</text>
+<rect x="540" y="334" width="120" height="40" rx="5"/>
+<text x="600" y="352" class="t1" text-anchor="middle" dominant-baseline="central">:amplifies</text>
+<text x="600" y="366" class="t2" text-anchor="middle" dominant-baseline="central">Campaign → Signal</text>
 </g>
-<!-- ══════════════════════════════════════════
-TIER 4 — DISSEMINATION CHANNELS
-══════════════════════════════════════════ -->
-<text x="340" y="388" text-anchor="middle" class="section-label">— dissemination channels · five deontological routes —</text>
-<!-- Connectors properties → channels -->
-<line class="conn-purple" x1="80" y1="362" x2="80" y2="400" marker-end="url(#arrow-purple)"/>
-<line class="conn-purple" x1="208" y1="362" x2="208" y2="400" marker-end="url(#arrow-purple)"/>
-<line class="conn-purple" x1="340" y1="362" x2="340" y2="400" marker-end="url(#arrow-purple)"/>
-<line class="conn-purple" x1="472" y1="362" x2="472" y2="400" marker-end="url(#arrow-purple)"/>
-<line class="conn-purple" x1="600" y1="362" x2="600" y2="400" marker-end="url(#arrow-purple)"/>
-<!-- Channel I: Legal -->
+
+<!-- TIER 4 — DISSEMINATION CHANNELS -->
+<text x="340" y="400" text-anchor="middle" class="section-label">— dissemination channels · five deontological routes —</text>
+<line class="conn-purple" x1="80" y1="374" x2="80" y2="412" marker-end="url(#arrow-purple)"/>
+<line class="conn-purple" x1="208" y1="374" x2="208" y2="412" marker-end="url(#arrow-purple)"/>
+<line class="conn-purple" x1="340" y1="374" x2="340" y2="412" marker-end="url(#arrow-purple)"/>
+<line class="conn-purple" x1="472" y1="374" x2="472" y2="412" marker-end="url(#arrow-purple)"/>
+<line class="conn-purple" x1="600" y1="374" x2="600" y2="412" marker-end="url(#arrow-purple)"/>
+
 <g class="node-legal" data-href="https://github.com/dr-wojak/legal" onclick="navigate(this)">
-<rect x="20" y="400" width="160" height="52" rx="8"/>
-<text x="100" y="418" class="t1" text-anchor="middle" dominant-baseline="central">Channel I · Legal</text>
-<text x="100" y="434" class="t2" text-anchor="middle" dominant-baseline="central">High Court · Ombudsman</text>
+<rect x="20" y="412" width="160" height="52" rx="8"/>
+<text x="100" y="430" class="t1" text-anchor="middle" dominant-baseline="central">Channel I · Legal</text>
+<text x="100" y="446" class="t2" text-anchor="middle" dominant-baseline="central">High Court · Ombudsman</text>
 </g>
-<!-- Channel II: EU -->
 <g class="node-channel" data-href="https://drive.google.com/file/d/1jD9Rmrlgp1wB0hqDqNIRNb8n3SwNBrCk" onclick="navigate(this)">
-<rect x="188" y="400" width="160" height="52" rx="8"/>
-<text x="268" y="418" class="t1" text-anchor="middle" dominant-baseline="central">Channel II · EU</text>
-<text x="268" y="434" class="t2" text-anchor="middle" dominant-baseline="central">CJEU · PETI · Défenseur</text>
+<rect x="188" y="412" width="160" height="52" rx="8"/>
+<text x="268" y="430" class="t1" text-anchor="middle" dominant-baseline="central">Channel II · EU</text>
+<text x="268" y="446" class="t2" text-anchor="middle" dominant-baseline="central">CJEU · PETI · Défenseur</text>
 </g>
-<!-- Channel III: Academic -->
 <g class="node-actor" data-href="https://github.com/dr-wojak/econ" onclick="navigate(this)">
-<rect x="260" y="400" width="160" height="52" rx="8"/>
-<text x="340" y="418" class="t1" text-anchor="middle" dominant-baseline="central">Channel III · Academic</text>
-<text x="340" y="434" class="t2" text-anchor="middle" dominant-baseline="central">O.R. · VSM · Bateson</text>
+<rect x="260" y="412" width="160" height="52" rx="8"/>
+<text x="340" y="430" class="t1" text-anchor="middle" dominant-baseline="central">Channel III · Academic</text>
+<text x="340" y="446" class="t2" text-anchor="middle" dominant-baseline="central">O.R. · VSM · Bateson</text>
 </g>
-<!-- Channel IV: Civic -->
 <g class="node-info" data-href="https://dr-wojak.github.io/meinhardt-initiative-public-flyer" onclick="navigate(this)">
-<rect x="390" y="400" width="160" height="52" rx="8"/>
-<text x="470" y="418" class="t1" text-anchor="middle" dominant-baseline="central">Channel IV · Civic</text>
-<text x="470" y="434" class="t2" text-anchor="middle" dominant-baseline="central">Petition · TD · MEP</text>
+<rect x="390" y="412" width="160" height="52" rx="8"/>
+<text x="470" y="430" class="t1" text-anchor="middle" dominant-baseline="central">Channel IV · Civic</text>
+<text x="470" y="446" class="t2" text-anchor="middle" dominant-baseline="central">Petition · TD · MEP</text>
 </g>
-<!-- Channel V: Media -->
 <g class="node-campaign" data-href="https://github.com/dr-wojak/press" onclick="navigate(this)">
-<rect x="500" y="400" width="160" height="52" rx="8"/>
-<text x="580" y="418" class="t1" text-anchor="middle" dominant-baseline="central">Channel V · Media</text>
-<text x="580" y="434" class="t2" text-anchor="middle" dominant-baseline="central">Press · Signal timeline</text>
+<rect x="500" y="412" width="160" height="52" rx="8"/>
+<text x="580" y="430" class="t1" text-anchor="middle" dominant-baseline="central">Channel V · Media</text>
+<text x="580" y="446" class="t2" text-anchor="middle" dominant-baseline="central">Press · Signal timeline</text>
 </g>
-<!-- ══════════════════════════════════════════
-TIER 5 — AUDIENCE INSTANCES
-══════════════════════════════════════════ -->
-<text x="340" y="476" text-anchor="middle" class="section-label">— audience instances · :Individual · named bodies —</text>
-<!-- Legal channel → instances -->
-<line class="conn-blue" x1="60" y1="452" x2="50" y2="490" marker-end="url(#arrow-blue)"/>
-<line class="conn-blue" x1="100" y1="452" x2="100" y2="490" marker-end="url(#arrow-blue)"/>
-<line class="conn-blue" x1="140" y1="452" x2="150" y2="490" marker-end="url(#arrow-blue)"/>
+
+<!-- TIER 5 — AUDIENCE INSTANCES -->
+<text x="340" y="488" text-anchor="middle" class="section-label">— audience instances · :Individual · named bodies —</text>
+<line class="conn-blue" x1="60" y1="464" x2="50" y2="502" marker-end="url(#arrow-blue)"/>
+<line class="conn-blue" x1="100" y1="464" x2="100" y2="502" marker-end="url(#arrow-blue)"/>
+<line class="conn-blue" x1="140" y1="464" x2="150" y2="502" marker-end="url(#arrow-blue)"/>
 <g class="node-legal" data-href="https://drive.google.com/file/d/1tMi94twUL5FVuZ5EmBL_GI1WJ0uE8Vwx" onclick="navigate(this)">
-<rect x="20" y="490" width="80" height="38" rx="5"/>
-<text x="60" y="507" class="t1" text-anchor="middle" dominant-baseline="central">High Court</text>
-<text x="60" y="521" class="t2" text-anchor="middle" dominant-baseline="central">Mandamus</text>
+<rect x="20" y="502" width="80" height="38" rx="5"/>
+<text x="60" y="519" class="t1" text-anchor="middle" dominant-baseline="central">High Court</text>
+<text x="60" y="533" class="t2" text-anchor="middle" dominant-baseline="central">Mandamus</text>
 </g>
 <g class="node-legal" data-href="https://drive.google.com/file/d/1-vETFPyMCzLWE1vm4T6Xse29cjC_SjUC" onclick="navigate(this)">
-<rect x="108" y="490" width="80" height="38" rx="5"/>
-<text x="148" y="507" class="t1" text-anchor="middle" dominant-baseline="central">Ombudsman</text>
-<text x="148" y="521" class="t2" text-anchor="middle" dominant-baseline="central">:IrishOmbudsman</text>
+<rect x="108" y="502" width="80" height="38" rx="5"/>
+<text x="148" y="519" class="t1" text-anchor="middle" dominant-baseline="central">Ombudsman</text>
+<text x="148" y="533" class="t2" text-anchor="middle" dominant-baseline="central">:IrishOmbudsman</text>
 </g>
-<!-- EU channel → instances -->
-<line class="conn-purple" x1="228" y1="452" x2="218" y2="490" marker-end="url(#arrow-purple)"/>
-<line class="conn-purple" x1="268" y1="452" x2="268" y2="490" marker-end="url(#arrow-purple)"/>
-<line class="conn-purple" x1="308" y1="452" x2="318" y2="490" marker-end="url(#arrow-purple)"/>
+<line class="conn-purple" x1="228" y1="464" x2="218" y2="502" marker-end="url(#arrow-purple)"/>
+<line class="conn-purple" x1="268" y1="464" x2="268" y2="502" marker-end="url(#arrow-purple)"/>
+<line class="conn-purple" x1="308" y1="464" x2="318" y2="502" marker-end="url(#arrow-purple)"/>
 <g class="node-channel" data-href="https://drive.google.com/file/d/1jD9Rmrlgp1wB0hqDqNIRNb8n3SwNBrCk" onclick="navigate(this)">
-<rect x="196" y="490" width="80" height="38" rx="5"/>
-<text x="236" y="507" class="t1" text-anchor="middle" dominant-baseline="central">EU Ombudsman</text>
-<text x="236" y="521" class="t2" text-anchor="middle" dominant-baseline="central">Art.228 TFEU</text>
+<rect x="196" y="502" width="80" height="38" rx="5"/>
+<text x="236" y="519" class="t1" text-anchor="middle" dominant-baseline="central">EU Ombudsman</text>
+<text x="236" y="533" class="t2" text-anchor="middle" dominant-baseline="central">Art.228 TFEU</text>
 </g>
 <g class="node-channel" data-href="https://drive.google.com/file/d/1ZSHHM7v0WAV3FGVuZ5EmBL_GI1WJ0uE8Vwx" onclick="navigate(this)">
-<rect x="284" y="490" width="80" height="38" rx="5"/>
-<text x="324" y="507" class="t1" text-anchor="middle" dominant-baseline="central">PETI</text>
-<text x="324" y="521" class="t2" text-anchor="middle" dominant-baseline="central">Art.227 TFEU</text>
+<rect x="284" y="502" width="80" height="38" rx="5"/>
+<text x="324" y="519" class="t1" text-anchor="middle" dominant-baseline="central">PETI</text>
+<text x="324" y="533" class="t2" text-anchor="middle" dominant-baseline="central">Art.227 TFEU</text>
 </g>
-<!-- Academic channel → instances -->
-<line class="conn-amber" x1="320" y1="452" x2="390" y2="490" marker-end="url(#arrow-amber)"/>
-<line class="conn-amber" x1="340" y1="452" x2="420" y2="490" marker-end="url(#arrow-amber)"/>
+<line class="conn-amber" x1="320" y1="464" x2="390" y2="502" marker-end="url(#arrow-amber)"/>
+<line class="conn-amber" x1="340" y1="464" x2="420" y2="502" marker-end="url(#arrow-amber)"/>
 <g class="node-actor" data-href="https://github.com/dr-wojak/econ" onclick="navigate(this)">
-<rect x="372" y="490" width="80" height="38" rx="5"/>
-<text x="412" y="507" class="t1" text-anchor="middle" dominant-baseline="central">O.R. Research</text>
-<text x="412" y="521" class="t2" text-anchor="middle" dominant-baseline="central">VSM · Bateson</text>
+<rect x="372" y="502" width="80" height="38" rx="5"/>
+<text x="412" y="519" class="t1" text-anchor="middle" dominant-baseline="central">O.R. Research</text>
+<text x="412" y="533" class="t2" text-anchor="middle" dominant-baseline="central">VSM · Bateson</text>
 </g>
-<!-- Civic channel → instances -->
-<line class="conn-green" x1="440" y1="452" x2="474" y2="490" marker-end="url(#arrow-green)"/>
-<line class="conn-green" x1="490" y1="452" x2="520" y2="490" marker-end="url(#arrow-green)"/>
+<line class="conn-green" x1="440" y1="464" x2="474" y2="502" marker-end="url(#arrow-green)"/>
+<line class="conn-green" x1="490" y1="464" x2="520" y2="502" marker-end="url(#arrow-green)"/>
 <g class="node-info" data-href="https://dr-wojak.github.io/meinhardt-initiative-public-flyer" onclick="navigate(this)">
-<rect x="460" y="490" width="80" height="38" rx="5"/>
-<text x="500" y="507" class="t1" text-anchor="middle" dominant-baseline="central">Citizens</text>
-<text x="500" y="521" class="t2" text-anchor="middle" dominant-baseline="central">Art. 15.10</text>
+<rect x="460" y="502" width="80" height="38" rx="5"/>
+<text x="500" y="519" class="t1" text-anchor="middle" dominant-baseline="central">Citizens</text>
+<text x="500" y="533" class="t2" text-anchor="middle" dominant-baseline="central">Art. 15.10</text>
 </g>
-<!-- Media channel → instances -->
-<line class="conn" x1="540" y1="452" x2="580" y2="490" marker-end="url(#arrow)"/>
-<line class="conn" x1="600" y1="452" x2="620" y2="490" marker-end="url(#arrow)"/>
+<line class="conn" x1="540" y1="464" x2="580" y2="502" marker-end="url(#arrow)"/>
+<line class="conn" x1="600" y1="464" x2="620" y2="502" marker-end="url(#arrow)"/>
 <g class="node-campaign" data-href="https://github.com/dr-wojak/press" onclick="navigate(this)">
-<rect x="560" y="490" width="80" height="38" rx="5"/>
-<text x="600" y="507" class="t1" text-anchor="middle" dominant-baseline="central">Press</text>
-<text x="600" y="521" class="t2" text-anchor="middle" dominant-baseline="central">CC0 · Timeline</text>
+<rect x="560" y="502" width="80" height="38" rx="5"/>
+<text x="600" y="519" class="t1" text-anchor="middle" dominant-baseline="central">Press</text>
+<text x="600" y="533" class="t2" text-anchor="middle" dominant-baseline="central">CC0 · Timeline</text>
 </g>
-<!-- ══════════════════════════════════════════
-TIER 6 — INFORMATION OBJECTS (Corpus artefacts)
-══════════════════════════════════════════ -->
-<text x="340" y="552" text-anchor="middle" class="section-label">— :InformationObject instances · the corpus artefacts —</text>
-<line class="conn-green" x1="340" y1="36" x2="340" y2="564" stroke-dasharray="none" marker-end="url(#arrow-green)"/>
+
+<!-- TIER 6 — INFORMATION OBJECTS -->
+<text x="340" y="564" text-anchor="middle" class="section-label">— :InformationObject instances · the corpus artefacts —</text>
+<line class="conn-green" x1="340" y1="36" x2="340" y2="576" stroke-dasharray="none" marker-end="url(#arrow-green)"/>
 <g class="node-info" data-href="https://drive.google.com/file/d/1-vETFPyMCzLWE1vm4T6Xse29cjC_SjUC" onclick="navigate(this)">
-<rect x="20" y="564" width="180" height="44" rx="6"/>
-<text x="110" y="580" class="t1" text-anchor="middle" dominant-baseline="central">:TairiscintMheinhardt</text>
-<text x="110" y="596" class="t2" text-anchor="middle" dominant-baseline="central">Constitutional indictment</text>
+<rect x="20" y="576" width="180" height="44" rx="6"/>
+<text x="110" y="592" class="t1" text-anchor="middle" dominant-baseline="central">:TairiscintMheinhardt</text>
+<text x="110" y="608" class="t2" text-anchor="middle" dominant-baseline="central">Constitutional indictment</text>
 </g>
 <g class="node-info" data-href="https://drive.google.com/file/d/1YB7so7pzTg7uZFFir7nKWxB5wZZeSEX3" onclick="navigate(this)">
-<rect x="208" y="564" width="180" height="44" rx="6"/>
-<text x="298" y="580" class="t1" text-anchor="middle" dominant-baseline="central">:InterregnumNullificans</text>
-<text x="298" y="596" class="t2" text-anchor="middle" dominant-baseline="central">17 legal frameworks</text>
+<rect x="208" y="576" width="180" height="44" rx="6"/>
+<text x="298" y="592" class="t1" text-anchor="middle" dominant-baseline="central">:InterregnumNullificans</text>
+<text x="298" y="608" class="t2" text-anchor="middle" dominant-baseline="central">17 legal frameworks</text>
 </g>
 <g class="node-info" data-href="https://drive.google.com/file/d/1k-FVtgRPjqZrch-IZHTL1EWOtFGRU9AY" onclick="navigate(this)">
-<rect x="396" y="564" width="180" height="44" rx="6"/>
-<text x="486" y="580" class="t1" text-anchor="middle" dominant-baseline="central">:SeanadSubmission</text>
-<text x="486" y="596" class="t2" text-anchor="middle" dominant-baseline="central">Reg.2021/821 · March 2026</text>
+<rect x="396" y="576" width="180" height="44" rx="6"/>
+<text x="486" y="592" class="t1" text-anchor="middle" dominant-baseline="central">:SeanadSubmission</text>
+<text x="486" y="608" class="t2" text-anchor="middle" dominant-baseline="central">Reg.2021/821 · March 2026</text>
 </g>
 <g class="node-info" data-href="https://drive.google.com/drive/u/0/folders/12o4-OPXJ0W5E8pxF9pN-VKUeODagy17g" onclick="navigate(this)">
-<rect x="20" y="618" width="180" height="44" rx="6"/>
-<text x="110" y="634" class="t1" text-anchor="middle" dominant-baseline="central">:MainRepository</text>
-<text x="110" y="650" class="t2" text-anchor="middle" dominant-baseline="central">Google Drive · primary archive</text>
+<rect x="20" y="630" width="180" height="44" rx="6"/>
+<text x="110" y="646" class="t1" text-anchor="middle" dominant-baseline="central">:MainRepository</text>
+<text x="110" y="662" class="t2" text-anchor="middle" dominant-baseline="central">Google Drive · primary archive</text>
 </g>
 <g class="node-info" data-href="https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS" onclick="navigate(this)">
-<rect x="208" y="618" width="180" height="44" rx="6"/>
-<text x="298" y="634" class="t1" text-anchor="middle" dominant-baseline="central">:FormalComplaint</text>
-<text x="298" y="650" class="t2" text-anchor="middle" dominant-baseline="central">226 pages · complete record</text>
+<rect x="208" y="630" width="180" height="44" rx="6"/>
+<text x="298" y="646" class="t1" text-anchor="middle" dominant-baseline="central">:FormalComplaint</text>
+<text x="298" y="662" class="t2" text-anchor="middle" dominant-baseline="central">226 pages · complete record</text>
 </g>
 <g class="node-info" data-href="https://drive.google.com/file/d/1ZSHHM7v0WAV3FGVuZ5EmBL_GI1WJ0uE8Vwx" onclick="navigate(this)">
-<rect x="396" y="618" width="180" height="44" rx="6"/>
-<text x="486" y="634" class="t1" text-anchor="middle" dominant-baseline="central">:CivicSignal</text>
-<text x="486" y="650" class="t2" text-anchor="middle" dominant-baseline="central">RedundancyAwareness</text>
+<rect x="396" y="630" width="180" height="44" rx="6"/>
+<text x="486" y="646" class="t1" text-anchor="middle" dominant-baseline="central">:CivicSignal</text>
+<text x="486" y="662" class="t2" text-anchor="middle" dominant-baseline="central">RedundancyAwareness</text>
 </g>
-<!-- ══════════════════════════════════════════
-TIER 7 — GITHUB / CAMPAIGN MECHANISMS
-══════════════════════════════════════════ -->
-<text x="340" y="682" text-anchor="middle" class="section-label">— :CampaignMechanism · github repositories · amplification nodes —</text>
+
+<!-- TIER 7 — GITHUB / CAMPAIGN MECHANISMS -->
+<text x="340" y="694" text-anchor="middle" class="section-label">— :CampaignMechanism · github repositories · amplification nodes —</text>
 <g class="node-channel" data-href="https://github.com/dr-crunch/nullification-loops" onclick="navigate(this)">
-<rect x="20" y="692" width="190" height="44" rx="6"/>
-<text x="115" y="708" class="t1" text-anchor="middle" dominant-baseline="central">nullification-loops</text>
-<text x="115" y="724" class="t2" text-anchor="middle" dominant-baseline="central">14 EU languages · primary hub</text>
+<rect x="20" y="704" width="190" height="44" rx="6"/>
+<text x="115" y="720" class="t1" text-anchor="middle" dominant-baseline="central">nullification-loops</text>
+<text x="115" y="736" class="t2" text-anchor="middle" dominant-baseline="central">14 EU languages · primary hub</text>
 </g>
 <g class="node-channel" data-href="https://github.com/dr-wojak/start-here" onclick="navigate(this)">
-<rect x="218" y="692" width="145" height="44" rx="6"/>
-<text x="290" y="708" class="t1" text-anchor="middle" dominant-baseline="central">start-here</text>
-<text x="290" y="724" class="t2" text-anchor="middle" dominant-baseline="central">Plain-language entry</text>
+<rect x="218" y="704" width="145" height="44" rx="6"/>
+<text x="290" y="720" class="t1" text-anchor="middle" dominant-baseline="central">start-here</text>
+<text x="290" y="736" class="t2" text-anchor="middle" dominant-baseline="central">Plain-language entry</text>
 </g>
 <g class="node-channel" data-href="https://github.com/dr-wojak/public-relations" onclick="navigate(this)">
-<rect x="371" y="692" width="145" height="44" rx="6"/>
-<text x="443" y="708" class="t1" text-anchor="middle" dominant-baseline="central">public-relations</text>
-<text x="443" y="724" class="t2" text-anchor="middle" dominant-baseline="central">Civic engagement</text>
+<rect x="371" y="704" width="145" height="44" rx="6"/>
+<text x="443" y="720" class="t1" text-anchor="middle" dominant-baseline="central">public-relations</text>
+<text x="443" y="736" class="t2" text-anchor="middle" dominant-baseline="central">Civic engagement</text>
 </g>
 <g class="node-campaign" data-href="https://github.com/dr-wojak/press" onclick="navigate(this)">
-<rect x="524" y="692" width="136" height="44" rx="6"/>
-<text x="592" y="708" class="t1" text-anchor="middle" dominant-baseline="central">press</text>
-<text x="592" y="724" class="t2" text-anchor="middle" dominant-baseline="central">Media kit · timeline</text>
+<rect x="524" y="704" width="136" height="44" rx="6"/>
+<text x="592" y="720" class="t1" text-anchor="middle" dominant-baseline="central">press</text>
+<text x="592" y="736" class="t2" text-anchor="middle" dominant-baseline="central">Media kit · timeline</text>
 </g>
 <g class="node-actor" data-href="https://github.com/dr-wojak/econ" onclick="navigate(this)">
-<rect x="20" y="744" width="145" height="44" rx="6"/>
-<text x="92" y="760" class="t1" text-anchor="middle" dominant-baseline="central">econ</text>
-<text x="92" y="776" class="t2" text-anchor="middle" dominant-baseline="central">Opportunity costs</text>
+<rect x="20" y="756" width="145" height="44" rx="6"/>
+<text x="92" y="772" class="t1" text-anchor="middle" dominant-baseline="central">econ</text>
+<text x="92" y="788" class="t2" text-anchor="middle" dominant-baseline="central">Opportunity costs</text>
 </g>
 <g class="node-actor" data-href="https://github.com/dr-wojak/governmentality-2025" onclick="navigate(this)">
-<rect x="173" y="744" width="190" height="44" rx="6"/>
-<text x="268" y="760" class="t1" text-anchor="middle" dominant-baseline="central">governmentality-2025</text>
-<text x="268" y="776" class="t2" text-anchor="middle" dominant-baseline="central">Structural indictment canon</text>
+<rect x="173" y="756" width="190" height="44" rx="6"/>
+<text x="268" y="772" class="t1" text-anchor="middle" dominant-baseline="central">governmentality-2025</text>
+<text x="268" y="788" class="t2" text-anchor="middle" dominant-baseline="central">Structural indictment canon</text>
 </g>
 <g class="node-actor" data-href="https://github.com/dr-wojak/redundancy-awareness" onclick="navigate(this)">
-<rect x="371" y="744" width="190" height="44" rx="6"/>
-<text x="466" y="760" class="t1" text-anchor="middle" dominant-baseline="central">redundancy-awareness</text>
-<text x="466" y="776" class="t2" text-anchor="middle" dominant-baseline="central">Ministerial correspondence</text>
+<rect x="371" y="756" width="190" height="44" rx="6"/>
+<text x="466" y="772" class="t1" text-anchor="middle" dominant-baseline="central">redundancy-awareness</text>
+<text x="466" y="788" class="t2" text-anchor="middle" dominant-baseline="central">Ministerial correspondence</text>
 </g>
-<!-- ══════════════════════════════════════════
-TIER 8 — :EconomicMechanism + SPARQL hook
-══════════════════════════════════════════ -->
-<text x="340" y="810" text-anchor="middle" class="section-label">— :EconomicMechanism · :FinanceOfNotice · SPARQL query surface —</text>
+
+<!-- TIER 8 — :EconomicMechanism + SPARQL hook -->
+<text x="340" y="822" text-anchor="middle" class="section-label">— :EconomicMechanism · :FinanceOfNotice · SPARQL query surface —</text>
 <g class="node-campaign" data-href="https://github.com/dr-wojak/econ" onclick="navigate(this)">
-<rect x="20" y="820" width="200" height="50" rx="8"/>
-<text x="120" y="837" class="t1" text-anchor="middle" dominant-baseline="central">:FinanceOfNotice</text>
-<text x="120" y="853" class="t2" text-anchor="middle" dominant-baseline="central">incentivises → IgnoringBehaviour</text>
+<rect x="20" y="832" width="200" height="50" rx="8"/>
+<text x="120" y="849" class="t1" text-anchor="middle" dominant-baseline="central">:FinanceOfNotice</text>
+<text x="120" y="865" class="t2" text-anchor="middle" dominant-baseline="central">incentivises → IgnoringBehaviour</text>
 </g>
 <g class="node-legal" data-href="https://github.com/dr-wojak/legal" onclick="navigate(this)">
-<rect x="228" y="820" width="200" height="50" rx="8"/>
-<text x="328" y="837" class="t1" text-anchor="middle" dominant-baseline="central">:RightToBeHeard</text>
-<text x="328" y="853" class="t2" text-anchor="middle" dominant-baseline="central">Art. 41 CFR · Re Haughey</text>
+<rect x="228" y="832" width="200" height="50" rx="8"/>
+<text x="328" y="849" class="t1" text-anchor="middle" dominant-baseline="central">:RightToBeHeard</text>
+<text x="328" y="865" class="t2" text-anchor="middle" dominant-baseline="central">Art. 41 CFR · Re Haughey</text>
 </g>
 <g class="node-info" data-href="https://drive.google.com/file/d/1rVCRvUs91lYDAoo_YIfxpAAsYzEAMMxm" onclick="navigate(this)">
-<rect x="436" y="820" width="224" height="50" rx="8"/>
-<text x="548" y="837" class="t1" text-anchor="middle" dominant-baseline="central">SPARQL: Find violations</text>
-<text x="548" y="853" class="t2" text-anchor="middle" dominant-baseline="central">caused by ignored submissions</text>
+<rect x="436" y="832" width="224" height="50" rx="8"/>
+<text x="548" y="849" class="t1" text-anchor="middle" dominant-baseline="central">SPARQL: Find violations</text>
+<text x="548" y="865" class="t2" text-anchor="middle" dominant-baseline="central">caused by ignored submissions</text>
 </g>
-<!-- ══════════════════════════════════════════
-LEGEND
-══════════════════════════════════════════ -->
-<rect x="20" y="898" width="12" height="12" rx="2" fill="#14121a" stroke="#534ab7" stroke-width="0.7"/>
-<text x="38" y="904" class="legend-text" dominant-baseline="central">:Entity root</text>
-<rect x="110" y="898" width="12" height="12" rx="2" fill="#1f1109" stroke="#993d1d" stroke-width="0.7"/>
-<text x="128" y="904" class="legend-text" dominant-baseline="central">:FailureMode</text>
-<rect x="220" y="898" width="12" height="12" rx="2" fill="#0c1929" stroke="#185fa5" stroke-width="0.7"/>
-<text x="238" y="904" class="legend-text" dominant-baseline="central">:LegalConstruct</text>
-<rect x="340" y="898" width="12" height="12" rx="2" fill="#0d1f1a" stroke="#0f6e56" stroke-width="0.7"/>
-<text x="358" y="904" class="legend-text" dominant-baseline="central">:InformationObject</text>
-<rect x="480" y="898" width="12" height="12" rx="2" fill="#1e1509" stroke="#854f0b" stroke-width="0.7"/>
-<text x="498" y="904" class="legend-text" dominant-baseline="central">:Actor / Process</text>
-<rect x="590" y="898" width="12" height="12" rx="2" fill="#1a1830" stroke="#7f77dd" stroke-width="0.7"/>
-<text x="608" y="904" class="legend-text" dominant-baseline="central">Channels</text>
-<rect x="20" y="924" width="12" height="12" rx="2" fill="#0a1e20" stroke="#156e72" stroke-width="0.7"/>
-<text x="38" y="930" class="legend-text" dominant-baseline="central">:CampaignMechanism</text>
-<!-- property label legend -->
-<line x1="200" y1="930" x2="240" y2="930" stroke="#534ab7" stroke-width="1" stroke-dasharray="4 3"/>
-<text x="248" y="930" class="legend-text" dominant-baseline="central">:objectProperty (dashed)</text>
-<line x1="380" y1="930" x2="420" y2="930" stroke="#2a2720" stroke-width="1"/>
-<text x="428" y="930" class="legend-text" dominant-baseline="central">rdf:type / subclass</text>
+
+<!-- LEGEND -->
+<rect x="20" y="910" width="12" height="12" rx="2" fill="#14121a" stroke="#534ab7" stroke-width="0.7"/>
+<text x="38" y="916" class="legend-text" dominant-baseline="central">:Entity root</text>
+<rect x="110" y="910" width="12" height="12" rx="2" fill="#1f1109" stroke="#993d1d" stroke-width="0.7"/>
+<text x="128" y="916" class="legend-text" dominant-baseline="central">:FailureMode</text>
+<rect x="220" y="910" width="12" height="12" rx="2" fill="#0c1929" stroke="#185fa5" stroke-width="0.7"/>
+<text x="238" y="916" class="legend-text" dominant-baseline="central">:LegalConstruct</text>
+<rect x="340" y="910" width="12" height="12" rx="2" fill="#0d1f1a" stroke="#0f6e56" stroke-width="0.7"/>
+<text x="358" y="916" class="legend-text" dominant-baseline="central">:InformationObject</text>
+<rect x="480" y="910" width="12" height="12" rx="2" fill="#1e1509" stroke="#854f0b" stroke-width="0.7"/>
+<text x="498" y="916" class="legend-text" dominant-baseline="central">:Actor / Process</text>
+<rect x="590" y="910" width="12" height="12" rx="2" fill="#1a1830" stroke="#7f77dd" stroke-width="0.7"/>
+<text x="608" y="916" class="legend-text" dominant-baseline="central">Channels</text>
+<rect x="20" y="936" width="12" height="12" rx="2" fill="#0a1e20" stroke="#156e72" stroke-width="0.7"/>
+<text x="38" y="942" class="legend-text" dominant-baseline="central">:CampaignMechanism</text>
+<line x1="200" y1="942" x2="240" y2="942" stroke="#534ab7" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="248" y="942" class="legend-text" dominant-baseline="central">:objectProperty (dashed)</text>
+<line x1="380" y1="942" x2="420" y2="942" stroke="#2a2720" stroke-width="1"/>
+<text x="428" y="942" class="legend-text" dominant-baseline="central">rdf:type / subclass</text>
 </svg>
 </div>
 </section>
+
 <!-- RDF/TURTLE EXCERPT -->
-<section id="rdf-turtle" class="turtle-section">
+<section class="turtle-section">
 <div class="map-header">
 <div class="map-title">RDF / Turtle — Executable Skeleton</div>
 <div class="map-note">meinhardt.org/ontology# · dissemination layer</div>
@@ -805,6 +773,7 @@ LEGEND
 <span class="ttl-inst">:SignalSuppression</span> <span class="ttl-prop">:violates</span> <span class="ttl-inst">:RightToBeHeard</span> .
 </div>
 </section>
+
 <!-- AXIOM -->
 <div class="axiom-bar">
 <div class="axiom-rule"></div>
@@ -814,6 +783,7 @@ LEGEND
 <div class="axiom-plain">This is not metadata. The ontology is a dissemination instrument. When the SPARQL query "find all violations caused by ignored submissions" runs against the Meinhardt corpus, it returns a structured list that is directly admissible as evidence in a CJEU Member State failure proceeding. The classes become legal categories. The instances extend the legal case. The relations become the causal chain. Nineteen years of narrative argument is now a directed labelled graph.</div>
 </div>
 </div>
+
 <!-- KEYWORDS -->
 <section class="keywords-section">
 <div class="section-label">Canonical keyword corpus · Deontological Differences · March 2026</div>
@@ -821,6 +791,7 @@ LEGEND
 <span class="k-onto">#OWL2DL</span> <span class="k-onto">#RDFTurtle</span> <span class="k-onto">#SPARQL</span> <span class="k-onto">#OntologyOfDissemination</span> <span class="k-onto">#DirectedLabelledGraph</span> <span class="k-onto">#MachineReadableInstitutionalCritique</span> <span class="k-core">#MeinhardtInitiative</span> <span class="k-core">#NullificationLoop</span> <span class="k-core">#InterregnumNullificans</span> <span class="k-core">#DeontologicalDifferences</span> <span class="k-core">#CyberneticFailureOntology</span> <span class="k-irish">#TairiscintMheinhardt</span> <span class="k-irish">#LúbaNeamhnithe</span> <span class="k-irish">#Séachanachas</span> <span class="k-irish">#Dealraitheachas</span> <span class="k-legal">#RightToBeHeard</span> <span class="k-legal">#DueProcessFailure</span> <span class="k-legal">#Maladministration</span> <span class="k-legal">#WritOfMandamus</span> <span class="k-legal">#JudicialReview</span> <span class="k-legal">#SilenceVeto</span> <span class="k-legal">#Article41Charter</span> <span class="k-legal">#Art4TEU</span> <span class="k-eu">#EUCouncilPresidency</span> <span class="k-eu">#EuropeanOmbudsman</span> <span class="k-eu">#PETI</span> <span class="k-eu">#CJEU</span> <span class="k-eu">#DéfenseurDesDroits</span> <span class="k-eu">#Reg2021821</span> <span class="k-mech">#FinanceOfNotice</span> <span class="k-mech">#SignalSuppression</span> <span class="k-mech">#DesignedForgetting</span> <span class="k-mech">#RemitDisplacement</span> <span class="k-mech">#JurisdictionalEvaporation</span> <span class="k-mech">#AcknowledgementAsClosure</span> <span class="k-core">#StateCapacityFailure</span> <span class="k-core">#StructuralNonGovernance</span> <span class="k-core">#InformationAsymmetry</span> <span class="k-core">#OperationsResearch</span> <span class="k-onto">#ViableSystemModel</span> <span class="k-onto">#BatesonDeuterBinding</span> <span class="k-onto">#ProtégéOWL</span>
 </div>
 </section>
+
 <!-- FOOTER -->
 <footer>
 <div class="footer-left">
@@ -832,45 +803,47 @@ Deontological Differences · Meinhardt Initiative<br>
 Ontology of Dissemination · March 2026
 </div>
 </footer>
+
 <div class="tooltip" id="tooltip"></div>
+
 <script>
 function navigate(el) {
-const href = el.getAttribute('data-href');
-if (href) window.open(href, '_blank', 'noopener');
+  const href = el.getAttribute('data-href');
+  if (href) window.open(href, '_blank', 'noopener');
 }
 const tooltip = document.getElementById('tooltip');
 const labels = {
-'https://github.com/dr-crunch/nullification-loops': 'nullification-loops · 14 EU languages · primary hub',
-'https://dr-crunch.github.io/nullification-loops/': 'Primary public landing · 14 EU languages',
-'https://github.com/dr-wojak/legal': ':LegalConstruct · Constitutional and statutory records',
-'https://drive.google.com/drive/u/0/folders/12o4-OPXJ0W5E8pxF9pN-VKUeODagy17g': 'Main Repository · Google Drive · primary archive',
-'https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS': 'Formal Complaint Archive · 226 pages · complete record',
-'https://drive.google.com/file/d/1-vETFPyMCzLWE1vm4T6Xse29cjC_SjUC': ':TairiscintMheinhardt · Systemic Governance Failure · Feb 2026',
-'https://drive.google.com/file/d/1YB7so7pzTg7uZFFir7nKWxB5wZZeSEX3': ':InterregnumNullificans · 17 legal frameworks · Seanad Select Committee',
-'https://drive.google.com/file/d/1k-FVtgRPjqZrch-IZHTL1EWOtFGRU9AY': ':SeanadSubmission · Reg.2021/821 · March 2026',
-'https://drive.google.com/file/d/1tMi94twUL5FVuZ5EmBL_GI1WJ0uE8Vwx': ':PreLitigationNotice · February 10th 2026 · High Court mandamus',
-'https://drive.google.com/file/d/1jD9Rmrlgp1wB0hqDqNIRNb8n3SwNBrCk': ':PETI · European Parliament · Art.227 TFEU guidance request',
-'https://drive.google.com/file/d/1rVCRvUs91lYDAoo_YIfxpAAsYzEAMMxm': 'JCEUA Timeline · 10 documented contact points · Designed Forgetting',
-'https://github.com/dr-wojak/econ': ':EconomicMechanism · Opportunity costs · Greenwald-Stiglitz',
-'https://github.com/dr-wojak/governmentality-2025': 'governmentality-2025 · Structural indictment · basic canon',
-'https://github.com/dr-wojak/redundancy-awareness': 'redundancy-awareness · Ministerial correspondence · Tánaiste enquiry',
-'https://github.com/dr-wojak/start-here': 'start-here · Plain-language entry point · all jurisdictions',
-'https://github.com/dr-wojak/public-relations': 'public-relations · Civic engagement · charter articles',
-'https://github.com/dr-wojak/press': 'press · Media kit · Signal-to-silence timeline · CC0',
-'https://dr-wojak.github.io/meinhardt-initiative-public-flyer': ':CivicSignal · Public petition · Art.15.10 Bunreacht',
-'https://drive.google.com/file/d/1ZSHHM7v0WAV3FGVuZ5EmBL_GI1WJ0uE8Vwx': ':CivicSignal · RedundancyAwareness · Strategic Intelligence Charter',
+  'https://github.com/dr-crunch/nullification-loops': 'nullification-loops · 14 EU languages · primary hub',
+  'https://dr-crunch.github.io/nullification-loops/': 'Primary public landing · 14 EU languages',
+  'https://github.com/dr-wojak/legal': ':LegalConstruct · Constitutional and statutory records',
+  'https://drive.google.com/drive/u/0/folders/12o4-OPXJ0W5E8pxF9pN-VKUeODagy17g': 'Main Repository · Google Drive · primary archive',
+  'https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS': 'Formal Complaint Archive · 226 pages · complete record',
+  'https://drive.google.com/file/d/1-vETFPyMCzLWE1vm4T6Xse29cjC_SjUC': ':TairiscintMheinhardt · Systemic Governance Failure · Feb 2026',
+  'https://drive.google.com/file/d/1YB7so7pzTg7uZFFir7nKWxB5wZZeSEX3': ':InterregnumNullificans · 17 legal frameworks · Seanad Select Committee',
+  'https://drive.google.com/file/d/1k-FVtgRPjqZrch-IZHTL1EWOtFGRU9AY': ':SeanadSubmission · Reg.2021/821 · March 2026',
+  'https://drive.google.com/file/d/1tMi94twUL5FVuZ5EmBL_GI1WJ0uE8Vwx': ':PreLitigationNotice · February 10th 2026 · High Court mandamus',
+  'https://drive.google.com/file/d/1jD9Rmrlgp1wB0hqDqNIRNb8n3SwNBrCk': ':PETI · European Parliament · Art.227 TFEU guidance request',
+  'https://drive.google.com/file/d/1rVCRvUs91lYDAoo_YIfxpAAsYzEAMMxm': 'JCEUA Timeline · 10 documented contact points · Designed Forgetting',
+  'https://github.com/dr-wojak/econ': ':EconomicMechanism · Opportunity costs · Greenwald-Stiglitz',
+  'https://github.com/dr-wojak/governmentality-2025': 'governmentality-2025 · Structural indictment · basic canon',
+  'https://github.com/dr-wojak/redundancy-awareness': 'redundancy-awareness · Ministerial correspondence · Tánaiste enquiry',
+  'https://github.com/dr-wojak/start-here': 'start-here · Plain-language entry point · all jurisdictions',
+  'https://github.com/dr-wojak/public-relations': 'public-relations · Civic engagement · charter articles',
+  'https://github.com/dr-wojak/press': 'press · Media kit · Signal-to-silence timeline · CC0',
+  'https://dr-wojak.github.io/meinhardt-initiative-public-flyer': ':CivicSignal · Public petition · Art.15.10 Bunreacht',
+  'https://drive.google.com/file/d/1ZSHHM7v0WAV3FGVuZ5EmBL_GI1WJ0uE8Vwx': ':CivicSignal · RedundancyAwareness · Strategic Intelligence Charter',
 };
 document.querySelectorAll('g[data-href]').forEach(g => {
-g.addEventListener('mouseenter', e => {
-const href = g.getAttribute('data-href');
-const label = labels[href];
-if (label) { tooltip.textContent = label; tooltip.classList.add('visible'); }
-});
-g.addEventListener('mousemove', e => {
-tooltip.style.left = (e.clientX + 14) + 'px';
-tooltip.style.top = (e.clientY - 10) + 'px';
-});
-g.addEventListener('mouseleave', () => tooltip.classList.remove('visible'));
+  g.addEventListener('mouseenter', e => {
+    const href = g.getAttribute('data-href');
+    const label = labels[href];
+    if (label) { tooltip.textContent = label; tooltip.classList.add('visible'); }
+  });
+  g.addEventListener('mousemove', e => {
+    tooltip.style.left = (e.clientX + 14) + 'px';
+    tooltip.style.top = (e.clientY - 10) + 'px';
+  });
+  g.addEventListener('mouseleave', () => tooltip.classList.remove('visible'));
 });
 </script>
 </body>
