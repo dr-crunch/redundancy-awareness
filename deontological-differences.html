@@ -373,6 +373,66 @@ h1 { font-size: 36px; }
         </marker>
       </defs>
 
+            <!-- ═══════════════════════════════════════════
+           CONNECTORS — named colour markers, explicit stroke colours
+           ═══════════════════════════════════════════ -->
+      <g id="connectors" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Failure mode class → failure instances -->
+        <line x1="462" y1="100" x2="462" y2="220" stroke="#993d1d" stroke-width="0.7" opacity="0.35" stroke-dasharray="3,2"/>
+        <line x1="50" y1="220" x2="630" y2="220" stroke="#993d1d" stroke-width="0.7" opacity="0.35" stroke-dasharray="3,2"/>
+        <line x1="100" y1="220" x2="100" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
+        <line x1="220" y1="220" x2="220" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
+        <line x1="340" y1="220" x2="340" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
+        <line x1="460" y1="220" x2="460" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
+        <line x1="580" y1="220" x2="580" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
+
+        <!-- Information object class → corpus artefacts -->
+        <line x1="340" y1="178" x2="340" y2="320" stroke="#185fa5" stroke-width="0.7" opacity="0.3" stroke-dasharray="3,2"/>
+        <line x1="50" y1="998" x2="620" y2="998" stroke="#534ab7" stroke-width="0.7" opacity="0.3" stroke-dasharray="3,2"/>
+        <line x1="131" y1="998" x2="131" y2="1008" stroke="#534ab7" stroke-width="0.7" opacity="0.35" marker-end="url(#arrow-purple)"/>
+        <line x1="323" y1="998" x2="323" y2="1008" stroke="#534ab7" stroke-width="0.7" opacity="0.35" marker-end="url(#arrow-purple)"/>
+        <line x1="515" y1="998" x2="515" y2="1008" stroke="#534ab7" stroke-width="0.7" opacity="0.35" marker-end="url(#arrow-purple)"/>
+        <line x1="131" y1="998" x2="131" y2="1086" stroke="#534ab7" stroke-width="0.7" opacity="0.25" stroke-dasharray="3,2"/>
+        <line x1="323" y1="998" x2="323" y2="1086" stroke="#534ab7" stroke-width="0.7" opacity="0.25" stroke-dasharray="3,2"/>
+        <line x1="515" y1="998" x2="515" y2="1086" stroke="#534ab7" stroke-width="0.7" opacity="0.25" stroke-dasharray="3,2"/>
+
+        <!-- Channels → Audiences -->
+        <line x1="96" y1="546" x2="218" y2="592" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
+        <line x1="96" y1="546" x2="340" y2="592" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
+        <line x1="218" y1="546" x2="218" y2="670" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
+        <line x1="218" y1="546" x2="340" y2="670" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
+        <line x1="340" y1="546" x2="280" y2="748" stroke="#2fb882" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-green)"/>
+        <line x1="462" y1="546" x2="280" y2="826" stroke="#2fb882" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-green)"/>
+        <line x1="584" y1="546" x2="280" y2="904" stroke="#c9881f" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-amber)"/>
+
+        <!-- Audiences → Corpus artefacts -->
+        <line x1="218" y1="648" x2="131" y2="1008" stroke="#534ab7" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-purple)"/>
+        <line x1="340" y1="648" x2="323" y2="1008" stroke="#534ab7" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-purple)"/>
+        <line x1="218" y1="726" x2="515" y2="1008" stroke="#185fa5" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-blue)"/>
+        <line x1="340" y1="726" x2="323" y2="1086" stroke="#185fa5" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-blue)"/>
+        <line x1="280" y1="804" x2="131" y2="1086" stroke="#3b6d11" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-green)"/>
+        <line x1="280" y1="882" x2="515" y2="1086" stroke="#0f6e56" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-green)"/>
+        <line x1="280" y1="960" x2="131" y2="1268" stroke="#854f0b" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-amber)"/>
+
+        <!-- Corpus artefacts → Campaign nodes -->
+        <line x1="128" y1="1064" x2="128" y2="1190" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
+        <line x1="320" y1="1064" x2="320" y2="1190" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
+        <line x1="512" y1="1064" x2="512" y2="1190" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
+        <line x1="134" y1="1142" x2="134" y2="1190" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
+        <line x1="326" y1="1142" x2="326" y2="1268" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
+        <line x1="515" y1="1142" x2="227" y2="1346" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
+
+        <!-- Campaign rows chain -->
+        <line x1="131" y1="1246" x2="131" y2="1268" stroke="#2fb882" stroke-width="0.8" opacity="0.4" marker-end="url(#arrow-green)"/>
+        <line x1="323" y1="1246" x2="323" y2="1268" stroke="#2fb882" stroke-width="0.8" opacity="0.4" marker-end="url(#arrow-green)"/>
+        <line x1="515" y1="1246" x2="515" y2="1268" stroke="#2fb882" stroke-width="0.8" opacity="0.4" marker-end="url(#arrow-green)"/>
+
+        <!-- Campaign nodes → Economic mechanism -->
+        <line x1="131" y1="1324" x2="131" y2="1454" stroke="#c9881f" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-amber)"/>
+        <line x1="323" y1="1324" x2="323" y2="1454" stroke="#534ab7" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-purple)"/>
+        <line x1="515" y1="1324" x2="515" y2="1454" stroke="#534ab7" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-purple)"/>
+        <line x1="227" y1="1402" x2="131" y2="1454" stroke="#c9881f" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-amber)"/>
+      </g>
       <!-- ── top-level classes ── -->
       <text x="340" y="30" text-anchor="middle" opacity="0.5" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase">top-level classes</text>
 
@@ -654,66 +714,7 @@ h1 { font-size: 36px; }
         <text x="515" y="1498" text-anchor="middle" dominant-baseline="central" style="fill:rgb(95,94,90);font-size:12px">SPARQL query</text>
       </g>
 
-      <!-- ═══════════════════════════════════════════
-           CONNECTORS — named colour markers, explicit stroke colours
-           ═══════════════════════════════════════════ -->
-      <g id="connectors" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <!-- Failure mode class → failure instances -->
-        <line x1="462" y1="100" x2="462" y2="220" stroke="#993d1d" stroke-width="0.7" opacity="0.35" stroke-dasharray="3,2"/>
-        <line x1="50" y1="220" x2="630" y2="220" stroke="#993d1d" stroke-width="0.7" opacity="0.35" stroke-dasharray="3,2"/>
-        <line x1="100" y1="220" x2="100" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
-        <line x1="220" y1="220" x2="220" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
-        <line x1="340" y1="220" x2="340" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
-        <line x1="460" y1="220" x2="460" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
-        <line x1="580" y1="220" x2="580" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
 
-        <!-- Information object class → corpus artefacts -->
-        <line x1="340" y1="178" x2="340" y2="320" stroke="#185fa5" stroke-width="0.7" opacity="0.3" stroke-dasharray="3,2"/>
-        <line x1="50" y1="998" x2="620" y2="998" stroke="#534ab7" stroke-width="0.7" opacity="0.3" stroke-dasharray="3,2"/>
-        <line x1="131" y1="998" x2="131" y2="1008" stroke="#534ab7" stroke-width="0.7" opacity="0.35" marker-end="url(#arrow-purple)"/>
-        <line x1="323" y1="998" x2="323" y2="1008" stroke="#534ab7" stroke-width="0.7" opacity="0.35" marker-end="url(#arrow-purple)"/>
-        <line x1="515" y1="998" x2="515" y2="1008" stroke="#534ab7" stroke-width="0.7" opacity="0.35" marker-end="url(#arrow-purple)"/>
-        <line x1="131" y1="998" x2="131" y2="1086" stroke="#534ab7" stroke-width="0.7" opacity="0.25" stroke-dasharray="3,2"/>
-        <line x1="323" y1="998" x2="323" y2="1086" stroke="#534ab7" stroke-width="0.7" opacity="0.25" stroke-dasharray="3,2"/>
-        <line x1="515" y1="998" x2="515" y2="1086" stroke="#534ab7" stroke-width="0.7" opacity="0.25" stroke-dasharray="3,2"/>
-
-        <!-- Channels → Audiences -->
-        <line x1="96" y1="546" x2="218" y2="592" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
-        <line x1="96" y1="546" x2="340" y2="592" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
-        <line x1="218" y1="546" x2="218" y2="670" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
-        <line x1="218" y1="546" x2="340" y2="670" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
-        <line x1="340" y1="546" x2="280" y2="748" stroke="#2fb882" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-green)"/>
-        <line x1="462" y1="546" x2="280" y2="826" stroke="#2fb882" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-green)"/>
-        <line x1="584" y1="546" x2="280" y2="904" stroke="#c9881f" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-amber)"/>
-
-        <!-- Audiences → Corpus artefacts -->
-        <line x1="218" y1="648" x2="131" y2="1008" stroke="#534ab7" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-purple)"/>
-        <line x1="340" y1="648" x2="323" y2="1008" stroke="#534ab7" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-purple)"/>
-        <line x1="218" y1="726" x2="515" y2="1008" stroke="#185fa5" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-blue)"/>
-        <line x1="340" y1="726" x2="323" y2="1086" stroke="#185fa5" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-blue)"/>
-        <line x1="280" y1="804" x2="131" y2="1086" stroke="#3b6d11" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-green)"/>
-        <line x1="280" y1="882" x2="515" y2="1086" stroke="#0f6e56" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-green)"/>
-        <line x1="280" y1="960" x2="131" y2="1268" stroke="#854f0b" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-amber)"/>
-
-        <!-- Corpus artefacts → Campaign nodes -->
-        <line x1="128" y1="1064" x2="128" y2="1190" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
-        <line x1="320" y1="1064" x2="320" y2="1190" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
-        <line x1="512" y1="1064" x2="512" y2="1190" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
-        <line x1="134" y1="1142" x2="134" y2="1190" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
-        <line x1="326" y1="1142" x2="326" y2="1268" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
-        <line x1="515" y1="1142" x2="227" y2="1346" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
-
-        <!-- Campaign rows chain -->
-        <line x1="131" y1="1246" x2="131" y2="1268" stroke="#2fb882" stroke-width="0.8" opacity="0.4" marker-end="url(#arrow-green)"/>
-        <line x1="323" y1="1246" x2="323" y2="1268" stroke="#2fb882" stroke-width="0.8" opacity="0.4" marker-end="url(#arrow-green)"/>
-        <line x1="515" y1="1246" x2="515" y2="1268" stroke="#2fb882" stroke-width="0.8" opacity="0.4" marker-end="url(#arrow-green)"/>
-
-        <!-- Campaign nodes → Economic mechanism -->
-        <line x1="131" y1="1324" x2="131" y2="1454" stroke="#c9881f" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-amber)"/>
-        <line x1="323" y1="1324" x2="323" y2="1454" stroke="#534ab7" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-purple)"/>
-        <line x1="515" y1="1324" x2="515" y2="1454" stroke="#534ab7" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-purple)"/>
-        <line x1="227" y1="1402" x2="131" y2="1454" stroke="#c9881f" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-amber)"/>
-      </g>
 
       <!-- ── legend ── -->
       <text x="340" y="1556" text-anchor="middle" opacity="0.5" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase">legend</text>
