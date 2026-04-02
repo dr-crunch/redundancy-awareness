@@ -8,11 +8,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <meta name="description" content="Deontological Differences — the ontology of dissemination. How the Meinhardt Initiative corpus reaches each of its audiences: legal, civic, academic, institutional, EU, media." />
-<meta property="og:title" content="Meinhardt Initiative · Epistemological Audit · Interregnum Nullificans" />
+<meta property="og:title" content="Meinhardt Initiative · Deontological Differences · Interregnum Nullificans" />
 <meta property="og:description" content="How the Meinhardt Initiative corpus reaches each of its audiences: legal, civic, academic, institutional, EU, media." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://dr-crunch.github.io/redundancy-awareness/deontological-differences.html" />
-<meta property="og:site_name" content="Deontological Differences — the ontology of dissemination. " />
+<meta property="og:site_name" content="Deontological Differences — the ontology of dissemination." />
 <meta property="og:image" content="https://dr-crunch.github.io/redundancy-awareness/og-image-deontology.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -183,7 +183,7 @@ border-radius: 6px; padding: 24px 16px; overflow-x: auto;
 }
 .svg-container svg { display: block; max-width: 100%; height: auto; }
 .svg-container g[data-href] { cursor: pointer; transition: opacity 0.15s; }
-.svg-container g[data-href]:hover { opacity: 0.82; filter: brightness(1.15); }
+.svg-container g[data-href]:hover { opacity: 0.82; filter: brightness(1.12); }
 .axiom-bar {
 position: relative; z-index: 1; max-width: 960px; margin: 0 auto;
 padding: 40px 32px; border-bottom: 1px solid var(--rule);
@@ -261,625 +261,586 @@ h1 { font-size: 36px; }
 </style>
 </head>
 <body>
+
 <div class="alert-strip">
-<div class="alert-strip-text">
-Deontological Differences<span>·</span>Ontology of Dissemination<span>·</span>Meinhardt Initiative<span>·</span>March 2026
+  <div class="alert-strip-text">
+    Deontological Differences<span>·</span>Ontology of Dissemination<span>·</span>Meinhardt Initiative<span>·</span>March 2026
+  </div>
+  <div class="hot-buttons">
+    <a href="https://dr-crunch.github.io/nullification-loops/" class="btn btn-green" target="_blank" rel="noopener">
+      <span>◎</span> Main Record
+    </a>
+    <!-- FIX: was github.com/dr-crunch/redundancy-awareness/epistemological-audit (repo path, not pages path) -->
+    <a href="https://dr-crunch.github.io/redundancy-awareness/epistemological-audit" class="btn btn-purple" target="_blank" rel="noopener">
+      <span>✦</span> Epistemological Audit
+    </a>
+  </div>
 </div>
-<div class="hot-buttons">
-<a href="https://dr-crunch.github.io/nullification-loops/" class="btn btn-green" target="_blank" rel="noopener">
-<span>◎</span> Main Record
-</a>
-<a href="https://github.com/dr-crunch/redundancy-awareness/epistemological-audit" class="btn btn-purple">
-<span>✦</span> Epistemological Audit
-</a>
-</div>
-</div>
+
 <header>
-<div class="header-eyebrow fade-up">Meinhardt Initiative · Ontological Layer · March 2026</div>
-<h1 class="fade-up">Deontological <em>Differences</em></h1>
-<div class="header-subtitle fade-up">The ontology of dissemination — who receives what, through which channel, under which obligation</div>
-<p class="header-lede fade-up">
-Dissemination is not neutral broadcast. Each audience — legal practitioner, EU institution, journalist, civic petitioner, academic researcher — receives a different slice of the corpus through a different channel, under a different institutional obligation. The OWL 2 ontology formalises this: hashtags become classes, channels become properties, obligations become axioms. The graph below maps every dissemination pathway derived from the corpus, structured as a machine-readable institutional critique.
-</p>
-<div class="header-meta fade-up">
-<div class="meta-item"><span class="meta-label">Ontology</span><span class="meta-value purple">OWL 2 DL</span></div>
-<div class="meta-item"><span class="meta-label">Serialisation</span><span class="meta-value">RDF / Turtle</span></div>
-<div class="meta-item"><span class="meta-label">Graph schema</span><span class="meta-value">Directed · Labelled</span></div>
-<div class="meta-item"><span class="meta-label">Corpus</span><span class="meta-value">2006 – 2026</span></div>
-<div class="meta-item"><span class="meta-label">Hard deadline</span><span class="meta-value live">July 1st, 2026</span></div>
-</div>
+  <div class="header-eyebrow fade-up">Meinhardt Initiative · Ontological Layer · March 2026</div>
+  <h1 class="fade-up">Deontological <em>Differences</em></h1>
+  <div class="header-subtitle fade-up">The ontology of dissemination — who receives what, through which channel, under which obligation</div>
+  <p class="header-lede fade-up">
+    Dissemination is not neutral broadcast. Each audience — legal practitioner, EU institution, journalist, civic petitioner, academic researcher — receives a different slice of the corpus through a different channel, under a different institutional obligation. The OWL 2 ontology formalises this: hashtags become classes, channels become properties, obligations become axioms. The graph below maps every dissemination pathway derived from the corpus, structured as a machine-readable institutional critique.
+  </p>
+  <div class="header-meta fade-up">
+    <div class="meta-item"><span class="meta-label">Ontology</span><span class="meta-value purple">OWL 2 DL</span></div>
+    <div class="meta-item"><span class="meta-label">Serialisation</span><span class="meta-value">RDF / Turtle</span></div>
+    <div class="meta-item"><span class="meta-label">Graph schema</span><span class="meta-value">Directed · Labelled</span></div>
+    <div class="meta-item"><span class="meta-label">Corpus</span><span class="meta-value">2006 – 2026</span></div>
+    <div class="meta-item"><span class="meta-label">Hard deadline</span><span class="meta-value live">July 1st, 2026</span></div>
+  </div>
 </header>
+
 <div class="machol">
-<div class="machol-line"></div>
-<div class="machol-body">
-<blockquote>Not: "They ignored me." But: "This actor instantiates a repeatable failure class under defined conditions."</blockquote>
-<div class="machol-attribution">— Ontological restatement · Meinhardt Initiative corpus · March 2026</div>
-<p class="machol-note">
-Formalising the hashtags as an ontology converts the work from narrative argument into machine-readable institutional critique. Each claim becomes a class, each case an instance, each causal relationship a defined property. The dissemination graph that follows shows how those classes reach each audience — and what obligation attaches on arrival.
-</p>
+  <div class="machol-line"></div>
+  <div class="machol-body">
+    <blockquote>Not: "They ignored me." But: "This actor instantiates a repeatable failure class under defined conditions."</blockquote>
+    <div class="machol-attribution">— Ontological restatement · Meinhardt Initiative corpus · March 2026</div>
+    <p class="machol-note">
+      Formalising the hashtags as an ontology converts the work from narrative argument into machine-readable institutional critique. Each claim becomes a class, each case an instance, each causal relationship a defined property. The dissemination graph that follows shows how those classes reach each audience — and what obligation attaches on arrival.
+    </p>
+  </div>
 </div>
-</div>
+
 <section class="hypotheses">
-<div class="section-label">Five deontological differences — the same corpus, five distinct obligations on receipt</div>
-<div class="hyp-grid">
-<div class="hyp-card" data-letter="I">
-<div class="hyp-title">I · Legal Channel</div>
-<div class="hyp-body">Courts, ombudsmen, and pre-litigation notices receive the corpus as evidence. The obligation on receipt is procedural: reasons must be given for any disposal. Silence is no longer available as a response. Each act becomes independently reviewable.</div>
-<div class="hyp-remedy">→ :violates :RightToBeHeard · :triggers :Maladministration</div>
-</div>
-<div class="hyp-card" data-letter="II">
-<div class="hyp-title">II · EU / Institutional Channel</div>
-<div class="hyp-body">European Ombudsman, CJEU, PETI, Défenseur des Droits, and the Council Presidency receive the corpus as a Member State failure record. The obligation is treaty-grounded. Ireland's assumption of the Presidency on 1 July 2026 makes continued silence structurally costly.</div>
-<div class="hyp-remedy">→ :exhibitsFailure :NullificationLoop · Art. 4(3) TEU</div>
-</div>
-<div class="hyp-card" data-letter="III">
-<div class="hyp-title">III · Academic / Research Channel</div>
-<div class="hyp-body">The corpus reaches governance researchers, O.R. methodologists, and cybernetics scholars as a live case study of Nullification Loop dynamics and Viable System Model failure. Bateson's deutero-binding made empirically visible. The obligation here is epistemic: the data must be engaged, not filed.</div>
-<div class="hyp-remedy">→ :documents :StateCapacityFailure · Beer/VSM · Bateson</div>
-</div>
-<div class="hyp-card" data-letter="IV">
-<div class="hyp-title">IV · Civic / Petition Channel</div>
-<div class="hyp-body">Citizens, councillors, TDs, MEPs, and civic petitioners receive the corpus as a public record of institutional avoidance. The obligation is democratic: elected representatives who are formally notified cannot subsequently claim ignorance. Receipt creates a duty of enquiry.</div>
-<div class="hyp-remedy">→ :amplifies :CivicSignal · Art. 15.10 Bunreacht</div>
-</div>
-<div class="hyp-card" data-letter="V">
-<div class="hyp-title">V · Media / Press Channel</div>
-<div class="hyp-body">Journalists and media investigators receive the corpus as a documented, timestamped, CC0 evidentiary record. Every claim is grounded; every reference number is real. The obligation is evidential: the materials withstand scrutiny. Signal-to-silence timeline is publication-ready.</div>
-<div class="hyp-remedy">→ :suppresses :CivicSignal · :documents :DesignedForgetting</div>
-</div>
-</div>
+  <div class="section-label">Five deontological differences — the same corpus, five distinct obligations on receipt</div>
+  <div class="hyp-grid">
+    <div class="hyp-card" data-letter="I">
+      <div class="hyp-title">I · Legal Channel</div>
+      <div class="hyp-body">Courts, ombudsmen, and pre-litigation notices receive the corpus as evidence. The obligation on receipt is procedural: reasons must be given for any disposal. Silence is no longer available as a response. Each act becomes independently reviewable.</div>
+      <div class="hyp-remedy">→ :violates :RightToBeHeard · :triggers :Maladministration</div>
+    </div>
+    <div class="hyp-card" data-letter="II">
+      <div class="hyp-title">II · EU / Institutional Channel</div>
+      <div class="hyp-body">European Ombudsman, CJEU, PETI, Défenseur des Droits, and the Council Presidency receive the corpus as a Member State failure record. The obligation is treaty-grounded. Ireland's assumption of the Presidency on 1 July 2026 makes continued silence structurally costly.</div>
+      <div class="hyp-remedy">→ :exhibitsFailure :NullificationLoop · Art. 4(3) TEU</div>
+    </div>
+    <div class="hyp-card" data-letter="III">
+      <div class="hyp-title">III · Academic / Research Channel</div>
+      <div class="hyp-body">The corpus reaches governance researchers, O.R. methodologists, and cybernetics scholars as a live case study of Nullification Loop dynamics and Viable System Model failure. Bateson's deutero-binding made empirically visible. The obligation here is epistemic: the data must be engaged, not filed.</div>
+      <div class="hyp-remedy">→ :documents :StateCapacityFailure · Beer/VSM · Bateson</div>
+    </div>
+    <div class="hyp-card" data-letter="IV">
+      <div class="hyp-title">IV · Civic / Petition Channel</div>
+      <div class="hyp-body">Citizens, councillors, TDs, MEPs, and civic petitioners receive the corpus as a public record of institutional avoidance. The obligation is democratic: elected representatives who are formally notified cannot subsequently claim ignorance. Receipt creates a duty of enquiry.</div>
+      <div class="hyp-remedy">→ :amplifies :CivicSignal · Art. 15.10 Bunreacht</div>
+    </div>
+    <div class="hyp-card" data-letter="V">
+      <div class="hyp-title">V · Media / Press Channel</div>
+      <div class="hyp-body">Journalists and media investigators receive the corpus as a documented, timestamped, CC0 evidentiary record. Every claim is grounded; every reference number is real. The obligation is evidential: the materials withstand scrutiny. Signal-to-silence timeline is publication-ready.</div>
+      <div class="hyp-remedy">→ :suppresses :CivicSignal · :documents :DesignedForgetting</div>
+    </div>
+  </div>
 </section>
+
 <div class="axiom-bar">
-<div class="axiom-rule"></div>
-<div class="axiom-body">
-<div class="axiom-label">OWL Axiom 1 — the master chain</div>
-<div class="axiom-text">AdministrativeProcess AND ignores some Submission → producesFailure some NullificationLoop → triggers some Maladministration → violates some RightToBeHeard.</div>
-<div class="axiom-plain">This is the core causal chain the ontology encodes. Dissemination routes it to five different audiences simultaneously. The legal channel uses it as a certiorari target. The EU channel uses it as a Member State failure record. The civic channel uses it as a petition ground. The academic channel uses it as a cybernetic case study. The media channel uses it as an investigation thread. Same chain. Five obligations.</div>
+  <div class="axiom-rule"></div>
+  <div class="axiom-body">
+    <div class="axiom-label">OWL Axiom 1 — the master chain</div>
+    <div class="axiom-text">AdministrativeProcess AND ignores some Submission → producesFailure some NullificationLoop → triggers some Maladministration → violates some RightToBeHeard.</div>
+    <div class="axiom-plain">This is the core causal chain the ontology encodes. Dissemination routes it to five different audiences simultaneously. The legal channel uses it as a certiorari target. The EU channel uses it as a Member State failure record. The civic channel uses it as a petition ground. The academic channel uses it as a cybernetic case study. The media channel uses it as an investigation thread. Same chain. Five obligations.</div>
+  </div>
 </div>
-</div>
+
 <section class="map-section">
-<div class="map-header">
-<div class="map-title">Dissemination Ontology Graph</div>
-<div class="map-note">OWL 2 DL · click nodes to navigate · hover for description</div>
-</div>
-<div class="svg-container" id="svgContainer">
-<svg width="100%" viewBox="0 0 680 2100" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-  <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</marker>
-</defs>
+  <div class="map-header">
+    <div class="map-title">Dissemination Ontology Graph</div>
+    <div class="map-note">OWL 2 DL · click nodes to navigate · hover for description</div>
+  </div>
+  <div class="svg-container" id="svgContainer">
+    <svg width="100%" viewBox="0 0 680 2100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- named colour markers used throughout — explicit stroke colours, cross-browser safe -->
+        <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M2 1L8 5L2 9" fill="none" stroke="#4a4540" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </marker>
+        <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M2 1L8 5L2 9" fill="none" stroke="#185fa5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </marker>
+        <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M2 1L8 5L2 9" fill="none" stroke="#0f6e56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </marker>
+        <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M2 1L8 5L2 9" fill="none" stroke="#854f0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </marker>
+        <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M2 1L8 5L2 9" fill="none" stroke="#993d1d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </marker>
+        <marker id="arrow-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M2 1L8 5L2 9" fill="none" stroke="#534ab7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </marker>
+      </defs>
 
-<!-- ── top-level classes ── -->
-<text x="340" y="30" text-anchor="middle" opacity="0.5" style="fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto">top-level classes</text>
+      <!-- ── top-level classes ── -->
+      <text x="340" y="30" text-anchor="middle" opacity="0.5" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase">top-level classes</text>
 
-<g title="The OWL ontology root — all classes and individuals belong here" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="44" y="44" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(238, 237, 254);stroke:rgb(83, 74, 183);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="96" y="66" text-anchor="middle" dominant-baseline="central">🌐</text>
-  <text x="96" y="88" text-anchor="middle" dominant-baseline="central" style="fill:rgb(83, 74, 183);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Root</text>
-</g>
-<g title="Institutional actors: state bodies and named individuals" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="166" y="44" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225, 245, 238);stroke:rgb(15, 110, 86);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="218" y="66" text-anchor="middle" dominant-baseline="central">🏛️</text>
-  <text x="218" y="88" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15, 110, 86);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Actor</text>
-</g>
-<g title="Administrative, operational and failure processes" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="288" y="44" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225, 245, 238);stroke:rgb(15, 110, 86);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="340" y="66" text-anchor="middle" dominant-baseline="central">⚙️</text>
-  <text x="340" y="88" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15, 110, 86);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Process</text>
-</g>
-<g title="Named failure patterns: procedural and structural breakdowns" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="410" y="44" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(250, 236, 231);stroke:rgb(153, 60, 29);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="462" y="66" text-anchor="middle" dominant-baseline="central">⚠️</text>
-  <text x="462" y="88" text-anchor="middle" dominant-baseline="central" style="fill:rgb(153, 60, 29);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Failure mode</text>
-</g>
-<g title="Rights, obligations and violations as legal constructs" data-href="https://github.com/dr-wojak/legal" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="532" y="44" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230, 241, 251);stroke:rgb(24, 95, 165);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="584" y="66" text-anchor="middle" dominant-baseline="central">⚖️</text>
-  <text x="584" y="88" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24, 95, 165);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Legal construct</text>
-</g>
+      <!-- Root: links to main nullification-loops hub -->
+      <g title="The OWL ontology root — all classes and individuals belong here" data-href="https://github.com/dr-crunch/nullification-loops">
+        <rect x="44" y="44" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(238,237,254);stroke:rgb(83,74,183)"/>
+        <text style="font-size:20px" x="96" y="66" text-anchor="middle" dominant-baseline="central">🌐</text>
+        <text x="96" y="88" text-anchor="middle" dominant-baseline="central" style="fill:rgb(83,74,183);font-size:12px">Root</text>
+      </g>
+      <!-- Actor: links to nullification-loops (actors documented there) -->
+      <g title="Institutional actors: state bodies and named individuals" data-href="https://github.com/dr-crunch/nullification-loops">
+        <rect x="166" y="44" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225,245,238);stroke:rgb(15,110,86)"/>
+        <text style="font-size:20px" x="218" y="66" text-anchor="middle" dominant-baseline="central">🏛️</text>
+        <text x="218" y="88" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15,110,86);font-size:12px">Actor</text>
+      </g>
+      <!-- Process: links to nullification-loops (processes documented there) -->
+      <g title="Administrative, operational and failure processes" data-href="https://github.com/dr-crunch/nullification-loops">
+        <rect x="288" y="44" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225,245,238);stroke:rgb(15,110,86)"/>
+        <text style="font-size:20px" x="340" y="66" text-anchor="middle" dominant-baseline="central">⚙️</text>
+        <text x="340" y="88" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15,110,86);font-size:12px">Process</text>
+      </g>
+      <!-- Failure mode: links to nullification-loops landing -->
+      <g title="Named failure patterns: procedural and structural breakdowns" data-href="https://dr-crunch.github.io/nullification-loops/">
+        <rect x="410" y="44" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(250,236,231);stroke:rgb(153,60,29)"/>
+        <text style="font-size:20px" x="462" y="66" text-anchor="middle" dominant-baseline="central">⚠️</text>
+        <text x="462" y="88" text-anchor="middle" dominant-baseline="central" style="fill:rgb(153,60,29);font-size:12px">Failure mode</text>
+      </g>
+      <!-- Legal construct: links to legal repo -->
+      <g title="Rights, obligations and violations as legal constructs" data-href="https://github.com/dr-wojak/legal">
+        <rect x="532" y="44" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230,241,251);stroke:rgb(24,95,165)"/>
+        <text style="font-size:20px" x="584" y="66" text-anchor="middle" dominant-baseline="central">⚖️</text>
+        <text x="584" y="88" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24,95,165);font-size:12px">Legal construct</text>
+      </g>
 
-<g title="Submissions, signals and documents that carry the corpus" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="288" y="122" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230, 241, 251);stroke:rgb(24, 95, 165);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="340" y="144" text-anchor="middle" dominant-baseline="central">📄</text>
-  <text x="340" y="166" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24, 95, 165);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Information object</text>
-</g>
+      <!-- Information object: links to main repository -->
+      <g title="Submissions, signals and documents that carry the corpus" data-href="https://drive.google.com/drive/u/0/folders/12o4-OPXJ0W5E8pxF9pN-VKUeODagy17g">
+        <rect x="288" y="122" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230,241,251);stroke:rgb(24,95,165)"/>
+        <text style="font-size:20px" x="340" y="144" text-anchor="middle" dominant-baseline="central">📄</text>
+        <text x="340" y="166" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24,95,165);font-size:12px">Information object</text>
+      </g>
 
-<!-- ── failure mode instances · nullification loop ── -->
-<text x="340" y="216" text-anchor="middle" opacity="0.5" style="fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto">failure mode instances · nullification loop</text>
+      <!-- ── failure mode instances · nullification loop ── -->
+      <text x="340" y="216" text-anchor="middle" opacity="0.5" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase">failure mode instances · nullification loop</text>
 
-<!-- 5 wider boxes: width=112, gap=8, total=5×112+4×8=592, start x=44 -->
-<g title="An acknowledgement treated as though it resolves the underlying matter" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="44" y="230" width="112" height="70" rx="8" stroke-width="0.5" style="fill:rgb(250, 236, 231);stroke:rgb(153, 60, 29);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:26px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:26px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="100" y="256" text-anchor="middle" dominant-baseline="central">📬</text>
-  <text style="font-size:10px;font-family:var(--font-sans);fill:rgb(153, 60, 29);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:10px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="100" y="284" text-anchor="middle" dominant-baseline="central">Acknowledgement</text>
-  <text style="font-size:10px;font-family:var(--font-sans);fill:rgb(153, 60, 29);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:10px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="100" y="296" text-anchor="middle" dominant-baseline="central">as closure</text>
-</g>
-<g title="Responsibility redirected until no jurisdiction remains" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="164" y="230" width="112" height="70" rx="8" stroke-width="0.5" style="fill:rgb(250, 236, 231);stroke:rgb(153, 60, 29);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:26px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:26px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="220" y="256" text-anchor="middle" dominant-baseline="central">🔀</text>
-  <text style="font-size:10px;font-family:var(--font-sans);fill:rgb(153, 60, 29);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:10px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="220" y="284" text-anchor="middle" dominant-baseline="central">Remit</text>
-  <text style="font-size:10px;font-family:var(--font-sans);fill:rgb(153, 60, 29);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:10px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="220" y="296" text-anchor="middle" dominant-baseline="central">displacement</text>
-</g>
-<g title="Deferral without any stated destination or timeline" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="284" y="230" width="112" height="70" rx="8" stroke-width="0.5" style="fill:rgb(250, 236, 231);stroke:rgb(153, 60, 29);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:26px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:26px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="340" y="256" text-anchor="middle" dominant-baseline="central">⏳</text>
-  <text style="font-size:10px;font-family:var(--font-sans);fill:rgb(153, 60, 29);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:10px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="340" y="284" text-anchor="middle" dominant-baseline="central">Deferral without</text>
-  <text style="font-size:10px;font-family:var(--font-sans);fill:rgb(153, 60, 29);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:10px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="340" y="296" text-anchor="middle" dominant-baseline="central">destination</text>
-</g>
-<g title="A claim of sufficiency made without independent audit" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="404" y="230" width="112" height="70" rx="8" stroke-width="0.5" style="fill:rgb(250, 236, 231);stroke:rgb(153, 60, 29);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:26px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:26px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="460" y="256" text-anchor="middle" dominant-baseline="central">🔇</text>
-  <text style="font-size:10px;font-family:var(--font-sans);fill:rgb(153, 60, 29);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:10px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="460" y="284" text-anchor="middle" dominant-baseline="central">Sufficiency</text>
-  <text style="font-size:10px;font-family:var(--font-sans);fill:rgb(153, 60, 29);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:10px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="460" y="296" text-anchor="middle" dominant-baseline="central">without audit</text>
-</g>
-<g title="Records suppressed through deliberate institutional omission" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="524" y="230" width="112" height="70" rx="8" stroke-width="0.5" style="fill:rgb(250, 236, 231);stroke:rgb(153, 60, 29);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:26px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:26px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="580" y="256" text-anchor="middle" dominant-baseline="central">🗑️</text>
-  <text style="font-size:10px;font-family:var(--font-sans);fill:rgb(153, 60, 29);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:10px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="580" y="284" text-anchor="middle" dominant-baseline="central">Record</text>
-  <text style="font-size:10px;font-family:var(--font-sans);fill:rgb(153, 60, 29);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:10px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="580" y="296" text-anchor="middle" dominant-baseline="central">suppression</text>
-</g>
+      <!-- FIX: all 5 failure mode instances now have data-href pointing to nullification-loops landing -->
+      <g title="An acknowledgement treated as though it resolves the underlying matter" data-href="https://dr-crunch.github.io/nullification-loops/">
+        <rect x="44" y="230" width="112" height="70" rx="8" stroke-width="0.5" style="fill:rgb(250,236,231);stroke:rgb(153,60,29)"/>
+        <text style="font-size:26px" x="100" y="256" text-anchor="middle" dominant-baseline="central">📬</text>
+        <text style="font-size:10px;fill:rgb(153,60,29)" x="100" y="284" text-anchor="middle" dominant-baseline="central">Acknowledgement</text>
+        <text style="font-size:10px;fill:rgb(153,60,29)" x="100" y="296" text-anchor="middle" dominant-baseline="central">as closure</text>
+      </g>
+      <g title="Responsibility redirected until no jurisdiction remains" data-href="https://dr-crunch.github.io/nullification-loops/">
+        <rect x="164" y="230" width="112" height="70" rx="8" stroke-width="0.5" style="fill:rgb(250,236,231);stroke:rgb(153,60,29)"/>
+        <text style="font-size:26px" x="220" y="256" text-anchor="middle" dominant-baseline="central">🔀</text>
+        <text style="font-size:10px;fill:rgb(153,60,29)" x="220" y="284" text-anchor="middle" dominant-baseline="central">Remit</text>
+        <text style="font-size:10px;fill:rgb(153,60,29)" x="220" y="296" text-anchor="middle" dominant-baseline="central">displacement</text>
+      </g>
+      <g title="Deferral without any stated destination or timeline" data-href="https://dr-crunch.github.io/nullification-loops/">
+        <rect x="284" y="230" width="112" height="70" rx="8" stroke-width="0.5" style="fill:rgb(250,236,231);stroke:rgb(153,60,29)"/>
+        <text style="font-size:26px" x="340" y="256" text-anchor="middle" dominant-baseline="central">⏳</text>
+        <text style="font-size:10px;fill:rgb(153,60,29)" x="340" y="284" text-anchor="middle" dominant-baseline="central">Deferral without</text>
+        <text style="font-size:10px;fill:rgb(153,60,29)" x="340" y="296" text-anchor="middle" dominant-baseline="central">destination</text>
+      </g>
+      <g title="A claim of sufficiency made without independent audit" data-href="https://dr-crunch.github.io/nullification-loops/">
+        <rect x="404" y="230" width="112" height="70" rx="8" stroke-width="0.5" style="fill:rgb(250,236,231);stroke:rgb(153,60,29)"/>
+        <text style="font-size:26px" x="460" y="256" text-anchor="middle" dominant-baseline="central">🔇</text>
+        <text style="font-size:10px;fill:rgb(153,60,29)" x="460" y="284" text-anchor="middle" dominant-baseline="central">Sufficiency</text>
+        <text style="font-size:10px;fill:rgb(153,60,29)" x="460" y="296" text-anchor="middle" dominant-baseline="central">without audit</text>
+      </g>
+      <g title="Records suppressed through deliberate institutional omission" data-href="https://dr-crunch.github.io/nullification-loops/">
+        <rect x="524" y="230" width="112" height="70" rx="8" stroke-width="0.5" style="fill:rgb(250,236,231);stroke:rgb(153,60,29)"/>
+        <text style="font-size:26px" x="580" y="256" text-anchor="middle" dominant-baseline="central">🗑️</text>
+        <text style="font-size:10px;fill:rgb(153,60,29)" x="580" y="284" text-anchor="middle" dominant-baseline="central">Record</text>
+        <text style="font-size:10px;fill:rgb(153,60,29)" x="580" y="296" text-anchor="middle" dominant-baseline="central">suppression</text>
+      </g>
 
-<!-- Causal chain label -->
-<text x="340" y="334" text-anchor="middle" opacity="0.6" style="fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.6;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto">produces failure → nullification loop → triggers → maladministration → violates → right to be heard</text>
+      <!-- Causal chain label -->
+      <text x="340" y="334" text-anchor="middle" opacity="0.6" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px">produces failure → nullification loop → triggers → maladministration → violates → right to be heard</text>
 
-<!-- ── object properties ── -->
-<text x="340" y="374" text-anchor="middle" opacity="0.5" style="fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto">object properties · dissemination relations</text>
+      <!-- ── object properties ── -->
+      <text x="340" y="374" text-anchor="middle" opacity="0.5" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase">object properties · dissemination relations</text>
 
-<g title="An actor ignores a submission — initiates the causal chain" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="44" y="388" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(241, 239, 232);stroke:rgb(95, 94, 90);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="96" y="410" text-anchor="middle" dominant-baseline="central">🙈</text>
-  <text x="96" y="432" text-anchor="middle" dominant-baseline="central" style="fill:rgb(95, 94, 90);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Ignores</text>
-</g>
-<g title="An actor suppresses an information object" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="166" y="388" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(241, 239, 232);stroke:rgb(95, 94, 90);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="218" y="410" text-anchor="middle" dominant-baseline="central">🔕</text>
-  <text x="218" y="432" text-anchor="middle" dominant-baseline="central" style="fill:rgb(95, 94, 90);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Suppresses</text>
-</g>
-<g title="A process produces a named failure mode" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="288" y="388" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(241, 239, 232);stroke:rgb(95, 94, 90);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="340" y="410" text-anchor="middle" dominant-baseline="central">💥</text>
-  <text x="340" y="432" text-anchor="middle" dominant-baseline="central" style="fill:rgb(95, 94, 90);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Produces failure</text>
-</g>
-<g title="An actor violates a legal construct such as the right to be heard" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="410" y="388" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(241, 239, 232);stroke:rgb(95, 94, 90);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="462" y="410" text-anchor="middle" dominant-baseline="central">⛔</text>
-  <text x="462" y="432" text-anchor="middle" dominant-baseline="central" style="fill:rgb(95, 94, 90);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Violates</text>
-</g>
-<g title="A campaign amplifies a civic signal into the public record" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="532" y="388" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(241, 239, 232);stroke:rgb(95, 94, 90);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="584" y="410" text-anchor="middle" dominant-baseline="central">📣</text>
-  <text x="584" y="432" text-anchor="middle" dominant-baseline="central" style="fill:rgb(95, 94, 90);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Amplifies</text>
-</g>
+      <!-- FIX: all 5 property nodes now have data-href -->
+      <g title="An actor ignores a submission — initiates the causal chain" data-href="https://dr-crunch.github.io/nullification-loops/">
+        <rect x="44" y="388" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(241,239,232);stroke:rgb(95,94,90)"/>
+        <text style="font-size:20px" x="96" y="410" text-anchor="middle" dominant-baseline="central">🙈</text>
+        <text x="96" y="432" text-anchor="middle" dominant-baseline="central" style="fill:rgb(95,94,90);font-size:12px">Ignores</text>
+      </g>
+      <g title="An actor suppresses an information object" data-href="https://dr-crunch.github.io/nullification-loops/">
+        <rect x="166" y="388" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(241,239,232);stroke:rgb(95,94,90)"/>
+        <text style="font-size:20px" x="218" y="410" text-anchor="middle" dominant-baseline="central">🔕</text>
+        <text x="218" y="432" text-anchor="middle" dominant-baseline="central" style="fill:rgb(95,94,90);font-size:12px">Suppresses</text>
+      </g>
+      <g title="A process produces a named failure mode" data-href="https://dr-crunch.github.io/nullification-loops/">
+        <rect x="288" y="388" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(241,239,232);stroke:rgb(95,94,90)"/>
+        <text style="font-size:20px" x="340" y="410" text-anchor="middle" dominant-baseline="central">💥</text>
+        <text x="340" y="432" text-anchor="middle" dominant-baseline="central" style="fill:rgb(95,94,90);font-size:12px">Produces failure</text>
+      </g>
+      <g title="An actor violates a legal construct such as the right to be heard" data-href="https://github.com/dr-wojak/legal">
+        <rect x="410" y="388" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(241,239,232);stroke:rgb(95,94,90)"/>
+        <text style="font-size:20px" x="462" y="410" text-anchor="middle" dominant-baseline="central">⛔</text>
+        <text x="462" y="432" text-anchor="middle" dominant-baseline="central" style="fill:rgb(95,94,90);font-size:12px">Violates</text>
+      </g>
+      <g title="A campaign amplifies a civic signal into the public record" data-href="https://github.com/dr-wojak/public-relations">
+        <rect x="532" y="388" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(241,239,232);stroke:rgb(95,94,90)"/>
+        <text style="font-size:20px" x="584" y="410" text-anchor="middle" dominant-baseline="central">📣</text>
+        <text x="584" y="432" text-anchor="middle" dominant-baseline="central" style="fill:rgb(95,94,90);font-size:12px">Amplifies</text>
+      </g>
 
-<!-- ── dissemination channels ── -->
-<text x="340" y="476" text-anchor="middle" opacity="0.5" style="fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto">dissemination channels · five deontological routes</text>
+      <!-- ── dissemination channels ── -->
+      <text x="340" y="476" text-anchor="middle" opacity="0.5" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase">dissemination channels · five deontological routes</text>
 
-<g title="Courts, ombudsmen and pre-litigation notices — receipt creates a duty to give reasons" data-href="https://dr-crunch.github.io/nullification-loops/" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="44" y="490" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230, 241, 251);stroke:rgb(24, 95, 165);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="96" y="512" text-anchor="middle" dominant-baseline="central">🔨</text>
-  <text x="96" y="534" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24, 95, 165);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Legal</text>
-</g>
-<g title="European Ombudsman, CJEU, PETI and the Council Presidency — treaty-grounded obligation" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="166" y="490" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230, 241, 251);stroke:rgb(24, 95, 165);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="218" y="512" text-anchor="middle" dominant-baseline="central">🇪🇺</text>
-  <text x="218" y="534" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24, 95, 165);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">EU / Institutional</text>
-</g>
-<g title="Governance researchers and cybernetics scholars — the corpus as a live case study" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="288" y="490" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(234, 243, 222);stroke:rgb(59, 109, 17);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="340" y="512" text-anchor="middle" dominant-baseline="central">🎓</text>
-  <text x="340" y="534" text-anchor="middle" dominant-baseline="central" style="fill:rgb(59, 109, 17);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Academic</text>
-</g>
-<g title="Citizens, TDs, MEPs and civic petitioners — formal notification creates a duty of enquiry" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="410" y="490" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225, 245, 238);stroke:rgb(15, 110, 86);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="462" y="512" text-anchor="middle" dominant-baseline="central">🗳️</text>
-  <text x="462" y="534" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15, 110, 86);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Civic / Petition</text>
-</g>
-<g title="Journalists and media investigators — CC0 timestamped record, publication-ready" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="532" y="490" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(250, 238, 218);stroke:rgb(133, 79, 11);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="584" y="512" text-anchor="middle" dominant-baseline="central">📰</text>
-  <text x="584" y="534" text-anchor="middle" dominant-baseline="central" style="fill:rgb(133, 79, 11);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Media / Press</text>
-</g>
+      <g title="Courts, ombudsmen and pre-litigation notices — receipt creates a duty to give reasons" data-href="https://dr-crunch.github.io/nullification-loops/">
+        <rect x="44" y="490" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230,241,251);stroke:rgb(24,95,165)"/>
+        <text style="font-size:20px" x="96" y="512" text-anchor="middle" dominant-baseline="central">🔨</text>
+        <text x="96" y="534" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24,95,165);font-size:12px">Legal</text>
+      </g>
+      <g title="European Ombudsman, CJEU, PETI and the Council Presidency — treaty-grounded obligation" data-href="https://drive.google.com/file/d/1jD9Rmrlgp1wB0hqDqNIRNb8n3SwNBrCk">
+        <rect x="166" y="490" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230,241,251);stroke:rgb(24,95,165)"/>
+        <text style="font-size:20px" x="218" y="512" text-anchor="middle" dominant-baseline="central">🇪🇺</text>
+        <text x="218" y="534" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24,95,165);font-size:12px">EU / Institutional</text>
+      </g>
+      <g title="Governance researchers and cybernetics scholars — the corpus as a live case study" data-href="https://github.com/dr-wojak/econ">
+        <rect x="288" y="490" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(234,243,222);stroke:rgb(59,109,17)"/>
+        <text style="font-size:20px" x="340" y="512" text-anchor="middle" dominant-baseline="central">🎓</text>
+        <text x="340" y="534" text-anchor="middle" dominant-baseline="central" style="fill:rgb(59,109,17);font-size:12px">Academic</text>
+      </g>
+      <g title="Citizens, TDs, MEPs and civic petitioners — formal notification creates a duty of enquiry" data-href="https://dr-wojak.github.io/meinhardt-initiative-public-flyer">
+        <rect x="410" y="490" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225,245,238);stroke:rgb(15,110,86)"/>
+        <text style="font-size:20px" x="462" y="512" text-anchor="middle" dominant-baseline="central">🗳️</text>
+        <text x="462" y="534" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15,110,86);font-size:12px">Civic / Petition</text>
+      </g>
+      <g title="Journalists and media investigators — CC0 timestamped record, publication-ready" data-href="https://github.com/dr-wojak/press">
+        <rect x="532" y="490" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(250,238,218);stroke:rgb(133,79,11)"/>
+        <text style="font-size:20px" x="584" y="512" text-anchor="middle" dominant-baseline="central">📰</text>
+        <text x="584" y="534" text-anchor="middle" dominant-baseline="central" style="fill:rgb(133,79,11);font-size:12px">Media / Press</text>
+      </g>
 
-<!-- ── audience instances ── -->
-<text x="340" y="578" text-anchor="middle" opacity="0.5" style="fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto">audience instances · named bodies</text>
+      <!-- ── audience instances ── -->
+      <text x="340" y="578" text-anchor="middle" opacity="0.5" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase">audience instances · named bodies</text>
 
-<g title="The High Court — mandamus proceedings, judicial review" data-href="https://drive.google.com/file/d/1tMi94twUL5FVuZ5EmBL_GI1WJ0uE8Vwx" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="166" y="592" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230, 241, 251);stroke:rgb(24, 95, 165);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="218" y="614" text-anchor="middle" dominant-baseline="central">🏛️</text>
-  <text x="218" y="636" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24, 95, 165);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">High Court</text>
-</g>
-<g title="Irish Ombudsman — administrative review of state conduct" data-href="https://drive.google.com/file/d/1tMi94twUL5FVuZ5EmBL_GI1WJ0uE8Vwx" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="288" y="592" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230, 241, 251);stroke:rgb(24, 95, 165);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="340" y="614" text-anchor="middle" dominant-baseline="central">🧑‍⚖️</text>
-  <text x="340" y="636" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24, 95, 165);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Ombudsman</text>
-</g>
+      <!-- High Court: pre-litigation notice doc -->
+      <g title="The High Court — mandamus proceedings, judicial review" data-href="https://drive.google.com/file/d/1tMi94twUL5FVuZ5EmBL_GI1WJ0uE8Vwx">
+        <rect x="166" y="592" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230,241,251);stroke:rgb(24,95,165)"/>
+        <text style="font-size:20px" x="218" y="614" text-anchor="middle" dominant-baseline="central">🏛️</text>
+        <text x="218" y="636" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24,95,165);font-size:12px">High Court</text>
+      </g>
+      <!-- FIX: Irish Ombudsman now has its own distinct href (Tairiscint — the formal complaint doc) -->
+      <g title="Irish Ombudsman — administrative review of state conduct" data-href="https://drive.google.com/file/d/1-vETFPyMCzLWE1vm4T6Xse29cjC_SjUC">
+        <rect x="288" y="592" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230,241,251);stroke:rgb(24,95,165)"/>
+        <text style="font-size:20px" x="340" y="614" text-anchor="middle" dominant-baseline="central">🧑‍⚖️</text>
+        <text x="340" y="636" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24,95,165);font-size:12px">Ombudsman</text>
+      </g>
 
-<g title="European Ombudsman — Article 228 TFEU, EU institutional maladministration" data-href="https://drive.google.com/file/d/1rVCRvUs91lYDAoo_YIfxpAAsYzEAMMxm" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="166" y="670" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230, 241, 251);stroke:rgb(24, 95, 165);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="218" y="692" text-anchor="middle" dominant-baseline="central">🇪🇺</text>
-  <text x="218" y="714" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24, 95, 165);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">EU Ombudsman</text>
-</g>
-<g title="PETI — European Parliament Committee on Petitions, Article 227 TFEU" data-href="https://drive.google.com/file/d/1jD9Rmrlgp1wB0hqDqNIRNb8n3SwNBrCk" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="288" y="670" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230, 241, 251);stroke:rgb(24, 95, 165);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="340" y="692" text-anchor="middle" dominant-baseline="central">📋</text>
-  <text x="340" y="714" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24, 95, 165);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">PETI</text>
-</g>
+      <!-- EU Ombudsman -->
+      <g title="European Ombudsman — Article 228 TFEU, EU institutional maladministration" data-href="https://drive.google.com/file/d/1rVCRvUs91lYDAoo_YIfxpAAsYzEAMMxm">
+        <rect x="166" y="670" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230,241,251);stroke:rgb(24,95,165)"/>
+        <text style="font-size:20px" x="218" y="692" text-anchor="middle" dominant-baseline="central">🇪🇺</text>
+        <text x="218" y="714" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24,95,165);font-size:12px">EU Ombudsman</text>
+      </g>
+      <!-- PETI -->
+      <g title="PETI — European Parliament Committee on Petitions, Article 227 TFEU" data-href="https://drive.google.com/file/d/1jD9Rmrlgp1wB0hqDqNIRNb8n3SwNBrCk">
+        <rect x="288" y="670" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230,241,251);stroke:rgb(24,95,165)"/>
+        <text style="font-size:20px" x="340" y="692" text-anchor="middle" dominant-baseline="central">📋</text>
+        <text x="340" y="714" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24,95,165);font-size:12px">PETI</text>
+      </g>
 
-<g title="Operations Research, Viable System Model and Bateson cybernetics — empirical engagement required" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="228" y="748" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(234, 243, 222);stroke:rgb(59, 109, 17);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="280" y="770" text-anchor="middle" dominant-baseline="central">🔬</text>
-  <text x="280" y="792" text-anchor="middle" dominant-baseline="central" style="fill:rgb(59, 109, 17);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Research</text>
-</g>
+      <!-- FIX: Research node now has data-href (was missing entirely) -->
+      <g title="Operations Research, Viable System Model and Bateson cybernetics — empirical engagement required" data-href="https://github.com/dr-wojak/econ">
+        <rect x="228" y="748" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(234,243,222);stroke:rgb(59,109,17)"/>
+        <text style="font-size:20px" x="280" y="770" text-anchor="middle" dominant-baseline="central">🔬</text>
+        <text x="280" y="792" text-anchor="middle" dominant-baseline="central" style="fill:rgb(59,109,17);font-size:12px">Research</text>
+      </g>
 
-<g title="Citizens and civic petitioners — Article 15.10 Bunreacht na hÉireann" data-href="https://dr-wojak.github.io/meinhardt-initiative-public-flyer" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="228" y="826" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225, 245, 238);stroke:rgb(15, 110, 86);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="280" y="848" text-anchor="middle" dominant-baseline="central">🗳️</text>
-  <text x="280" y="870" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15, 110, 86);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Citizens</text>
-</g>
+      <!-- Citizens -->
+      <g title="Citizens and civic petitioners — Article 15.10 Bunreacht na hÉireann" data-href="https://dr-wojak.github.io/meinhardt-initiative-public-flyer">
+        <rect x="228" y="826" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225,245,238);stroke:rgb(15,110,86)"/>
+        <text style="font-size:20px" x="280" y="848" text-anchor="middle" dominant-baseline="central">🗳️</text>
+        <text x="280" y="870" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15,110,86);font-size:12px">Citizens</text>
+      </g>
 
-<g title="Press and media — CC0 licensed, fully timestamped, publication-ready" data-href="https://github.com/dr-wojak/press" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="228" y="904" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(250, 238, 218);stroke:rgb(133, 79, 11);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="280" y="926" text-anchor="middle" dominant-baseline="central">📰</text>
-  <text x="280" y="948" text-anchor="middle" dominant-baseline="central" style="fill:rgb(133, 79, 11);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Press</text>
-</g>
+      <!-- Press audience -->
+      <g title="Press and media — CC0 licensed, fully timestamped, publication-ready" data-href="https://github.com/dr-wojak/press">
+        <rect x="228" y="904" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(250,238,218);stroke:rgb(133,79,11)"/>
+        <text style="font-size:20px" x="280" y="926" text-anchor="middle" dominant-baseline="central">📰</text>
+        <text x="280" y="948" text-anchor="middle" dominant-baseline="central" style="fill:rgb(133,79,11);font-size:12px">Press</text>
+      </g>
 
-<!-- ── corpus artefacts ── -->
-<text x="340" y="994" text-anchor="middle" opacity="0.5" style="fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto">corpus artefacts · information objects</text>
+      <!-- ── corpus artefacts ── -->
+      <text x="340" y="994" text-anchor="middle" opacity="0.5" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase">corpus artefacts · information objects</text>
 
-<g title="Constitutional indictment in Irish and English — the foundational document" data-href="https://drive.google.com/file/d/1-vETFPyMCzLWE1vm4T6Xse29cjC_SjUC" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="44" y="1008" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(238, 237, 254);stroke:rgb(83, 74, 183);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="131" y="1030" text-anchor="middle" dominant-baseline="central">📜</text>
-  <text x="131" y="1052" text-anchor="middle" dominant-baseline="central" style="fill:rgb(83, 74, 183);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Tairiscint Mheinhardt</text>
-</g>
-<g title="The Interregnum Nullificans — 17 legal frameworks applied to the corpus" data-href="https://drive.google.com/file/d/1YB7so7pzTg7uZFFir7nKWxB5wZZeSEX3" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="236" y="1008" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(238, 237, 254);stroke:rgb(83, 74, 183);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="323" y="1030" text-anchor="middle" dominant-baseline="central">📚</text>
-  <text x="323" y="1052" text-anchor="middle" dominant-baseline="central" style="fill:rgb(83, 74, 183);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Interregnum Nullificans</text>
-</g>
-<g title="Seanad submission — Regulation 2021/821, March 2026" data-href="https://drive.google.com/file/d/1k-FVtgRPjqZrch-IZHTL1EWOtFGRU9AY" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="428" y="1008" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(238, 237, 254);stroke:rgb(83, 74, 183);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="515" y="1030" text-anchor="middle" dominant-baseline="central">🏛️</text>
-  <text x="515" y="1052" text-anchor="middle" dominant-baseline="central" style="fill:rgb(83, 74, 183);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Seanad submission</text>
-</g>
-<g title="Main repository — Google Drive primary archive of the full corpus" data-href="https://drive.google.com/drive/u/0/folders/12o4-OPXJ0W5E8pxF9pN-VKUeODagy17g" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="44" y="1086" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(238, 237, 254);stroke:rgb(83, 74, 183);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="131" y="1108" text-anchor="middle" dominant-baseline="central">🗄️</text>
-  <text x="131" y="1130" text-anchor="middle" dominant-baseline="central" style="fill:rgb(83, 74, 183);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Main repository</text>
-</g>
-<g title="Formal complaint — 226 pages, complete evidentiary record" data-href="https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="236" y="1086" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(238, 237, 254);stroke:rgb(83, 74, 183);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="323" y="1108" text-anchor="middle" dominant-baseline="central">🗂️</text>
-  <text x="323" y="1130" text-anchor="middle" dominant-baseline="central" style="fill:rgb(83, 74, 183);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Formal complaint</text>
-</g>
-<g title="Civic signal — RedundancyAwareness public record and ministerial correspondence" data-href="https://dr-wojak.github.io/meinhardt-initiative-public-flyer" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="428" y="1086" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(238, 237, 254);stroke:rgb(83, 74, 183);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="515" y="1108" text-anchor="middle" dominant-baseline="central">📡</text>
-  <text x="515" y="1130" text-anchor="middle" dominant-baseline="central" style="fill:rgb(83, 74, 183);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Civic signal</text>
-</g>
+      <g title="Constitutional indictment in Irish and English — the foundational document" data-href="https://drive.google.com/file/d/1-vETFPyMCzLWE1vm4T6Xse29cjC_SjUC">
+        <rect x="44" y="1008" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(238,237,254);stroke:rgb(83,74,183)"/>
+        <text style="font-size:20px" x="131" y="1030" text-anchor="middle" dominant-baseline="central">📜</text>
+        <text x="131" y="1052" text-anchor="middle" dominant-baseline="central" style="fill:rgb(83,74,183);font-size:12px">Tairiscint Mheinhardt</text>
+      </g>
+      <g title="The Interregnum Nullificans — 17 legal frameworks applied to the corpus" data-href="https://drive.google.com/file/d/1YB7so7pzTg7uZFFir7nKWxB5wZZeSEX3">
+        <rect x="236" y="1008" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(238,237,254);stroke:rgb(83,74,183)"/>
+        <text style="font-size:20px" x="323" y="1030" text-anchor="middle" dominant-baseline="central">📚</text>
+        <text x="323" y="1052" text-anchor="middle" dominant-baseline="central" style="fill:rgb(83,74,183);font-size:12px">Interregnum Nullificans</text>
+      </g>
+      <g title="Seanad submission — Regulation 2021/821, March 2026" data-href="https://drive.google.com/file/d/1k-FVtgRPjqZrch-IZHTL1EWOtFGRU9AY">
+        <rect x="428" y="1008" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(238,237,254);stroke:rgb(83,74,183)"/>
+        <text style="font-size:20px" x="515" y="1030" text-anchor="middle" dominant-baseline="central">🏛️</text>
+        <text x="515" y="1052" text-anchor="middle" dominant-baseline="central" style="fill:rgb(83,74,183);font-size:12px">Seanad submission</text>
+      </g>
+      <g title="Main repository — Google Drive primary archive of the full corpus" data-href="https://drive.google.com/drive/u/0/folders/12o4-OPXJ0W5E8pxF9pN-VKUeODagy17g">
+        <rect x="44" y="1086" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(238,237,254);stroke:rgb(83,74,183)"/>
+        <text style="font-size:20px" x="131" y="1108" text-anchor="middle" dominant-baseline="central">🗄️</text>
+        <text x="131" y="1130" text-anchor="middle" dominant-baseline="central" style="fill:rgb(83,74,183);font-size:12px">Main repository</text>
+      </g>
+      <g title="Formal complaint — 226 pages, complete evidentiary record" data-href="https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS">
+        <rect x="236" y="1086" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(238,237,254);stroke:rgb(83,74,183)"/>
+        <text style="font-size:20px" x="323" y="1108" text-anchor="middle" dominant-baseline="central">🗂️</text>
+        <text x="323" y="1130" text-anchor="middle" dominant-baseline="central" style="fill:rgb(83,74,183);font-size:12px">Formal complaint</text>
+      </g>
+      <!-- FIX: Civic signal artefact now uses its own distinct href (not the same as Citizens audience) -->
+      <g title="Civic signal — RedundancyAwareness public record and ministerial correspondence" data-href="https://drive.google.com/file/d/1ZSHHM7v0WAV3FGVuZ5EmBL_GI1WJ0uE8Vwx">
+        <rect x="428" y="1086" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(238,237,254);stroke:rgb(83,74,183)"/>
+        <text style="font-size:20px" x="515" y="1108" text-anchor="middle" dominant-baseline="central">📡</text>
+        <text x="515" y="1130" text-anchor="middle" dominant-baseline="central" style="fill:rgb(83,74,183);font-size:12px">Civic signal</text>
+      </g>
 
-<!-- ── campaign nodes ── -->
-<text x="340" y="1176" text-anchor="middle" opacity="0.5" style="fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto">campaign nodes · GitHub repositories · amplification</text>
+      <!-- ── campaign nodes ── -->
+      <text x="340" y="1176" text-anchor="middle" opacity="0.5" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase">campaign nodes · GitHub repositories · amplification</text>
 
-<g title="Primary hub — 14 EU languages, main dissemination entry point" data-href="https://github.com/dr-crunch/nullification-loops" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="44" y="1190" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225, 245, 238);stroke:rgb(15, 110, 86);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="131" y="1212" text-anchor="middle" dominant-baseline="central">🌍</text>
-  <text x="131" y="1234" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15, 110, 86);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">nullification-loops</text>
-</g>
-<g title="Plain-language entry point — accessible overview for new readers" data-href="https://github.com/dr-wojak/start-here" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="236" y="1190" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225, 245, 238);stroke:rgb(15, 110, 86);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="323" y="1212" text-anchor="middle" dominant-baseline="central">🚪</text>
-  <text x="323" y="1234" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15, 110, 86);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">start-here</text>
-</g>
-<g title="Civic engagement repository — public relations materials" data-href="https://github.com/dr-wojak/public-relations" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="428" y="1190" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225, 245, 238);stroke:rgb(15, 110, 86);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="515" y="1212" text-anchor="middle" dominant-baseline="central">📢</text>
-  <text x="515" y="1234" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15, 110, 86);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">public-relations</text>
-</g>
-<g title="Media kit and signal timeline — press-ready materials" data-href="https://github.com/dr-wojak/press" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="44" y="1268" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225, 245, 238);stroke:rgb(15, 110, 86);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="131" y="1290" text-anchor="middle" dominant-baseline="central">🗞️</text>
-  <text x="131" y="1312" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15, 110, 86);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">press</text>
-</g>
-<g title="Economic analysis — opportunity costs of institutional inaction" data-href="https://github.com/dr-wojak/econ" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="236" y="1268" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225, 245, 238);stroke:rgb(15, 110, 86);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="323" y="1290" text-anchor="middle" dominant-baseline="central">📊</text>
-  <text x="323" y="1312" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15, 110, 86);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">econ</text>
-</g>
-<g title="Structural indictment of governance — governmentality canon 2025" data-href="https://github.com/dr-wojak/governmentality-2025" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="428" y="1268" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225, 245, 238);stroke:rgb(15, 110, 86);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="515" y="1290" text-anchor="middle" dominant-baseline="central">🏗️</text>
-  <text x="515" y="1312" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15, 110, 86);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">governmentality-2025</text>
-</g>
-<g title="Ministerial correspondence — full record of state responses and non-responses" data-href="https://github.com/dr-wojak/redundancy-awareness" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="140" y="1346" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225, 245, 238);stroke:rgb(15, 110, 86);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="227" y="1368" text-anchor="middle" dominant-baseline="central">📬</text>
-  <text x="227" y="1390" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15, 110, 86);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">redundancy-awareness</text>
-</g>
+      <g title="Primary hub — 14 EU languages, main dissemination entry point" data-href="https://github.com/dr-crunch/nullification-loops">
+        <rect x="44" y="1190" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225,245,238);stroke:rgb(15,110,86)"/>
+        <text style="font-size:20px" x="131" y="1212" text-anchor="middle" dominant-baseline="central">🌍</text>
+        <text x="131" y="1234" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15,110,86);font-size:12px">nullification-loops</text>
+      </g>
+      <g title="Plain-language entry point — accessible overview for new readers" data-href="https://github.com/dr-wojak/start-here">
+        <rect x="236" y="1190" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225,245,238);stroke:rgb(15,110,86)"/>
+        <text style="font-size:20px" x="323" y="1212" text-anchor="middle" dominant-baseline="central">🚪</text>
+        <text x="323" y="1234" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15,110,86);font-size:12px">start-here</text>
+      </g>
+      <g title="Civic engagement repository — public relations materials" data-href="https://github.com/dr-wojak/public-relations">
+        <rect x="428" y="1190" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225,245,238);stroke:rgb(15,110,86)"/>
+        <text style="font-size:20px" x="515" y="1212" text-anchor="middle" dominant-baseline="central">📢</text>
+        <text x="515" y="1234" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15,110,86);font-size:12px">public-relations</text>
+      </g>
+      <g title="Media kit and signal timeline — press-ready materials" data-href="https://github.com/dr-wojak/press">
+        <rect x="44" y="1268" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225,245,238);stroke:rgb(15,110,86)"/>
+        <text style="font-size:20px" x="131" y="1290" text-anchor="middle" dominant-baseline="central">🗞️</text>
+        <text x="131" y="1312" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15,110,86);font-size:12px">press</text>
+      </g>
+      <g title="Economic analysis — opportunity costs of institutional inaction" data-href="https://github.com/dr-wojak/econ">
+        <rect x="236" y="1268" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225,245,238);stroke:rgb(15,110,86)"/>
+        <text style="font-size:20px" x="323" y="1290" text-anchor="middle" dominant-baseline="central">📊</text>
+        <text x="323" y="1312" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15,110,86);font-size:12px">econ</text>
+      </g>
+      <g title="Structural indictment of governance — governmentality canon 2025" data-href="https://github.com/dr-wojak/governmentality-2025">
+        <rect x="428" y="1268" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225,245,238);stroke:rgb(15,110,86)"/>
+        <text style="font-size:20px" x="515" y="1290" text-anchor="middle" dominant-baseline="central">🏗️</text>
+        <text x="515" y="1312" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15,110,86);font-size:12px">governmentality-2025</text>
+      </g>
+      <g title="Ministerial correspondence — full record of state responses and non-responses" data-href="https://github.com/dr-wojak/redundancy-awareness">
+        <rect x="140" y="1346" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225,245,238);stroke:rgb(15,110,86)"/>
+        <text style="font-size:20px" x="227" y="1368" text-anchor="middle" dominant-baseline="central">📬</text>
+        <text x="227" y="1390" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15,110,86);font-size:12px">redundancy-awareness</text>
+      </g>
 
-<!-- ── economic mechanism ── -->
-<text x="340" y="1440" text-anchor="middle" opacity="0.5" style="fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto">economic mechanism · finance of notice</text>
+      <!-- ── economic mechanism ── -->
+      <text x="340" y="1440" text-anchor="middle" opacity="0.5" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase">economic mechanism · finance of notice</text>
 
-<g title="The economic incentive structure that makes ignoring submissions institutionally rational" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="44" y="1454" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(250, 238, 218);stroke:rgb(133, 79, 11);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="131" y="1476" text-anchor="middle" dominant-baseline="central">💰</text>
-  <text x="131" y="1498" text-anchor="middle" dominant-baseline="central" style="fill:rgb(133, 79, 11);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Finance of Notice</text>
-</g>
-<g title="Article 41 Charter of Fundamental Rights — re Haughey constitutional grounding" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="236" y="1454" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230, 241, 251);stroke:rgb(24, 95, 165);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="323" y="1476" text-anchor="middle" dominant-baseline="central">🎙️</text>
-  <text x="323" y="1498" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24, 95, 165);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">Right to be heard</text>
-</g>
-<g title="Find all violations caused by ignored submissions — directly admissible as evidence" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <rect x="428" y="1454" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(241, 239, 232);stroke:rgb(95, 94, 90);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <text style="font-size:20px;fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:20px;font-weight:400;text-anchor:middle;dominant-baseline:central" x="515" y="1476" text-anchor="middle" dominant-baseline="central">🔍</text>
-  <text x="515" y="1498" text-anchor="middle" dominant-baseline="central" style="fill:rgb(95, 94, 90);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:central">SPARQL query</text>
-</g>
+      <g title="The economic incentive structure that makes ignoring submissions institutionally rational" data-href="https://github.com/dr-wojak/econ">
+        <rect x="44" y="1454" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(250,238,218);stroke:rgb(133,79,11)"/>
+        <text style="font-size:20px" x="131" y="1476" text-anchor="middle" dominant-baseline="central">💰</text>
+        <text x="131" y="1498" text-anchor="middle" dominant-baseline="central" style="fill:rgb(133,79,11);font-size:12px">Finance of Notice</text>
+      </g>
+      <g title="Article 41 Charter of Fundamental Rights — re Haughey constitutional grounding" data-href="https://github.com/dr-wojak/legal">
+        <rect x="236" y="1454" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230,241,251);stroke:rgb(24,95,165)"/>
+        <text style="font-size:20px" x="323" y="1476" text-anchor="middle" dominant-baseline="central">🎙️</text>
+        <text x="323" y="1498" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24,95,165);font-size:12px">Right to be heard</text>
+      </g>
+      <g title="Find all violations caused by ignored submissions — directly admissible as evidence" data-href="https://drive.google.com/file/d/1rVCRvUs91lYDAoo_YIfxpAAsYzEAMMxm">
+        <rect x="428" y="1454" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(241,239,232);stroke:rgb(95,94,90)"/>
+        <text style="font-size:20px" x="515" y="1476" text-anchor="middle" dominant-baseline="central">🔍</text>
+        <text x="515" y="1498" text-anchor="middle" dominant-baseline="central" style="fill:rgb(95,94,90);font-size:12px">SPARQL query</text>
+      </g>
 
+      <!-- ═══════════════════════════════════════════
+           CONNECTORS — named colour markers, explicit stroke colours
+           ═══════════════════════════════════════════ -->
+      <g id="connectors" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Failure mode class → failure instances -->
+        <line x1="462" y1="100" x2="462" y2="220" stroke="#993d1d" stroke-width="0.7" opacity="0.35" stroke-dasharray="3,2"/>
+        <line x1="50" y1="220" x2="630" y2="220" stroke="#993d1d" stroke-width="0.7" opacity="0.35" stroke-dasharray="3,2"/>
+        <line x1="100" y1="220" x2="100" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
+        <line x1="220" y1="220" x2="220" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
+        <line x1="340" y1="220" x2="340" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
+        <line x1="460" y1="220" x2="460" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
+        <line x1="580" y1="220" x2="580" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
 
-<!-- ═══════════════════════════════════════════════════
-     CONNECTORS — injected from v2 merge
-     Taxonomy lines: dashed · Dissemination flow: solid
-     ═══════════════════════════════════════════════════ -->
-<g id="connectors" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Information object class → corpus artefacts -->
+        <line x1="340" y1="178" x2="340" y2="320" stroke="#185fa5" stroke-width="0.7" opacity="0.3" stroke-dasharray="3,2"/>
+        <line x1="50" y1="998" x2="620" y2="998" stroke="#534ab7" stroke-width="0.7" opacity="0.3" stroke-dasharray="3,2"/>
+        <line x1="131" y1="998" x2="131" y2="1008" stroke="#534ab7" stroke-width="0.7" opacity="0.35" marker-end="url(#arrow-purple)"/>
+        <line x1="323" y1="998" x2="323" y2="1008" stroke="#534ab7" stroke-width="0.7" opacity="0.35" marker-end="url(#arrow-purple)"/>
+        <line x1="515" y1="998" x2="515" y2="1008" stroke="#534ab7" stroke-width="0.7" opacity="0.35" marker-end="url(#arrow-purple)"/>
+        <line x1="131" y1="998" x2="131" y2="1086" stroke="#534ab7" stroke-width="0.7" opacity="0.25" stroke-dasharray="3,2"/>
+        <line x1="323" y1="998" x2="323" y2="1086" stroke="#534ab7" stroke-width="0.7" opacity="0.25" stroke-dasharray="3,2"/>
+        <line x1="515" y1="998" x2="515" y2="1086" stroke="#534ab7" stroke-width="0.7" opacity="0.25" stroke-dasharray="3,2"/>
 
-  <!-- ── Taxonomy: Failure mode class → failure instances ── -->
-  <!-- trunk from Failure mode class bottom-center down to bracket rail -->
-  <line x1="462" y1="100" x2="462" y2="220"
-        stroke="#993d1d" stroke-width="0.7" opacity="0.35" stroke-dasharray="3,2"/>
-  <!-- horizontal bracket rail above failure instances -->
-  <line x1="50"  y1="220" x2="630" y2="220"
-        stroke="#993d1d" stroke-width="0.7" opacity="0.35" stroke-dasharray="3,2"/>
-  <!-- five ticks down to each failure instance top -->
-  <line x1="100" y1="220" x2="100" y2="230"
-        stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow)"/>
-  <line x1="220" y1="220" x2="220" y2="230"
-        stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow)"/>
-  <line x1="340" y1="220" x2="340" y2="230"
-        stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow)"/>
-  <line x1="460" y1="220" x2="460" y2="230"
-        stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow)"/>
-  <line x1="580" y1="220" x2="580" y2="230"
-        stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow)"/>
+        <!-- Channels → Audiences -->
+        <line x1="96" y1="546" x2="218" y2="592" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
+        <line x1="96" y1="546" x2="340" y2="592" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
+        <line x1="218" y1="546" x2="218" y2="670" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
+        <line x1="218" y1="546" x2="340" y2="670" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
+        <line x1="340" y1="546" x2="280" y2="748" stroke="#2fb882" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-green)"/>
+        <line x1="462" y1="546" x2="280" y2="826" stroke="#2fb882" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-green)"/>
+        <line x1="584" y1="546" x2="280" y2="904" stroke="#c9881f" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-amber)"/>
 
-  <!-- ── Taxonomy: Information object class → corpus artefacts ── -->
-  <!-- trunk from Information object bottom-center (340,178) → bracket at 998 -->
-  <line x1="340" y1="178" x2="340" y2="320"
-        stroke="#185fa5" stroke-width="0.7" opacity="0.3" stroke-dasharray="3,2"/>
-  <!-- bracket at 998 spanning artefacts -->
-  <line x1="50"  y1="998" x2="620" y2="998"
-        stroke="#534ab7" stroke-width="0.7" opacity="0.3" stroke-dasharray="3,2"/>
-  <line x1="131" y1="998" x2="131" y2="1008"
-        stroke="#534ab7" stroke-width="0.7" opacity="0.35" marker-end="url(#arrow)"/>
-  <line x1="323" y1="998" x2="323" y2="1008"
-        stroke="#534ab7" stroke-width="0.7" opacity="0.35" marker-end="url(#arrow)"/>
-  <line x1="515" y1="998" x2="515" y2="1008"
-        stroke="#534ab7" stroke-width="0.7" opacity="0.35" marker-end="url(#arrow)"/>
-  <line x1="131" y1="998" x2="131" y2="1086"
-        stroke="#534ab7" stroke-width="0.7" opacity="0.25" stroke-dasharray="3,2"/>
-  <line x1="323" y1="998" x2="323" y2="1086"
-        stroke="#534ab7" stroke-width="0.7" opacity="0.25" stroke-dasharray="3,2"/>
-  <line x1="515" y1="998" x2="515" y2="1086"
-        stroke="#534ab7" stroke-width="0.7" opacity="0.25" stroke-dasharray="3,2"/>
+        <!-- Audiences → Corpus artefacts -->
+        <line x1="218" y1="648" x2="131" y2="1008" stroke="#534ab7" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-purple)"/>
+        <line x1="340" y1="648" x2="323" y2="1008" stroke="#534ab7" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-purple)"/>
+        <line x1="218" y1="726" x2="515" y2="1008" stroke="#185fa5" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-blue)"/>
+        <line x1="340" y1="726" x2="323" y2="1086" stroke="#185fa5" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-blue)"/>
+        <line x1="280" y1="804" x2="131" y2="1086" stroke="#3b6d11" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-green)"/>
+        <line x1="280" y1="882" x2="515" y2="1086" stroke="#0f6e56" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-green)"/>
+        <line x1="280" y1="960" x2="131" y2="1268" stroke="#854f0b" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-amber)"/>
 
-  <!-- ── Channels → Audiences (solid, coloured by channel) ── -->
-  <!-- Legal (96,546) → High Court (218,592) -->
-  <line x1="96"  y1="546" x2="218" y2="592"
-        stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow)"/>
-  <!-- Legal (96,546) → Irish Ombudsman (340,592) -->
-  <line x1="96"  y1="546" x2="340" y2="592"
-        stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow)"/>
-  <!-- EU channel (218,546) → EU Ombudsman (218,670) -->
-  <line x1="218" y1="546" x2="218" y2="670"
-        stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow)"/>
-  <!-- EU channel (218,546) → PETI (340,670) -->
-  <line x1="218" y1="546" x2="340" y2="670"
-        stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow)"/>
-  <!-- Academic (340,546) → Research (280,748) -->
-  <line x1="340" y1="546" x2="280" y2="748"
-        stroke="#2fb882" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow)"/>
-  <!-- Civic (462,546) → Citizens (280,826) -->
-  <line x1="462" y1="546" x2="280" y2="826"
-        stroke="#2fb882" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow)"/>
-  <!-- Media (584,546) → Press audience (280,904) -->
-  <line x1="584" y1="546" x2="280" y2="904"
-        stroke="#c9881f" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow)"/>
+        <!-- Corpus artefacts → Campaign nodes -->
+        <line x1="128" y1="1064" x2="128" y2="1190" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
+        <line x1="320" y1="1064" x2="320" y2="1190" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
+        <line x1="512" y1="1064" x2="512" y2="1190" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
+        <line x1="134" y1="1142" x2="134" y2="1190" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
+        <line x1="326" y1="1142" x2="326" y2="1268" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
+        <line x1="515" y1="1142" x2="227" y2="1346" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
 
-  <!-- ── Audiences → Corpus artefacts ── -->
-  <!-- High Court (218,648) → Tairiscint (131,1008) -->
-  <line x1="218" y1="648" x2="131" y2="1008"
-        stroke="#534ab7" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow)"/>
-  <!-- Irish Ombudsman (340,648) → Interregnum (323,1008) -->
-  <line x1="340" y1="648" x2="323" y2="1008"
-        stroke="#534ab7" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow)"/>
-  <!-- EU Ombudsman (218,726) → Seanad submission (515,1008) -->
-  <line x1="218" y1="726" x2="515" y2="1008"
-        stroke="#185fa5" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow)"/>
-  <!-- PETI (340,726) → Formal complaint (323,1086) -->
-  <line x1="340" y1="726" x2="323" y2="1086"
-        stroke="#185fa5" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow)"/>
-  <!-- Research (280,804) → Main repository (131,1086) -->
-  <line x1="280" y1="804" x2="131" y2="1086"
-        stroke="#3b6d11" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow)"/>
-  <!-- Citizens (280,882) → Civic signal (515,1086) -->
-  <line x1="280" y1="882" x2="515" y2="1086"
-        stroke="#0f6e56" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow)"/>
-  <!-- Press audience (280,960) → press campaign (131,1268) -->
-  <line x1="280" y1="960" x2="131" y2="1268"
-        stroke="#854f0b" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow)"/>
+        <!-- Campaign rows chain -->
+        <line x1="131" y1="1246" x2="131" y2="1268" stroke="#2fb882" stroke-width="0.8" opacity="0.4" marker-end="url(#arrow-green)"/>
+        <line x1="323" y1="1246" x2="323" y2="1268" stroke="#2fb882" stroke-width="0.8" opacity="0.4" marker-end="url(#arrow-green)"/>
+        <line x1="515" y1="1246" x2="515" y2="1268" stroke="#2fb882" stroke-width="0.8" opacity="0.4" marker-end="url(#arrow-green)"/>
 
-  <!-- ── Corpus artefacts → Campaign nodes ── -->
-  <!-- Tairiscint (131,1064) → nullification-loops (131,1190) -->
-  <line x1="128" y1="1064" x2="128" y2="1190"
-        stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow)"/>
-  <!-- Interregnum (323,1064) → start-here (323,1190) -->
-  <line x1="320" y1="1064" x2="320" y2="1190"
-        stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow)"/>
-  <!-- Seanad (515,1064) → public-relations (515,1190) -->
-  <line x1="512" y1="1064" x2="512" y2="1190"
-        stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow)"/>
-  <!-- Main repo (131,1142) → nullification-loops (131,1190) [offset +6] -->
-  <line x1="134" y1="1142" x2="134" y2="1190"
-        stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow)"/>
-  <!-- Formal complaint (323,1142) → econ (323,1268) -->
-  <line x1="326" y1="1142" x2="326" y2="1268"
-        stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow)"/>
-  <!-- Civic signal (515,1142) → redundancy-awareness (227,1346) -->
-  <line x1="515" y1="1142" x2="227" y2="1346"
-        stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow)"/>
+        <!-- Campaign nodes → Economic mechanism -->
+        <line x1="131" y1="1324" x2="131" y2="1454" stroke="#c9881f" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-amber)"/>
+        <line x1="323" y1="1324" x2="323" y2="1454" stroke="#534ab7" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-purple)"/>
+        <line x1="515" y1="1324" x2="515" y2="1454" stroke="#534ab7" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-purple)"/>
+        <line x1="227" y1="1402" x2="131" y2="1454" stroke="#c9881f" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-amber)"/>
+      </g>
 
-  <!-- ── Campaign node rows chain ── -->
-  <!-- nullification-loops (131,1246) → press (131,1268) -->
-  <line x1="131" y1="1246" x2="131" y2="1268"
-        stroke="#2fb882" stroke-width="0.8" opacity="0.4" marker-end="url(#arrow)"/>
-  <!-- start-here (323,1246) → econ (323,1268) -->
-  <line x1="323" y1="1246" x2="323" y2="1268"
-        stroke="#2fb882" stroke-width="0.8" opacity="0.4" marker-end="url(#arrow)"/>
-  <!-- public-relations (515,1246) → governmentality-2025 (515,1268) -->
-  <line x1="515" y1="1246" x2="515" y2="1268"
-        stroke="#2fb882" stroke-width="0.8" opacity="0.4" marker-end="url(#arrow)"/>
+      <!-- ── legend ── -->
+      <text x="340" y="1556" text-anchor="middle" opacity="0.5" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase">legend</text>
 
-  <!-- ── Campaign nodes → Economic mechanism ── -->
-  <!-- press (131,1324) → Finance of Notice (131,1454) -->
-  <line x1="131" y1="1324" x2="131" y2="1454"
-        stroke="#c9881f" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow)"/>
-  <!-- econ (323,1324) → Right to be heard (323,1454) -->
-  <line x1="323" y1="1324" x2="323" y2="1454"
-        stroke="#534ab7" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow)"/>
-  <!-- governmentality-2025 (515,1324) → SPARQL query (515,1454) -->
-  <line x1="515" y1="1324" x2="515" y2="1454"
-        stroke="#534ab7" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow)"/>
-  <!-- redundancy-awareness (227,1402) → Finance of Notice (131,1454) -->
-  <line x1="227" y1="1402" x2="131" y2="1454"
-        stroke="#c9881f" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow)"/>
+      <rect x="44" y="1570" width="18" height="18" rx="4" stroke-width="0.5" style="fill:rgb(238,237,254);stroke:rgb(83,74,183)"/>
+      <text x="70" y="1583" style="fill:rgb(61,61,58);font-size:12px" dominant-baseline="central">Corpus artefact</text>
+      <rect x="200" y="1570" width="18" height="18" rx="4" stroke-width="0.5" style="fill:rgb(225,245,238);stroke:rgb(15,110,86)"/>
+      <text x="226" y="1583" style="fill:rgb(61,61,58);font-size:12px" dominant-baseline="central">Actor / Campaign node</text>
+      <rect x="390" y="1570" width="18" height="18" rx="4" stroke-width="0.5" style="fill:rgb(250,236,231);stroke:rgb(153,60,29)"/>
+      <text x="416" y="1583" style="fill:rgb(61,61,58);font-size:12px" dominant-baseline="central">Failure mode</text>
+      <rect x="510" y="1570" width="18" height="18" rx="4" stroke-width="0.5" style="fill:rgb(230,241,251);stroke:rgb(24,95,165)"/>
+      <text x="536" y="1583" style="fill:rgb(61,61,58);font-size:12px" dominant-baseline="central">Legal / EU</text>
 
-</g>
-
-<!-- ── legend ── -->
-<text x="340" y="1556" text-anchor="middle" opacity="0.5" style="fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto">legend</text>
-
-<g style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"><rect x="44" y="1570" width="18" height="18" rx="4" stroke-width="0.5" style="fill:rgb(238, 237, 254);stroke:rgb(83, 74, 183);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/></g>
-<text x="70" y="1583" style="fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:start;dominant-baseline:auto">Corpus artefact</text>
-<g style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">  <rect x="200" y="1570" width="18" height="18" rx="4" stroke-width="0.5" style="fill:rgb(225, 245, 238);stroke:rgb(15, 110, 86);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/></g>
-<text x="226" y="1583" style="fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:start;dominant-baseline:auto">Actor / Campaign node</text>
-<g style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">  <rect x="390" y="1570" width="18" height="18" rx="4" stroke-width="0.5" style="fill:rgb(250, 236, 231);stroke:rgb(153, 60, 29);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/></g>
-<text x="416" y="1583" style="fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:start;dominant-baseline:auto">Failure mode</text>
-<g style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">   <rect x="510" y="1570" width="18" height="18" rx="4" stroke-width="0.5" style="fill:rgb(230, 241, 251);stroke:rgb(24, 95, 165);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/></g>
-<text x="536" y="1583" style="fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:start;dominant-baseline:auto">Legal / EU</text>
-
-<g style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">  <rect x="44" y="1606" width="18" height="18" rx="4" stroke-width="0.5" style="fill:rgb(234, 243, 222);stroke:rgb(59, 109, 17);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/></g>
-<text x="70" y="1619" style="fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:start;dominant-baseline:auto">Academic</text>
-<g style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">  <rect x="200" y="1606" width="18" height="18" rx="4" stroke-width="0.5" style="fill:rgb(250, 238, 218);stroke:rgb(133, 79, 11);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/></g>
-<text x="226" y="1619" style="fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:start;dominant-baseline:auto">Economic / Media</text>
-<g style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">   <rect x="390" y="1606" width="18" height="18" rx="4" stroke-width="0.5" style="fill:rgb(241, 239, 232);stroke:rgb(95, 94, 90);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/></g>
-<text x="416" y="1619" style="fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:start;dominant-baseline:auto">Object property / Query</text>
-
-</svg>
-</div>
+      <rect x="44" y="1606" width="18" height="18" rx="4" stroke-width="0.5" style="fill:rgb(234,243,222);stroke:rgb(59,109,17)"/>
+      <text x="70" y="1619" style="fill:rgb(61,61,58);font-size:12px" dominant-baseline="central">Academic</text>
+      <rect x="200" y="1606" width="18" height="18" rx="4" stroke-width="0.5" style="fill:rgb(250,238,218);stroke:rgb(133,79,11)"/>
+      <text x="226" y="1619" style="fill:rgb(61,61,58);font-size:12px" dominant-baseline="central">Economic / Media</text>
+      <rect x="390" y="1606" width="18" height="18" rx="4" stroke-width="0.5" style="fill:rgb(241,239,232);stroke:rgb(95,94,90)"/>
+      <text x="416" y="1619" style="fill:rgb(61,61,58);font-size:12px" dominant-baseline="central">Object property / Query</text>
+    </svg>
+  </div>
 </section>
 
 <section class="turtle-section">
-<div class="map-header">
-<div class="map-title">RDF / Turtle — Executable Skeleton</div>
-<div class="map-note">meinhardt.org/ontology# · dissemination layer</div>
-</div>
-<div class="turtle-block">
-<span class="ttl-prefix">@prefix</span> <span class="ttl-class">:</span> &lt;http://meinhardt.org/ontology#&gt; .<br>
-<span class="ttl-prefix">@prefix</span> <span class="ttl-type">rdf:</span> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .<br>
-<span class="ttl-prefix">@prefix</span> <span class="ttl-type">owl:</span> &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
-<br>
-<span class="ttl-comment"># ── DISSEMINATION CHANNELS ────────────────────────</span><br>
-<span class="ttl-inst">:ChannelLegal</span> <span class="ttl-type">rdf:type</span> <span class="ttl-class">:DisseminationChannel</span> ;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:reaches</span> <span class="ttl-inst">:HighCourt, :IrishOmbudsman</span> ;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:obligates</span> <span class="ttl-lit">"Reasons must be given on disposal"</span> .<br>
-<br>
-<span class="ttl-inst">:ChannelEU</span> <span class="ttl-type">rdf:type</span> <span class="ttl-class">:DisseminationChannel</span> ;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:reaches</span> <span class="ttl-inst">:EuropeanOmbudsman, :PETI, :DefenseurDesDroits</span> ;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:groundedIn</span> <span class="ttl-lit">"Art.4(3) TEU · Art.228 TFEU · Art.227 TFEU"</span> .<br>
-<br>
-<span class="ttl-inst">:ChannelAcademic</span> <span class="ttl-type">rdf:type</span> <span class="ttl-class">:DisseminationChannel</span> ;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:documents</span> <span class="ttl-inst">:NullificationLoop</span> ;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:appliesFrame</span> <span class="ttl-lit">"Beer/VSM · Bateson deutero-binding"</span> .<br>
-<br>
-<span class="ttl-inst">:ChannelCivic</span> <span class="ttl-type">rdf:type</span> <span class="ttl-class">:DisseminationChannel</span> ;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:amplifies</span> <span class="ttl-inst">:CivicSignal</span> ;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:groundedIn</span> <span class="ttl-lit">"Art.15.10 Bunreacht na hÉireann"</span> .<br>
-<br>
-<span class="ttl-inst">:ChannelMedia</span> <span class="ttl-type">rdf:type</span> <span class="ttl-class">:DisseminationChannel</span> ;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:documents</span> <span class="ttl-inst">:DesignedForgetting, :SignalSuppression</span> ;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:licence</span> <span class="ttl-lit">"CC0 1.0 Universal"</span> .<br>
-<br>
-<span class="ttl-comment"># ── MASTER CAUSAL CHAIN ───────────────────────────</span><br>
-<span class="ttl-inst">:IrishState</span> <span class="ttl-prop">:ignores</span> <span class="ttl-inst">:Submission_2006</span> ;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:exhibitsFailure</span> <span class="ttl-inst">:NullificationLoop</span> .<br>
-<span class="ttl-inst">:NullificationLoop</span> <span class="ttl-prop">:triggers</span> <span class="ttl-inst">:Maladministration</span> .<br>
-<span class="ttl-inst">:Maladministration</span> <span class="ttl-prop">:violates</span> <span class="ttl-inst">:RightToBeHeard</span> .<br>
-<span class="ttl-inst">:FinanceOfNotice</span> <span class="ttl-prop">:incentivises</span> <span class="ttl-inst">:IgnoringBehaviour</span> .<br>
-<span class="ttl-inst">:IgnoringBehaviour</span> <span class="ttl-prop">:producesFailure</span> <span class="ttl-inst">:SignalSuppression</span> .<br>
-<span class="ttl-inst">:SignalSuppression</span> <span class="ttl-prop">:violates</span> <span class="ttl-inst">:RightToBeHeard</span> .
-</div>
+  <div class="map-header">
+    <div class="map-title">RDF / Turtle — Executable Skeleton</div>
+    <div class="map-note">meinhardt.org/ontology# · dissemination layer</div>
+  </div>
+  <div class="turtle-block">
+    <span class="ttl-prefix">@prefix</span> <span class="ttl-class">:</span> &lt;http://meinhardt.org/ontology#&gt; .<br>
+    <span class="ttl-prefix">@prefix</span> <span class="ttl-type">rdf:</span> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .<br>
+    <span class="ttl-prefix">@prefix</span> <span class="ttl-type">owl:</span> &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+    <br>
+    <span class="ttl-comment"># ── DISSEMINATION CHANNELS ────────────────────────</span><br>
+    <span class="ttl-inst">:ChannelLegal</span> <span class="ttl-type">rdf:type</span> <span class="ttl-class">:DisseminationChannel</span> ;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:reaches</span> <span class="ttl-inst">:HighCourt, :IrishOmbudsman</span> ;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:obligates</span> <span class="ttl-lit">"Reasons must be given on disposal"</span> .<br>
+    <br>
+    <span class="ttl-inst">:ChannelEU</span> <span class="ttl-type">rdf:type</span> <span class="ttl-class">:DisseminationChannel</span> ;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:reaches</span> <span class="ttl-inst">:EuropeanOmbudsman, :PETI, :DefenseurDesDroits</span> ;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:groundedIn</span> <span class="ttl-lit">"Art.4(3) TEU · Art.228 TFEU · Art.227 TFEU"</span> .<br>
+    <br>
+    <span class="ttl-inst">:ChannelAcademic</span> <span class="ttl-type">rdf:type</span> <span class="ttl-class">:DisseminationChannel</span> ;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:documents</span> <span class="ttl-inst">:NullificationLoop</span> ;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:appliesFrame</span> <span class="ttl-lit">"Beer/VSM · Bateson deutero-binding"</span> .<br>
+    <br>
+    <span class="ttl-inst">:ChannelCivic</span> <span class="ttl-type">rdf:type</span> <span class="ttl-class">:DisseminationChannel</span> ;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:amplifies</span> <span class="ttl-inst">:CivicSignal</span> ;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:groundedIn</span> <span class="ttl-lit">"Art.15.10 Bunreacht na hÉireann"</span> .<br>
+    <br>
+    <span class="ttl-inst">:ChannelMedia</span> <span class="ttl-type">rdf:type</span> <span class="ttl-class">:DisseminationChannel</span> ;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:documents</span> <span class="ttl-inst">:DesignedForgetting, :SignalSuppression</span> ;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:licence</span> <span class="ttl-lit">"CC0 1.0 Universal"</span> .<br>
+    <br>
+    <span class="ttl-comment"># ── MASTER CAUSAL CHAIN ───────────────────────────</span><br>
+    <span class="ttl-inst">:IrishState</span> <span class="ttl-prop">:ignores</span> <span class="ttl-inst">:Submission_2006</span> ;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:exhibitsFailure</span> <span class="ttl-inst">:NullificationLoop</span> .<br>
+    <span class="ttl-inst">:NullificationLoop</span> <span class="ttl-prop">:triggers</span> <span class="ttl-inst">:Maladministration</span> .<br>
+    <span class="ttl-inst">:Maladministration</span> <span class="ttl-prop">:violates</span> <span class="ttl-inst">:RightToBeHeard</span> .<br>
+    <span class="ttl-inst">:FinanceOfNotice</span> <span class="ttl-prop">:incentivises</span> <span class="ttl-inst">:IgnoringBehaviour</span> .<br>
+    <span class="ttl-inst">:IgnoringBehaviour</span> <span class="ttl-prop">:producesFailure</span> <span class="ttl-inst">:SignalSuppression</span> .<br>
+    <span class="ttl-inst">:SignalSuppression</span> <span class="ttl-prop">:violates</span> <span class="ttl-inst">:RightToBeHeard</span> .
+  </div>
 </section>
 
 <div class="axiom-bar">
-<div class="axiom-rule"></div>
-<div class="axiom-body">
-<div class="axiom-label">Critical insight · the ontological restatement of the corpus</div>
-<div class="axiom-text">The hashtags are already consistent, hierarchical, and composable. Formalising them converts the work from narrative argument into machine-readable institutional critique.</div>
-<div class="axiom-plain">This is not metadata. The ontology is a dissemination instrument. When the SPARQL query "find all violations caused by ignored submissions" runs against the Meinhardt corpus, it returns a structured list that is directly admissible as evidence in a CJEU Member State failure proceeding. The classes become legal categories. The instances extend the legal case. The relations become the causal chain. Nineteen years of narrative argument is now a directed labelled graph.</div>
-</div>
+  <div class="axiom-rule"></div>
+  <div class="axiom-body">
+    <div class="axiom-label">Critical insight · the ontological restatement of the corpus</div>
+    <div class="axiom-text">The hashtags are already consistent, hierarchical, and composable. Formalising them converts the work from narrative argument into machine-readable institutional critique.</div>
+    <div class="axiom-plain">This is not metadata. The ontology is a dissemination instrument. When the SPARQL query "find all violations caused by ignored submissions" runs against the Meinhardt corpus, it returns a structured list that is directly admissible as evidence in a CJEU Member State failure proceeding. The classes become legal categories. The instances extend the legal case. The relations become the causal chain. Nineteen years of narrative argument is now a directed labelled graph.</div>
+  </div>
 </div>
 
 <section class="keywords-section">
-<div class="section-label">Canonical keyword corpus · Deontological Differences · March 2026</div>
-<div class="keyword-blob">
-<span class="k-onto">#OWL2DL</span> <span class="k-onto">#RDFTurtle</span> <span class="k-onto">#SPARQL</span> <span class="k-onto">#OntologyOfDissemination</span> <span class="k-onto">#DirectedLabelledGraph</span> <span class="k-onto">#MachineReadableInstitutionalCritique</span> <span class="k-core">#MeinhardtInitiative</span> <span class="k-core">#NullificationLoop</span> <span class="k-core">#InterregnumNullificans</span> <span class="k-core">#DeontologicalDifferences</span> <span class="k-core">#CyberneticFailureOntology</span> <span class="k-irish">#TairiscintMheinhardt</span> <span class="k-irish">#LúbaNeamhnithe</span> <span class="k-irish">#Séachanachas</span> <span class="k-irish">#Dealraitheachas</span> <span class="k-legal">#RightToBeHeard</span> <span class="k-legal">#DueProcessFailure</span> <span class="k-legal">#Maladministration</span> <span class="k-legal">#WritOfMandamus</span> <span class="k-legal">#JudicialReview</span> <span class="k-legal">#SilenceVeto</span> <span class="k-legal">#Article41Charter</span> <span class="k-legal">#Art4TEU</span> <span class="k-eu">#EUCouncilPresidency</span> <span class="k-eu">#EuropeanOmbudsman</span> <span class="k-eu">#PETI</span> <span class="k-eu">#CJEU</span> <span class="k-eu">#DéfenseurDesDroits</span> <span class="k-eu">#Reg2021821</span> <span class="k-mech">#FinanceOfNotice</span> <span class="k-mech">#SignalSuppression</span> <span class="k-mech">#DesignedForgetting</span> <span class="k-mech">#RemitDisplacement</span> <span class="k-mech">#JurisdictionalEvaporation</span> <span class="k-mech">#AcknowledgementAsClosure</span> <span class="k-core">#StateCapacityFailure</span> <span class="k-core">#StructuralNonGovernance</span> <span class="k-core">#InformationAsymmetry</span> <span class="k-core">#OperationsResearch</span> <span class="k-onto">#ViableSystemModel</span> <span class="k-onto">#BatesonDeuterBinding</span> <span class="k-onto">#ProtégéOWL</span>
-</div>
+  <div class="section-label">Canonical keyword corpus · Deontological Differences · March 2026</div>
+  <div class="keyword-blob">
+    <span class="k-onto">#OWL2DL</span> <span class="k-onto">#RDFTurtle</span> <span class="k-onto">#SPARQL</span> <span class="k-onto">#OntologyOfDissemination</span> <span class="k-onto">#DirectedLabelledGraph</span> <span class="k-onto">#MachineReadableInstitutionalCritique</span> <span class="k-core">#MeinhardtInitiative</span> <span class="k-core">#NullificationLoop</span> <span class="k-core">#InterregnumNullificans</span> <span class="k-core">#DeontologicalDifferences</span> <span class="k-core">#CyberneticFailureOntology</span> <span class="k-irish">#TairiscintMheinhardt</span> <span class="k-irish">#LúbaNeamhnithe</span> <span class="k-irish">#Séachanachas</span> <span class="k-irish">#Dealraitheachas</span> <span class="k-legal">#RightToBeHeard</span> <span class="k-legal">#DueProcessFailure</span> <span class="k-legal">#Maladministration</span> <span class="k-legal">#WritOfMandamus</span> <span class="k-legal">#JudicialReview</span> <span class="k-legal">#SilenceVeto</span> <span class="k-legal">#Article41Charter</span> <span class="k-legal">#Art4TEU</span> <span class="k-eu">#EUCouncilPresidency</span> <span class="k-eu">#EuropeanOmbudsman</span> <span class="k-eu">#PETI</span> <span class="k-eu">#CJEU</span> <span class="k-eu">#DéfenseurDesDroits</span> <span class="k-eu">#Reg2021821</span> <span class="k-mech">#FinanceOfNotice</span> <span class="k-mech">#SignalSuppression</span> <span class="k-mech">#DesignedForgetting</span> <span class="k-mech">#RemitDisplacement</span> <span class="k-mech">#JurisdictionalEvaporation</span> <span class="k-mech">#AcknowledgementAsClosure</span> <span class="k-core">#StateCapacityFailure</span> <span class="k-core">#StructuralNonGovernance</span> <span class="k-core">#InformationAsymmetry</span> <span class="k-core">#OperationsResearch</span> <span class="k-onto">#ViableSystemModel</span> <span class="k-onto">#BatesonDeuterBinding</span> <span class="k-onto">#ProtégéOWL</span>
+  </div>
 </section>
 
 <footer>
-<div class="footer-left">
-<a href="https://dr-crunch.github.io/nullification-loops/" target="_blank">dr-crunch.github.io/nullification-loops</a><br>
-<a href="https://github.com/dr-wojak?tab=repositories" target="_blank">github.com/dr-wojak</a> · CC0 · The record is public
-</div>
-<div class="footer-right">
-Deontological Differences · Meinhardt Initiative<br>
-Ontology of Dissemination · March 2026
-</div>
+  <div class="footer-left">
+    <a href="https://dr-crunch.github.io/nullification-loops/" target="_blank">dr-crunch.github.io/nullification-loops</a><br>
+    <a href="https://github.com/dr-wojak?tab=repositories" target="_blank">github.com/dr-wojak</a> · CC0 · The record is public
+  </div>
+  <div class="footer-right">
+    Deontological Differences · Meinhardt Initiative<br>
+    Ontology of Dissemination · March 2026
+  </div>
 </footer>
 
 <div class="tooltip" id="tooltip"></div>
 
 <script>
-
-function navigate(el) {
-  const href = el.getAttribute('data-href');
-  if (href) window.open(href, '_blank', 'noopener');
-}
 const tooltip = document.getElementById('tooltip');
+
+// Complete labels map — every data-href in the document is covered
 const labels = {
   'https://github.com/dr-crunch/nullification-loops': 'nullification-loops · 14 EU languages · primary hub',
-  'https://dr-crunch.github.io/nullification-loops/': 'Primary public landing · 14 EU languages',
+  'https://dr-crunch.github.io/nullification-loops/': 'Nullification Loops · primary public landing · 14 EU languages',
   'https://github.com/dr-wojak/legal': ':LegalConstruct · Constitutional and statutory records',
+  'https://github.com/dr-wojak/legal': ':LegalConstruct · Art. 41 CFR · re Haughey · mandamus record',
   'https://drive.google.com/drive/u/0/folders/12o4-OPXJ0W5E8pxF9pN-VKUeODagy17g': 'Main Repository · Google Drive · primary archive',
-  'https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS': 'Formal Complaint Archive · 226 pages · complete record',
-  'https://drive.google.com/file/d/1-vETFPyMCzLWE1vm4T6Xse29cjC_SjUC': ':TairiscintMheinhardt · Systemic Governance Failure · Feb 2026',
+  'https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS': 'Formal Complaint Archive · 226 pages · complete evidentiary record',
+  'https://drive.google.com/file/d/1-vETFPyMCzLWE1vm4T6Xse29cjC_SjUC': ':TairiscintMheinhardt · Constitutional indictment · Irish and English · Feb 2026',
   'https://drive.google.com/file/d/1YB7so7pzTg7uZFFir7nKWxB5wZZeSEX3': ':InterregnumNullificans · 17 legal frameworks · Seanad Select Committee',
   'https://drive.google.com/file/d/1k-FVtgRPjqZrch-IZHTL1EWOtFGRU9AY': ':SeanadSubmission · Reg.2021/821 · March 2026',
   'https://drive.google.com/file/d/1tMi94twUL5FVuZ5EmBL_GI1WJ0uE8Vwx': ':PreLitigationNotice · February 10th 2026 · High Court mandamus',
-  'https://drive.google.com/file/d/1jD9Rmrlgp1wB0hqDqNIRNb8n3SwNBrCk': ':PETI · European Parliament · Art.227 TFEU guidance request',
-  'https://drive.google.com/file/d/1rVCRvUs91lYDAoo_YIfxpAAsYzEAMMxm': 'JCEUA Timeline · 10 documented contact points · Designed Forgetting',
-  'https://github.com/dr-wojak/econ': ':EconomicMechanism · Opportunity costs · Greenwald-Stiglitz',
-  'https://github.com/dr-wojak/governmentality-2025': 'governmentality-2025 · Structural indictment · basic canon',
-  'https://github.com/dr-wojak/redundancy-awareness': 'redundancy-awareness · Ministerial correspondence · Tánaiste enquiry',
+  'https://drive.google.com/file/d/1jD9Rmrlgp1wB0hqDqNIRNb8n3SwNBrCk': ':PETI submission · European Parliament · Art.227 TFEU guidance request',
+  'https://drive.google.com/file/d/1rVCRvUs91lYDAoo_YIfxpAAsYzEAMMxm': 'JCEUA Timeline · 10 documented contact points · Designed Forgetting record',
+  'https://drive.google.com/file/d/1ZSHHM7v0WAV3FGVuZ5EmBL_GI1WJ0uE8Vwx': ':CivicSignal · RedundancyAwareness · Strategic Intelligence Charter',
+  'https://github.com/dr-wojak/econ': ':EconomicMechanism · Opportunity costs · Greenwald-Stiglitz framework',
+  'https://github.com/dr-wojak/governmentality-2025': 'governmentality-2025 · Structural indictment canon',
+  'https://github.com/dr-wojak/redundancy-awareness': 'redundancy-awareness · Ministerial correspondence · Tánaiste enquiry record',
   'https://github.com/dr-wojak/start-here': 'start-here · Plain-language entry point · all jurisdictions',
   'https://github.com/dr-wojak/public-relations': 'public-relations · Civic engagement · charter articles',
   'https://github.com/dr-wojak/press': 'press · Media kit · Signal-to-silence timeline · CC0',
-  'https://dr-wojak.github.io/meinhardt-initiative-public-flyer': ':CivicSignal · Public petition · Art.15.10 Bunreacht',
-  'https://drive.google.com/file/d/1ZSHHM7v0WAV3FGVuZ5EmBL_GI1WJ0uE8Vwx': ':CivicSignal · RedundancyAwareness · Strategic Intelligence Charter',
+  'https://dr-wojak.github.io/meinhardt-initiative-public-flyer': ':CivicSignal · Public petition · Art.15.10 Bunreacht na hÉireann',
 };
+
 document.querySelectorAll('g[data-href]').forEach(g => {
   g.style.cursor = 'pointer';
-  g.addEventListener('click', () => navigate(g));
+  g.addEventListener('click', () => {
+    const href = g.getAttribute('data-href');
+    if (href) window.open(href, '_blank', 'noopener');
+  });
   g.addEventListener('mouseenter', e => {
     const href = g.getAttribute('data-href');
     const label = labels[href];
@@ -891,7 +852,6 @@ document.querySelectorAll('g[data-href]').forEach(g => {
   });
   g.addEventListener('mouseleave', () => tooltip.classList.remove('visible'));
 });
-
 </script>
 </body>
 </html>
