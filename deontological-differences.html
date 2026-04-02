@@ -52,6 +52,10 @@
 --gold: #c9a84c;
 --rule: rgba(232, 227, 212, 0.1);
 --rule-strong: rgba(232, 227, 212, 0.18);
+/* SVG label colours — used as inline style values */
+--svg-label: #9e9887;       /* section headers — parchment-dim, full opacity */
+--svg-chain: #c9a84c;       /* causal chain text — gold */
+--svg-legend: #9e9887;      /* legend labels */
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -258,6 +262,30 @@ h1 { font-size: 36px; }
 .machol { flex-direction: column; }
 .machol-line { width: 40px; height: 3px; min-height: auto; }
 }
+
+/* ─── SVG label colour classes ────────────────────────────────────────────
+   These apply to <text> elements sitting between node groups in the SVG —
+   section headers, the causal chain, and the legend. Not to text inside
+   coloured node rects (those use inline fill on the coloured backgrounds).
+   ──────────────────────────────────────────────────────────────────────── */
+.svg-section-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  fill: #9e9887;          /* --parchment-dim — legible on dark background */
+}
+.svg-chain-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  fill: #c9a84c;          /* --gold — structural accent, clearly readable */
+  opacity: 0.85;
+}
+.svg-legend-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  fill: #9e9887;          /* --parchment-dim */
+}
 </style>
 </head>
 <body>
@@ -270,7 +298,6 @@ h1 { font-size: 36px; }
     <a href="https://dr-crunch.github.io/nullification-loops/" class="btn btn-green" target="_blank" rel="noopener">
       <span>◎</span> Main Record
     </a>
-    <!-- FIX: was github.com/dr-crunch/redundancy-awareness/epistemological-audit (repo path, not pages path) -->
     <a href="https://dr-crunch.github.io/redundancy-awareness/epistemological-audit" class="btn btn-purple" target="_blank" rel="noopener">
       <span>✦</span> Epistemological Audit
     </a>
@@ -304,7 +331,7 @@ h1 { font-size: 36px; }
   </div>
 </div>
 
-<section class="hypotheses">
+<section id="five-channels" class="hypotheses">
   <div class="section-label">Five deontological differences — the same corpus, five distinct obligations on receipt</div>
   <div class="hyp-grid">
     <div class="hyp-card" data-letter="I">
@@ -335,7 +362,7 @@ h1 { font-size: 36px; }
   </div>
 </section>
 
-<div class="axiom-bar">
+<div id="master-chain" class="axiom-bar">
   <div class="axiom-rule"></div>
   <div class="axiom-body">
     <div class="axiom-label">OWL Axiom 1 — the master chain</div>
@@ -350,9 +377,23 @@ h1 { font-size: 36px; }
     <div class="map-note">OWL 2 DL · click nodes to navigate · hover for description</div>
   </div>
   <div class="svg-container" id="svgContainer">
+    <!--
+      COLOUR FIX SUMMARY
+      ══════════════════
+      Problem: floating <text> labels between node groups used
+        style="fill:rgb(61,61,58)" with opacity="0.5" or "0.6"
+        → on #0c0b09 background ≈ invisible
+
+      Solution: three classes applied to all non-node text:
+        .svg-section-label  fill:#9e9887 (--parchment-dim)  section headers
+        .svg-chain-label    fill:#c9a84c (--gold)           causal chain
+        .svg-legend-label   fill:#9e9887 (--parchment-dim)  legend entries
+
+      Node text inside coloured rects is UNCHANGED — those use
+      inline fill values against light backgrounds and were fine.
+    -->
     <svg width="100%" viewBox="0 0 680 2100" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <!-- named colour markers used throughout — explicit stroke colours, cross-browser safe -->
         <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
           <path d="M2 1L8 5L2 9" fill="none" stroke="#4a4540" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </marker>
@@ -373,11 +414,8 @@ h1 { font-size: 36px; }
         </marker>
       </defs>
 
-            <!-- ═══════════════════════════════════════════
-           CONNECTORS — named colour markers, explicit stroke colours
-           ═══════════════════════════════════════════ -->
+      <!-- ═══ CONNECTORS ═══ -->
       <g id="connectors" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <!-- Failure mode class → failure instances -->
         <line x1="462" y1="100" x2="462" y2="220" stroke="#993d1d" stroke-width="0.7" opacity="0.35" stroke-dasharray="3,2"/>
         <line x1="50" y1="220" x2="630" y2="220" stroke="#993d1d" stroke-width="0.7" opacity="0.35" stroke-dasharray="3,2"/>
         <line x1="100" y1="220" x2="100" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
@@ -385,8 +423,6 @@ h1 { font-size: 36px; }
         <line x1="340" y1="220" x2="340" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
         <line x1="460" y1="220" x2="460" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
         <line x1="580" y1="220" x2="580" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
-
-        <!-- Information object class → corpus artefacts -->
         <line x1="340" y1="178" x2="340" y2="320" stroke="#185fa5" stroke-width="0.7" opacity="0.3" stroke-dasharray="3,2"/>
         <line x1="50" y1="998" x2="620" y2="998" stroke="#534ab7" stroke-width="0.7" opacity="0.3" stroke-dasharray="3,2"/>
         <line x1="131" y1="998" x2="131" y2="1008" stroke="#534ab7" stroke-width="0.7" opacity="0.35" marker-end="url(#arrow-purple)"/>
@@ -395,8 +431,6 @@ h1 { font-size: 36px; }
         <line x1="131" y1="998" x2="131" y2="1086" stroke="#534ab7" stroke-width="0.7" opacity="0.25" stroke-dasharray="3,2"/>
         <line x1="323" y1="998" x2="323" y2="1086" stroke="#534ab7" stroke-width="0.7" opacity="0.25" stroke-dasharray="3,2"/>
         <line x1="515" y1="998" x2="515" y2="1086" stroke="#534ab7" stroke-width="0.7" opacity="0.25" stroke-dasharray="3,2"/>
-
-        <!-- Channels → Audiences -->
         <line x1="96" y1="546" x2="218" y2="592" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
         <line x1="96" y1="546" x2="340" y2="592" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
         <line x1="218" y1="546" x2="218" y2="670" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
@@ -404,8 +438,6 @@ h1 { font-size: 36px; }
         <line x1="340" y1="546" x2="280" y2="748" stroke="#2fb882" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-green)"/>
         <line x1="462" y1="546" x2="280" y2="826" stroke="#2fb882" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-green)"/>
         <line x1="584" y1="546" x2="280" y2="904" stroke="#c9881f" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-amber)"/>
-
-        <!-- Audiences → Corpus artefacts -->
         <line x1="218" y1="648" x2="131" y2="1008" stroke="#534ab7" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-purple)"/>
         <line x1="340" y1="648" x2="323" y2="1008" stroke="#534ab7" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-purple)"/>
         <line x1="218" y1="726" x2="515" y2="1008" stroke="#185fa5" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-blue)"/>
@@ -413,71 +445,65 @@ h1 { font-size: 36px; }
         <line x1="280" y1="804" x2="131" y2="1086" stroke="#3b6d11" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-green)"/>
         <line x1="280" y1="882" x2="515" y2="1086" stroke="#0f6e56" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-green)"/>
         <line x1="280" y1="960" x2="131" y2="1268" stroke="#854f0b" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-amber)"/>
-
-        <!-- Corpus artefacts → Campaign nodes -->
         <line x1="128" y1="1064" x2="128" y2="1190" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
         <line x1="320" y1="1064" x2="320" y2="1190" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
         <line x1="512" y1="1064" x2="512" y2="1190" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
         <line x1="134" y1="1142" x2="134" y2="1190" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
         <line x1="326" y1="1142" x2="326" y2="1268" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
         <line x1="515" y1="1142" x2="227" y2="1346" stroke="#2fb882" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
-
-        <!-- Campaign rows chain -->
         <line x1="131" y1="1246" x2="131" y2="1268" stroke="#2fb882" stroke-width="0.8" opacity="0.4" marker-end="url(#arrow-green)"/>
         <line x1="323" y1="1246" x2="323" y2="1268" stroke="#2fb882" stroke-width="0.8" opacity="0.4" marker-end="url(#arrow-green)"/>
         <line x1="515" y1="1246" x2="515" y2="1268" stroke="#2fb882" stroke-width="0.8" opacity="0.4" marker-end="url(#arrow-green)"/>
-
-        <!-- Campaign nodes → Economic mechanism -->
         <line x1="131" y1="1324" x2="131" y2="1454" stroke="#c9881f" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-amber)"/>
         <line x1="323" y1="1324" x2="323" y2="1454" stroke="#534ab7" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-purple)"/>
         <line x1="515" y1="1324" x2="515" y2="1454" stroke="#534ab7" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-purple)"/>
         <line x1="227" y1="1402" x2="131" y2="1454" stroke="#c9881f" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-amber)"/>
       </g>
-      <!-- ── top-level classes ── -->
-      <text x="340" y="30" text-anchor="middle" opacity="0.5" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase">top-level classes</text>
 
-      <!-- Root: links to main nullification-loops hub -->
+      <!-- ═══ SECTION LABEL: top-level classes ═══ -->
+      <!-- FIXED: was fill:rgb(61,61,58) opacity:0.5 — now uses .svg-section-label -->
+      <text x="340" y="30" text-anchor="middle" class="svg-section-label">top-level owl classes</text>
+
+      <!-- Root -->
       <g title="The OWL ontology root — all classes and individuals belong here" data-href="https://github.com/dr-crunch/nullification-loops">
         <rect x="44" y="44" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(238,237,254);stroke:rgb(83,74,183)"/>
         <text style="font-size:20px" x="96" y="66" text-anchor="middle" dominant-baseline="central">🌐</text>
         <text x="96" y="88" text-anchor="middle" dominant-baseline="central" style="fill:rgb(83,74,183);font-size:12px">Root</text>
       </g>
-      <!-- Actor: links to nullification-loops (actors documented there) -->
+      <!-- Actor -->
       <g title="Institutional actors: state bodies and named individuals" data-href="https://github.com/dr-crunch/nullification-loops">
         <rect x="166" y="44" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225,245,238);stroke:rgb(15,110,86)"/>
         <text style="font-size:20px" x="218" y="66" text-anchor="middle" dominant-baseline="central">🏛️</text>
         <text x="218" y="88" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15,110,86);font-size:12px">Actor</text>
       </g>
-      <!-- Process: links to nullification-loops (processes documented there) -->
+      <!-- Process -->
       <g title="Administrative, operational and failure processes" data-href="https://github.com/dr-crunch/nullification-loops">
         <rect x="288" y="44" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225,245,238);stroke:rgb(15,110,86)"/>
         <text style="font-size:20px" x="340" y="66" text-anchor="middle" dominant-baseline="central">⚙️</text>
         <text x="340" y="88" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15,110,86);font-size:12px">Process</text>
       </g>
-      <!-- Failure mode: links to nullification-loops landing -->
+      <!-- Failure mode -->
       <g title="Named failure patterns: procedural and structural breakdowns" data-href="https://dr-crunch.github.io/nullification-loops/">
         <rect x="410" y="44" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(250,236,231);stroke:rgb(153,60,29)"/>
         <text style="font-size:20px" x="462" y="66" text-anchor="middle" dominant-baseline="central">⚠️</text>
         <text x="462" y="88" text-anchor="middle" dominant-baseline="central" style="fill:rgb(153,60,29);font-size:12px">Failure mode</text>
       </g>
-      <!-- Legal construct: links to legal repo -->
+      <!-- Legal construct -->
       <g title="Rights, obligations and violations as legal constructs" data-href="https://github.com/dr-wojak/legal">
         <rect x="532" y="44" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230,241,251);stroke:rgb(24,95,165)"/>
         <text style="font-size:20px" x="584" y="66" text-anchor="middle" dominant-baseline="central">⚖️</text>
         <text x="584" y="88" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24,95,165);font-size:12px">Legal construct</text>
       </g>
-
-      <!-- Information object: links to main repository -->
+      <!-- Information object -->
       <g title="Submissions, signals and documents that carry the corpus" data-href="https://drive.google.com/drive/u/0/folders/12o4-OPXJ0W5E8pxF9pN-VKUeODagy17g">
         <rect x="288" y="122" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230,241,251);stroke:rgb(24,95,165)"/>
         <text style="font-size:20px" x="340" y="144" text-anchor="middle" dominant-baseline="central">📄</text>
         <text x="340" y="166" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24,95,165);font-size:12px">Information object</text>
       </g>
 
-      <!-- ── failure mode instances · nullification loop ── -->
-      <text x="340" y="216" text-anchor="middle" opacity="0.5" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase">failure mode instances · nullification loop</text>
+      <!-- ═══ SECTION LABEL: failure mode instances ═══ -->
+      <text x="340" y="216" text-anchor="middle" class="svg-section-label">failure mode instances · nullification loop</text>
 
-      <!-- FIX: all 5 failure mode instances now have data-href pointing to nullification-loops landing -->
       <g title="An acknowledgement treated as though it resolves the underlying matter" data-href="https://dr-crunch.github.io/nullification-loops/">
         <rect x="44" y="230" width="112" height="70" rx="8" stroke-width="0.5" style="fill:rgb(250,236,231);stroke:rgb(153,60,29)"/>
         <text style="font-size:26px" x="100" y="256" text-anchor="middle" dominant-baseline="central">📬</text>
@@ -509,13 +535,13 @@ h1 { font-size: 36px; }
         <text style="font-size:10px;fill:rgb(153,60,29)" x="580" y="296" text-anchor="middle" dominant-baseline="central">suppression</text>
       </g>
 
-      <!-- Causal chain label -->
-      <text x="340" y="334" text-anchor="middle" opacity="0.6" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px">produces failure → nullification loop → triggers → maladministration → violates → right to be heard</text>
+      <!-- ═══ CAUSAL CHAIN LABEL ═══ -->
+      <!-- FIXED: was fill:rgb(61,61,58) opacity:0.6 — now uses .svg-chain-label (gold) -->
+      <text x="340" y="334" text-anchor="middle" class="svg-chain-label">produces failure → nullification loop → triggers → maladministration → violates → right to be heard</text>
 
-      <!-- ── object properties ── -->
-      <text x="340" y="374" text-anchor="middle" opacity="0.5" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase">object properties · dissemination relations</text>
+      <!-- ═══ SECTION LABEL: object properties ═══ -->
+      <text x="340" y="374" text-anchor="middle" class="svg-section-label">object properties · dissemination relations</text>
 
-      <!-- FIX: all 5 property nodes now have data-href -->
       <g title="An actor ignores a submission — initiates the causal chain" data-href="https://dr-crunch.github.io/nullification-loops/">
         <rect x="44" y="388" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(241,239,232);stroke:rgb(95,94,90)"/>
         <text style="font-size:20px" x="96" y="410" text-anchor="middle" dominant-baseline="central">🙈</text>
@@ -542,8 +568,8 @@ h1 { font-size: 36px; }
         <text x="584" y="432" text-anchor="middle" dominant-baseline="central" style="fill:rgb(95,94,90);font-size:12px">Amplifies</text>
       </g>
 
-      <!-- ── dissemination channels ── -->
-      <text x="340" y="476" text-anchor="middle" opacity="0.5" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase">dissemination channels · five deontological routes</text>
+      <!-- ═══ SECTION LABEL: dissemination channels ═══ -->
+      <text x="340" y="476" text-anchor="middle" class="svg-section-label">dissemination channels · five deontological routes</text>
 
       <g title="Courts, ombudsmen and pre-litigation notices — receipt creates a duty to give reasons" data-href="https://dr-crunch.github.io/nullification-loops/">
         <rect x="44" y="490" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230,241,251);stroke:rgb(24,95,165)"/>
@@ -571,58 +597,47 @@ h1 { font-size: 36px; }
         <text x="584" y="534" text-anchor="middle" dominant-baseline="central" style="fill:rgb(133,79,11);font-size:12px">Media / Press</text>
       </g>
 
-      <!-- ── audience instances ── -->
-      <text x="340" y="578" text-anchor="middle" opacity="0.5" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase">audience instances · named bodies</text>
+      <!-- ═══ SECTION LABEL: audience instances ═══ -->
+      <text x="340" y="578" text-anchor="middle" class="svg-section-label">audience instances · named bodies</text>
 
-      <!-- High Court: pre-litigation notice doc -->
       <g title="The High Court — mandamus proceedings, judicial review" data-href="https://drive.google.com/file/d/1tMi94twUL5FVuZ5EmBL_GI1WJ0uE8Vwx">
         <rect x="166" y="592" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230,241,251);stroke:rgb(24,95,165)"/>
         <text style="font-size:20px" x="218" y="614" text-anchor="middle" dominant-baseline="central">🏛️</text>
         <text x="218" y="636" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24,95,165);font-size:12px">High Court</text>
       </g>
-      <!-- FIX: Irish Ombudsman now has its own distinct href (Tairiscint — the formal complaint doc) -->
       <g title="Irish Ombudsman — administrative review of state conduct" data-href="https://drive.google.com/file/d/1-vETFPyMCzLWE1vm4T6Xse29cjC_SjUC">
         <rect x="288" y="592" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230,241,251);stroke:rgb(24,95,165)"/>
         <text style="font-size:20px" x="340" y="614" text-anchor="middle" dominant-baseline="central">🧑‍⚖️</text>
         <text x="340" y="636" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24,95,165);font-size:12px">Ombudsman</text>
       </g>
-
-      <!-- EU Ombudsman -->
       <g title="European Ombudsman — Article 228 TFEU, EU institutional maladministration" data-href="https://drive.google.com/file/d/1rVCRvUs91lYDAoo_YIfxpAAsYzEAMMxm">
         <rect x="166" y="670" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230,241,251);stroke:rgb(24,95,165)"/>
         <text style="font-size:20px" x="218" y="692" text-anchor="middle" dominant-baseline="central">🇪🇺</text>
         <text x="218" y="714" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24,95,165);font-size:12px">EU Ombudsman</text>
       </g>
-      <!-- PETI -->
       <g title="PETI — European Parliament Committee on Petitions, Article 227 TFEU" data-href="https://drive.google.com/file/d/1jD9Rmrlgp1wB0hqDqNIRNb8n3SwNBrCk">
         <rect x="288" y="670" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(230,241,251);stroke:rgb(24,95,165)"/>
         <text style="font-size:20px" x="340" y="692" text-anchor="middle" dominant-baseline="central">📋</text>
         <text x="340" y="714" text-anchor="middle" dominant-baseline="central" style="fill:rgb(24,95,165);font-size:12px">PETI</text>
       </g>
-
-      <!-- FIX: Research node now has data-href (was missing entirely) -->
       <g title="Operations Research, Viable System Model and Bateson cybernetics — empirical engagement required" data-href="https://github.com/dr-wojak/econ">
         <rect x="228" y="748" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(234,243,222);stroke:rgb(59,109,17)"/>
         <text style="font-size:20px" x="280" y="770" text-anchor="middle" dominant-baseline="central">🔬</text>
         <text x="280" y="792" text-anchor="middle" dominant-baseline="central" style="fill:rgb(59,109,17);font-size:12px">Research</text>
       </g>
-
-      <!-- Citizens -->
       <g title="Citizens and civic petitioners — Article 15.10 Bunreacht na hÉireann" data-href="https://dr-wojak.github.io/meinhardt-initiative-public-flyer">
         <rect x="228" y="826" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225,245,238);stroke:rgb(15,110,86)"/>
         <text style="font-size:20px" x="280" y="848" text-anchor="middle" dominant-baseline="central">🗳️</text>
         <text x="280" y="870" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15,110,86);font-size:12px">Citizens</text>
       </g>
-
-      <!-- Press audience -->
       <g title="Press and media — CC0 licensed, fully timestamped, publication-ready" data-href="https://github.com/dr-wojak/press">
         <rect x="228" y="904" width="104" height="56" rx="8" stroke-width="0.5" style="fill:rgb(250,238,218);stroke:rgb(133,79,11)"/>
         <text style="font-size:20px" x="280" y="926" text-anchor="middle" dominant-baseline="central">📰</text>
         <text x="280" y="948" text-anchor="middle" dominant-baseline="central" style="fill:rgb(133,79,11);font-size:12px">Press</text>
       </g>
 
-      <!-- ── corpus artefacts ── -->
-      <text x="340" y="994" text-anchor="middle" opacity="0.5" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase">corpus artefacts · information objects</text>
+      <!-- ═══ SECTION LABEL: corpus artefacts ═══ -->
+      <text x="340" y="994" text-anchor="middle" class="svg-section-label">corpus artefacts · information objects</text>
 
       <g title="Constitutional indictment in Irish and English — the foundational document" data-href="https://drive.google.com/file/d/1-vETFPyMCzLWE1vm4T6Xse29cjC_SjUC">
         <rect x="44" y="1008" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(238,237,254);stroke:rgb(83,74,183)"/>
@@ -649,15 +664,14 @@ h1 { font-size: 36px; }
         <text style="font-size:20px" x="323" y="1108" text-anchor="middle" dominant-baseline="central">🗂️</text>
         <text x="323" y="1130" text-anchor="middle" dominant-baseline="central" style="fill:rgb(83,74,183);font-size:12px">Formal complaint</text>
       </g>
-      <!-- FIX: Civic signal artefact now uses its own distinct href (not the same as Citizens audience) -->
-      <g title="Civic signal — RedundancyAwareness public record and ministerial correspondence" data-href="https://drive.google.com/file/d/1ZSHHM7v0WAV3FGVuZ5EmBL_GI1WJ0uE8Vwx">
+      <g title="Civic signal — RedundancyAwareness public record and ministerial correspondence" data-href="https://dr-crunch.github.io/redundancy-awareness">
         <rect x="428" y="1086" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(238,237,254);stroke:rgb(83,74,183)"/>
         <text style="font-size:20px" x="515" y="1108" text-anchor="middle" dominant-baseline="central">📡</text>
         <text x="515" y="1130" text-anchor="middle" dominant-baseline="central" style="fill:rgb(83,74,183);font-size:12px">Civic signal</text>
       </g>
 
-      <!-- ── campaign nodes ── -->
-      <text x="340" y="1176" text-anchor="middle" opacity="0.5" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase">campaign nodes · GitHub repositories · amplification</text>
+      <!-- ═══ SECTION LABEL: campaign nodes ═══ -->
+      <text x="340" y="1176" text-anchor="middle" class="svg-section-label">campaign nodes · GitHub repositories · amplification</text>
 
       <g title="Primary hub — 14 EU languages, main dissemination entry point" data-href="https://github.com/dr-crunch/nullification-loops">
         <rect x="44" y="1190" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(225,245,238);stroke:rgb(15,110,86)"/>
@@ -695,8 +709,8 @@ h1 { font-size: 36px; }
         <text x="227" y="1390" text-anchor="middle" dominant-baseline="central" style="fill:rgb(15,110,86);font-size:12px">redundancy-awareness</text>
       </g>
 
-      <!-- ── economic mechanism ── -->
-      <text x="340" y="1440" text-anchor="middle" opacity="0.5" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase">economic mechanism · finance of notice</text>
+      <!-- ═══ SECTION LABEL: economic mechanism ═══ -->
+      <text x="340" y="1440" text-anchor="middle" class="svg-section-label">economic mechanism · finance of notice</text>
 
       <g title="The economic incentive structure that makes ignoring submissions institutionally rational" data-href="https://github.com/dr-wojak/econ">
         <rect x="44" y="1454" width="174" height="56" rx="8" stroke-width="0.5" style="fill:rgb(250,238,218);stroke:rgb(133,79,11)"/>
@@ -714,26 +728,27 @@ h1 { font-size: 36px; }
         <text x="515" y="1498" text-anchor="middle" dominant-baseline="central" style="fill:rgb(95,94,90);font-size:12px">SPARQL query</text>
       </g>
 
+      <!-- ═══ SECTION LABEL: legend ═══ -->
+      <text x="340" y="1556" text-anchor="middle" class="svg-section-label">legend</text>
 
-
-      <!-- ── legend ── -->
-      <text x="340" y="1556" text-anchor="middle" opacity="0.5" style="fill:rgb(61,61,58);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase">legend</text>
-
+      <!-- ═══ LEGEND ENTRIES ═══ -->
+      <!-- FIXED: were fill:rgb(61,61,58) — now use .svg-legend-label -->
       <rect x="44" y="1570" width="18" height="18" rx="4" stroke-width="0.5" style="fill:rgb(238,237,254);stroke:rgb(83,74,183)"/>
-      <text x="70" y="1583" style="fill:rgb(61,61,58);font-size:12px" dominant-baseline="central">Corpus artefact</text>
+      <text x="70" y="1583" class="svg-legend-label" dominant-baseline="central">Corpus artefact</text>
       <rect x="200" y="1570" width="18" height="18" rx="4" stroke-width="0.5" style="fill:rgb(225,245,238);stroke:rgb(15,110,86)"/>
-      <text x="226" y="1583" style="fill:rgb(61,61,58);font-size:12px" dominant-baseline="central">Actor / Campaign node</text>
+      <text x="226" y="1583" class="svg-legend-label" dominant-baseline="central">Actor / Campaign node</text>
       <rect x="390" y="1570" width="18" height="18" rx="4" stroke-width="0.5" style="fill:rgb(250,236,231);stroke:rgb(153,60,29)"/>
-      <text x="416" y="1583" style="fill:rgb(61,61,58);font-size:12px" dominant-baseline="central">Failure mode</text>
+      <text x="416" y="1583" class="svg-legend-label" dominant-baseline="central">Failure mode</text>
       <rect x="510" y="1570" width="18" height="18" rx="4" stroke-width="0.5" style="fill:rgb(230,241,251);stroke:rgb(24,95,165)"/>
-      <text x="536" y="1583" style="fill:rgb(61,61,58);font-size:12px" dominant-baseline="central">Legal / EU</text>
+      <text x="536" y="1583" class="svg-legend-label" dominant-baseline="central">Legal / EU</text>
 
       <rect x="44" y="1606" width="18" height="18" rx="4" stroke-width="0.5" style="fill:rgb(234,243,222);stroke:rgb(59,109,17)"/>
-      <text x="70" y="1619" style="fill:rgb(61,61,58);font-size:12px" dominant-baseline="central">Academic</text>
+      <text x="70" y="1619" class="svg-legend-label" dominant-baseline="central">Academic</text>
       <rect x="200" y="1606" width="18" height="18" rx="4" stroke-width="0.5" style="fill:rgb(250,238,218);stroke:rgb(133,79,11)"/>
-      <text x="226" y="1619" style="fill:rgb(61,61,58);font-size:12px" dominant-baseline="central">Economic / Media</text>
+      <text x="226" y="1619" class="svg-legend-label" dominant-baseline="central">Economic / Media</text>
       <rect x="390" y="1606" width="18" height="18" rx="4" stroke-width="0.5" style="fill:rgb(241,239,232);stroke:rgb(95,94,90)"/>
-      <text x="416" y="1619" style="fill:rgb(61,61,58);font-size:12px" dominant-baseline="central">Object property / Query</text>
+      <text x="416" y="1619" class="svg-legend-label" dominant-baseline="central">Object property / Query</text>
+
     </svg>
   </div>
 </section>
@@ -799,7 +814,8 @@ h1 { font-size: 36px; }
 <footer>
   <div class="footer-left">
     <a href="https://dr-crunch.github.io/nullification-loops/" target="_blank">dr-crunch.github.io/nullification-loops</a><br>
-    <a href="https://github.com/dr-wojak?tab=repositories" target="_blank">github.com/dr-wojak</a> · CC0 · The record is public
+    <a href="https://github.com/dr-wojak?tab=repositories" target="_blank">github.com/dr-wojak</a> · CC0 · The record is public<br>
+    <a href="https://dr-crunch.github.io/sitemap" target="_blank">Sitemap</a>
   </div>
   <div class="footer-right">
     Deontological Differences · Meinhardt Initiative<br>
@@ -811,29 +827,26 @@ h1 { font-size: 36px; }
 
 <script>
 const tooltip = document.getElementById('tooltip');
-
-// Complete labels map — every data-href in the document is covered
 const labels = {
   'https://github.com/dr-crunch/nullification-loops': 'nullification-loops · 14 EU languages · primary hub',
-  'https://dr-crunch.github.io/nullification-loops/': 'Nullification Loops · primary public landing · 14 EU languages',
-  'https://github.com/dr-wojak/legal': ':LegalConstruct · Constitutional and statutory records',
+  'https://dr-crunch.github.io/nullification-loops/': 'Nullification Loops · primary public landing',
   'https://github.com/dr-wojak/legal': ':LegalConstruct · Art. 41 CFR · re Haughey · mandamus record',
   'https://drive.google.com/drive/u/0/folders/12o4-OPXJ0W5E8pxF9pN-VKUeODagy17g': 'Main Repository · Google Drive · primary archive',
   'https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS': 'Formal Complaint Archive · 226 pages · complete evidentiary record',
-  'https://drive.google.com/file/d/1-vETFPyMCzLWE1vm4T6Xse29cjC_SjUC': ':TairiscintMheinhardt · Constitutional indictment · Irish and English · Feb 2026',
-  'https://drive.google.com/file/d/1YB7so7pzTg7uZFFir7nKWxB5wZZeSEX3': ':InterregnumNullificans · 17 legal frameworks · Seanad Select Committee',
+  'https://drive.google.com/file/d/1-vETFPyMCzLWE1vm4T6Xse29cjC_SjUC': ':TairiscintMheinhardt · Constitutional indictment · Feb 2026',
+  'https://drive.google.com/file/d/1YB7so7pzTg7uZFFir7nKWxB5wZZeSEX3': ':InterregnumNullificans · 17 legal frameworks',
   'https://drive.google.com/file/d/1k-FVtgRPjqZrch-IZHTL1EWOtFGRU9AY': ':SeanadSubmission · Reg.2021/821 · March 2026',
   'https://drive.google.com/file/d/1tMi94twUL5FVuZ5EmBL_GI1WJ0uE8Vwx': ':PreLitigationNotice · February 10th 2026 · High Court mandamus',
-  'https://drive.google.com/file/d/1jD9Rmrlgp1wB0hqDqNIRNb8n3SwNBrCk': ':PETI submission · European Parliament · Art.227 TFEU guidance request',
-  'https://drive.google.com/file/d/1rVCRvUs91lYDAoo_YIfxpAAsYzEAMMxm': 'JCEUA Timeline · 10 documented contact points · Designed Forgetting record',
-  'https://drive.google.com/file/d/1ZSHHM7v0WAV3FGVuZ5EmBL_GI1WJ0uE8Vwx': ':CivicSignal · RedundancyAwareness · Strategic Intelligence Charter',
+  'https://drive.google.com/file/d/1jD9Rmrlgp1wB0hqDqNIRNb8n3SwNBrCk': ':PETI submission · Art.227 TFEU guidance request',
+  'https://drive.google.com/file/d/1rVCRvUs91lYDAoo_YIfxpAAsYzEAMMxm': 'JCEUA Timeline · Designed Forgetting record',
+  'https://dr-crunch.github.io/redundancy-awareness': ':CivicSignal · RedundancyAwareness · ministerial correspondence',
   'https://github.com/dr-wojak/econ': ':EconomicMechanism · Opportunity costs · Greenwald-Stiglitz framework',
   'https://github.com/dr-wojak/governmentality-2025': 'governmentality-2025 · Structural indictment canon',
-  'https://github.com/dr-wojak/redundancy-awareness': 'redundancy-awareness · Ministerial correspondence · Tánaiste enquiry record',
-  'https://github.com/dr-wojak/start-here': 'start-here · Plain-language entry point · all jurisdictions',
-  'https://github.com/dr-wojak/public-relations': 'public-relations · Civic engagement · charter articles',
+  'https://github.com/dr-wojak/redundancy-awareness': 'redundancy-awareness · Ministerial correspondence · Tánaiste enquiry',
+  'https://github.com/dr-wojak/start-here': 'start-here · Plain-language entry point',
+  'https://github.com/dr-wojak/public-relations': 'public-relations · Civic engagement',
   'https://github.com/dr-wojak/press': 'press · Media kit · Signal-to-silence timeline · CC0',
-  'https://dr-wojak.github.io/meinhardt-initiative-public-flyer': ':CivicSignal · Public petition · Art.15.10 Bunreacht na hÉireann',
+  'https://dr-wojak.github.io/meinhardt-initiative-public-flyer': ':CivicSignal · Public petition · Art.15.10 Bunreacht',
 };
 
 document.querySelectorAll('g[data-href]').forEach(g => {
@@ -842,7 +855,7 @@ document.querySelectorAll('g[data-href]').forEach(g => {
     const href = g.getAttribute('data-href');
     if (href) window.open(href, '_blank', 'noopener');
   });
-  g.addEventListener('mouseenter', e => {
+  g.addEventListener('mouseenter', () => {
     const href = g.getAttribute('data-href');
     const label = labels[href];
     if (label) { tooltip.textContent = label; tooltip.classList.add('visible'); }
