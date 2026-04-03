@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ontology Relations · OWL Layer · Meinhardt Initiative</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400;500&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink:#0c0b09;
+  --surface:#141210;
+  --surface2:#1c1a17;
+  --parchment:#e8e3d4;
+  --parchment-dim:#9e9887;
+  --purple:#8b83e8;
+  --green:#2fb882;
+  --green-bg:#0d1f1a;
+  --blue:#4a9fe0;
+  --blue-bg:#0c1929;
+  --amber:#c9a84c;
+  --amber-bg:#1e1509;
+  --rule:rgba(232,227,212,0.12);
+}
+
+body {
+  margin:0;
+  background:var(--ink);
+  color:var(--parchment);
+  font-family:'Cormorant Garamond', serif;
+}
+
+.container {
+  max-width:960px;
+  margin:0 auto;
+  padding:56px 32px;
+}
+
+.nav {
+  margin-bottom:28px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11px;
+}
+
+.nav a {
+  color:var(--parchment-dim);
+  text-decoration:none;
+  margin-right:18px;
+}
+
+.nav a:hover { color:var(--parchment); }
+
+h1 {
+  font-weight:300;
+  font-size:56px;
+  margin-bottom:8px;
+}
+
+.subtitle {
+  font-style:italic;
+  color:var(--parchment-dim);
+  margin-bottom:40px;
+  max-width:680px;
+}
+
+.section-label {
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11px;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--parchment-dim);
+  margin-bottom:18px;
+}
+
+.relation {
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-left:3px solid var(--purple);
+  border-radius:4px;
+  padding:20px 22px;
+  margin-bottom:18px;
+}
+
+.rel-name {
+  font-family:'IBM Plex Mono', monospace;
+  font-size:13px;
+  color:var(--purple);
+  margin-bottom:6px;
+}
+
+.rel-signature {
+  font-family:'IBM Plex Mono', monospace;
+  font-size:12px;
+  color:var(--amber);
+  margin-bottom:10px;
+}
+
+.rel-body {
+  font-family:'EB Garamond', serif;
+  font-size:16px;
+  line-height:1.65;
+}
+
+.rel-axiom {
+  margin-top:10px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11px;
+  color:var(--green);
+}
+
+.cross-links {
+  margin-top:14px;
+  padding-top:12px;
+  border-top:1px solid var(--rule);
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.cross-group {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+}
+
+.cross-label {
+  font-family:'IBM Plex Mono', monospace;
+  font-size:10px;
+  letter-spacing:0.08em;
+  color:var(--parchment-dim);
+  text-transform:uppercase;
+  min-width:75px;
+}
+
+.cross-link {
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11px;
+  text-decoration:none;
+  padding:3px 8px;
+  border-radius:3px;
+  border:1px solid;
+}
+
+.instance {
+  color:var(--green);
+  border-color:#0f6e56;
+  background:var(--green-bg);
+}
+
+.evidence {
+  color:var(--blue);
+  border-color:#185fa5;
+  background:var(--blue-bg);
+}
+
+.graph {
+  color:var(--amber);
+  border-color:#854f0b;
+  background:var(--amber-bg);
+}
+
+.cross-link:hover { opacity:0.85; }
+
+.interpretive {
+  background:var(--surface2);
+  border-left:3px solid var(--purple);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="nav">
+  <a href="/redundancy-awareness/deontological-differences.html">← Graph</a>
+  <a href="/nullification-loops/">Main Record</a>
+</div>
+
+<h1>Ontology Relations</h1>
+<div class="subtitle">
+Object properties of the OWL 2 ontology — causal operators linking actors, processes, and failure modes. These are not labels but directional mechanisms.
+</div>
+
+<div class="section-label">Core Relations</div>
+
+<!-- ignores -->
+
+<div id="ignores" class="relation">
+  <div class="rel-name">:ignores</div>
+  <div class="rel-signature">AdministrativeProcess → Submission</div>
+  <div class="rel-body">
+    Non-processing of a formally received submission. Not absence of receipt, but failure to act despite acknowledgement.
+  </div>
+  <div class="rel-axiom">ignores ⟹ producesFailure NullificationLoop</div>
+
+  <div class="cross-links">
+    <div class="cross-group">
+      <div class="cross-label">Instances</div>
+      <a class="cross-link instance" href="/failure-modes.html#acknowledgement-as-closure">Acknowledgement</a>
+      <a class="cross-link instance" href="/failure-modes.html#deferral-without-destination">Deferral</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://drive.google.com/" target="_blank">Submission Record</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Graph</div>
+      <a class="cross-link graph" href="/redundancy-awareness/deontological-differences.html">View</a>
+    </div>
+  </div>
+</div>
+
+<!-- suppresses -->
+
+<div id="suppresses" class="relation">
+  <div class="rel-name">:suppresses</div>
+  <div class="rel-signature">Actor → CivicSignal</div>
+  <div class="rel-body">
+    Attenuation of a civic signal such that it fails to propagate through institutional channels.
+  </div>
+  <div class="rel-axiom">suppresses ⟹ documents DesignedForgetting</div>
+
+  <div class="cross-links">
+    <div class="cross-group">
+      <div class="cross-label">Instances</div>
+      <a class="cross-link instance" href="/failure-modes.html#record-suppression">Record suppression</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://github.com/dr-wojak/press" target="_blank">Press Archive</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Graph</div>
+      <a class="cross-link graph" href="/redundancy-awareness/deontological-differences.html">View</a>
+    </div>
+  </div>
+</div>
+
+<!-- producesFailure -->
+
+<div id="produces-failure" class="relation">
+  <div class="rel-name">:producesFailure</div>
+  <div class="rel-signature">Process → FailureMode</div>
+  <div class="rel-body">
+    Links a process to the failure mode it systematically generates.
+  </div>
+  <div class="rel-axiom">producesFailure ⟹ triggers Maladministration</div>
+
+  <div class="cross-links">
+    <div class="cross-group">
+      <div class="cross-label">Instances</div>
+      <a class="cross-link instance" href="/failure-modes.html#remit-displacement">Remit displacement</a>
+      <a class="cross-link instance" href="/failure-modes.html#sufficiency-without-audit">Sufficiency</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://drive.google.com/" target="_blank">Case Files</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Graph</div>
+      <a class="cross-link graph" href="/redundancy-awareness/deontological-differences.html">View</a>
+    </div>
+  </div>
+</div>
+
+<!-- triggers -->
+
+<div id="triggers" class="relation">
+  <div class="rel-name">:triggers</div>
+  <div class="rel-signature">FailureMode → LegalCondition</div>
+  <div class="rel-body">
+    A failure mode activates a legally cognisable condition (e.g. maladministration).
+  </div>
+  <div class="rel-axiom">triggers ⟹ enables judicial review</div>
+
+  <div class="cross-links">
+    <div class="cross-group">
+      <div class="cross-label">Instances</div>
+      <a class="cross-link instance" href="/failure-modes.html#deferral-without-destination">Deferral</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://drive.google.com/" target="_blank">Mandamus Draft</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Graph</div>
+      <a class="cross-link graph" href="/redundancy-awareness/deontological-differences.html">View</a>
+    </div>
+  </div>
+</div>
+
+<!-- violates -->
+
+<div id="violates" class="relation">
+  <div class="rel-name">:violates</div>
+  <div class="rel-signature">Process → Right</div>
+  <div class="rel-body">
+    Breach of a protected procedural or fundamental right arising from institutional conduct.
+  </div>
+  <div class="rel-axiom">violates ⟹ grounds certiorari / mandamus</div>
+
+  <div class="cross-links">
+    <div class="cross-group">
+      <div class="cross-label">Instances</div>
+      <a class="cross-link instance" href="/failure-modes.html#acknowledgement-as-closure">Acknowledgement</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://github.com/dr-wojak/legal" target="_blank">Legal Repo</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Graph</div>
+      <a class="cross-link graph" href="/redundancy-awareness/deontological-differences.html">View</a>
+    </div>
+  </div>
+</div>
+
+<div class="section-label">Interpretation</div>
+
+<div class="relation interpretive">
+  <div class="rel-body">
+    The ontology encodes a directional chain:
+    <br><br>
+    <strong>ignores → producesFailure → triggers → violates</strong>
+    <br><br>
+    Each relation is a causal operator.  
+    The cross-links bind abstraction to instance and evidence, ensuring the graph remains navigable, verifiable, and legally actionable.
+  </div>
+</div>
+
+</div>
+</body>
+</html>
