@@ -3,24 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Semantic Mapping · Meinhardt Corpus · Interregnum Nullificans</title>
+<title>Semantic Map · Meinhardt Corpus · Interregnum Nullificans</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<!-- Open Graph / Facebook, LinkedIn, Discord, etc. -->
 <meta property="og:title" content="Meinhardt Initiative · Semantically Mapping the Interregnum Nullificans" />
-<meta property="og:description" content="Why we know what we know." />
+<meta property="og:description" content="Three-page integration: Deontological Differences, Ontology Relations, Failure Modes — one directed labelled graph." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://dr-crunch.github.io/redundancy-awareness/epistemological-audit.html" />
+<meta property="og:url" content="https://dr-crunch.github.io/redundancy-awareness/semantic-map" />
 <meta property="og:site_name" content="Meinhardt Initiative Semantic Map" />
 <meta property="og:image" content="https://dr-crunch.github.io/redundancy-awareness/og-image-semantic-map.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<!-- Twitter / X Cards -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Semantic Mapping (see also Epistemological Audit)" />
-<meta name="twitter:description" content="What we know, what we still need to prove, and what needs to happen next." />
+<meta name="twitter:title" content="Semantic Map · Meinhardt Corpus" />
+<meta name="twitter:description" content="Three-page integration: one directed labelled graph." />
 <meta name="twitter:image" content="https://dr-crunch.github.io/redundancy-awareness/og-image-semantic-map.jpg" />
-<!-- Optional extra meta tags for better SEO and previews -->
-<meta name="description" content="Causal Chains · Semantic Mapping · Meinhardt Initiative · March 2026." />
+<meta name="description" content="Causal Chains · Semantic Mapping · Three-Page Integration · Meinhardt Initiative · 2026." />
 
 <style>
 :root {
@@ -72,33 +69,36 @@ body::before {
   opacity: 0.6;
 }
 
-/* ─── NAV ─────────────────────────────────── */
-.top-bar {
+/* ─── CLUSTER NAV ─── */
+.cluster-nav {
   position: relative; z-index: 10;
-  border-bottom: 1px solid var(--rule-strong);
-  background: rgba(12,11,9,0.92);
+  background: rgba(26,20,8,0.75);
+  border-bottom: 1px solid rgba(201,168,76,0.2);
   backdrop-filter: blur(8px);
-  padding: 14px 32px;
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 16px; flex-wrap: wrap;
-}
-.top-bar-title {
+  padding: 8px 32px;
+  display: flex; align-items: center; gap: 0;
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  flex-wrap: wrap;
+}
+.cluster-nav-label {
+  color: rgba(201,168,76,0.45);
+  margin-right: 18px; white-space: nowrap;
+}
+.cluster-nav-sep { color: rgba(158,152,135,0.3); margin: 0 10px; }
+.cluster-nav a {
+  color: #9e9887; text-decoration: none;
+  padding: 2px 0; border-bottom: 1px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+.cluster-nav a:hover { color: #e8e3d4; border-bottom-color: #9e9887; }
+.cluster-nav .current {
   color: var(--amber);
+  border-bottom: 1px solid var(--amber-dim);
+  cursor: default;
 }
-.top-bar-links {
-  display: flex; gap: 20px;
-}
-.top-bar-links a {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--parchment-dim); text-decoration: none;
-  transition: color 0.15s;
-}
-.top-bar-links a:hover { color: var(--parchment); }
 
-/* ─── HEADER ──────────────────────────────── */
+/* ─── HEADER ─── */
 header {
   position: relative; z-index: 1;
   max-width: 960px; margin: 0 auto;
@@ -118,8 +118,7 @@ header {
 h1 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 300; font-size: clamp(36px,6vw,68px);
-  line-height: 1.05; color: var(--parchment);
-  margin-bottom: 6px;
+  line-height: 1.05; color: var(--parchment); margin-bottom: 6px;
 }
 h1 em { font-style: italic; color: var(--parchment-dim); }
 .header-sub {
@@ -133,8 +132,6 @@ h1 em { font-style: italic; color: var(--parchment-dim); }
   padding-left: 20px; margin-bottom: 32px;
   font-family: 'EB Garamond', serif;
 }
-
-/* layer badges */
 .layer-badges { display: flex; gap: 10px; flex-wrap: wrap; }
 .layer-badge {
   font-family: 'IBM Plex Mono', monospace;
@@ -144,11 +141,11 @@ h1 em { font-style: italic; color: var(--parchment-dim); }
 }
 .lb-purple { color: var(--purple); border-color: var(--purple-dim); background: var(--purple-bg); }
 .lb-green  { color: var(--green);  border-color: var(--green-dim);  background: var(--green-bg); }
-.lb-blue   { color: var(--blue);   border-color: var(--blue-dim);   background: var(--blue-bg); }
+.lb-amber  { color: var(--amber);  border-color: var(--amber-dim);  background: var(--amber-bg); }
 .layer-badge:hover { opacity: 0.8; }
 .layer-badge.active { box-shadow: 0 0 10px currentColor; opacity: 1; }
 
-/* ─── SECTION WRAPPER ─────────────────────── */
+/* ─── SECTION WRAPPER ─── */
 .section-wrap {
   position: relative; z-index: 1;
   max-width: 960px; margin: 0 auto;
@@ -161,7 +158,7 @@ h1 em { font-style: italic; color: var(--parchment-dim); }
   color: var(--parchment-dim); margin-bottom: 20px;
 }
 
-/* ─── MASTER CHAIN ────────────────────────── */
+/* ─── MASTER CHAIN ─── */
 .chain-display {
   background: var(--surface2);
   border: 1px solid var(--rule-strong);
@@ -179,12 +176,12 @@ h1 em { font-style: italic; color: var(--parchment-dim); }
   cursor: pointer; transition: all 0.2s;
   padding: 12px 16px;
   border-radius: 5px; border: 1px solid;
-  min-width: 140px; text-align: center;
+  min-width: 130px; text-align: center;
 }
-.chain-node:hover { transform: translateY(-2px); }
+.chain-node:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.4); }
 .chain-node-label {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+  font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase;
 }
 .chain-node-name {
   font-family: 'EB Garamond', serif;
@@ -207,93 +204,7 @@ h1 em { font-style: italic; color: var(--parchment-dim); }
   white-space: nowrap;
 }
 
-/* ─── THREE-PANE MAP ──────────────────────── */
-.map-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1px;
-  background: var(--rule-strong);
-  border: 1px solid var(--rule-strong);
-  border-radius: 6px;
-  overflow: hidden;
-}
-.map-col {
-  background: var(--surface);
-  padding: 24px 20px;
-  display: flex; flex-direction: column; gap: 0;
-}
-.map-col-head {
-  padding-bottom: 16px;
-  margin-bottom: 16px;
-  border-bottom: 1px solid var(--rule);
-}
-.map-col-label {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--parchment-dim); margin-bottom: 6px;
-}
-.map-col-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 20px; font-weight: 300; color: var(--parchment);
-}
-.map-col-sub {
-  font-family: 'EB Garamond', serif;
-  font-size: 13px; font-style: italic;
-  color: var(--parchment-dim); margin-top: 4px;
-  line-height: 1.5;
-}
-
-/* item cards within each pane */
-.map-item {
-  padding: 12px 14px;
-  border-radius: 4px;
-  border: 1px solid var(--rule);
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: all 0.18s;
-  position: relative;
-}
-.map-item:hover {
-  border-color: currentColor;
-  transform: translateX(2px);
-}
-.map-item.highlighted {
-  box-shadow: 0 0 0 1px currentColor;
-}
-.map-item-name {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px; font-weight: 500;
-  margin-bottom: 4px;
-}
-.map-item-desc {
-  font-family: 'EB Garamond', serif;
-  font-size: 13px; line-height: 1.5;
-  color: var(--parchment-dim);
-}
-.map-item-axiom {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px; margin-top: 6px;
-  opacity: 0.65;
-}
-.map-item-tags {
-  display: flex; gap: 4px; flex-wrap: wrap; margin-top: 8px;
-}
-.map-tag {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 9px; letter-spacing: 0.05em; text-transform: uppercase;
-  padding: 2px 6px; border-radius: 2px; border: 1px solid;
-}
-
-/* page-colour overrides */
-.col-diss .map-item  { color: var(--purple); background: var(--purple-bg); border-color: rgba(83,74,183,0.3); }
-.col-rel  .map-item  { color: var(--purple); background: var(--purple-bg); border-color: rgba(83,74,183,0.3); }
-.col-fail .map-item  { color: var(--green);  background: var(--green-bg);  border-color: rgba(15,110,86,0.3); }
-
-.col-diss .map-col-title { color: var(--purple); }
-.col-rel  .map-col-title { color: var(--purple); }
-.col-fail .map-col-title { color: var(--green); }
-
-/* ─── CROSS-REFERENCE PANEL ───────────────── */
+/* ─── CROSS-REF PANEL ─── */
 .xref-panel {
   background: var(--surface2);
   border: 1px solid var(--rule-strong);
@@ -309,7 +220,10 @@ h1 em { font-style: italic; color: var(--parchment-dim); }
   font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
   color: var(--amber); margin-bottom: 12px;
 }
-.xref-content { font-family: 'EB Garamond', serif; font-size: 15px; line-height: 1.7; color: var(--parchment); }
+.xref-content {
+  font-family: 'EB Garamond', serif;
+  font-size: 15px; line-height: 1.7; color: var(--parchment);
+}
 .xref-links { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
 .xref-link {
   font-family: 'IBM Plex Mono', monospace;
@@ -318,27 +232,91 @@ h1 em { font-style: italic; color: var(--parchment-dim); }
 }
 .xref-link:hover { opacity: 0.75; }
 
-/* ─── ONTOLOGICAL CHAIN NARRATIVE ─────────── */
-.chain-narrative {
-  background: var(--surface2);
-  border-left: 3px solid var(--purple);
-  border-radius: 4px;
-  padding: 28px 30px;
+/* ─── THREE-PANE MAP ─── */
+.map-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px;
+  background: var(--rule-strong);
+  border: 1px solid var(--rule-strong);
+  border-radius: 6px;
+  overflow: hidden;
 }
-.chain-narrative blockquote {
+.map-col {
+  background: var(--surface);
+  padding: 24px 20px;
+  display: flex; flex-direction: column; gap: 0;
+}
+.map-col-head {
+  padding-bottom: 16px; margin-bottom: 16px;
+  border-bottom: 1px solid var(--rule);
+}
+.map-col-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--parchment-dim); margin-bottom: 6px;
+}
+.map-col-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(18px,2.2vw,24px);
-  font-weight: 300; font-style: italic;
-  color: var(--parchment); line-height: 1.5;
-  margin-bottom: 14px;
+  font-size: 20px; font-weight: 300; color: var(--parchment);
 }
-.chain-narrative-body {
+.map-col-sub {
   font-family: 'EB Garamond', serif;
-  font-size: 16px; line-height: 1.75;
-  color: var(--parchment-dim); max-width: 680px;
+  font-size: 13px; font-style: italic;
+  color: var(--parchment-dim); margin-top: 4px; line-height: 1.5;
 }
+.map-item {
+  padding: 12px 14px;
+  border-radius: 4px; border: 1px solid var(--rule);
+  margin-bottom: 10px;
+  transition: all 0.18s;
+  position: relative;
+}
+.map-item:hover { border-color: currentColor; transform: translateX(2px); }
+.map-item.highlighted { box-shadow: 0 0 0 1px currentColor; }
+.map-item-name {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px; font-weight: 500; margin-bottom: 4px;
+}
+.map-item-desc {
+  font-family: 'EB Garamond', serif;
+  font-size: 13px; line-height: 1.5; color: var(--parchment-dim);
+}
+.map-item-axiom {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px; margin-top: 6px; opacity: 0.65;
+}
+.map-item-tags {
+  display: flex; gap: 4px; flex-wrap: wrap; margin-top: 8px;
+}
+.map-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px; letter-spacing: 0.05em; text-transform: uppercase;
+  padding: 2px 6px; border-radius: 2px; border: 1px solid;
+}
+/* source link at bottom of each card */
+.map-item-source {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--rule);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px; letter-spacing: 0.08em;
+}
+.map-item-source a {
+  text-decoration: none;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+.map-item-source a:hover { opacity: 1; }
 
-/* ─── DISSEMINATION CHANNELS ──────────────── */
+.col-diss .map-item  { color: var(--purple); background: var(--purple-bg); border-color: rgba(83,74,183,0.3); }
+.col-rel  .map-item  { color: var(--purple); background: var(--purple-bg); border-color: rgba(83,74,183,0.3); }
+.col-fail .map-item  { color: var(--green);  background: var(--green-bg);  border-color: rgba(15,110,86,0.3); }
+.col-diss .map-col-title { color: var(--purple); }
+.col-rel  .map-col-title { color: var(--purple); }
+.col-fail .map-col-title { color: var(--green); }
+
+/* ─── CHANNEL GRID ─── */
 .channel-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -350,7 +328,6 @@ h1 em { font-style: italic; color: var(--parchment-dim); }
 .channel-card {
   background: var(--surface);
   padding: 20px;
-  cursor: pointer;
   transition: background 0.18s;
   position: relative;
 }
@@ -381,30 +358,38 @@ h1 em { font-style: italic; color: var(--parchment-dim); }
   font-size: 10px; margin-top: 10px; letter-spacing: 0.04em;
 }
 
-/* ─── TOOLTIP ─────────────────────────────── */
-.tooltip {
-  position: fixed; pointer-events: none;
-  background: var(--surface3); border: 1px solid var(--rule-strong);
-  border-radius: 4px; padding: 8px 12px;
-  font-family: 'IBM Plex Mono', monospace; font-size: 11px;
-  color: var(--parchment); max-width: 280px; line-height: 1.5;
-  z-index: 1000; opacity: 0; transition: opacity 0.12s;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+/* ─── CHAIN NARRATIVE ─── */
+.chain-narrative {
+  background: var(--surface2);
+  border-left: 3px solid var(--purple);
+  border-radius: 4px;
+  padding: 28px 30px;
 }
-.tooltip.visible { opacity: 1; }
+.chain-narrative blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px,2.2vw,24px);
+  font-weight: 300; font-style: italic;
+  color: var(--parchment); line-height: 1.5; margin-bottom: 14px;
+}
+.chain-narrative-body {
+  font-family: 'EB Garamond', serif;
+  font-size: 16px; line-height: 1.75;
+  color: var(--parchment-dim); max-width: 680px;
+}
 
-/* ─── FOOTER ──────────────────────────────── */
+/* ─── FOOTER ─── */
 footer {
   position: relative; z-index: 1;
   max-width: 960px; margin: 0 auto;
-  padding: 32px 32px;
+  padding: 32px;
   border-top: 1px solid var(--rule);
   display: flex; justify-content: space-between; align-items: flex-start;
   gap: 24px; flex-wrap: wrap;
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px; color: var(--parchment-dim);
-  letter-spacing: 0.06em;
+  font-size: 10px; color: var(--parchment-dim); letter-spacing: 0.06em;
 }
+footer a { color: var(--parchment-dim); text-decoration: none; margin-right: 16px; }
+footer a:hover { color: var(--parchment); }
 
 @media (max-width: 700px) {
   .map-grid { grid-template-columns: 1fr; }
@@ -415,18 +400,25 @@ footer {
 </head>
 <body>
 
-<div class="top-bar">
-  <div class="top-bar-title">Semantic Map · Meinhardt Corpus · Three-Page Integration · 2026</div>
-  <div class="top-bar-links">
-    <a href="https://dr-crunch.github.io/redundancy-awareness/deontological-differences.html" target="_blank">Deontological Differences</a>
-    <a href="https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html" target="_blank">Ontology Relations</a>
-    <a href="https://dr-wojak.github.io/redundancy-awareness/failure-modes.html" target="_blank">Failure Modes</a>
-  </div>
-</div>
+<!-- ─── CLUSTER NAV ─── -->
+<nav class="cluster-nav">
+  <span class="cluster-nav-label">Ontology layer · 4 pages</span>
+  <a href="https://dr-crunch.github.io/redundancy-awareness/deontological-differences">Graph</a>
+  <span class="cluster-nav-sep">·</span>
+  <a href="https://dr-crunch.github.io/redundancy-awareness/ontology-relations.html">Relations</a>
+  <span class="cluster-nav-sep">·</span>
+  <a href="https://dr-crunch.github.io/redundancy-awareness/failure-modes.html">Failure Modes</a>
+  <span class="cluster-nav-sep">·</span>
+  <span class="current">Semantic Map</span>
+  <span class="cluster-nav-sep">·</span>
+  <a href="https://dr-crunch.github.io/redundancy-awareness/epistemological-audit">Epistemological Audit</a>
+  <span class="cluster-nav-sep">·</span>
+  <a href="https://dr-crunch.github.io/sitemap">Sitemap</a>
+</nav>
 
 <header>
   <div class="eyebrow">Meinhardt Initiative · Redundancy Awareness</div>
-  <h1>Semantic Map</h1>
+  <h1>Semantic <em>Map</em></h1>
   <div class="header-sub">Three-Page Integration · OWL 2 DL · Causal Ontology</div>
   <div class="header-lede">
     This map integrates three corpus pages into a single navigable surface: the dissemination ontology of <em>Deontological Differences</em>, the causal object properties of <em>Ontology Relations</em>, and the concrete failure instances of <em>Failure Modes</em>. Each layer is distinct; together they close the evidentiary chain from administrative act to legal condition.
@@ -438,9 +430,9 @@ footer {
   </div>
 </header>
 
-<!-- MASTER CAUSAL CHAIN -->
+<!-- ─── MASTER CAUSAL CHAIN ─── -->
 <div class="section-wrap">
-  <div class="section-label">Master causal chain · OWL Axiom 1</div>
+  <div class="section-label">Master causal chain · OWL Axiom 1 · click any node to inspect</div>
   <div class="chain-display">
     <div class="chain-row">
 
@@ -449,50 +441,35 @@ footer {
         <div class="chain-node-name">Administrative<br>Process</div>
       </div>
 
-      <div class="chain-arrow">
-        <span>→</span>
-        <span class="chain-arrow-rel">:ignores</span>
-      </div>
+      <div class="chain-arrow"><span>→</span><span class="chain-arrow-rel">:ignores</span></div>
 
       <div class="chain-node cn-process" onclick="showXRef('submission')" title="Submission_2006">
         <div class="chain-node-label">Object</div>
         <div class="chain-node-name">Submission<br>2006–</div>
       </div>
 
-      <div class="chain-arrow">
-        <span>→</span>
-        <span class="chain-arrow-rel">:producesFailure</span>
-      </div>
+      <div class="chain-arrow"><span>→</span><span class="chain-arrow-rel">:producesFailure</span></div>
 
       <div class="chain-node cn-failure" onclick="showXRef('nullloop')" title="NullificationLoop">
         <div class="chain-node-label">Failure</div>
         <div class="chain-node-name">Nullification<br>Loop</div>
       </div>
 
-      <div class="chain-arrow">
-        <span>→</span>
-        <span class="chain-arrow-rel">:triggers</span>
-      </div>
+      <div class="chain-arrow"><span>→</span><span class="chain-arrow-rel">:triggers</span></div>
 
       <div class="chain-node cn-legal" onclick="showXRef('maladmin')" title="Maladministration">
         <div class="chain-node-label">Legal Condition</div>
         <div class="chain-node-name">Maladmin&shy;istration</div>
       </div>
 
-      <div class="chain-arrow">
-        <span>→</span>
-        <span class="chain-arrow-rel">:violates</span>
-      </div>
+      <div class="chain-arrow"><span>→</span><span class="chain-arrow-rel">:violates</span></div>
 
       <div class="chain-node cn-legal" onclick="showXRef('rights')" title="RightToBeHeard">
         <div class="chain-node-label">Right</div>
         <div class="chain-node-name">Right to<br>be Heard</div>
       </div>
 
-      <div class="chain-arrow">
-        <span>→</span>
-        <span class="chain-arrow-rel">:routes</span>
-      </div>
+      <div class="chain-arrow"><span>→</span><span class="chain-arrow-rel">:routes</span></div>
 
       <div class="chain-node cn-diss" onclick="showXRef('channels')" title="DisseminationChannels">
         <div class="chain-node-label">Dissemination</div>
@@ -502,7 +479,6 @@ footer {
     </div>
   </div>
 
-  <!-- cross-ref detail panel -->
   <div class="xref-panel" id="xrefPanel">
     <div class="xref-panel-label">Cross-reference · click any chain node to inspect</div>
     <div class="xref-content" id="xrefContent">
@@ -512,12 +488,12 @@ footer {
   </div>
 </div>
 
-<!-- THREE-PANE SEMANTIC MAP -->
+<!-- ─── THREE-PANE SEMANTIC MAP ─── -->
 <div class="section-wrap">
-  <div class="section-label">Three-page integration · side-by-side semantic layers</div>
+  <div class="section-label">Three-page integration · side-by-side semantic layers · click any card to open source page</div>
   <div class="map-grid">
 
-    <!-- PAGE 1 -->
+    <!-- PAGE 1: Deontological Differences -->
     <div class="map-col col-diss" id="layer-diss">
       <div class="map-col-head">
         <div class="map-col-label">Page I · Deontological Differences</div>
@@ -525,7 +501,7 @@ footer {
         <div class="map-col-sub">How the corpus reaches each audience; obligations per channel; OWL class hierarchy.</div>
       </div>
 
-      <div class="map-item" onclick="highlightItem(this, 'channel-legal')" title="Legal channel">
+      <div class="map-item">
         <div class="map-item-name">:ChannelLegal</div>
         <div class="map-item-desc">High Court, Irish Ombudsman. Obligation: reasons must be given on disposal.</div>
         <div class="map-item-axiom">:obligates "reasons on disposal"</div>
@@ -533,9 +509,12 @@ footer {
           <span class="map-tag" style="color:var(--purple);border-color:var(--purple-dim);background:var(--purple-bg)">certiorari</span>
           <span class="map-tag" style="color:var(--purple);border-color:var(--purple-dim);background:var(--purple-bg)">mandamus</span>
         </div>
+        <div class="map-item-source">
+          <a href="https://dr-crunch.github.io/redundancy-awareness/deontological-differences#five-channels" target="_blank" style="color:var(--purple)">View on source page ↗</a>
+        </div>
       </div>
 
-      <div class="map-item" onclick="highlightItem(this, 'channel-eu')" title="EU channel">
+      <div class="map-item">
         <div class="map-item-name">:ChannelEU</div>
         <div class="map-item-desc">European Ombudsman, PETI, Défenseur des Droits. Grounded in Art.4(3) TEU · Art.228 TFEU.</div>
         <div class="map-item-axiom">:groundedIn "Art.227 TFEU"</div>
@@ -543,9 +522,12 @@ footer {
           <span class="map-tag" style="color:var(--blue);border-color:var(--blue-dim);background:var(--blue-bg)">CJEU</span>
           <span class="map-tag" style="color:var(--blue);border-color:var(--blue-dim);background:var(--blue-bg)">PETI</span>
         </div>
+        <div class="map-item-source">
+          <a href="https://dr-crunch.github.io/redundancy-awareness/deontological-differences#five-channels" target="_blank" style="color:var(--purple)">View on source page ↗</a>
+        </div>
       </div>
 
-      <div class="map-item" onclick="highlightItem(this, 'channel-academic')" title="Academic channel">
+      <div class="map-item">
         <div class="map-item-name">:ChannelAcademic</div>
         <div class="map-item-desc">Documents NullificationLoop. Applies Beer/VSM · Bateson deutero-binding framework.</div>
         <div class="map-item-axiom">:appliesFrame "Beer/VSM"</div>
@@ -553,18 +535,24 @@ footer {
           <span class="map-tag" style="color:var(--amber);border-color:var(--amber-dim);background:var(--amber-bg)">VSM</span>
           <span class="map-tag" style="color:var(--amber);border-color:var(--amber-dim);background:var(--amber-bg)">Bateson</span>
         </div>
+        <div class="map-item-source">
+          <a href="https://dr-crunch.github.io/redundancy-awareness/deontological-differences#five-channels" target="_blank" style="color:var(--purple)">View on source page ↗</a>
+        </div>
       </div>
 
-      <div class="map-item" onclick="highlightItem(this, 'channel-civic')" title="Civic channel">
+      <div class="map-item">
         <div class="map-item-name">:ChannelCivic</div>
         <div class="map-item-desc">Amplifies CivicSignal. Receipt by elected representatives creates a duty of enquiry.</div>
         <div class="map-item-axiom">:groundedIn "Art.15.10 Bunreacht"</div>
         <div class="map-item-tags">
           <span class="map-tag" style="color:var(--green);border-color:var(--green-dim);background:var(--green-bg)">petition</span>
         </div>
+        <div class="map-item-source">
+          <a href="https://dr-crunch.github.io/redundancy-awareness/deontological-differences#five-channels" target="_blank" style="color:var(--purple)">View on source page ↗</a>
+        </div>
       </div>
 
-      <div class="map-item" onclick="highlightItem(this, 'channel-media')" title="Media channel">
+      <div class="map-item">
         <div class="map-item-name">:ChannelMedia</div>
         <div class="map-item-desc">Documents DesignedForgetting and SignalSuppression. CC0 evidentiary record, publication-ready.</div>
         <div class="map-item-axiom">:licence "CC0 1.0 Universal"</div>
@@ -572,10 +560,13 @@ footer {
           <span class="map-tag" style="color:var(--terra);border-color:var(--terra-dim);background:#1f1109">press</span>
           <span class="map-tag" style="color:var(--terra);border-color:var(--terra-dim);background:#1f1109">CC0</span>
         </div>
+        <div class="map-item-source">
+          <a href="https://dr-crunch.github.io/redundancy-awareness/deontological-differences#five-channels" target="_blank" style="color:var(--purple)">View on source page ↗</a>
+        </div>
       </div>
     </div>
 
-    <!-- PAGE 2 -->
+    <!-- PAGE 2: Ontology Relations -->
     <div class="map-col col-rel" id="layer-rel">
       <div class="map-col-head">
         <div class="map-col-label">Page II · Ontology Relations</div>
@@ -583,7 +574,7 @@ footer {
         <div class="map-col-sub">Causal operators linking actors, processes, failure modes, and legal conditions.</div>
       </div>
 
-      <div class="map-item" onclick="highlightItem(this, 'rel-ignores')" title=":ignores">
+      <div class="map-item">
         <div class="map-item-name">:ignores</div>
         <div class="map-item-desc">AdministrativeProcess → Submission. Non-processing despite acknowledgement.</div>
         <div class="map-item-axiom">ignores ⟹ producesFailure NullificationLoop</div>
@@ -591,18 +582,24 @@ footer {
           <span class="map-tag" style="color:var(--green);border-color:var(--green-dim);background:var(--green-bg)">Acknowledgement</span>
           <span class="map-tag" style="color:var(--green);border-color:var(--green-dim);background:var(--green-bg)">Deferral</span>
         </div>
+        <div class="map-item-source">
+          <a href="https://dr-crunch.github.io/redundancy-awareness/ontology-relations.html#ignores" target="_blank" style="color:var(--purple)">View on source page ↗</a>
+        </div>
       </div>
 
-      <div class="map-item" onclick="highlightItem(this, 'rel-suppresses')" title=":suppresses">
+      <div class="map-item">
         <div class="map-item-name">:suppresses</div>
         <div class="map-item-desc">Actor → CivicSignal. Attenuation of a civic signal through institutional channels.</div>
         <div class="map-item-axiom">suppresses ⟹ documents DesignedForgetting</div>
         <div class="map-item-tags">
           <span class="map-tag" style="color:var(--green);border-color:var(--green-dim);background:var(--green-bg)">Record Suppression</span>
         </div>
+        <div class="map-item-source">
+          <a href="https://dr-crunch.github.io/redundancy-awareness/ontology-relations.html#suppresses" target="_blank" style="color:var(--purple)">View on source page ↗</a>
+        </div>
       </div>
 
-      <div class="map-item" onclick="highlightItem(this, 'rel-produces')" title=":producesFailure">
+      <div class="map-item">
         <div class="map-item-name">:producesFailure</div>
         <div class="map-item-desc">Process → FailureMode. Systematic linkage between process and its generated failure.</div>
         <div class="map-item-axiom">producesFailure ⟹ triggers Maladministration</div>
@@ -610,28 +607,37 @@ footer {
           <span class="map-tag" style="color:var(--green);border-color:var(--green-dim);background:var(--green-bg)">Remit Displacement</span>
           <span class="map-tag" style="color:var(--green);border-color:var(--green-dim);background:var(--green-bg)">Sufficiency</span>
         </div>
+        <div class="map-item-source">
+          <a href="https://dr-crunch.github.io/redundancy-awareness/ontology-relations.html#produces-failure" target="_blank" style="color:var(--purple)">View on source page ↗</a>
+        </div>
       </div>
 
-      <div class="map-item" onclick="highlightItem(this, 'rel-triggers')" title=":triggers">
+      <div class="map-item">
         <div class="map-item-name">:triggers</div>
         <div class="map-item-desc">FailureMode → LegalCondition. Activates a legally cognisable condition.</div>
         <div class="map-item-axiom">triggers ⟹ enables judicial review</div>
         <div class="map-item-tags">
           <span class="map-tag" style="color:var(--green);border-color:var(--green-dim);background:var(--green-bg)">Deferral</span>
         </div>
+        <div class="map-item-source">
+          <a href="https://dr-crunch.github.io/redundancy-awareness/ontology-relations.html#triggers" target="_blank" style="color:var(--purple)">View on source page ↗</a>
+        </div>
       </div>
 
-      <div class="map-item" onclick="highlightItem(this, 'rel-violates')" title=":violates">
+      <div class="map-item">
         <div class="map-item-name">:violates</div>
         <div class="map-item-desc">Process → Right. Breach of protected procedural or fundamental right.</div>
         <div class="map-item-axiom">violates ⟹ grounds certiorari / mandamus</div>
         <div class="map-item-tags">
           <span class="map-tag" style="color:var(--green);border-color:var(--green-dim);background:var(--green-bg)">Acknowledgement</span>
         </div>
+        <div class="map-item-source">
+          <a href="https://dr-crunch.github.io/redundancy-awareness/ontology-relations.html#violates" target="_blank" style="color:var(--purple)">View on source page ↗</a>
+        </div>
       </div>
     </div>
 
-    <!-- PAGE 3 -->
+    <!-- PAGE 3: Failure Modes -->
     <div class="map-col col-fail" id="layer-fail">
       <div class="map-col-head">
         <div class="map-col-label">Page III · Failure Modes</div>
@@ -639,7 +645,7 @@ footer {
         <div class="map-col-sub">Repeatable failure outputs of institutional processes; each links to its causal relation and evidence.</div>
       </div>
 
-      <div class="map-item" onclick="highlightItem(this, 'fm-ack')" title="Acknowledgement as Closure">
+      <div class="map-item">
         <div class="map-item-name">Acknowledgement as Closure</div>
         <div class="map-item-desc">Formal acknowledgement substitutes for substantive processing, terminating the procedural chain.</div>
         <div class="map-item-axiom">FailureMode :: Procedural Termination</div>
@@ -647,18 +653,24 @@ footer {
           <span class="map-tag" style="color:var(--purple);border-color:var(--purple-dim);background:var(--purple-bg)">:ignores</span>
           <span class="map-tag" style="color:var(--purple);border-color:var(--purple-dim);background:var(--purple-bg)">:violates</span>
         </div>
+        <div class="map-item-source">
+          <a href="https://dr-crunch.github.io/redundancy-awareness/failure-modes.html#acknowledgement-as-closure" target="_blank" style="color:var(--green)">View on source page ↗</a>
+        </div>
       </div>
 
-      <div class="map-item" onclick="highlightItem(this, 'fm-remit')" title="Remit Displacement">
+      <div class="map-item">
         <div class="map-item-name">Remit Displacement</div>
         <div class="map-item-desc">Responsibility redirected across institutional boundaries without resolution, diffusing accountability.</div>
         <div class="map-item-axiom">FailureMode :: Jurisdictional Evasion</div>
         <div class="map-item-tags">
           <span class="map-tag" style="color:var(--purple);border-color:var(--purple-dim);background:var(--purple-bg)">:producesFailure</span>
         </div>
+        <div class="map-item-source">
+          <a href="https://dr-crunch.github.io/redundancy-awareness/failure-modes.html#remit-displacement" target="_blank" style="color:var(--green)">View on source page ↗</a>
+        </div>
       </div>
 
-      <div class="map-item" onclick="highlightItem(this, 'fm-deferral')" title="Deferral without Destination">
+      <div class="map-item">
         <div class="map-item-name">Deferral without Destination</div>
         <div class="map-item-desc">Action indefinitely postponed without assignment to a responsible actor or endpoint.</div>
         <div class="map-item-axiom">FailureMode :: Temporal Evasion</div>
@@ -666,23 +678,32 @@ footer {
           <span class="map-tag" style="color:var(--purple);border-color:var(--purple-dim);background:var(--purple-bg)">:ignores</span>
           <span class="map-tag" style="color:var(--purple);border-color:var(--purple-dim);background:var(--purple-bg)">:triggers</span>
         </div>
+        <div class="map-item-source">
+          <a href="https://dr-crunch.github.io/redundancy-awareness/failure-modes.html#deferral-without-destination" target="_blank" style="color:var(--green)">View on source page ↗</a>
+        </div>
       </div>
 
-      <div class="map-item" onclick="highlightItem(this, 'fm-suff')" title="Sufficiency without Audit">
+      <div class="map-item">
         <div class="map-item-name">Sufficiency without Audit</div>
         <div class="map-item-desc">Claims of adequacy made without verification, audit, or evidentiary grounding.</div>
         <div class="map-item-axiom">FailureMode :: Assertion Failure</div>
         <div class="map-item-tags">
           <span class="map-tag" style="color:var(--purple);border-color:var(--purple-dim);background:var(--purple-bg)">:producesFailure</span>
         </div>
+        <div class="map-item-source">
+          <a href="https://dr-crunch.github.io/redundancy-awareness/failure-modes.html#sufficiency-without-audit" target="_blank" style="color:var(--green)">View on source page ↗</a>
+        </div>
       </div>
 
-      <div class="map-item" onclick="highlightItem(this, 'fm-rec')" title="Record Suppression">
+      <div class="map-item">
         <div class="map-item-name">Record Suppression</div>
         <div class="map-item-desc">Relevant records withheld, omitted, or rendered inaccessible within institutional processes.</div>
         <div class="map-item-axiom">FailureMode :: Information Control</div>
         <div class="map-item-tags">
           <span class="map-tag" style="color:var(--purple);border-color:var(--purple-dim);background:var(--purple-bg)">:suppresses</span>
+        </div>
+        <div class="map-item-source">
+          <a href="https://dr-crunch.github.io/redundancy-awareness/failure-modes.html#record-suppression" target="_blank" style="color:var(--green)">View on source page ↗</a>
         </div>
       </div>
     </div>
@@ -690,7 +711,7 @@ footer {
   </div>
 </div>
 
-<!-- DISSEMINATION CHANNELS GRID -->
+<!-- ─── DISSEMINATION CHANNELS GRID ─── -->
 <div class="section-wrap" id="layer-diss-channels">
   <div class="section-label">Deontological Differences · dissemination channels · five obligations, one chain</div>
   <div class="channel-grid">
@@ -733,15 +754,15 @@ footer {
   </div>
 </div>
 
-<!-- CHAIN NARRATIVE -->
+<!-- ─── CHAIN NARRATIVE ─── -->
 <div class="section-wrap">
   <div class="section-label">Interpretive synthesis · three layers, one directed labelled graph</div>
   <div class="chain-narrative">
     <blockquote>
-      The ontology encodes the causal chain. The failure modes instance it. The dissemination channels route it. Three pages—one argument.
+      The ontology encodes the causal chain. The failure modes instance it. The dissemination channels route it. Three pages — one argument.
     </blockquote>
     <div class="chain-narrative-body">
-      <em>Deontological Differences</em> establishes the dissemination architecture: five channels, each with its own obligation and legal grounding, each routing the same master causal chain to a distinct audience. <em>Ontology Relations</em> formalises that chain as OWL 2 object properties—directional causal operators with explicit axioms. <em>Failure Modes</em> instantiates each relation with a concrete, repeatable institutional output. The three pages are not parallel documents but layers of a single directed labelled graph: class hierarchy above, causal operators as edges, failure instances as nodes below, and five dissemination channels as terminal outputs. When the SPARQL query "find all violations caused by ignored submissions" runs against this corpus, it returns a structured list directly admissible in CJEU Member State failure proceedings. Nineteen years of narrative argument—now machine-readable institutional critique.
+      <em>Deontological Differences</em> establishes the dissemination architecture: five channels, each with its own obligation and legal grounding, each routing the same master causal chain to a distinct audience. <em>Ontology Relations</em> formalises that chain as OWL 2 object properties — directional causal operators with explicit axioms. <em>Failure Modes</em> instantiates each relation with a concrete, repeatable institutional output. The three pages are not parallel documents but layers of a single directed labelled graph: class hierarchy above, causal operators as edges, failure instances as nodes below, and five dissemination channels as terminal outputs. When the SPARQL query "find all violations caused by ignored submissions" runs against this corpus, it returns a structured list directly admissible in CJEU Member State failure proceedings. Nineteen years of narrative argument — now machine-readable institutional critique.
     </div>
   </div>
 </div>
@@ -749,63 +770,61 @@ footer {
 <footer>
   <div>Semantic Map · Meinhardt Initiative · Redundancy Awareness · April 2026</div>
   <div>
-    <a href="https://dr-crunch.github.io/redundancy-awareness/deontological-differences.html" target="_blank" style="color:var(--parchment-dim);text-decoration:none;margin-right:16px">Deontological Differences</a>
-    <a href="https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html" target="_blank" style="color:var(--parchment-dim);text-decoration:none;margin-right:16px">Ontology Relations</a>
-    <a href="https://dr-wojak.github.io/redundancy-awareness/failure-modes.html" target="_blank" style="color:var(--parchment-dim);text-decoration:none">Failure Modes</a>
+    <a href="https://dr-crunch.github.io/redundancy-awareness/deontological-differences" target="_blank">Deontological Differences</a>
+    <a href="https://dr-crunch.github.io/redundancy-awareness/ontology-relations.html" target="_blank">Ontology Relations</a>
+    <a href="https://dr-crunch.github.io/redundancy-awareness/failure-modes.html" target="_blank">Failure Modes</a>
+    <a href="https://dr-crunch.github.io/sitemap" target="_blank">Sitemap</a>
   </div>
 </footer>
 
-<div class="tooltip" id="tooltip"></div>
-
 <script>
-/* ─── CROSS-REFERENCE DATA ──────────────────────────────────────── */
 const xrefData = {
   process: {
     title: 'AdministrativeProcess',
     body: 'The primary actor class in the OWL ontology. Appears as the domain of :ignores (→ Submission) and :producesFailure (→ FailureMode). In Deontological Differences, the Irish State instantiates this class via its treatment of Submission_2006. Five channels receive the evidentiary record of how this process failed.',
     links: [
-      { label: ':ignores', href: 'https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html#ignores', color: 'var(--purple)' },
-      { label: ':producesFailure', href: 'https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html#produces-failure', color: 'var(--purple)' },
+      { label: ':ignores', href: 'https://dr-crunch.github.io/redundancy-awareness/ontology-relations.html#ignores', color: 'var(--purple)' },
+      { label: ':producesFailure', href: 'https://dr-crunch.github.io/redundancy-awareness/ontology-relations.html#produces-failure', color: 'var(--purple)' },
     ]
   },
   submission: {
     title: 'Submission_2006–',
-    body: 'The civic signal —the range object of :ignores. Its non-processing is the initiating event of the causal chain. :suppresses attenuates it; Acknowledgement as Closure terminates its procedural path. The Academic channel documents its nineteen-year record; the Media channel holds the signal-to-silence timeline.',
+    body: 'The civic signal — the range object of :ignores. Its non-processing is the initiating event of the causal chain. :suppresses attenuates it; Acknowledgement as Closure terminates its procedural path. The Academic channel documents its nineteen-year record; the Media channel holds the signal-to-silence timeline.',
     links: [
-      { label: 'Acknowledgement as Closure', href: 'https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#acknowledgement-as-closure', color: 'var(--green)' },
-      { label: 'Record Suppression', href: 'https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#record-suppression', color: 'var(--green)' },
+      { label: 'Acknowledgement as Closure', href: 'https://dr-crunch.github.io/redundancy-awareness/failure-modes.html#acknowledgement-as-closure', color: 'var(--green)' },
+      { label: 'Record Suppression', href: 'https://dr-crunch.github.io/redundancy-awareness/failure-modes.html#record-suppression', color: 'var(--green)' },
     ]
   },
   nullloop: {
     title: 'NullificationLoop',
     body: 'The central failure entity: a system that cannot close itself from inside because no node holds the full objective. Produced by :ignores; documented by :ChannelAcademic via Beer/VSM; instances include Deferral without Destination and Remit Displacement. The loop is the core cybernetic case study of the corpus.',
     links: [
-      { label: 'Deferral without Destination', href: 'https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#deferral-without-destination', color: 'var(--green)' },
-      { label: 'Remit Displacement', href: 'https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#remit-displacement', color: 'var(--green)' },
-      { label: ':ignores axiom', href: 'https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html#ignores', color: 'var(--purple)' },
+      { label: 'Deferral without Destination', href: 'https://dr-crunch.github.io/redundancy-awareness/failure-modes.html#deferral-without-destination', color: 'var(--green)' },
+      { label: 'Remit Displacement', href: 'https://dr-crunch.github.io/redundancy-awareness/failure-modes.html#remit-displacement', color: 'var(--green)' },
+      { label: ':ignores', href: 'https://dr-crunch.github.io/redundancy-awareness/ontology-relations.html#ignores', color: 'var(--purple)' },
     ]
   },
   maladmin: {
     title: 'Maladministration',
     body: 'The legal condition triggered by FailureMode via :triggers. It is the operative category for the Legal channel (certiorari, mandamus) and the EU channel (Member State failure under Art.4(3) TEU). All five failure modes contribute to its establishment; the Formal Complaint archive provides 226 pages of evidentiary grounding.',
     links: [
-      { label: ':triggers', href: 'https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html#triggers', color: 'var(--purple)' },
-      { label: 'Formal Complaint', href: 'https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS', color: 'var(--blue)' },
+      { label: ':triggers', href: 'https://dr-crunch.github.io/redundancy-awareness/ontology-relations.html#triggers', color: 'var(--purple)' },
+      { label: 'Formal Complaint · 226pp', href: 'https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS', color: 'var(--blue)' },
     ]
   },
   rights: {
     title: 'RightToBeHeard',
     body: 'The fundamental right violated by Maladministration, grounded in Art.41 CFR, Art.4(3) TEU, and re Haughey. :violates grounds the certiorari / mandamus record. Acknowledgement as Closure is its primary concrete violation instance. The Legal and EU channels route the rights claim to High Court and CJEU respectively.',
     links: [
-      { label: ':violates', href: 'https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html#violates', color: 'var(--purple)' },
-      { label: 'Acknowledgement as Closure', href: 'https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#acknowledgement-as-closure', color: 'var(--green)' },
+      { label: ':violates', href: 'https://dr-crunch.github.io/redundancy-awareness/ontology-relations.html#violates', color: 'var(--purple)' },
+      { label: 'Acknowledgement as Closure', href: 'https://dr-crunch.github.io/redundancy-awareness/failure-modes.html#acknowledgement-as-closure', color: 'var(--green)' },
     ]
   },
   channels: {
     title: 'Five Dissemination Channels',
     body: 'The terminal layer of the graph, defined in Deontological Differences. Each channel receives the same master causal chain and converts it into a distinct obligation: Legal → certiorari; EU → Member State failure; Academic → cybernetic case study; Civic → duty of enquiry; Media → investigation thread. Same chain. Five obligations.',
     links: [
-      { label: 'Deontological Differences', href: 'https://dr-crunch.github.io/redundancy-awareness/deontological-differences.html', color: 'var(--purple)' },
+      { label: 'Deontological Differences', href: 'https://dr-crunch.github.io/redundancy-awareness/deontological-differences#five-channels', color: 'var(--purple)' },
     ]
   }
 };
@@ -813,8 +832,8 @@ const xrefData = {
 function showXRef(key) {
   const d = xrefData[key];
   if (!d) return;
-  document.getElementById('xrefPanel').style.borderColor = 'var(--amber)';
-  document.getElementById('xrefContent').innerHTML = '<strong style="font-family:\'IBM Plex Mono\',monospace;font-size:13px;color:var(--amber)">' + d.title + '</strong><br><br>' + d.body;
+  document.getElementById('xrefContent').innerHTML =
+    '<strong style="font-family:\'IBM Plex Mono\',monospace;font-size:13px;color:var(--amber)">' + d.title + '</strong><br><br>' + d.body;
   const linksEl = document.getElementById('xrefLinks');
   linksEl.innerHTML = '';
   (d.links || []).forEach(l => {
@@ -829,9 +848,8 @@ function showXRef(key) {
   });
 }
 
-/* ─── HIGHLIGHT / LAYER TOGGLE ──────────────────────────────────── */
 let lastHighlighted = null;
-function highlightItem(el, id) {
+function highlightItem(el) {
   if (lastHighlighted) lastHighlighted.classList.remove('highlighted');
   el.classList.add('highlighted');
   lastHighlighted = el;
