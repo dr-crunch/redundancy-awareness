@@ -153,7 +153,15 @@ h1 em{font-style:italic;color:var(--parchment-dim);}
 .axiom-plain{font-family:'EB Garamond',serif;font-size:16px;color:var(--parchment-dim);line-height:1.72;max-width:640px;}
 /* NET ROW */
 .net-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule-strong);border:1px solid var(--rule-strong);border-radius:3px;overflow:hidden;margin-top:28px;}
-.net-cell{background:var(--surface);padding:28px 24px;text-align:center;}
+.net-cell{background:var(--surface);padding:28px 24px;text-align:center;
+  display:block;
+  text-decoration:none;
+  color:inherit;
+}
+.net-cell:hover{
+  transform: translateY(-2px);
+  transition: transform .15s ease;
+}
 .net-n{font-family:'Cormorant Garamond',serif;font-size:62px;font-weight:300;line-height:1;margin-bottom:8px;}
 .net-n.done{color:var(--green);}
 .net-n.needs{color:var(--amber);}
@@ -616,8 +624,8 @@ An audit like this one doesn't score arguments for how clever they sound. It ask
 <div class="section-num">07</div>
 <div class="section-title">Semantic Map</div>
 </div>
-<div class="section-sub">Gross Injustice</div>
-<p class="prompt-line">Instantiation of Bad Karma</p>
+<div class="section-sub">Rule of Law</div>
+<p class="prompt-line">Duty to Reason</p>
 <div class="net-row">
 <a class="net-cell" href="https://dr-crunch.github.io/redundancy-awareness/semantic-map#ob1">
   <div class="net-n done">⚖️</div>
@@ -637,6 +645,11 @@ An audit like this one doesn't score arguments for how clever they sound. It ask
 <a class="net-cell" href="https://dr-crunch.github.io/redundancy-awareness/semantic-map#ob4">
   <div class="net-n info">📡</div>
   <div class="net-label gap">informational<br>ingress</div>
+</a>
+
+<a class="net-cell" href="https://dr-crunch.github.io/redundancy-awareness/semantic-map#ob5">
+  <div class="net-n gap">⚠</div>
+  <div class="net-label gap">taking<br>liberties</div>
 </a>
 </div>
 </section>
