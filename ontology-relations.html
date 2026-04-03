@@ -24,6 +24,23 @@
   --amber-bg:#1e1509;
   --rule:rgba(232,227,212,0.12);
 }
+/* ── Cluster nav ── */
+.cluster-nav {
+  background:rgba(26,24,48,0.6);
+  border-bottom:1px solid rgba(139,131,232,0.2);
+  padding:8px 32px;
+  display:flex; align-items:center; gap:0;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:10px; letter-spacing:0.12em; text-transform:uppercase;
+  flex-wrap:wrap;
+}
+.cluster-nav-label { color:rgba(139,131,232,0.45); margin-right:18px; white-space:nowrap; }
+.cluster-nav-sep { color:rgba(158,152,135,0.3); margin:0 10px; }
+.cluster-nav a { color:#9e9887; text-decoration:none; padding:2px 0;
+  border-bottom:1px solid transparent; transition:color 0.15s, border-color 0.15s; }
+.cluster-nav a:hover { color:#e8e3d4; border-bottom-color:#9e9887; }
+.cluster-nav .current { color:var(--purple); border-bottom:1px solid #534ab7; cursor:default; }
+
 
 body {
   margin:0;
@@ -176,11 +193,20 @@ h1 {
 
 <div class="container">
 
-<div class="nav">
-  <a href="https://dr-crunch.github.io/redundancy-awareness/deontological-differences.html">← Graph</a>
-  <a href="https://dr-wojak.github.io/redundancy-awareness/failure-modes.html">Failure Modes</a>
-  <a href="https://dr-crunch.github.io/nullification-loops/">Main Record</a>
-</div>
+<nav class="cluster-nav">
+  <span class="cluster-nav-label">Ontology layer · 4 pages</span>
+  <a href="https://dr-crunch.github.io/redundancy-awareness/deontological-differences">Graph</a>
+  <span class="cluster-nav-sep">·</span>
+  <span class="current">Relations</span>
+  <span class="cluster-nav-sep">·</span>
+  <a href="https://dr-crunch.github.io/redundancy-awareness/failure-modes.html">Failure Modes</a>
+  <span class="cluster-nav-sep">·</span>
+  <a href="https://dr-crunch.github.io/redundancy-awareness/semantic-map">Semantic Map</a>
+  <span class="cluster-nav-sep">·</span>
+  <a href="https://dr-crunch.github.io/redundancy-awareness/epistemological-audit">Epistemological Audit</a>
+  <span class="cluster-nav-sep">·</span>
+  <a href="https://dr-crunch.github.io/sitemap">Sitemap</a>
+</nav>
 
 <h1>Ontology Relations</h1>
 <div class="subtitle">
@@ -207,7 +233,7 @@ Object properties of the OWL 2 ontology — causal operators linking actors, pro
     </div>
     <div class="cross-group">
       <div class="cross-label">Evidence</div>
-      <a class="cross-link evidence" href="https://drive.google.com/drive/u/0/folders/1lvFwZwWpRR2tC4BwsdeR8X0Dxk2mmAwo" target="_blank">Snapshot 2026</a>
+      <a class="cross-link evidence" href="https://drive.google.com/drive/u/0/folders/1pcay_yA1DWwY1BB5KOLLLekr9ub9OYo5" target="_blank">Tánaiste Enquiry 2024–25</a>
     </div>
     <div class="cross-group">
       <div class="cross-label">Graph</div>
@@ -286,7 +312,7 @@ Object properties of the OWL 2 ontology — causal operators linking actors, pro
     </div>
     <div class="cross-group">
       <div class="cross-label">Evidence</div>
-      <a class="cross-link evidence" href="https://drive.google.com/drive/u/0/folders/12o4-OPXJ0W5E8pxF9pN-VKUeODagy17g" target="_blank">Redundancy</a>
+      <a class="cross-link evidence" href="https://drive.google.com/drive/u/0/folders/1pcay_yA1DWwY1BB5KOLLLekr9ub9OYo5" target="_blank">Redundancy Awareness · PR</a>
     </div>
     <div class="cross-group">
       <div class="cross-label">Graph</div>
@@ -327,7 +353,7 @@ Object properties of the OWL 2 ontology — causal operators linking actors, pro
   <div class="rel-body">
     The ontology encodes a directional chain:
     <br><br>
-    <strong>ignores → producesFailure → triggers → violates</strong>
+    <a href="#ignores" style="color:var(--purple);text-decoration:none;font-weight:500">ignores</a> → <a href="#produces-failure" style="color:var(--purple);text-decoration:none;font-weight:500">producesFailure</a> → <a href="#triggers" style="color:var(--purple);text-decoration:none;font-weight:500">triggers</a> → <a href="#violates" style="color:var(--purple);text-decoration:none;font-weight:500">violates</a>
     <br><br>
     Each relation is a causal operator.  
     The cross-links bind abstraction to instance and evidence, ensuring the graph remains navigable, verifiable, and legally actionable.
@@ -335,5 +361,20 @@ Object properties of the OWL 2 ontology — causal operators linking actors, pro
 </div>
 
 </div>
+
+<footer style="max-width:960px;margin:0 auto;padding:28px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#9e9887;border-top:1px solid rgba(232,227,212,0.08);">
+  <div>
+    <a href="https://dr-crunch.github.io/redundancy-awareness/deontological-differences" style="color:#9e9887;text-decoration:none">Graph</a>
+    &nbsp;·&nbsp;
+    <a href="https://dr-crunch.github.io/redundancy-awareness/failure-modes.html" style="color:#9e9887;text-decoration:none">Failure Modes</a>
+    &nbsp;·&nbsp;
+    <a href="https://dr-crunch.github.io/redundancy-awareness/semantic-map" style="color:#9e9887;text-decoration:none">Semantic Map</a>
+    &nbsp;·&nbsp;
+    <a href="https://dr-crunch.github.io/nullification-loops/" style="color:#9e9887;text-decoration:none">Main Record</a>
+    &nbsp;·&nbsp;
+    <a href="https://dr-crunch.github.io/sitemap" style="color:#9e9887;text-decoration:none">Sitemap</a>
+  </div>
+  <div style="color:rgba(158,152,135,0.4);text-align:right">Ontology Relations · OWL Layer<br>Meinhardt Initiative · 2006–2026</div>
+</footer>
 </body>
 </html>
