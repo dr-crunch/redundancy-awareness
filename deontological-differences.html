@@ -283,6 +283,32 @@ h1 { font-size: 36px; }
   font-size: 12px;
   fill: #9e9887;
 }
+
+/* ── Cluster nav ── */
+.cluster-nav {
+  background:rgba(26,24,48,0.6);
+  border-bottom:1px solid rgba(139,131,232,0.2);
+  padding:8px 32px;
+  display:flex; align-items:center; gap:0;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:10px; letter-spacing:0.12em; text-transform:uppercase;
+  flex-wrap:wrap; position:relative; z-index:10;
+}
+.cluster-nav-label { color:rgba(139,131,232,0.45); margin-right:18px; white-space:nowrap; }
+.cluster-nav-sep { color:rgba(158,152,135,0.3); margin:0 10px; }
+.cluster-nav a { color:#9e9887; text-decoration:none; padding:2px 0;
+  border-bottom:1px solid transparent; transition:color 0.15s, border-color 0.15s; }
+.cluster-nav a:hover { color:#e8e3d4; border-bottom-color:#9e9887; }
+.cluster-nav .current { color:var(--purple); border-bottom:1px solid #534ab7; cursor:default; }
+
+/* ── Graph reading note ── */
+.graph-reading-note {
+  font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:0.08em;
+  color:#9e9887; background:rgba(26,24,48,0.4); border:1px solid rgba(139,131,232,0.15);
+  border-radius:3px; padding:10px 16px; margin-bottom:16px; line-height:1.7;
+}
+.graph-reading-note strong { color:var(--purple); font-weight:500; }
+.graph-reading-note a { color:var(--purple); text-decoration:none; border-bottom:1px solid #534ab7; }
 </style>
 </head>
 <body>
@@ -306,6 +332,21 @@ h1 { font-size: 36px; }
     </a>
   </div>
 </div>
+
+<nav class="cluster-nav">
+  <span class="cluster-nav-label">Ontology layer · 4 pages</span>
+  <span class="current">Graph</span>
+  <span class="cluster-nav-sep">·</span>
+  <a href="https://dr-crunch.github.io/redundancy-awareness/ontology-relations.html">Relations</a>
+  <span class="cluster-nav-sep">·</span>
+  <a href="https://dr-crunch.github.io/redundancy-awareness/failure-modes.html">Failure Modes</a>
+  <span class="cluster-nav-sep">·</span>
+  <a href="https://dr-crunch.github.io/redundancy-awareness/semantic-map">Semantic Map</a>
+  <span class="cluster-nav-sep">·</span>
+  <a href="https://dr-crunch.github.io/redundancy-awareness/epistemological-audit">Epistemological Audit</a>
+  <span class="cluster-nav-sep">·</span>
+  <a href="https://dr-crunch.github.io/sitemap">Sitemap</a>
+</nav>
 
 <header>
   <div class="header-eyebrow fade-up">Meinhardt Initiative · Ontological Layer · March 2026</div>
@@ -378,6 +419,18 @@ h1 { font-size: 36px; }
   <div class="map-header">
     <div class="map-title">Dissemination Ontology Graph</div>
     <div class="map-note">OWL 2 DL · click nodes to navigate · hover for description</div>
+  </div>
+  <div class="graph-reading-note">
+    <strong>Reading direction: top → bottom.</strong>
+    OWL classes
+    <span style="color:rgba(158,152,135,0.4);margin:0 5px">→</span>
+    failure mode instances (the five nullification loop stages)
+    <span style="color:rgba(158,152,135,0.4);margin:0 5px">→</span>
+    object properties — click each to open <a href="https://dr-crunch.github.io/redundancy-awareness/ontology-relations.html">Relations</a>
+    <span style="color:rgba(158,152,135,0.4);margin:0 5px">→</span>
+    dissemination channels
+    <span style="color:rgba(158,152,135,0.4);margin:0 5px">→</span>
+    audience instances · corpus artefacts · campaign repositories · economic mechanism
   </div>
   <div class="svg-container" id="svgContainer">
     <svg width="100%" viewBox="0 0 680 1810" xmlns="http://www.w3.org/2000/svg">
