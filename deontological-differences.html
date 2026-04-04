@@ -22,294 +22,117 @@
 <meta name="twitter:image" content="https://dr-crunch.github.io/redundancy-awareness/og-image-deontology.jpg" />
 <style>
 :root {
---ink: #0c0b09;
---surface: #141210;
---surface2: #1c1a17;
---parchment: #e8e3d4;
---parchment-dim: #9e9887;
---parchment-faint: #2a2720;
---purple: #9098b0;
---purple-dim: #303848;
---purple-bg: #1e1f24;
---green: #5e9e9a;
---green-dim: #2a3e3d;
---green-bg: #1a1e20;
---regatta: #7faad4;
---regatta-dim: #2a4060;
---regatta-bg: #171e28;
---citron: #c8b87a;
---citron-dim: #3a3420;
---citron-bg: #1e1e20;
---terra: #d4643d;
---terra-dim: #993d1d;
---terra-bg: #1f1109;
---amber: #c9881f;
---amber-dim: #854f0b;
---amber-bg: #1e1509;
---blue: #4a9fe0;
---blue-dim: #185fa5;
---blue-bg: #0c1929;
---teal: #2ab8c0;
---teal-dim: #156e72;
---teal-bg: #0a1e20;
---pink: #c060a0;
---pink-dim: #7a3060;
---pink-bg: #1e0d18;
+--ink: #0c0b09; --surface: #141210; --surface2: #1c1a17;
+--parchment: #e8e3d4; --parchment-dim: #9e9887; --parchment-faint: #2a2720;
+--purple: #9098b0; --purple-dim: #303848; --purple-bg: #1e1f24;
+--green: #5e9e9a; --green-dim: #2a3e3d; --green-bg: #1a1e20;
+--regatta: #7faad4; --regatta-dim: #2a4060; --regatta-bg: #171e28;
+--citron: #c8b87a; --citron-dim: #3a3420; --citron-bg: #1e1e20;
+--terra: #d4643d; --terra-dim: #993d1d; --terra-bg: #1f1109;
+--amber: #c9881f; --amber-dim: #854f0b; --amber-bg: #1e1509;
+--blue: #4a9fe0; --blue-dim: #185fa5; --blue-bg: #0c1929;
+--teal: #2ab8c0; --teal-dim: #156e72; --teal-bg: #0a1e20;
+--pink: #c060a0; --pink-dim: #7a3060; --pink-bg: #1e0d18;
 --gold: #c9a84c;
---rule: rgba(232, 227, 212, 0.1);
---rule-strong: rgba(232, 227, 212, 0.18);
---svg-label: #9e9887;
---svg-chain: #c9a84c;
---svg-legend: #9e9887;
+--rule: rgba(232,227,212,0.1); --rule-strong: rgba(232,227,212,0.18);
 }
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-background: var(--ink);
-color: var(--parchment);
-font-family: 'Cormorant Garamond', Georgia, serif;
-font-size: 18px;
-line-height: 1.6;
-min-height: 100vh;
-overflow-x: hidden;
-}
-body::before {
-content: '';
-position: fixed;
-inset: 0;
-background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-pointer-events: none;
-z-index: 0;
-opacity: 0.5;
-}
-.alert-strip {
-background: var(--regatta-bg);
-border-bottom: 1px solid var(--regatta-dim);
-padding: 10px 32px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 16px;
-position: relative;
-z-index: 10;
-flex-wrap: wrap;
-}
-.alert-strip-text {
-font-family: 'IBM Plex Mono', monospace;
-font-size: 11px;
-color: var(--regatta);
-letter-spacing: 0.08em;
-text-transform: uppercase;
-}
-.alert-strip-text span { color: var(--parchment-dim); margin: 0 6px; }
-.hot-buttons { display: flex; gap: 10px; flex-shrink: 0; flex-wrap: wrap; }
-.btn {
-display: inline-flex; align-items: center; gap: 7px; padding: 8px 18px;
-border-radius: 3px; font-family: 'IBM Plex Mono', monospace; font-size: 11px;
-font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;
-text-decoration: none; border: 1px solid; cursor: pointer; transition: all 0.2s;
-position: relative; overflow: hidden;
-}
-.btn::before { content: ''; position: absolute; inset: 0; background: currentColor; opacity: 0; transition: opacity 0.2s; }
-.btn:hover::before { opacity: 0.08; }
-.btn-purple { background: var(--purple-bg); border-color: var(--purple-dim); color: var(--purple); }
-.btn-purple:hover { border-color: var(--purple); box-shadow: 0 0 10px rgba(144,152,176,0.15); }
-.btn-green { background: var(--regatta-bg); border-color: var(--regatta-dim); color: var(--regatta); }
-.btn-green:hover { border-color: var(--regatta); box-shadow: 0 0 10px rgba(127,170,212,0.15); }
-.btn-amber { background: var(--green-bg); border-color: var(--green-dim); color: var(--green); }
-.btn-amber:hover { border-color: var(--green); box-shadow: 0 0 10px rgba(94,158,154,0.12); }
-.btn-blue { background: var(--citron-bg); border-color: var(--citron-dim); color: var(--citron); }
-.btn-blue:hover { border-color: var(--citron); box-shadow: 0 0 10px rgba(200,184,122,0.12); }
-header {
-position: relative; z-index: 1; padding: 64px 32px 48px;
-max-width: 960px; margin: 0 auto; border-bottom: 1px solid var(--rule);
-}
-.header-eyebrow {
-font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.15em;
-text-transform: uppercase; color: var(--regatta); margin-bottom: 20px;
-display: flex; align-items: center; gap: 10px;
-}
-.header-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--regatta); opacity: 0.3; max-width: 200px; }
-h1 {
-font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 300;
-font-size: clamp(36px, 6vw, 72px); line-height: 1.05; letter-spacing: -0.01em;
-color: var(--parchment); margin-bottom: 8px;
-}
-h1 em { font-style: italic; color: var(--parchment-dim); }
-.header-subtitle {
-font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.5vw, 24px);
-font-weight: 300; font-style: italic; color: var(--parchment-dim);
-margin-bottom: 32px; line-height: 1.4;
-}
-.header-lede {
-font-size: 17px; color: var(--parchment); max-width: 680px; line-height: 1.75;
-border-left: 2px solid var(--regatta); padding-left: 20px; margin-bottom: 32px;
-}
-.header-meta { display: flex; gap: 32px; flex-wrap: wrap; }
-.meta-item { display: flex; flex-direction: column; gap: 3px; }
-.meta-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--parchment-dim); }
-.meta-value { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--parchment); }
-.meta-value.purple { color: var(--regatta); }
-.meta-value.live { color: var(--terra); }
-.machol {
-position: relative; z-index: 1; max-width: 960px; margin: 0 auto;
-padding: 40px 32px; border-bottom: 1px solid var(--rule);
-display: flex; gap: 24px; align-items: flex-start;
-}
-.machol-line { width: 3px; background: linear-gradient(to bottom, var(--regatta), transparent); flex-shrink: 0; align-self: stretch; min-height: 60px; }
-.machol-body blockquote { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; font-style: italic; color: var(--parchment); line-height: 1.5; margin-bottom: 8px; }
-.machol-attribution { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--regatta); text-transform: uppercase; }
-.machol-note { margin-top: 14px; font-size: 16px; color: var(--parchment-dim); max-width: 580px; line-height: 1.7; font-family: 'EB Garamond', serif; }
-.hypotheses {
-position: relative; z-index: 1; max-width: 960px; margin: 0 auto;
-padding: 40px 32px; border-bottom: 1px solid var(--rule);
-}
-.section-label {
-font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.15em;
-text-transform: uppercase; color: var(--parchment-dim); margin-bottom: 20px;
-}
-.hyp-grid {
-display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-gap: 1px; background: var(--rule-strong); border: 1px solid var(--rule-strong);
-border-radius: 4px; overflow: hidden;
-}
-.hyp-card { background: var(--surface); padding: 24px; position: relative; transition: background 0.2s; }
-.hyp-card:hover { background: var(--surface2); }
-.hyp-card::before {
-content: attr(data-letter); position: absolute; top: 16px; right: 20px;
-font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300;
-font-style: italic; opacity: 0.07; color: var(--parchment); line-height: 1;
-}
-.hyp-title { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--parchment-dim); margin-bottom: 8px; }
-.hyp-body { font-size: 15px; font-weight: 400; color: var(--parchment); line-height: 1.6; font-family: 'EB Garamond', serif; }
-.hyp-remedy { margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--regatta); letter-spacing: 0.05em; }
-.map-section {
-position: relative; z-index: 1; max-width: 960px; margin: 0 auto;
-padding: 40px 32px; border-bottom: 1px solid var(--rule);
-}
-.map-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 12px; }
-.map-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: var(--parchment); }
-.map-note { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.08em; color: var(--parchment-dim); text-transform: uppercase; }
-.svg-container {
-background: var(--surface2); border: 1px solid var(--rule-strong);
-border-radius: 6px; padding: 24px 16px; overflow-x: auto;
-}
-.svg-container svg { display: block; max-width: 100%; height: auto; }
-.svg-container g[data-href] { cursor: pointer; transition: opacity 0.15s; }
-.svg-container g[data-href]:hover { opacity: 0.82; filter: brightness(1.12); }
-.axiom-bar {
-position: relative; z-index: 1; max-width: 960px; margin: 0 auto;
-padding: 40px 32px; border-bottom: 1px solid var(--rule);
-display: grid; grid-template-columns: 3px 1fr; gap: 24px; align-items: start;
-}
-.axiom-rule { width: 3px; align-self: stretch; background: linear-gradient(to bottom, var(--regatta) 0%, rgba(127,170,212,0.06) 100%); border-radius: 2px; min-height: 80px; }
-.axiom-body { display: flex; flex-direction: column; gap: 10px; }
-.axiom-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(127,170,212,0.35); }
-.axiom-text { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.5vw, 26px); font-weight: 300; font-style: italic; color: var(--parchment); line-height: 1.45; }
-.axiom-plain { font-family: 'EB Garamond', serif; font-size: 16px; color: var(--parchment-dim); line-height: 1.72; max-width: 640px; }
-.turtle-section {
-position: relative; z-index: 1; max-width: 960px; margin: 0 auto;
-padding: 40px 32px; border-bottom: 1px solid var(--rule);
-}
-.turtle-block {
-background: var(--surface2); border: 1px solid var(--rule-strong);
-border-left: 3px solid var(--regatta-dim); border-radius: 4px;
-padding: 24px 28px; font-family: 'IBM Plex Mono', monospace;
-font-size: 12px; line-height: 1.85; overflow-x: auto; margin-top: 20px;
-}
-.ttl-prefix { color: rgba(127,170,212,0.45); }
-.ttl-class { color: var(--regatta); }
-.ttl-prop { color: var(--amber); }
-.ttl-inst { color: var(--green); }
-.ttl-lit { color: var(--terra); }
-.ttl-comment { color: rgba(158,152,135,0.45); font-style: italic; }
-.ttl-type { color: var(--blue); }
-.keywords-section {
-position: relative; z-index: 1; max-width: 960px; margin: 0 auto;
-padding: 40px 32px; border-bottom: 1px solid var(--rule);
-}
-.keyword-blob {
-font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 2.0;
-color: var(--parchment-dim); background: var(--surface2); border: 1px solid var(--rule);
-border-radius: 4px; padding: 24px; word-break: break-word;
-}
-.keyword-blob .k-core { color: var(--regatta); }
-.keyword-blob .k-legal { color: var(--blue); }
-.keyword-blob .k-irish { color: var(--green); }
-.keyword-blob .k-mech { color: var(--amber); }
-.keyword-blob .k-eu { color: var(--terra); }
-.keyword-blob .k-onto { color: var(--teal); }
-footer {
-position: relative; z-index: 1; max-width: 960px; margin: 0 auto;
-padding: 32px; display: flex; justify-content: space-between;
-align-items: center; flex-wrap: wrap; gap: 16px;
-}
-.footer-left { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: var(--parchment-dim); line-height: 1.8; }
-.footer-left a { color: var(--parchment-dim); text-decoration: none; transition: color 0.15s; }
-.footer-left a:hover { color: var(--parchment); }
-.footer-right { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(158,152,135,0.4); text-align: right; }
-.tooltip {
-position: fixed; background: var(--surface2); border: 1px solid var(--rule-strong);
-border-radius: 4px; padding: 8px 14px; font-family: 'IBM Plex Mono', monospace;
-font-size: 11px; color: var(--parchment); pointer-events: none; z-index: 1000;
-opacity: 0; transition: opacity 0.15s; max-width: 280px; line-height: 1.5;
-}
-.tooltip.visible { opacity: 1; }
-@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-.fade-up { animation: fadeUp 0.6s ease forwards; opacity: 0; }
-.fade-up:nth-child(1) { animation-delay: 0.05s; }
-.fade-up:nth-child(2) { animation-delay: 0.15s; }
-.fade-up:nth-child(3) { animation-delay: 0.25s; }
-.fade-up:nth-child(4) { animation-delay: 0.35s; }
-.fade-up:nth-child(5) { animation-delay: 0.45s; }
-@media (max-width: 600px) {
-.alert-strip { flex-direction: column; align-items: flex-start; }
-.hot-buttons { width: 100%; }
-.btn { flex: 1; justify-content: center; }
-h1 { font-size: 36px; }
-.hyp-grid { grid-template-columns: 1fr; }
-.machol { flex-direction: column; }
-.machol-line { width: 40px; height: 3px; min-height: auto; }
-}
-.svg-section-label {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  fill: #9e9887;
-}
-.svg-chain-label {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px;
-  fill: #c9a84c;
-  opacity: 0.85;
-}
-.svg-legend-label {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
-  fill: #9e9887;
-}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamond',Georgia,serif;font-size:18px;line-height:1.6;min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.5}
+.alert-strip{background:var(--regatta-bg);border-bottom:1px solid var(--regatta-dim);padding:10px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative;z-index:10;flex-wrap:wrap}
+.alert-strip-text{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--regatta);letter-spacing:0.08em;text-transform:uppercase}
+.alert-strip-text span{color:var(--parchment-dim);margin:0 6px}
+.hot-buttons{display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:8px 18px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;border:1px solid;cursor:pointer;transition:all 0.2s;position:relative;overflow:hidden}
+.btn::before{content:'';position:absolute;inset:0;background:currentColor;opacity:0;transition:opacity 0.2s}
+.btn:hover::before{opacity:0.08}
+.btn-purple{background:var(--purple-bg);border-color:var(--purple-dim);color:var(--purple)}
+.btn-purple:hover{border-color:var(--purple);box-shadow:0 0 10px rgba(144,152,176,0.15)}
+.btn-green{background:var(--regatta-bg);border-color:var(--regatta-dim);color:var(--regatta)}
+.btn-green:hover{border-color:var(--regatta);box-shadow:0 0 10px rgba(127,170,212,0.15)}
+.btn-amber{background:var(--green-bg);border-color:var(--green-dim);color:var(--green)}
+.btn-amber:hover{border-color:var(--green);box-shadow:0 0 10px rgba(94,158,154,0.12)}
+.btn-blue{background:var(--citron-bg);border-color:var(--citron-dim);color:var(--citron)}
+.btn-blue:hover{border-color:var(--citron);box-shadow:0 0 10px rgba(200,184,122,0.12)}
+header{position:relative;z-index:1;padding:64px 32px 48px;max-width:960px;margin:0 auto;border-bottom:1px solid var(--rule)}
+.header-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--regatta);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.header-eyebrow::after{content:'';flex:1;height:1px;background:var(--regatta);opacity:0.3;max-width:200px}
+h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(36px,6vw,72px);line-height:1.05;letter-spacing:-0.01em;color:var(--parchment);margin-bottom:8px}
+h1 em{font-style:italic;color:var(--parchment-dim)}
+.header-subtitle{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.5vw,24px);font-weight:300;font-style:italic;color:var(--parchment-dim);margin-bottom:32px;line-height:1.4}
+.header-lede{font-size:17px;color:var(--parchment);max-width:680px;line-height:1.75;border-left:2px solid var(--regatta);padding-left:20px;margin-bottom:32px}
+.header-meta{display:flex;gap:32px;flex-wrap:wrap}
+.meta-item{display:flex;flex-direction:column;gap:3px}
+.meta-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--parchment-dim)}
+.meta-value{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--parchment)}
+.meta-value.purple{color:var(--regatta)}
+.meta-value.live{color:var(--terra)}
+.machol{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:40px 32px;border-bottom:1px solid var(--rule);display:flex;gap:24px;align-items:flex-start}
+.machol-line{width:3px;background:linear-gradient(to bottom,var(--regatta),transparent);flex-shrink:0;align-self:stretch;min-height:60px}
+.machol-body blockquote{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;font-style:italic;color:var(--parchment);line-height:1.5;margin-bottom:8px}
+.machol-attribution{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--regatta);text-transform:uppercase}
+.machol-note{margin-top:14px;font-size:16px;color:var(--parchment-dim);max-width:580px;line-height:1.7;font-family:'EB Garamond',serif}
+.hypotheses{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:40px 32px;border-bottom:1px solid var(--rule)}
+.section-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--parchment-dim);margin-bottom:20px}
+.hyp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--rule-strong);border:1px solid var(--rule-strong);border-radius:4px;overflow:hidden}
+.hyp-card{background:var(--surface);padding:24px;position:relative;transition:background 0.2s}
+.hyp-card:hover{background:var(--surface2)}
+.hyp-card::before{content:attr(data-letter);position:absolute;top:16px;right:20px;font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;font-style:italic;opacity:0.07;color:var(--parchment);line-height:1}
+.hyp-title{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--parchment-dim);margin-bottom:8px}
+.hyp-body{font-size:15px;font-weight:400;color:var(--parchment);line-height:1.6;font-family:'EB Garamond',serif}
+.hyp-remedy{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--regatta);letter-spacing:0.05em}
+.map-section{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:40px 32px;border-bottom:1px solid var(--rule)}
+.map-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px}
+.map-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--parchment)}
+.map-note{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;color:var(--parchment-dim);text-transform:uppercase}
+.svg-container{background:var(--surface2);border:1px solid var(--rule-strong);border-radius:6px;padding:24px 16px;overflow-x:auto}
+.svg-container svg{display:block;max-width:100%;height:auto}
+.svg-container g[data-href]{cursor:pointer;transition:opacity 0.15s}
+.svg-container g[data-href]:hover{opacity:0.82;filter:brightness(1.12)}
+.axiom-bar{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:40px 32px;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:3px 1fr;gap:24px;align-items:start}
+.axiom-rule{width:3px;align-self:stretch;background:linear-gradient(to bottom,var(--regatta) 0%,rgba(127,170,212,0.06) 100%);border-radius:2px;min-height:80px}
+.axiom-body{display:flex;flex-direction:column;gap:10px}
+.axiom-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(127,170,212,0.35)}
+.axiom-text{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.5vw,26px);font-weight:300;font-style:italic;color:var(--parchment);line-height:1.45}
+.axiom-plain{font-family:'EB Garamond',serif;font-size:16px;color:var(--parchment-dim);line-height:1.72;max-width:640px}
+.turtle-section{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:40px 32px;border-bottom:1px solid var(--rule)}
+.turtle-block{background:var(--surface2);border:1px solid var(--rule-strong);border-left:3px solid var(--regatta-dim);border-radius:4px;padding:24px 28px;font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.85;overflow-x:auto;margin-top:20px}
+.ttl-prefix{color:rgba(127,170,212,0.45)} .ttl-class{color:var(--regatta)} .ttl-prop{color:var(--amber)}
+.ttl-inst{color:var(--green)} .ttl-lit{color:var(--terra)} .ttl-comment{color:rgba(158,152,135,0.45);font-style:italic}
+.ttl-type{color:var(--blue)}
+.keywords-section{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:40px 32px;border-bottom:1px solid var(--rule)}
+.keyword-blob{font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:2.0;color:var(--parchment-dim);background:var(--surface2);border:1px solid var(--rule);border-radius:4px;padding:24px;word-break:break-word}
+.keyword-blob .k-core{color:var(--regatta)} .keyword-blob .k-legal{color:var(--blue)}
+.keyword-blob .k-irish{color:var(--green)} .keyword-blob .k-mech{color:var(--amber)}
+.keyword-blob .k-eu{color:var(--terra)} .keyword-blob .k-onto{color:var(--teal)}
+footer{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-left{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;color:var(--parchment-dim);line-height:1.8}
+.footer-left a{color:var(--parchment-dim);text-decoration:none;transition:color 0.15s}
+.footer-left a:hover{color:var(--parchment)}
+.footer-right{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(158,152,135,0.4);text-align:right}
+.tooltip{position:fixed;background:var(--surface2);border:1px solid var(--rule-strong);border-radius:4px;padding:8px 14px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--parchment);pointer-events:none;z-index:1000;opacity:0;transition:opacity 0.15s;max-width:280px;line-height:1.5}
+.tooltip.visible{opacity:1}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{animation:fadeUp 0.6s ease forwards;opacity:0}
+.fade-up:nth-child(1){animation-delay:0.05s} .fade-up:nth-child(2){animation-delay:0.15s}
+.fade-up:nth-child(3){animation-delay:0.25s} .fade-up:nth-child(4){animation-delay:0.35s}
+.fade-up:nth-child(5){animation-delay:0.45s}
+@media(max-width:600px){.alert-strip{flex-direction:column;align-items:flex-start}.hot-buttons{width:100%}.btn{flex:1;justify-content:center}h1{font-size:36px}.hyp-grid{grid-template-columns:1fr}.machol{flex-direction:column}.machol-line{width:40px;height:3px;min-height:auto}}
+.svg-section-label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;fill:#9e9887}
+.svg-chain-label{font-family:'IBM Plex Mono',monospace;font-size:11px;fill:#c9a84c;opacity:0.85}
+.svg-legend-label{font-family:'IBM Plex Mono',monospace;font-size:12px;fill:#9e9887}
 </style>
 </head>
 <body>
 
 <div class="alert-strip">
-  <div class="alert-strip-text">
-    Deontological Differences<span>·</span>Ontology of Dissemination<span>·</span>Meinhardt Initiative<span>·</span>March 2026
-  </div>
+  <div class="alert-strip-text">Deontological Differences<span>·</span>Ontology of Dissemination<span>·</span>Meinhardt Initiative<span>·</span>March 2026</div>
   <div class="hot-buttons">
-    <a href="https://dr-crunch.github.io/nullification-loops/" class="btn btn-green" target="_blank" rel="noopener">
-      <span>◎</span> Main Record
-    </a>
-    <a href="https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html" class="btn btn-purple" target="_blank" rel="noopener">
-      <span>⬡</span> Relations
-    </a>
-    <a href="https://dr-wojak.github.io/redundancy-awareness/failure-modes.html" class="btn btn-amber" target="_blank" rel="noopener">
-      <span>⚠</span> Failure Modes
-    </a>
-    <a href="https://dr-crunch.github.io/redundancy-awareness/epistemological-audit" class="btn btn-blue" target="_blank" rel="noopener">
-      <span>✦</span> Epistemological Audit
-    </a>
+    <a href="https://dr-crunch.github.io/nullification-loops/" class="btn btn-green" target="_blank" rel="noopener"><span>◎</span> Main Record</a>
+    <a href="https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html" class="btn btn-purple" target="_blank" rel="noopener"><span>⬡</span> Relations</a>
+    <a href="https://dr-wojak.github.io/redundancy-awareness/failure-modes.html" class="btn btn-amber" target="_blank" rel="noopener"><span>⚠</span> Failure Modes</a>
+    <a href="https://dr-crunch.github.io/redundancy-awareness/epistemological-audit" class="btn btn-blue" target="_blank" rel="noopener"><span>✦</span> Epistemological Audit</a>
   </div>
 </div>
 
@@ -317,9 +140,7 @@ h1 { font-size: 36px; }
   <div class="header-eyebrow fade-up">Meinhardt Initiative · Ontological Layer · March 2026</div>
   <h1 class="fade-up">Deontological <em>Differences</em></h1>
   <div class="header-subtitle fade-up">The ontology of dissemination — who receives what, through which channel, under which obligation</div>
-  <p class="header-lede fade-up">
-    Dissemination is not neutral broadcast. Each audience — legal practitioner, EU institution, journalist, civic petitioner, academic researcher — receives a different slice of the corpus through a different channel, under a different institutional obligation. The OWL 2 ontology formalises this: hashtags become classes, channels become properties, obligations become axioms. The graph below maps every dissemination pathway derived from the corpus, structured as a machine-readable institutional critique.
-  </p>
+  <p class="header-lede fade-up">Dissemination is not neutral broadcast. Each audience — legal practitioner, EU institution, journalist, civic petitioner, academic researcher — receives a different slice of the corpus through a different channel, under a different institutional obligation. The OWL 2 ontology formalises this: hashtags become classes, channels become properties, obligations become axioms. The graph below maps every dissemination pathway derived from the corpus, structured as a machine-readable institutional critique.</p>
   <div class="header-meta fade-up">
     <div class="meta-item"><span class="meta-label">Ontology</span><span class="meta-value purple">OWL 2 DL</span></div>
     <div class="meta-item"><span class="meta-label">Serialisation</span><span class="meta-value">RDF / Turtle</span></div>
@@ -334,40 +155,18 @@ h1 { font-size: 36px; }
   <div class="machol-body">
     <blockquote>Not: "They ignored me." But: "This actor instantiates a repeatable failure class under defined conditions."</blockquote>
     <div class="machol-attribution">— Ontological restatement · Meinhardt Initiative corpus · March 2026</div>
-    <p class="machol-note">
-      Formalising the hashtags as an ontology converts the work from narrative argument into machine-readable institutional critique. Each claim becomes a class, each case an instance, each causal relationship a defined property. The dissemination graph that follows shows how those classes reach each audience — and what obligation attaches on arrival.
-    </p>
+    <p class="machol-note">Formalising the hashtags as an ontology converts the work from narrative argument into machine-readable institutional critique. Each claim becomes a class, each case an instance, each causal relationship a defined property. The dissemination graph that follows shows how those classes reach each audience — and what obligation attaches on arrival.</p>
   </div>
 </div>
 
 <section id="five-channels" class="hypotheses">
   <div class="section-label">Five deontological differences — the same corpus, five distinct obligations on receipt</div>
   <div class="hyp-grid">
-    <div class="hyp-card" data-letter="I">
-      <div class="hyp-title">I · Legal Channel</div>
-      <div class="hyp-body">Courts, ombudsmen, and pre-litigation notices receive the corpus as evidence. The obligation on receipt is procedural: reasons must be given for any disposal. Silence is no longer available as a response. Each act becomes independently reviewable.</div>
-      <div class="hyp-remedy">→ :violates :RightToBeHeard · :triggers :Maladministration</div>
-    </div>
-    <div class="hyp-card" data-letter="II">
-      <div class="hyp-title">II · EU / Institutional Channel</div>
-      <div class="hyp-body">European Ombudsman, CJEU, PETI, Défenseur des Droits, and the Council Presidency receive the corpus as a Member State failure record. The obligation is treaty-grounded. Ireland's assumption of the Presidency on 1 July 2026 makes continued silence structurally costly.</div>
-      <div class="hyp-remedy">→ :exhibitsFailure :NullificationLoop · Art. 4(3) TEU</div>
-    </div>
-    <div class="hyp-card" data-letter="III">
-      <div class="hyp-title">III · Academic / Research Channel</div>
-      <div class="hyp-body">The corpus reaches governance researchers, O.R. methodologists, and cybernetics scholars as a live case study of Nullification Loop dynamics and Viable System Model failure. Bateson's deutero-binding made empirically visible. The obligation here is epistemic: the data must be engaged, not filed.</div>
-      <div class="hyp-remedy">→ :documents :StateCapacityFailure · Beer/VSM · Bateson</div>
-    </div>
-    <div class="hyp-card" data-letter="IV">
-      <div class="hyp-title">IV · Civic / Petition Channel</div>
-      <div class="hyp-body">Citizens, councillors, TDs, MEPs, and civic petitioners receive the corpus as a public record of institutional avoidance. The obligation is democratic: elected representatives who are formally notified cannot subsequently claim ignorance. Receipt creates a duty of enquiry.</div>
-      <div class="hyp-remedy">→ :amplifies :CivicSignal · Art. 15.10 Bunreacht</div>
-    </div>
-    <div class="hyp-card" data-letter="V">
-      <div class="hyp-title">V · Media / Press Channel</div>
-      <div class="hyp-body">Journalists and media investigators receive the corpus as a documented, timestamped, CC0 evidentiary record. Every claim is grounded; every reference number is real. The obligation is evidential: the materials withstand scrutiny. Signal-to-silence timeline is publication-ready.</div>
-      <div class="hyp-remedy">→ :suppresses :CivicSignal · :documents :DesignedForgetting</div>
-    </div>
+    <div class="hyp-card" data-letter="I"><div class="hyp-title">I · Legal Channel</div><div class="hyp-body">Courts, ombudsmen, and pre-litigation notices receive the corpus as evidence. The obligation on receipt is procedural: reasons must be given for any disposal. Silence is no longer available as a response. Each act becomes independently reviewable.</div><div class="hyp-remedy">→ :violates :RightToBeHeard · :triggers :Maladministration</div></div>
+    <div class="hyp-card" data-letter="II"><div class="hyp-title">II · EU / Institutional Channel</div><div class="hyp-body">European Ombudsman, CJEU, PETI, Défenseur des Droits, and the Council Presidency receive the corpus as a Member State failure record. The obligation is treaty-grounded. Ireland's assumption of the Presidency on 1 July 2026 makes continued silence structurally costly.</div><div class="hyp-remedy">→ :exhibitsFailure :NullificationLoop · Art. 4(3) TEU</div></div>
+    <div class="hyp-card" data-letter="III"><div class="hyp-title">III · Academic / Research Channel</div><div class="hyp-body">The corpus reaches governance researchers, O.R. methodologists, and cybernetics scholars as a live case study of Nullification Loop dynamics and Viable System Model failure. Bateson's deutero-binding made empirically visible. The obligation here is epistemic: the data must be engaged, not filed.</div><div class="hyp-remedy">→ :documents :StateCapacityFailure · Beer/VSM · Bateson</div></div>
+    <div class="hyp-card" data-letter="IV"><div class="hyp-title">IV · Civic / Petition Channel</div><div class="hyp-body">Citizens, councillors, TDs, MEPs, and civic petitioners receive the corpus as a public record of institutional avoidance. The obligation is democratic: elected representatives who are formally notified cannot subsequently claim ignorance. Receipt creates a duty of enquiry.</div><div class="hyp-remedy">→ :amplifies :CivicSignal · Art. 15.10 Bunreacht</div></div>
+    <div class="hyp-card" data-letter="V"><div class="hyp-title">V · Media / Press Channel</div><div class="hyp-body">Journalists and media investigators receive the corpus as a documented, timestamped, CC0 evidentiary record. Every claim is grounded; every reference number is real. The obligation is evidential: the materials withstand scrutiny. Signal-to-silence timeline is publication-ready.</div><div class="hyp-remedy">→ :suppresses :CivicSignal · :documents :DesignedForgetting</div></div>
   </div>
 </section>
 
@@ -386,377 +185,179 @@ h1 { font-size: 36px; }
     <div class="map-note">OWL 2 DL · click nodes to navigate · hover for description</div>
   </div>
   <div class="svg-container" id="svgContainer">
-    <svg width="100%" viewBox="0 0 680 1810" xmlns="http://www.w3.org/2000/svg">
+    <svg width="100%" viewBox="0 0 680 1310" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-          <path d="M2 1L8 5L2 9" fill="none" stroke="#4a4540" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </marker>
-        <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-          <path d="M2 1L8 5L2 9" fill="none" stroke="#185fa5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </marker>
-        <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-          <path d="M2 1L8 5L2 9" fill="none" stroke="#2a3e3d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </marker>
-        <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-          <path d="M2 1L8 5L2 9" fill="none" stroke="#854f0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </marker>
-        <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-          <path d="M2 1L8 5L2 9" fill="none" stroke="#993d1d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </marker>
-        <marker id="arrow-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-          <path d="M2 1L8 5L2 9" fill="none" stroke="#2a4060" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </marker>
+        <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#185fa5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+        <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#2a3e3d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+        <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#854f0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+        <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#993d1d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+        <marker id="arrow-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#2a4060" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
       </defs>
 
+      <!-- CONNECTORS -->
       <g id="connectors" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="462" y1="100" x2="462" y2="220" stroke="#993d1d" stroke-width="0.7" opacity="0.35" stroke-dasharray="3,2"/>
-        <line x1="50" y1="220" x2="630" y2="220" stroke="#993d1d" stroke-width="0.7" opacity="0.35" stroke-dasharray="3,2"/>
-        <line x1="100" y1="220" x2="100" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
-        <line x1="220" y1="220" x2="220" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
-        <line x1="340" y1="220" x2="340" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
-        <line x1="460" y1="220" x2="460" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
-        <line x1="580" y1="220" x2="580" y2="230" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
-        <line x1="340" y1="178" x2="340" y2="320" stroke="#185fa5" stroke-width="0.7" opacity="0.3" stroke-dasharray="3,2"/>
-        <line x1="50" y1="998" x2="620" y2="998" stroke="#2a4060" stroke-width="0.7" opacity="0.3" stroke-dasharray="3,2"/>
-        <line x1="131" y1="998" x2="131" y2="1008" stroke="#2a4060" stroke-width="0.7" opacity="0.35" marker-end="url(#arrow-purple)"/>
-        <line x1="323" y1="998" x2="323" y2="1008" stroke="#2a4060" stroke-width="0.7" opacity="0.35" marker-end="url(#arrow-purple)"/>
-        <line x1="515" y1="998" x2="515" y2="1008" stroke="#2a4060" stroke-width="0.7" opacity="0.35" marker-end="url(#arrow-purple)"/>
-        <line x1="131" y1="998" x2="131" y2="1086" stroke="#2a4060" stroke-width="0.7" opacity="0.25" stroke-dasharray="3,2"/>
-        <line x1="323" y1="998" x2="323" y2="1086" stroke="#2a4060" stroke-width="0.7" opacity="0.25" stroke-dasharray="3,2"/>
-        <line x1="515" y1="998" x2="515" y2="1086" stroke="#2a4060" stroke-width="0.7" opacity="0.25" stroke-dasharray="3,2"/>
-        <line x1="96" y1="546" x2="218" y2="592" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
-        <line x1="96" y1="546" x2="340" y2="592" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
-        <line x1="218" y1="546" x2="218" y2="670" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
-        <line x1="218" y1="546" x2="340" y2="670" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
-        <line x1="340" y1="546" x2="280" y2="748" stroke="#5e9e9a" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-green)"/>
-        <line x1="462" y1="546" x2="280" y2="826" stroke="#5e9e9a" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-green)"/>
-        <line x1="584" y1="546" x2="280" y2="904" stroke="#c9881f" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-amber)"/>
-        <line x1="218" y1="648" x2="131" y2="1008" stroke="#2a4060" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-purple)"/>
-        <line x1="340" y1="648" x2="323" y2="1008" stroke="#2a4060" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-purple)"/>
-        <line x1="218" y1="726" x2="515" y2="1008" stroke="#185fa5" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-blue)"/>
-        <line x1="340" y1="726" x2="323" y2="1086" stroke="#185fa5" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-blue)"/>
-        <line x1="280" y1="804" x2="131" y2="1086" stroke="#3b6d11" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-green)"/>
-        <line x1="280" y1="882" x2="515" y2="1086" stroke="#2a3e3d" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-green)"/>
-        <line x1="280" y1="960" x2="131" y2="1268" stroke="#854f0b" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-amber)"/>
-        <line x1="128" y1="1064" x2="128" y2="1190" stroke="#5e9e9a" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
-        <line x1="320" y1="1064" x2="320" y2="1190" stroke="#5e9e9a" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
-        <line x1="512" y1="1064" x2="512" y2="1190" stroke="#5e9e9a" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
-        <line x1="134" y1="1142" x2="134" y2="1190" stroke="#5e9e9a" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
-        <line x1="326" y1="1142" x2="326" y2="1268" stroke="#5e9e9a" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
-        <line x1="515" y1="1142" x2="227" y2="1346" stroke="#5e9e9a" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
-        <line x1="131" y1="1246" x2="131" y2="1268" stroke="#5e9e9a" stroke-width="0.8" opacity="0.4" marker-end="url(#arrow-green)"/>
-        <line x1="323" y1="1246" x2="323" y2="1268" stroke="#5e9e9a" stroke-width="0.8" opacity="0.4" marker-end="url(#arrow-green)"/>
-        <line x1="515" y1="1246" x2="515" y2="1268" stroke="#5e9e9a" stroke-width="0.8" opacity="0.4" marker-end="url(#arrow-green)"/>
-        <line x1="131" y1="1324" x2="131" y2="1454" stroke="#c9881f" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-amber)"/>
-        <line x1="323" y1="1324" x2="323" y2="1454" stroke="#2a4060" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-purple)"/>
-        <line x1="515" y1="1324" x2="515" y2="1454" stroke="#2a4060" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-purple)"/>
-        <line x1="227" y1="1402" x2="131" y2="1454" stroke="#c9881f" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-amber)"/>
+        <!-- OWL fan → failure mode bus y=236 -->
+        <line x1="462" y1="100" x2="462" y2="236" stroke="#993d1d" stroke-width="0.7" opacity="0.35" stroke-dasharray="3,2"/>
+        <line x1="50" y1="236" x2="630" y2="236" stroke="#993d1d" stroke-width="0.7" opacity="0.35" stroke-dasharray="3,2"/>
+        <line x1="100" y1="236" x2="100" y2="246" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
+        <line x1="220" y1="236" x2="220" y2="246" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
+        <line x1="340" y1="236" x2="340" y2="246" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
+        <line x1="460" y1="236" x2="460" y2="246" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
+        <line x1="580" y1="236" x2="580" y2="246" stroke="#993d1d" stroke-width="0.7" opacity="0.4" marker-end="url(#arrow-red)"/>
+        <!-- Info object down -->
+        <line x1="340" y1="178" x2="340" y2="336" stroke="#185fa5" stroke-width="0.7" opacity="0.3" stroke-dasharray="3,2"/>
+        <!-- CHANNEL → AUDIENCE ROW A (y=592) -->
+        <!-- Legal (cx=96) → High Court (cx=54) + Ombudsman (cx=166) -->
+        <line x1="96" y1="562" x2="54" y2="592" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
+        <line x1="96" y1="562" x2="166" y2="592" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
+        <!-- EU/Inst (cx=218) → EU Ombudsman (cx=166 row B) + PETI (cx=288 row B) -->
+        <line x1="218" y1="562" x2="166" y2="664" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
+        <line x1="218" y1="562" x2="288" y2="664" stroke="#4a9fe0" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-blue)"/>
+        <!-- Academic (cx=340) → Research (cx=288 row A) -->
+        <line x1="340" y1="562" x2="288" y2="592" stroke="#5e9e9a" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-green)"/>
+        <!-- Civic (cx=462) → Citizens (cx=410 row A) -->
+        <line x1="462" y1="562" x2="410" y2="592" stroke="#5e9e9a" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-green)"/>
+        <!-- Media (cx=584) → Press (cx=584 row A, straight down) -->
+        <line x1="584" y1="562" x2="584" y2="592" stroke="#c9881f" stroke-width="1.0" opacity="0.6" marker-end="url(#arrow-amber)"/>
+        <!-- AUDIENCE → CORPUS (corpus row 1 y=750, row 2 y=822) -->
+        <line x1="54"  y1="648" x2="131" y2="750" stroke="#2a4060" stroke-width="0.8" opacity="0.5" marker-end="url(#arrow-purple)"/>
+        <line x1="166" y1="648" x2="323" y2="750" stroke="#2a4060" stroke-width="0.8" opacity="0.5" marker-end="url(#arrow-purple)"/>
+        <line x1="166" y1="720" x2="515" y2="750" stroke="#185fa5" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-blue)"/>
+        <line x1="288" y1="720" x2="323" y2="822" stroke="#185fa5" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-blue)"/>
+        <line x1="288" y1="648" x2="131" y2="822" stroke="#3b6d11" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-green)"/>
+        <line x1="410" y1="648" x2="515" y2="822" stroke="#2a3e3d" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-green)"/>
+        <line x1="584" y1="648" x2="131" y2="980" stroke="#854f0b" stroke-width="0.8" opacity="0.45" marker-end="url(#arrow-amber)"/>
+        <!-- CORPUS internal bus -->
+        <line x1="50"  y1="742" x2="620" y2="742" stroke="#2a4060" stroke-width="0.7" opacity="0.25" stroke-dasharray="3,2"/>
+        <line x1="131" y1="742" x2="131" y2="750" stroke="#2a4060" stroke-width="0.7" opacity="0.35" marker-end="url(#arrow-purple)"/>
+        <line x1="323" y1="742" x2="323" y2="750" stroke="#2a4060" stroke-width="0.7" opacity="0.35" marker-end="url(#arrow-purple)"/>
+        <line x1="515" y1="742" x2="515" y2="750" stroke="#2a4060" stroke-width="0.7" opacity="0.35" marker-end="url(#arrow-purple)"/>
+        <line x1="128" y1="806" x2="128" y2="822" stroke="#5e9e9a" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
+        <line x1="320" y1="806" x2="320" y2="822" stroke="#5e9e9a" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
+        <line x1="512" y1="806" x2="512" y2="822" stroke="#5e9e9a" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
+        <line x1="134" y1="878" x2="134" y2="908" stroke="#5e9e9a" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
+        <line x1="326" y1="878" x2="326" y2="980" stroke="#5e9e9a" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
+        <line x1="515" y1="878" x2="227" y2="1052" stroke="#5e9e9a" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-green)"/>
+        <!-- CAMPAIGN internal -->
+        <line x1="131" y1="964" x2="131" y2="980" stroke="#5e9e9a" stroke-width="0.8" opacity="0.4" marker-end="url(#arrow-green)"/>
+        <line x1="323" y1="964" x2="323" y2="980" stroke="#5e9e9a" stroke-width="0.8" opacity="0.4" marker-end="url(#arrow-green)"/>
+        <line x1="515" y1="964" x2="515" y2="980" stroke="#5e9e9a" stroke-width="0.8" opacity="0.4" marker-end="url(#arrow-green)"/>
+        <!-- CAMPAIGN → ECONOMIC -->
+        <line x1="131" y1="1036" x2="131" y2="1138" stroke="#c9881f" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-amber)"/>
+        <line x1="323" y1="1036" x2="323" y2="1138" stroke="#2a4060" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-purple)"/>
+        <line x1="515" y1="1036" x2="515" y2="1138" stroke="#2a4060" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-purple)"/>
+        <line x1="227" y1="1108" x2="131" y2="1138" stroke="#c9881f" stroke-width="0.9" opacity="0.5" marker-end="url(#arrow-amber)"/>
       </g>
 
+      <!-- TOP-LEVEL OWL CLASSES -->
       <text x="340" y="30" text-anchor="middle" class="svg-section-label">top-level owl classes</text>
+      <g title="The OWL ontology root" data-href="https://dr-crunch.github.io/nullification-loops/"><rect x="44" y="44" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#3a2820;stroke:#c17a5a"/><text style="font-size:20px" x="96" y="66" text-anchor="middle" dominant-baseline="central">🌐</text><text x="96" y="88" text-anchor="middle" dominant-baseline="central" style="fill:#e8b89a;font-size:12px">Root</text></g>
+      <g title="Institutional actors: state bodies and named individuals" data-href="https://dr-crunch.github.io/nullification-loops/dossier.html#actors"><rect x="166" y="44" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/><text style="font-size:20px" x="218" y="66" text-anchor="middle" dominant-baseline="central">🏛️</text><text x="218" y="88" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">Actor</text></g>
+      <g title="Administrative, operational and failure processes — five-stage nullification loop" data-href="https://dr-crunch.github.io/nullification-loops/dossier.html#loop"><rect x="288" y="44" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/><text style="font-size:20px" x="340" y="66" text-anchor="middle" dominant-baseline="central">⚙️</text><text x="340" y="88" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">Process</text></g>
+      <g title="Named failure patterns — five ontological instances with causal relations" data-href="https://dr-wojak.github.io/redundancy-awareness/failure-modes.html"><rect x="410" y="44" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#3a2e28;stroke:#a07060"/><text style="font-size:20px" x="462" y="66" text-anchor="middle" dominant-baseline="central">⚠️</text><text x="462" y="88" text-anchor="middle" dominant-baseline="central" style="fill:#c8a898;font-size:12px">Failure mode</text></g>
+      <g title="Rights, obligations and violations as legal constructs" data-href="https://dr-crunch.github.io/nullification-loops/dossier.html#legal"><rect x="532" y="44" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2a2a;stroke:#987880"/><text style="font-size:20px" x="584" y="66" text-anchor="middle" dominant-baseline="central">⚖️</text><text x="584" y="88" text-anchor="middle" dominant-baseline="central" style="fill:#c8a8b0;font-size:12px">Legal construct</text></g>
+      <g title="Submissions, signals and documents that carry the corpus" data-href="https://dr-crunch.github.io/nullification-loops/dossier.html#documents"><rect x="288" y="122" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2a2a;stroke:#987880"/><text style="font-size:20px" x="340" y="144" text-anchor="middle" dominant-baseline="central">📄</text><text x="340" y="166" text-anchor="middle" dominant-baseline="central" style="fill:#c8a8b0;font-size:12px">Information object</text></g>
 
-      <g title="The OWL ontology root — all classes and individuals belong here" data-href="https://dr-crunch.github.io/nullification-loops/">
-        <rect x="44" y="44" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#3a2820;stroke:#c17a5a"/>
-        <text style="font-size:20px" x="96" y="66" text-anchor="middle" dominant-baseline="central">🌐</text>
-        <text x="96" y="88" text-anchor="middle" dominant-baseline="central" style="fill:#e8b89a;font-size:12px">Root</text>
-      </g>
-      <g title="Institutional actors: state bodies and named individuals — implicated offices, ministers, MEPs, commissioners" data-href="https://dr-crunch.github.io/nullification-loops/dossier.html#actors">
-        <rect x="166" y="44" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/>
-        <text style="font-size:20px" x="218" y="66" text-anchor="middle" dominant-baseline="central">🏛️</text>
-        <text x="218" y="88" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">Actor</text>
-      </g>
-      <g title="Administrative, operational and failure processes — the five-stage nullification loop documented across 19 years" data-href="https://dr-crunch.github.io/nullification-loops/dossier.html#loop">
-        <rect x="288" y="44" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/>
-        <text style="font-size:20px" x="340" y="66" text-anchor="middle" dominant-baseline="central">⚙️</text>
-        <text x="340" y="88" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">Process</text>
-      </g>
-      <g title="Named failure patterns: procedural and structural breakdowns — five ontological instances with causal relations" data-href="https://dr-wojak.github.io/redundancy-awareness/failure-modes.html">
-        <rect x="410" y="44" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#3a2e28;stroke:#a07060"/>
-        <text style="font-size:20px" x="462" y="66" text-anchor="middle" dominant-baseline="central">⚠️</text>
-        <text x="462" y="88" text-anchor="middle" dominant-baseline="central" style="fill:#c8a898;font-size:12px">Failure mode</text>
-      </g>
-      <g title="Rights, obligations and violations as legal constructs — Art.41 CFR, Art.4(3) TEU, Order 84 RSC, and operative instruments" data-href="https://dr-crunch.github.io/nullification-loops/dossier.html#legal">
-        <rect x="532" y="44" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2a2a;stroke:#987880"/>
-        <text style="font-size:20px" x="584" y="66" text-anchor="middle" dominant-baseline="central">⚖️</text>
-        <text x="584" y="88" text-anchor="middle" dominant-baseline="central" style="fill:#c8a8b0;font-size:12px">Legal construct</text>
-      </g>
-      <g title="Submissions, signals and documents that carry the corpus — curated index of all evidentiary records" data-href="https://dr-crunch.github.io/nullification-loops/dossier.html#documents">
-        <rect x="288" y="122" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2a2a;stroke:#987880"/>
-        <text style="font-size:20px" x="340" y="144" text-anchor="middle" dominant-baseline="central">📄</text>
-        <text x="340" y="166" text-anchor="middle" dominant-baseline="central" style="fill:#c8a8b0;font-size:12px">Information object</text>
-      </g>
-
+      <!-- FAILURE MODE INSTANCES (h=86) -->
       <text x="340" y="216" text-anchor="middle" class="svg-section-label">failure mode instances · nullification loop</text>
+      <g title="An acknowledgement treated as though it resolves the underlying matter" data-href="https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#acknowledgement-as-closure"><rect x="44" y="230" width="112" height="86" rx="14" stroke-width="1.5" style="fill:#3a2e28;stroke:#a07060"/><text style="font-size:26px" x="100" y="261" text-anchor="middle" dominant-baseline="central">📬</text><text style="font-size:10px;fill:#c8a898" x="100" y="294" text-anchor="middle" dominant-baseline="central">Acknowledgement</text><text style="font-size:10px;fill:#c8a898" x="100" y="308" text-anchor="middle" dominant-baseline="central">as closure</text></g>
+      <g title="Responsibility redirected until no jurisdiction remains" data-href="https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#remit-displacement"><rect x="164" y="230" width="112" height="86" rx="14" stroke-width="1.5" style="fill:#3a2e28;stroke:#a07060"/><text style="font-size:26px" x="220" y="261" text-anchor="middle" dominant-baseline="central">🔀</text><text style="font-size:10px;fill:#c8a898" x="220" y="294" text-anchor="middle" dominant-baseline="central">Remit</text><text style="font-size:10px;fill:#c8a898" x="220" y="308" text-anchor="middle" dominant-baseline="central">displacement</text></g>
+      <g title="Deferral without any stated destination or timeline" data-href="https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#deferral-without-destination"><rect x="284" y="230" width="112" height="86" rx="14" stroke-width="1.5" style="fill:#3a2e28;stroke:#a07060"/><text style="font-size:26px" x="340" y="261" text-anchor="middle" dominant-baseline="central">⏳</text><text style="font-size:10px;fill:#c8a898" x="340" y="294" text-anchor="middle" dominant-baseline="central">Deferral without</text><text style="font-size:10px;fill:#c8a898" x="340" y="308" text-anchor="middle" dominant-baseline="central">destination</text></g>
+      <g title="A claim of sufficiency made without independent audit" data-href="https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#sufficiency-without-audit"><rect x="404" y="230" width="112" height="86" rx="14" stroke-width="1.5" style="fill:#3a2e28;stroke:#a07060"/><text style="font-size:26px" x="460" y="261" text-anchor="middle" dominant-baseline="central">🔇</text><text style="font-size:10px;fill:#c8a898" x="460" y="294" text-anchor="middle" dominant-baseline="central">Sufficiency</text><text style="font-size:10px;fill:#c8a898" x="460" y="308" text-anchor="middle" dominant-baseline="central">without audit</text></g>
+      <g title="Records suppressed through deliberate institutional omission" data-href="https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#record-suppression"><rect x="524" y="230" width="112" height="86" rx="14" stroke-width="1.5" style="fill:#3a2e28;stroke:#a07060"/><text style="font-size:26px" x="580" y="261" text-anchor="middle" dominant-baseline="central">🗑️</text><text style="font-size:10px;fill:#c8a898" x="580" y="294" text-anchor="middle" dominant-baseline="central">Record</text><text style="font-size:10px;fill:#c8a898" x="580" y="308" text-anchor="middle" dominant-baseline="central">suppression</text></g>
 
-      <g title="An acknowledgement treated as though it resolves the underlying matter" data-href="https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#acknowledgement-as-closure">
-        <rect x="44" y="230" width="112" height="70" rx="14" stroke-width="1.5" style="fill:#3a2e28;stroke:#a07060"/>
-        <text style="font-size:26px" x="100" y="256" text-anchor="middle" dominant-baseline="central">📬</text>
-        <text style="font-size:10px;fill:#c8a898" x="100" y="284" text-anchor="middle" dominant-baseline="central">Acknowledgement</text>
-        <text style="font-size:10px;fill:#c8a898" x="100" y="296" text-anchor="middle" dominant-baseline="central">as closure</text>
-      </g>
-      <g title="Responsibility redirected until no jurisdiction remains" data-href="https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#remit-displacement">
-        <rect x="164" y="230" width="112" height="70" rx="14" stroke-width="1.5" style="fill:#3a2e28;stroke:#a07060"/>
-        <text style="font-size:26px" x="220" y="256" text-anchor="middle" dominant-baseline="central">🔀</text>
-        <text style="font-size:10px;fill:#c8a898" x="220" y="284" text-anchor="middle" dominant-baseline="central">Remit</text>
-        <text style="font-size:10px;fill:#c8a898" x="220" y="296" text-anchor="middle" dominant-baseline="central">displacement</text>
-      </g>
-      <g title="Deferral without any stated destination or timeline" data-href="https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#deferral-without-destination">
-        <rect x="284" y="230" width="112" height="70" rx="14" stroke-width="1.5" style="fill:#3a2e28;stroke:#a07060"/>
-        <text style="font-size:26px" x="340" y="256" text-anchor="middle" dominant-baseline="central">⏳</text>
-        <text style="font-size:10px;fill:#c8a898" x="340" y="284" text-anchor="middle" dominant-baseline="central">Deferral without</text>
-        <text style="font-size:10px;fill:#c8a898" x="340" y="296" text-anchor="middle" dominant-baseline="central">destination</text>
-      </g>
-      <g title="A claim of sufficiency made without independent audit" data-href="https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#sufficiency-without-audit">
-        <rect x="404" y="230" width="112" height="70" rx="14" stroke-width="1.5" style="fill:#3a2e28;stroke:#a07060"/>
-        <text style="font-size:26px" x="460" y="256" text-anchor="middle" dominant-baseline="central">🔇</text>
-        <text style="font-size:10px;fill:#c8a898" x="460" y="284" text-anchor="middle" dominant-baseline="central">Sufficiency</text>
-        <text style="font-size:10px;fill:#c8a898" x="460" y="296" text-anchor="middle" dominant-baseline="central">without audit</text>
-      </g>
-      <g title="Records suppressed through deliberate institutional omission" data-href="https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#record-suppression">
-        <rect x="524" y="230" width="112" height="70" rx="14" stroke-width="1.5" style="fill:#3a2e28;stroke:#a07060"/>
-        <text style="font-size:26px" x="580" y="256" text-anchor="middle" dominant-baseline="central">🗑️</text>
-        <text style="font-size:10px;fill:#c8a898" x="580" y="284" text-anchor="middle" dominant-baseline="central">Record</text>
-        <text style="font-size:10px;fill:#c8a898" x="580" y="296" text-anchor="middle" dominant-baseline="central">suppression</text>
-      </g>
+      <text x="340" y="350" text-anchor="middle" class="svg-chain-label">produces failure → nullification loop → triggers → maladministration → violates → right to be heard</text>
 
-      <text x="340" y="334" text-anchor="middle" class="svg-chain-label">produces failure → nullification loop → triggers → maladministration → violates → right to be heard</text>
+      <!-- OBJECT PROPERTIES -->
+      <text x="340" y="390" text-anchor="middle" class="svg-section-label">object properties · dissemination relations</text>
+      <g title="An actor ignores a submission — initiates the causal chain" data-href="https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html#ignores"><rect x="44" y="404" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2820;stroke:#a08858"/><text style="font-size:20px" x="96" y="426" text-anchor="middle" dominant-baseline="central">🙈</text><text x="96" y="448" text-anchor="middle" dominant-baseline="central" style="fill:#d4b878;font-size:12px">Ignores</text></g>
+      <g title="An actor suppresses an information object" data-href="https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html#suppresses"><rect x="166" y="404" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2820;stroke:#a08858"/><text style="font-size:20px" x="218" y="426" text-anchor="middle" dominant-baseline="central">🔕</text><text x="218" y="448" text-anchor="middle" dominant-baseline="central" style="fill:#d4b878;font-size:12px">Suppresses</text></g>
+      <g title="A process produces a named failure mode" data-href="https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html#produces-failure"><rect x="288" y="404" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2820;stroke:#a08858"/><text style="font-size:20px" x="340" y="426" text-anchor="middle" dominant-baseline="central">💥</text><text x="340" y="448" text-anchor="middle" dominant-baseline="central" style="fill:#d4b878;font-size:12px">Produces failure</text></g>
+      <g title="An actor violates a legal construct such as the right to be heard" data-href="https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html#violates"><rect x="410" y="404" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2820;stroke:#a08858"/><text style="font-size:20px" x="462" y="426" text-anchor="middle" dominant-baseline="central">⛔</text><text x="462" y="448" text-anchor="middle" dominant-baseline="central" style="fill:#d4b878;font-size:12px">Violates</text></g>
+      <g title="A campaign amplifies a civic signal into the public record" data-href="https://github.com/dr-wojak/public-relations"><rect x="532" y="404" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2820;stroke:#a08858"/><text style="font-size:20px" x="584" y="426" text-anchor="middle" dominant-baseline="central">📣</text><text x="584" y="448" text-anchor="middle" dominant-baseline="central" style="fill:#d4b878;font-size:12px">Amplifies</text></g>
 
-      <text x="340" y="374" text-anchor="middle" class="svg-section-label">object properties · dissemination relations</text>
+      <!-- DISSEMINATION CHANNELS -->
+      <text x="340" y="492" text-anchor="middle" class="svg-section-label">dissemination channels · five deontological routes</text>
+      <g title="Courts, ombudsmen and pre-litigation notices — receipt creates a duty to give reasons" data-href="https://dr-crunch.github.io/nullification-loops/dossier.html#legal"><rect x="44" y="506" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2a2a;stroke:#987880"/><text style="font-size:20px" x="96" y="528" text-anchor="middle" dominant-baseline="central">🔨</text><text x="96" y="550" text-anchor="middle" dominant-baseline="central" style="fill:#c8a8b0;font-size:12px">Legal</text></g>
+      <g title="European Ombudsman, CJEU, PETI and the Council Presidency — treaty-grounded obligation" data-href="https://drive.google.com/file/d/1jD9Rmrlgp1wB0hqDqNIRNb8n3SwNBrCk"><rect x="166" y="506" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2a2a;stroke:#987880"/><text style="font-size:20px" x="218" y="528" text-anchor="middle" dominant-baseline="central">🇪🇺</text><text x="218" y="550" text-anchor="middle" dominant-baseline="central" style="fill:#c8a8b0;font-size:12px">EU / Institutional</text></g>
+      <g title="Governance researchers and cybernetics scholars — the corpus as a live case study" data-href="https://github.com/dr-wojak/econ"><rect x="288" y="506" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2a2818;stroke:#908050"/><text style="font-size:20px" x="340" y="528" text-anchor="middle" dominant-baseline="central">🎓</text><text x="340" y="550" text-anchor="middle" dominant-baseline="central" style="fill:#c8b868;font-size:12px">Academic</text></g>
+      <g title="Citizens, TDs, MEPs and civic petitioners — formal notification creates a duty of enquiry" data-href="https://dr-wojak.github.io/meinhardt-initiative-public-flyer"><rect x="410" y="506" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/><text style="font-size:20px" x="462" y="528" text-anchor="middle" dominant-baseline="central">🗳️</text><text x="462" y="550" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">Civic / Petition</text></g>
+      <g title="Journalists and media investigators — CC0 timestamped record, publication-ready" data-href="https://github.com/dr-wojak/press"><rect x="532" y="506" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#281e20;stroke:#886068"/><text style="font-size:20px" x="584" y="528" text-anchor="middle" dominant-baseline="central">📰</text><text x="584" y="550" text-anchor="middle" dominant-baseline="central" style="fill:#c09098;font-size:12px">Media / Press</text></g>
 
-      <g title="An actor ignores a submission — initiates the causal chain" data-href="https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html#ignores">
-        <rect x="44" y="388" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2820;stroke:#a08858"/>
-        <text style="font-size:20px" x="96" y="410" text-anchor="middle" dominant-baseline="central">🙈</text>
-        <text x="96" y="432" text-anchor="middle" dominant-baseline="central" style="fill:#d4b878;font-size:12px">Ignores</text>
-      </g>
-      <g title="An actor suppresses an information object" data-href="https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html#suppresses">
-        <rect x="166" y="388" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2820;stroke:#a08858"/>
-        <text style="font-size:20px" x="218" y="410" text-anchor="middle" dominant-baseline="central">🔕</text>
-        <text x="218" y="432" text-anchor="middle" dominant-baseline="central" style="fill:#d4b878;font-size:12px">Suppresses</text>
-      </g>
-      <g title="A process produces a named failure mode" data-href="https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html#produces-failure">
-        <rect x="288" y="388" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2820;stroke:#a08858"/>
-        <text style="font-size:20px" x="340" y="410" text-anchor="middle" dominant-baseline="central">💥</text>
-        <text x="340" y="432" text-anchor="middle" dominant-baseline="central" style="fill:#d4b878;font-size:12px">Produces failure</text>
-      </g>
-      <g title="An actor violates a legal construct such as the right to be heard" data-href="https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html#violates">
-        <rect x="410" y="388" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2820;stroke:#a08858"/>
-        <text style="font-size:20px" x="462" y="410" text-anchor="middle" dominant-baseline="central">⛔</text>
-        <text x="462" y="432" text-anchor="middle" dominant-baseline="central" style="fill:#d4b878;font-size:12px">Violates</text>
-      </g>
-      <g title="A campaign amplifies a civic signal into the public record" data-href="https://github.com/dr-wojak/public-relations">
-        <rect x="532" y="388" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2820;stroke:#a08858"/>
-        <text style="font-size:20px" x="584" y="410" text-anchor="middle" dominant-baseline="central">📣</text>
-        <text x="584" y="432" text-anchor="middle" dominant-baseline="central" style="fill:#d4b878;font-size:12px">Amplifies</text>
-      </g>
-
-      <text x="340" y="476" text-anchor="middle" class="svg-section-label">dissemination channels · five deontological routes</text>
-
-      <g title="Courts, ombudsmen and pre-litigation notices — receipt creates a duty to give reasons" data-href="https://dr-crunch.github.io/nullification-loops/dossier.html#legal">
-        <rect x="44" y="490" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2a2a;stroke:#987880"/>
-        <text style="font-size:20px" x="96" y="512" text-anchor="middle" dominant-baseline="central">🔨</text>
-        <text x="96" y="534" text-anchor="middle" dominant-baseline="central" style="fill:#c8a8b0;font-size:12px">Legal</text>
-      </g>
-      <g title="European Ombudsman, CJEU, PETI and the Council Presidency — treaty-grounded obligation" data-href="https://drive.google.com/file/d/1jD9Rmrlgp1wB0hqDqNIRNb8n3SwNBrCk">
-        <rect x="166" y="490" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2a2a;stroke:#987880"/>
-        <text style="font-size:20px" x="218" y="512" text-anchor="middle" dominant-baseline="central">🇪🇺</text>
-        <text x="218" y="534" text-anchor="middle" dominant-baseline="central" style="fill:#c8a8b0;font-size:12px">EU / Institutional</text>
-      </g>
-      <g title="Governance researchers and cybernetics scholars — the corpus as a live case study" data-href="https://github.com/dr-wojak/econ">
-        <rect x="288" y="490" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2a2818;stroke:#908050"/>
-        <text style="font-size:20px" x="340" y="512" text-anchor="middle" dominant-baseline="central">🎓</text>
-        <text x="340" y="534" text-anchor="middle" dominant-baseline="central" style="fill:#c8b868;font-size:12px">Academic</text>
-      </g>
-      <g title="Citizens, TDs, MEPs and civic petitioners — formal notification creates a duty of enquiry" data-href="https://dr-wojak.github.io/meinhardt-initiative-public-flyer">
-        <rect x="410" y="490" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/>
-        <text style="font-size:20px" x="462" y="512" text-anchor="middle" dominant-baseline="central">🗳️</text>
-        <text x="462" y="534" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">Civic / Petition</text>
-      </g>
-      <g title="Journalists and media investigators — CC0 timestamped record, publication-ready" data-href="https://github.com/dr-wojak/press">
-        <rect x="532" y="490" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#281e20;stroke:#886068"/>
-        <text style="font-size:20px" x="584" y="512" text-anchor="middle" dominant-baseline="central">📰</text>
-        <text x="584" y="534" text-anchor="middle" dominant-baseline="central" style="fill:#c09098;font-size:12px">Media / Press</text>
-      </g>
-
+      <!-- AUDIENCE INSTANCES -->
       <text x="340" y="578" text-anchor="middle" class="svg-section-label">audience instances · named bodies</text>
 
-      <g title="The High Court — mandamus proceedings, judicial review" data-href="https://drive.google.com/file/d/1tMi94twUL5FVuZ5EmBL_GI1WJ0uE8Vwx">
-        <rect x="166" y="592" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2a2a;stroke:#987880"/>
-        <text style="font-size:20px" x="218" y="614" text-anchor="middle" dominant-baseline="central">🏛️</text>
-        <text x="218" y="636" text-anchor="middle" dominant-baseline="central" style="fill:#c8a8b0;font-size:12px">High Court</text>
-      </g>
-      <g title="Irish Ombudsman — administrative review of state conduct" data-href="https://drive.google.com/file/d/1-vETFPyMCzLWE1vm4T6Xse29cjC_SjUC">
-        <rect x="288" y="592" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2a2a;stroke:#987880"/>
-        <text style="font-size:20px" x="340" y="614" text-anchor="middle" dominant-baseline="central">🧑‍⚖️</text>
-        <text x="340" y="636" text-anchor="middle" dominant-baseline="central" style="fill:#c8a8b0;font-size:12px">Ombudsman</text>
-      </g>
-      <g title="European Ombudsman — Article 228 TFEU, EU institutional maladministration" data-href="https://drive.google.com/file/d/1rVCRvUs91lYDAoo_YIfxpAAsYzEAMMxm">
-        <rect x="166" y="670" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2a2a;stroke:#987880"/>
-        <text style="font-size:20px" x="218" y="692" text-anchor="middle" dominant-baseline="central">🇪🇺</text>
-        <text x="218" y="714" text-anchor="middle" dominant-baseline="central" style="fill:#c8a8b0;font-size:12px">EU Ombudsman</text>
-      </g>
-      <g title="PETI — European Parliament Committee on Petitions, Article 227 TFEU" data-href="https://drive.google.com/file/d/1jD9Rmrlgp1wB0hqDqNIRNb8n3SwNBrCk">
-        <rect x="288" y="670" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2a2a;stroke:#987880"/>
-        <text style="font-size:20px" x="340" y="692" text-anchor="middle" dominant-baseline="central">📋</text>
-        <text x="340" y="714" text-anchor="middle" dominant-baseline="central" style="fill:#c8a8b0;font-size:12px">PETI</text>
-      </g>
-      <g title="Operations Research, Viable System Model and Bateson cybernetics — empirical engagement required" data-href="https://github.com/dr-wojak/econ">
-        <rect x="228" y="748" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2a2818;stroke:#908050"/>
-        <text style="font-size:20px" x="280" y="770" text-anchor="middle" dominant-baseline="central">🔬</text>
-        <text x="280" y="792" text-anchor="middle" dominant-baseline="central" style="fill:#c8b868;font-size:12px">Research</text>
-      </g>
-      <g title="Citizens and civic petitioners — Article 15.10 Bunreacht na hÉireann" data-href="https://dr-wojak.github.io/meinhardt-initiative-public-flyer">
-        <rect x="228" y="826" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/>
-        <text style="font-size:20px" x="280" y="848" text-anchor="middle" dominant-baseline="central">🗳️</text>
-        <text x="280" y="870" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">Citizens</text>
-      </g>
-      <g title="Press and media — CC0 licensed, fully timestamped, publication-ready" data-href="https://github.com/dr-wojak/press">
-        <rect x="228" y="904" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#281e20;stroke:#886068"/>
-        <text style="font-size:20px" x="280" y="926" text-anchor="middle" dominant-baseline="central">📰</text>
-        <text x="280" y="948" text-anchor="middle" dominant-baseline="central" style="fill:#c09098;font-size:12px">Press</text>
-      </g>
+      <!-- ROW A y=592: High Court (far left) · Ombudsman · Research · Citizens · Press -->
+      <g title="The High Court — mandamus proceedings, judicial review" data-href="https://drive.google.com/file/d/1tMi94twUL5FVuZ5EmBL_GI1WJ0uE8Vwx"><rect x="2" y="592" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2a2a;stroke:#987880"/><text style="font-size:20px" x="54" y="614" text-anchor="middle" dominant-baseline="central">🏛️</text><text x="54" y="636" text-anchor="middle" dominant-baseline="central" style="fill:#c8a8b0;font-size:12px">High Court</text></g>
+      <g title="Irish Ombudsman — administrative review of state conduct" data-href="https://drive.google.com/file/d/1-vETFPyMCzLWE1vm4T6Xse29cjC_SjUC"><rect x="114" y="592" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2a2a;stroke:#987880"/><text style="font-size:20px" x="166" y="614" text-anchor="middle" dominant-baseline="central">🧑‍⚖️</text><text x="166" y="636" text-anchor="middle" dominant-baseline="central" style="fill:#c8a8b0;font-size:12px">Ombudsman</text></g>
+      <g title="Operations Research, Viable System Model and Bateson cybernetics — empirical engagement required" data-href="https://github.com/dr-wojak/econ"><rect x="236" y="592" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2a2818;stroke:#908050"/><text style="font-size:20px" x="288" y="614" text-anchor="middle" dominant-baseline="central">🔬</text><text x="288" y="636" text-anchor="middle" dominant-baseline="central" style="fill:#c8b868;font-size:12px">Research</text></g>
+      <g title="Citizens and civic petitioners — Article 15.10 Bunreacht na hÉireann" data-href="https://dr-wojak.github.io/meinhardt-initiative-public-flyer"><rect x="358" y="592" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/><text style="font-size:20px" x="410" y="614" text-anchor="middle" dominant-baseline="central">🗳️</text><text x="410" y="636" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">Citizens</text></g>
+      <g title="Press and media — CC0 licensed, fully timestamped, publication-ready" data-href="https://github.com/dr-wojak/press"><rect x="532" y="592" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#281e20;stroke:#886068"/><text style="font-size:20px" x="584" y="614" text-anchor="middle" dominant-baseline="central">📰</text><text x="584" y="636" text-anchor="middle" dominant-baseline="central" style="fill:#c09098;font-size:12px">Press</text></g>
 
-      <text x="340" y="994" text-anchor="middle" class="svg-section-label">corpus artefacts · information objects</text>
+      <!-- ROW B y=664: EU Ombudsman · PETI -->
+      <g title="European Ombudsman — Article 228 TFEU, EU institutional maladministration" data-href="https://drive.google.com/file/d/1rVCRvUs91lYDAoo_YIfxpAAsYzEAMMxm"><rect x="114" y="664" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2a2a;stroke:#987880"/><text style="font-size:20px" x="166" y="686" text-anchor="middle" dominant-baseline="central">🇪🇺</text><text x="166" y="708" text-anchor="middle" dominant-baseline="central" style="fill:#c8a8b0;font-size:12px">EU Ombudsman</text></g>
+      <g title="PETI — European Parliament Committee on Petitions, Article 227 TFEU" data-href="https://drive.google.com/file/d/1jD9Rmrlgp1wB0hqDqNIRNb8n3SwNBrCk"><rect x="236" y="664" width="104" height="56" rx="14" stroke-width="1.5" style="fill:#2e2a2a;stroke:#987880"/><text style="font-size:20px" x="288" y="686" text-anchor="middle" dominant-baseline="central">📋</text><text x="288" y="708" text-anchor="middle" dominant-baseline="central" style="fill:#c8a8b0;font-size:12px">PETI</text></g>
 
-      <g title="Constitutional indictment in Irish and English — Tairiscint Mheinhardt · foundational document" data-href="https://dr-crunch.github.io/nullification-loops/tairiscint.html">
-        <rect x="44" y="1008" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#3a2820;stroke:#c17a5a"/>
-        <text style="font-size:20px" x="131" y="1030" text-anchor="middle" dominant-baseline="central">📜</text>
-        <text x="131" y="1052" text-anchor="middle" dominant-baseline="central" style="fill:#e8b89a;font-size:12px">Tairiscint Mheinhardt</text>
-      </g>
-      <g title="The Interregnum Nullificans — 17 legal frameworks applied to the corpus" data-href="https://drive.google.com/file/d/1YB7so7pzTg7uZFFir7nKWxB5wZZeSEX3">
-        <rect x="236" y="1008" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#3a2820;stroke:#c17a5a"/>
-        <text style="font-size:20px" x="323" y="1030" text-anchor="middle" dominant-baseline="central">📚</text>
-        <text x="323" y="1052" text-anchor="middle" dominant-baseline="central" style="fill:#e8b89a;font-size:12px">Interregnum Nullificans</text>
-      </g>
-      <g title="Seanad submission — Regulation 2021/821, March 2026" data-href="https://drive.google.com/file/d/1k-FVtgRPjqZrch-IZHTL1EWOtFGRU9AY">
-        <rect x="428" y="1008" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#3a2820;stroke:#c17a5a"/>
-        <text style="font-size:20px" x="515" y="1030" text-anchor="middle" dominant-baseline="central">🏛️</text>
-        <text x="515" y="1052" text-anchor="middle" dominant-baseline="central" style="fill:#e8b89a;font-size:12px">Seanad submission</text>
-      </g>
-      <g title="Main repository — Google Drive primary archive of the full corpus" data-href="https://drive.google.com/drive/u/0/folders/12o4-OPXJ0W5E8pxF9pN-VKUeODagy17g">
-        <rect x="44" y="1086" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#3a2820;stroke:#c17a5a"/>
-        <text style="font-size:20px" x="131" y="1108" text-anchor="middle" dominant-baseline="central">🗄️</text>
-        <text x="131" y="1130" text-anchor="middle" dominant-baseline="central" style="fill:#e8b89a;font-size:12px">Main repository</text>
-      </g>
-      <g title="Formal complaint — 226 pages, complete evidentiary record" data-href="https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS">
-        <rect x="236" y="1086" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#3a2820;stroke:#c17a5a"/>
-        <text style="font-size:20px" x="323" y="1108" text-anchor="middle" dominant-baseline="central">🗂️</text>
-        <text x="323" y="1130" text-anchor="middle" dominant-baseline="central" style="fill:#e8b89a;font-size:12px">Formal complaint</text>
-      </g>
-      <g title="Civic signal — RedundancyAwareness public record and ministerial correspondence" data-href="https://dr-crunch.github.io/redundancy-awareness">
-        <rect x="428" y="1086" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#3a2820;stroke:#c17a5a"/>
-        <text style="font-size:20px" x="515" y="1108" text-anchor="middle" dominant-baseline="central">📡</text>
-        <text x="515" y="1130" text-anchor="middle" dominant-baseline="central" style="fill:#e8b89a;font-size:12px">Civic signal</text>
-      </g>
+      <!-- CORPUS ARTEFACTS -->
+      <text x="340" y="736" text-anchor="middle" class="svg-section-label">corpus artefacts · information objects</text>
+      <g title="Constitutional indictment in Irish and English — Tairiscint Mheinhardt · foundational document" data-href="https://dr-crunch.github.io/nullification-loops/tairiscint.html"><rect x="44" y="750" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#3a2820;stroke:#c17a5a"/><text style="font-size:20px" x="131" y="772" text-anchor="middle" dominant-baseline="central">📜</text><text x="131" y="794" text-anchor="middle" dominant-baseline="central" style="fill:#e8b89a;font-size:12px">Tairiscint Mheinhardt</text></g>
+      <g title="The Interregnum Nullificans — 17 legal frameworks applied to the corpus" data-href="https://drive.google.com/file/d/1YB7so7pzTg7uZFFir7nKWxB5wZZeSEX3"><rect x="236" y="750" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#3a2820;stroke:#c17a5a"/><text style="font-size:20px" x="323" y="772" text-anchor="middle" dominant-baseline="central">📚</text><text x="323" y="794" text-anchor="middle" dominant-baseline="central" style="fill:#e8b89a;font-size:12px">Interregnum Nullificans</text></g>
+      <g title="Seanad submission — Regulation 2021/821, March 2026" data-href="https://drive.google.com/file/d/1k-FVtgRPjqZrch-IZHTL1EWOtFGRU9AY"><rect x="428" y="750" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#3a2820;stroke:#c17a5a"/><text style="font-size:20px" x="515" y="772" text-anchor="middle" dominant-baseline="central">🏛️</text><text x="515" y="794" text-anchor="middle" dominant-baseline="central" style="fill:#e8b89a;font-size:12px">Seanad submission</text></g>
+      <g title="Main repository — Google Drive primary archive of the full corpus" data-href="https://drive.google.com/drive/u/0/folders/12o4-OPXJ0W5E8pxF9pN-VKUeODagy17g"><rect x="44" y="822" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#3a2820;stroke:#c17a5a"/><text style="font-size:20px" x="131" y="844" text-anchor="middle" dominant-baseline="central">🗄️</text><text x="131" y="866" text-anchor="middle" dominant-baseline="central" style="fill:#e8b89a;font-size:12px">Main repository</text></g>
+      <g title="Formal complaint — 226 pages, complete evidentiary record" data-href="https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS"><rect x="236" y="822" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#3a2820;stroke:#c17a5a"/><text style="font-size:20px" x="323" y="844" text-anchor="middle" dominant-baseline="central">🗂️</text><text x="323" y="866" text-anchor="middle" dominant-baseline="central" style="fill:#e8b89a;font-size:12px">Formal complaint</text></g>
+      <g title="Civic signal — RedundancyAwareness public record and ministerial correspondence" data-href="https://dr-crunch.github.io/redundancy-awareness"><rect x="428" y="822" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#3a2820;stroke:#c17a5a"/><text style="font-size:20px" x="515" y="844" text-anchor="middle" dominant-baseline="central">📡</text><text x="515" y="866" text-anchor="middle" dominant-baseline="central" style="fill:#e8b89a;font-size:12px">Civic signal</text></g>
 
-      <text x="340" y="1176" text-anchor="middle" class="svg-section-label">campaign nodes · GitHub repositories · amplification</text>
+      <!-- CAMPAIGN NODES -->
+      <text x="340" y="894" text-anchor="middle" class="svg-section-label">campaign nodes · GitHub repositories · amplification</text>
+      <g title="Primary hub — 14 EU languages, main dissemination entry point" data-href="https://github.com/dr-crunch/nullification-loops"><rect x="44" y="908" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/><text style="font-size:20px" x="131" y="930" text-anchor="middle" dominant-baseline="central">🌍</text><text x="131" y="952" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">nullification-loops</text></g>
+      <g title="Plain-language entry point — accessible overview for new readers" data-href="https://github.com/dr-wojak/start-here"><rect x="236" y="908" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/><text style="font-size:20px" x="323" y="930" text-anchor="middle" dominant-baseline="central">🚪</text><text x="323" y="952" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">start-here</text></g>
+      <g title="Civic engagement repository — public relations materials" data-href="https://github.com/dr-wojak/public-relations"><rect x="428" y="908" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/><text style="font-size:20px" x="515" y="930" text-anchor="middle" dominant-baseline="central">📢</text><text x="515" y="952" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">public-relations</text></g>
+      <g title="Media kit and signal timeline — press-ready materials" data-href="https://github.com/dr-wojak/press"><rect x="44" y="980" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/><text style="font-size:20px" x="131" y="1002" text-anchor="middle" dominant-baseline="central">🗞️</text><text x="131" y="1024" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">press</text></g>
+      <g title="Economic analysis — opportunity costs of institutional inaction" data-href="https://github.com/dr-wojak/econ"><rect x="236" y="980" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/><text style="font-size:20px" x="323" y="1002" text-anchor="middle" dominant-baseline="central">📊</text><text x="323" y="1024" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">econ</text></g>
+      <g title="Structural indictment of governance — governmentality canon 2025" data-href="https://github.com/dr-wojak/governmentality-2025"><rect x="428" y="980" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/><text style="font-size:20px" x="515" y="1002" text-anchor="middle" dominant-baseline="central">🏗️</text><text x="515" y="1024" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">governmentality-2025</text></g>
+      <g title="Ministerial correspondence — full record of state responses and non-responses" data-href="https://github.com/dr-wojak/redundancy-awareness"><rect x="140" y="1052" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/><text style="font-size:20px" x="227" y="1074" text-anchor="middle" dominant-baseline="central">📬</text><text x="227" y="1096" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">redundancy-awareness</text></g>
 
-      <g title="Primary hub — 14 EU languages, main dissemination entry point" data-href="https://github.com/dr-crunch/nullification-loops">
-        <rect x="44" y="1190" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/>
-        <text style="font-size:20px" x="131" y="1212" text-anchor="middle" dominant-baseline="central">🌍</text>
-        <text x="131" y="1234" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">nullification-loops</text>
-      </g>
-      <g title="Plain-language entry point — accessible overview for new readers" data-href="https://github.com/dr-wojak/start-here">
-        <rect x="236" y="1190" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/>
-        <text style="font-size:20px" x="323" y="1212" text-anchor="middle" dominant-baseline="central">🚪</text>
-        <text x="323" y="1234" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">start-here</text>
-      </g>
-      <g title="Civic engagement repository — public relations materials" data-href="https://github.com/dr-wojak/public-relations">
-        <rect x="428" y="1190" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/>
-        <text style="font-size:20px" x="515" y="1212" text-anchor="middle" dominant-baseline="central">📢</text>
-        <text x="515" y="1234" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">public-relations</text>
-      </g>
-      <g title="Media kit and signal timeline — press-ready materials" data-href="https://github.com/dr-wojak/press">
-        <rect x="44" y="1268" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/>
-        <text style="font-size:20px" x="131" y="1290" text-anchor="middle" dominant-baseline="central">🗞️</text>
-        <text x="131" y="1312" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">press</text>
-      </g>
-      <g title="Economic analysis — opportunity costs of institutional inaction" data-href="https://github.com/dr-wojak/econ">
-        <rect x="236" y="1268" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/>
-        <text style="font-size:20px" x="323" y="1290" text-anchor="middle" dominant-baseline="central">📊</text>
-        <text x="323" y="1312" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">econ</text>
-      </g>
-      <g title="Structural indictment of governance — governmentality canon 2025" data-href="https://github.com/dr-wojak/governmentality-2025">
-        <rect x="428" y="1268" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/>
-        <text style="font-size:20px" x="515" y="1290" text-anchor="middle" dominant-baseline="central">🏗️</text>
-        <text x="515" y="1312" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">governmentality-2025</text>
-      </g>
-      <g title="Ministerial correspondence — full record of state responses and non-responses" data-href="https://github.com/dr-wojak/redundancy-awareness">
-        <rect x="140" y="1346" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/>
-        <text style="font-size:20px" x="227" y="1368" text-anchor="middle" dominant-baseline="central">📬</text>
-        <text x="227" y="1390" text-anchor="middle" dominant-baseline="central" style="fill:#c0b060;font-size:12px">redundancy-awareness</text>
-      </g>
+      <!-- ECONOMIC MECHANISM -->
+      <text x="340" y="1124" text-anchor="middle" class="svg-section-label">economic mechanism · finance of notice</text>
+      <g title="The economic incentive structure that makes ignoring submissions institutionally rational" data-href="https://github.com/dr-wojak/econ"><rect x="44" y="1138" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#281e20;stroke:#886068"/><text style="font-size:20px" x="131" y="1160" text-anchor="middle" dominant-baseline="central">💰</text><text x="131" y="1182" text-anchor="middle" dominant-baseline="central" style="fill:#c09098;font-size:12px">Finance of Notice</text></g>
+      <g title="Article 41 Charter of Fundamental Rights — re Haughey constitutional grounding" data-href="https://github.com/dr-wojak/legal"><rect x="236" y="1138" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#2e2a2a;stroke:#987880"/><text style="font-size:20px" x="323" y="1160" text-anchor="middle" dominant-baseline="central">🎙️</text><text x="323" y="1182" text-anchor="middle" dominant-baseline="central" style="fill:#c8a8b0;font-size:12px">Right to be heard</text></g>
+      <g title="Find all violations caused by ignored submissions — directly admissible as evidence" data-href="https://drive.google.com/file/d/1rVCRvUs91lYDAoo_YIfxpAAsYzEAMMxm"><rect x="428" y="1138" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#2e2820;stroke:#a08858"/><text style="font-size:20px" x="515" y="1160" text-anchor="middle" dominant-baseline="central">🔍</text><text x="515" y="1182" text-anchor="middle" dominant-baseline="central" style="fill:#d4b878;font-size:12px">SPARQL query</text></g>
 
-      <text x="340" y="1440" text-anchor="middle" class="svg-section-label">economic mechanism · finance of notice</text>
-
-      <g title="The economic incentive structure that makes ignoring submissions institutionally rational" data-href="https://github.com/dr-wojak/econ">
-        <rect x="44" y="1454" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#281e20;stroke:#886068"/>
-        <text style="font-size:20px" x="131" y="1476" text-anchor="middle" dominant-baseline="central">💰</text>
-        <text x="131" y="1498" text-anchor="middle" dominant-baseline="central" style="fill:#c09098;font-size:12px">Finance of Notice</text>
-      </g>
-      <g title="Article 41 Charter of Fundamental Rights — re Haughey constitutional grounding" data-href="https://github.com/dr-wojak/legal">
-        <rect x="236" y="1454" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#2e2a2a;stroke:#987880"/>
-        <text style="font-size:20px" x="323" y="1476" text-anchor="middle" dominant-baseline="central">🎙️</text>
-        <text x="323" y="1498" text-anchor="middle" dominant-baseline="central" style="fill:#c8a8b0;font-size:12px">Right to be heard</text>
-      </g>
-      <g title="Find all violations caused by ignored submissions — directly admissible as evidence" data-href="https://drive.google.com/file/d/1rVCRvUs91lYDAoo_YIfxpAAsYzEAMMxm">
-        <rect x="428" y="1454" width="174" height="56" rx="14" stroke-width="1.5" style="fill:#2e2820;stroke:#a08858"/>
-        <text style="font-size:20px" x="515" y="1476" text-anchor="middle" dominant-baseline="central">🔍</text>
-        <text x="515" y="1498" text-anchor="middle" dominant-baseline="central" style="fill:#d4b878;font-size:12px">SPARQL query</text>
-      </g>
-
-      <text x="340" y="1556" text-anchor="middle" class="svg-section-label">legend</text>
-
-      <rect x="44" y="1570" width="18" height="18" rx="4" stroke-width="1.5" style="fill:#3a2820;stroke:#c17a5a"/>
-      <text x="70" y="1583" class="svg-legend-label" dominant-baseline="central">Corpus artefact</text>
-      <rect x="200" y="1570" width="18" height="18" rx="4" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/>
-      <text x="226" y="1583" class="svg-legend-label" dominant-baseline="central">Actor / Campaign node</text>
-      <rect x="390" y="1570" width="18" height="18" rx="4" stroke-width="1.5" style="fill:#3a2e28;stroke:#a07060"/>
-      <text x="416" y="1583" class="svg-legend-label" dominant-baseline="central">Failure mode</text>
-      <rect x="510" y="1570" width="18" height="18" rx="4" stroke-width="1.5" style="fill:#2e2a2a;stroke:#987880"/>
-      <text x="536" y="1583" class="svg-legend-label" dominant-baseline="central">Legal / EU</text>
-
-      <rect x="44" y="1606" width="18" height="18" rx="4" stroke-width="1.5" style="fill:#2a2818;stroke:#908050"/>
-      <text x="70" y="1619" class="svg-legend-label" dominant-baseline="central">Academic</text>
-      <rect x="200" y="1606" width="18" height="18" rx="4" stroke-width="1.5" style="fill:#281e20;stroke:#886068"/>
-      <text x="226" y="1619" class="svg-legend-label" dominant-baseline="central">Economic / Media</text>
-      <rect x="390" y="1606" width="18" height="18" rx="4" stroke-width="1.5" style="fill:#2e2820;stroke:#a08858"/>
-      <text x="416" y="1619" class="svg-legend-label" dominant-baseline="central">Object property / Query</text>
-
+      <!-- LEGEND -->
+      <text x="340" y="1210" text-anchor="middle" class="svg-section-label">legend</text>
+      <rect x="44" y="1224" width="18" height="18" rx="4" stroke-width="1.5" style="fill:#3a2820;stroke:#c17a5a"/><text x="70" y="1237" class="svg-legend-label" dominant-baseline="central">Corpus artefact</text>
+      <rect x="200" y="1224" width="18" height="18" rx="4" stroke-width="1.5" style="fill:#28281e;stroke:#888048"/><text x="226" y="1237" class="svg-legend-label" dominant-baseline="central">Actor / Campaign node</text>
+      <rect x="390" y="1224" width="18" height="18" rx="4" stroke-width="1.5" style="fill:#3a2e28;stroke:#a07060"/><text x="416" y="1237" class="svg-legend-label" dominant-baseline="central">Failure mode</text>
+      <rect x="510" y="1224" width="18" height="18" rx="4" stroke-width="1.5" style="fill:#2e2a2a;stroke:#987880"/><text x="536" y="1237" class="svg-legend-label" dominant-baseline="central">Legal / EU</text>
+      <rect x="44" y="1260" width="18" height="18" rx="4" stroke-width="1.5" style="fill:#2a2818;stroke:#908050"/><text x="70" y="1273" class="svg-legend-label" dominant-baseline="central">Academic</text>
+      <rect x="200" y="1260" width="18" height="18" rx="4" stroke-width="1.5" style="fill:#281e20;stroke:#886068"/><text x="226" y="1273" class="svg-legend-label" dominant-baseline="central">Economic / Media</text>
+      <rect x="390" y="1260" width="18" height="18" rx="4" stroke-width="1.5" style="fill:#2e2820;stroke:#a08858"/><text x="416" y="1273" class="svg-legend-label" dominant-baseline="central">Object property / Query</text>
     </svg>
   </div>
 </section>
 
 <section class="turtle-section">
-  <div class="map-header">
-    <div class="map-title">RDF / Turtle — Executable Skeleton</div>
-    <div class="map-note">meinhardt.org/ontology# · dissemination layer</div>
-  </div>
+  <div class="map-header"><div class="map-title">RDF / Turtle — Executable Skeleton</div><div class="map-note">meinhardt.org/ontology# · dissemination layer</div></div>
   <div class="turtle-block">
     <span class="ttl-prefix">@prefix</span> <span class="ttl-class">:</span> &lt;http://meinhardt.org/ontology#&gt; .<br>
     <span class="ttl-prefix">@prefix</span> <span class="ttl-type">rdf:</span> &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .<br>
-    <span class="ttl-prefix">@prefix</span> <span class="ttl-type">owl:</span> &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
-    <br>
+    <span class="ttl-prefix">@prefix</span> <span class="ttl-type">owl:</span> &lt;http://www.w3.org/2002/07/owl#&gt; .<br><br>
     <span class="ttl-comment"># ── DISSEMINATION CHANNELS ────────────────────────</span><br>
     <span class="ttl-inst">:ChannelLegal</span> <span class="ttl-type">rdf:type</span> <span class="ttl-class">:DisseminationChannel</span> ;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:reaches</span> <span class="ttl-inst">:HighCourt, :IrishOmbudsman</span> ;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:obligates</span> <span class="ttl-lit">"Reasons must be given on disposal"</span> .<br>
-    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:obligates</span> <span class="ttl-lit">"Reasons must be given on disposal"</span> .<br><br>
     <span class="ttl-inst">:ChannelEU</span> <span class="ttl-type">rdf:type</span> <span class="ttl-class">:DisseminationChannel</span> ;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:reaches</span> <span class="ttl-inst">:EuropeanOmbudsman, :PETI, :DefenseurDesDroits</span> ;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:groundedIn</span> <span class="ttl-lit">"Art.4(3) TEU · Art.228 TFEU · Art.227 TFEU"</span> .<br>
-    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:groundedIn</span> <span class="ttl-lit">"Art.4(3) TEU · Art.228 TFEU · Art.227 TFEU"</span> .<br><br>
     <span class="ttl-inst">:ChannelAcademic</span> <span class="ttl-type">rdf:type</span> <span class="ttl-class">:DisseminationChannel</span> ;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:documents</span> <span class="ttl-inst">:NullificationLoop</span> ;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:appliesFrame</span> <span class="ttl-lit">"Beer/VSM · Bateson deutero-binding"</span> .<br>
-    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:appliesFrame</span> <span class="ttl-lit">"Beer/VSM · Bateson deutero-binding"</span> .<br><br>
     <span class="ttl-inst">:ChannelCivic</span> <span class="ttl-type">rdf:type</span> <span class="ttl-class">:DisseminationChannel</span> ;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:amplifies</span> <span class="ttl-inst">:CivicSignal</span> ;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:groundedIn</span> <span class="ttl-lit">"Art.15.10 Bunreacht na hÉireann"</span> .<br>
-    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:groundedIn</span> <span class="ttl-lit">"Art.15.10 Bunreacht na hÉireann"</span> .<br><br>
     <span class="ttl-inst">:ChannelMedia</span> <span class="ttl-type">rdf:type</span> <span class="ttl-class">:DisseminationChannel</span> ;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:documents</span> <span class="ttl-inst">:DesignedForgetting, :SignalSuppression</span> ;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:licence</span> <span class="ttl-lit">"CC0 1.0 Universal"</span> .<br>
-    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:licence</span> <span class="ttl-lit">"CC0 1.0 Universal"</span> .<br><br>
     <span class="ttl-comment"># ── MASTER CAUSAL CHAIN ───────────────────────────</span><br>
     <span class="ttl-inst">:IrishState</span> <span class="ttl-prop">:ignores</span> <span class="ttl-inst">:Submission_2006</span> ;<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ttl-prop">:exhibitsFailure</span> <span class="ttl-inst">:NullificationLoop</span> .<br>
@@ -790,77 +391,53 @@ h1 { font-size: 36px; }
     <a href="https://github.com/dr-wojak?tab=repositories" target="_blank">github.com/dr-wojak</a> · CC0 · The record is public<br>
     <a href="https://dr-crunch.github.io/sitemap" target="_blank">Sitemap</a>
   </div>
-  <div class="footer-right">
-    Deontological Differences · Meinhardt Initiative<br>
-    Ontology of Dissemination · March 2026
-  </div>
+  <div class="footer-right">Deontological Differences · Meinhardt Initiative<br>Ontology of Dissemination · March 2026</div>
 </footer>
 
 <div class="tooltip" id="tooltip"></div>
-
 <script>
 const tooltip = document.getElementById('tooltip');
 const labels = {
-  // ── OWL class nodes (top row) ─────────────────────────────────────────────
-  'https://dr-crunch.github.io/nullification-loops/':                               'Root — corpus entry point',
-  'https://dr-crunch.github.io/nullification-loops/dossier.html#actors':            'Actor — state bodies, ministers, MEPs, commissioners',
-  'https://dr-crunch.github.io/nullification-loops/dossier.html#loop':              'Process — five-stage nullification loop, 19 years documented',
-  'https://dr-wojak.github.io/redundancy-awareness/failure-modes.html':             'Failure Mode — five named instances with causal relations',
-  'https://dr-crunch.github.io/nullification-loops/dossier.html#legal':             'Legal Construct — Art.41 CFR · Art.4(3) TEU · Order 84 RSC',
-  'https://dr-crunch.github.io/nullification-loops/dossier.html#documents':         'Information Object — full evidentiary document index',
-  // ── Failure mode instances ────────────────────────────────────────────────
+  'https://dr-crunch.github.io/nullification-loops/': 'Root — corpus entry point',
+  'https://dr-crunch.github.io/nullification-loops/dossier.html#actors': 'Actor — state bodies, ministers, MEPs, commissioners',
+  'https://dr-crunch.github.io/nullification-loops/dossier.html#loop': 'Process — five-stage nullification loop, 19 years documented',
+  'https://dr-wojak.github.io/redundancy-awareness/failure-modes.html': 'Failure Mode — five named instances with causal relations',
+  'https://dr-crunch.github.io/nullification-loops/dossier.html#legal': 'Legal Construct — Art.41 CFR · Art.4(3) TEU · Order 84 RSC',
+  'https://dr-crunch.github.io/nullification-loops/dossier.html#documents': 'Information Object — full evidentiary document index',
   'https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#acknowledgement-as-closure': 'Acknowledgement as Closure — receipt treated as resolution',
-  'https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#remit-displacement':         'Remit Displacement — responsibility redirected until no jurisdiction remains',
+  'https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#remit-displacement': 'Remit Displacement — responsibility redirected until no jurisdiction remains',
   'https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#deferral-without-destination': 'Deferral without Destination — postponed, no actor, no endpoint',
-  'https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#sufficiency-without-audit':  'Sufficiency without Audit — adequacy claimed without verification',
-  'https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#record-suppression':         'Record Suppression — records withheld or rendered inaccessible',
-  // ── Object property nodes ─────────────────────────────────────────────────
-  'https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html#ignores':          ':ignores — non-processing despite receipt · initiates the causal chain',
-  'https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html#suppresses':       ':suppresses — civic signal attenuated below institutional threshold',
+  'https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#sufficiency-without-audit': 'Sufficiency without Audit — adequacy claimed without verification',
+  'https://dr-wojak.github.io/redundancy-awareness/failure-modes.html#record-suppression': 'Record Suppression — records withheld or rendered inaccessible',
+  'https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html#ignores': ':ignores — non-processing despite receipt · initiates the causal chain',
+  'https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html#suppresses': ':suppresses — civic signal attenuated below institutional threshold',
   'https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html#produces-failure': ':producesFailure — process generates a named failure mode',
-  'https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html#violates':         ':violates — breach of right · grounds certiorari or mandamus',
-  // ── Dissemination channels ────────────────────────────────────────────────
+  'https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html#violates': ':violates — breach of right · grounds certiorari or mandamus',
   'https://drive.google.com/file/d/1jD9Rmrlgp1wB0hqDqNIRNb8n3SwNBrCk': 'EU/Institutional channel — PETI submission · Art.227 TFEU',
-  'https://dr-wojak.github.io/meinhardt-initiative-public-flyer':        'Civic/Petition channel — public record · Art.15.10 Bunreacht',
-  'https://github.com/dr-wojak/press':                                   'Media/Press channel — CC0 timestamped record, publication-ready',
-  // ── Audience instances ────────────────────────────────────────────────────
+  'https://dr-wojak.github.io/meinhardt-initiative-public-flyer': 'Civic/Petition channel — public record · Art.15.10 Bunreacht',
+  'https://github.com/dr-wojak/press': 'Media/Press channel — CC0 timestamped record, publication-ready',
   'https://drive.google.com/file/d/1tMi94twUL5FVuZ5EmBL_GI1WJ0uE8Vwx': 'High Court — pre-litigation notice 10 Feb 2026 · mandamus preparation',
   'https://drive.google.com/file/d/1-vETFPyMCzLWE1vm4T6Xse29cjC_SjUC': 'Irish Ombudsman — formal complaint · administrative review',
   'https://drive.google.com/file/d/1rVCRvUs91lYDAoo_YIfxpAAsYzEAMMxm': 'European Ombudsman — Art.228 TFEU · designed forgetting timeline',
-  // ── Corpus artefacts ──────────────────────────────────────────────────────
-  'https://dr-crunch.github.io/nullification-loops/tairiscint.html':                'Tairiscint Mheinhardt — constitutional indictment in Irish and English',
-  'https://drive.google.com/file/d/1YB7so7pzTg7uZFFir7nKWxB5wZZeSEX3':             'Interregnum Nullificans — 17 legal frameworks applied to the corpus',
-  'https://drive.google.com/file/d/1k-FVtgRPjqZrch-IZHTL1EWOtFGRU9AY':             'Seanad submission — Reg.2021/821 · March 2026',
-  'https://drive.google.com/drive/u/0/folders/12o4-OPXJ0W5E8pxF9pN-VKUeODagy17g':  'Main repository — primary archive · Google Drive',
-  'https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS':  'Formal complaint — 226 pages · complete evidentiary record',
-  'https://dr-crunch.github.io/redundancy-awareness':                               'Civic signal — RedundancyAwareness · ministerial correspondence',
-  // ── Campaign / repo nodes ─────────────────────────────────────────────────
-  'https://github.com/dr-crunch/nullification-loops':   'nullification-loops — 14 EU languages · primary hub',
-  'https://github.com/dr-wojak/start-here':             'start-here — plain-language entry point',
-  'https://github.com/dr-wojak/public-relations':       'public-relations — civic engagement materials',
-  'https://github.com/dr-wojak/econ':                   'econ — opportunity costs · VSM · Bateson cybernetics',
-  'https://github.com/dr-wojak/governmentality-2025':   'governmentality-2025 — structural indictment · governance canon',
-  'https://github.com/dr-wojak/redundancy-awareness':   'redundancy-awareness — ministerial correspondence · Tánaiste enquiry',
-  'https://github.com/dr-wojak/legal':                  'legal — Art.41 CFR · re Haughey · mandamus record',
-  // ── Economic mechanism ────────────────────────────────────────────────────
-  'https://github.com/dr-wojak/econ': 'Finance of Notice — incentive structure that makes ignoring submissions rational',
+  'https://dr-crunch.github.io/nullification-loops/tairiscint.html': 'Tairiscint Mheinhardt — constitutional indictment in Irish and English',
+  'https://drive.google.com/file/d/1YB7so7pzTg7uZFFir7nKWxB5wZZeSEX3': 'Interregnum Nullificans — 17 legal frameworks applied to the corpus',
+  'https://drive.google.com/file/d/1k-FVtgRPjqZrch-IZHTL1EWOtFGRU9AY': 'Seanad submission — Reg.2021/821 · March 2026',
+  'https://drive.google.com/drive/u/0/folders/12o4-OPXJ0W5E8pxF9pN-VKUeODagy17g': 'Main repository — primary archive · Google Drive',
+  'https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS': 'Formal complaint — 226 pages · complete evidentiary record',
+  'https://dr-crunch.github.io/redundancy-awareness': 'Civic signal — RedundancyAwareness · ministerial correspondence',
+  'https://github.com/dr-crunch/nullification-loops': 'nullification-loops — 14 EU languages · primary hub',
+  'https://github.com/dr-wojak/start-here': 'start-here — plain-language entry point',
+  'https://github.com/dr-wojak/public-relations': 'public-relations — civic engagement materials',
+  'https://github.com/dr-wojak/econ': 'econ — opportunity costs · VSM · Bateson cybernetics',
+  'https://github.com/dr-wojak/governmentality-2025': 'governmentality-2025 — structural indictment · governance canon',
+  'https://github.com/dr-wojak/redundancy-awareness': 'redundancy-awareness — ministerial correspondence · Tánaiste enquiry',
+  'https://github.com/dr-wojak/legal': 'legal — Art.41 CFR · re Haughey · mandamus record',
 };
-
 document.querySelectorAll('g[data-href]').forEach(g => {
   g.style.cursor = 'pointer';
-  g.addEventListener('click', () => {
-    const href = g.getAttribute('data-href');
-    if (href) window.open(href, '_blank', 'noopener');
-  });
-  g.addEventListener('mouseenter', () => {
-    const href = g.getAttribute('data-href');
-    const label = labels[href];
-    if (label) { tooltip.textContent = label; tooltip.classList.add('visible'); }
-  });
-  g.addEventListener('mousemove', e => {
-    tooltip.style.left = (e.clientX + 14) + 'px';
-    tooltip.style.top = (e.clientY - 10) + 'px';
-  });
+  g.addEventListener('click', () => { const h = g.getAttribute('data-href'); if(h) window.open(h,'_blank','noopener'); });
+  g.addEventListener('mouseenter', () => { const l = labels[g.getAttribute('data-href')]; if(l){tooltip.textContent=l;tooltip.classList.add('visible');} });
+  g.addEventListener('mousemove', e => { tooltip.style.left=(e.clientX+14)+'px'; tooltip.style.top=(e.clientY-10)+'px'; });
   g.addEventListener('mouseleave', () => tooltip.classList.remove('visible'));
 });
 </script>
