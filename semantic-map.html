@@ -961,7 +961,7 @@ footer a:hover{color:var(--parchment);}
       <div class="deadline-date">1 July 2026</div>
       <div class="deadline-context" style="margin-top:8px;">Ireland assumes the Presidency of the Council of the European Union. Continued institutional silence becomes structurally costly—the Presidency Paradox closes. All escalation sequencing is governed by this date.</div>
     </div>
-    <div class="deadline-chip">83 days remaining</div>
+    <div class="deadline-chip">— days remaining</div>
   </div>
 
   <!-- DRIVE PORTAL CARD -->
@@ -1304,7 +1304,7 @@ footer a:hover{color:var(--parchment);}
           <tr><td style="color:var(--scarlet);font-weight:500;">JCPP — Cathaoirleach Louise O'Reilly (×5)</td><td>—</td><td>June 2025 – Feb 2026</td><td><span class="status-none">0 replies</span></td></tr>
           <tr><td style="color:var(--scarlet);font-weight:500;">JCPP — Leas-Chathaoirleach Albert Dolan (×8)</td><td>—</td><td>Aug 2025 – Feb 2026</td><td><span class="status-none">0 replies</span></td></tr>
           <tr><td style="color:var(--scarlet);font-weight:500;">JCPP — Clerk Martha Dowling (×1)</td><td>—</td><td>Dec 2025</td><td><span class="status-none">0 replies</span></td></tr>
-          <tr><td style="color:var(--scarlet);font-weight:500;">JCPP — jcpp@oireachtas.ie (×4)</td><td>—</td><td>July 2025 – Dec 2025</td><td><span class="status-none">0 replies</span></td></tr>
+          <tr><td style="color:var(--scarlet);font-weight:500;">JCPP — <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1e747d6e6e5e71776c7b7f7d766a7f6d30777b">[email&#160;protected]</a> (×4)</td><td>—</td><td>July 2025 – Dec 2025</td><td><span class="status-none">0 replies</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -1344,7 +1344,7 @@ footer a:hover{color:var(--parchment);}
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const xref={
   process:{t:'AdministrativeProcess · Irish State',b:'The primary actor class in the OWL ontology. Domain of :ignores (→ Submission) and :producesFailure (→ FailureMode). Memo D diagnoses the Taoiseach / Tánaiste role-pair as its constitutional instantiation: a prisoner\'s dilemma that cannot process O.R. signal without breaking Cabinet hierarchy. Memo E names the result Séachanachas—evasocracy as governance design.',ls:[{l:':ignores (OWL)',h:'https://dr-wojak.github.io/redundancy-awareness/ontology-relations.html#ignores',c:'var(--cosmic)'},{l:'Memo D',h:'https://drive.google.com/file/d/1-vETFPyMCzLWE1vm4T6Xse29cjC_SjUC',c:'var(--citron)'}]},
   submission:{t:'Submission 2006–2025',b:'The civic signal—range object of :ignores. Nineteen years of formal submissions spanning Defence, Foreign Affairs, Health, Finance, Emergency Planning. Its non-processing is the initiating event of the entire causal chain. Acknowledgement as Closure is its primary failure mode.',ls:[{l:'Acknowledgement as Closure',h:'https://dr-wojak.github.io/redundancy-awareness/failure-modes.html',c:'var(--rivulet)'},{l:'Formal Complaint Archive',h:'https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS',c:'var(--dragonfly)'}]},
@@ -1384,13 +1384,20 @@ function switchMemo(id,btn){
 
 // Live deadline counter
 (function(){
-  const el=document.querySelector('.deadline-chip');
-  if(!el)return;
-  const target=new Date('2026-07-01');
-  const now=new Date();
-  const days=Math.ceil((target-now)/(1000*60*60*24));
-  if(days>0)el.textContent=days+' days remaining';
-  else el.textContent='Presidency active';
+  const chip = document.querySelector('.deadline-chip');
+  if(!chip) return;
+  const target = new Date('2026-07-01T08:00:00Z'); // 09:00 IST (UTC+1, summer)
+
+  function tick(){
+    const diff = target - Date.now();
+    if(diff <= 0){ chip.textContent = 'Presidency active'; return; }
+    const days = diff / 86400000;
+    const display = days >= 1 ? (Math.floor(days * 2) / 2).toFixed(1) : '< 0.5';
+    chip.textContent = display + ' days remaining';
+  }
+
+  tick();
+  setInterval(tick, 60000);
 })();
 </script>
 </body>
