@@ -462,6 +462,44 @@ canvas#starfield{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.
   border-top:1px solid var(--rule);margin-top:10px;padding-top:10px;}
 .rc-ans strong{color:var(--parchment);}
 
+/* Corpus image gallery */
+.corpus-gallery{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-bottom:32px;
+}
+@media(max-width:600px){.corpus-gallery{grid-template-columns:1fr;}}
+.corpus-fig{
+  border:1px solid rgba(107,45,139,0.4);
+  border-radius:5px;overflow:hidden;
+  background:var(--grape-bg);
+  position:relative;
+  cursor:pointer;transition:border-color 0.2s, transform 0.2s;
+}
+.corpus-fig:hover{border-color:var(--grape-lt);transform:translateY(-2px);}
+.corpus-fig-img{
+  width:100%;display:block;
+  object-fit:cover;max-height:280px;
+  filter:saturate(0.85) contrast(1.1);
+  transition:filter 0.3s;
+}
+.corpus-fig:hover .corpus-fig-img{filter:saturate(1.0) contrast(1.15);}
+.corpus-fig-cap{
+  padding:12px 14px;
+  border-top:1px solid rgba(107,45,139,0.3);
+  background:rgba(18,8,26,0.7);
+}
+.corpus-fig-num{
+  font-family:'IBM Plex Mono',monospace;font-size:9px;
+  letter-spacing:0.14em;text-transform:uppercase;color:var(--grape-lt);margin-bottom:3px;
+}
+.corpus-fig-title{
+  font-family:'EB Garamond',serif;font-size:13px;
+  line-height:1.5;color:var(--parchment-dim);
+}
+
+  
 /* ── SYNTHESIS TABLE ── */
 .synth-table{width:100%;border-collapse:collapse;margin:32px 0;min-width:540px;}
 .synth-table th{
@@ -552,6 +590,49 @@ footer{
   </p>
 </section>
 
+
+<!-- CORPUS IMAGES -->
+  <div class="section-label" style="margin-bottom:18px;">Corpus images · Interregnum Nullificans</div>
+  <div class="corpus-gallery">
+    <a class="corpus-fig" href="https://dr-crunch.github.io/nullification-loops/" target="_blank">
+      <img class="corpus-fig-img"
+        src="https://github.com/dr-crunch/nullification-loops/blob/main/compendium/information-reception-vs-political-system-dysfunction.png?raw=true"
+        alt="Information Reception vs Political System Dysfunction — mapping the reception gap"
+        loading="lazy"
+        onerror="this.style.display='none';this.parentElement.querySelector('.corpus-fig-fallback').style.display='flex'">
+      <div class="corpus-fig-fallback" style="display:none;min-height:200px;align-items:center;justify-content:center;padding:20px;background:var(--grape-bg);">
+        <div style="text-align:center;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--grape-lt);margin-bottom:8px;">FIG 01.1</div>
+          <div style="font-family:'EB Garamond',serif;font-size:14px;color:var(--parchment-dim);line-height:1.5;">Information Reception vs Political System Dysfunction<br><span style="font-size:11px;color:var(--grape-lt);">Click to open in repository</span></div>
+        </div>
+      </div>
+      <div class="corpus-fig-cap">
+        <div class="corpus-fig-num">FIG 01.1 · Mapping the Reception Gap</div>
+        <div class="corpus-fig-title">Information Reception vs Political System Dysfunction — evidence absorption without correction. The central diagnostic of the corpus.</div>
+      </div>
+    </a>
+    <a class="corpus-fig" href="https://dr-crunch.github.io/nullification-loops/#addendum" target="_blank">
+      <img class="corpus-fig-img"
+        src="https://github.com/dr-crunch/nullification-loops/blob/main/compendium/scathain-agus-splanc-v3.jpg?raw=true"
+        alt="Scátháin agus Splanc — Mirrors and Flash"
+        loading="lazy"
+        onerror="this.style.display='none';this.parentElement.querySelector('.corpus-fig-fallback').style.display='flex'">
+      <div class="corpus-fig-fallback" style="display:none;min-height:200px;align-items:center;justify-content:center;padding:20px;background:var(--grape-bg);">
+        <div style="text-align:center;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--grape-lt);margin-bottom:8px;">FIG 01.2</div>
+          <div style="font-family:'EB Garamond',serif;font-size:14px;color:var(--parchment-dim);line-height:1.5;">Scátháin agus Splanc — Mirrors and Flash<br><span style="font-size:11px;color:var(--grape-lt);">Click to open in repository</span></div>
+        </div>
+      </div>
+      <div class="corpus-fig-cap">
+        <div class="corpus-fig-num">FIG 01.2 · Scátháin agus Splanc v3</div>
+        <div class="corpus-fig-title">Mirrors and Flash — the Phainocratic Deflector. Governing through the preservation of appearances rather than substantive correction.</div>
+      </div>
+    </a>
+  </div>
+
+
+
+  
 <!-- ══════════════════════════════════════════
      SECTION I · ANNEX III · LEGAL TRIGGERS
 ══════════════════════════════════════════ -->
