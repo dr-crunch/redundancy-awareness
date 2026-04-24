@@ -106,6 +106,14 @@ canvas#starfield{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.
   max-width:960px;margin:0 auto;padding:0 36px 0 52px;
 }
 
+/* ── CORPUS FULL-BLEED WRAPPER ── */
+.corpus-fullbleed{
+  position:relative;z-index:1;
+  width:100%;
+  padding:20px 0 16px;     /* ↓ tightened top/bottom from doc-section's 80px/60px */
+  border-bottom:1px solid var(--rule);
+}
+
 /* ── TYPOGRAPHY ── */
 .mono{font-family:'IBM Plex Mono',monospace;}
 .garamond{font-family:'Cormorant Garamond',serif;}
@@ -364,7 +372,10 @@ canvas#starfield{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.
 }
 .ch-name em{font-style:italic;opacity:0.7;}
 
-c
+.ch-arrow{
+  font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--parchment-dim);
+  flex-shrink:0;transition:transform 0.3s;
+}
 
 .case-card.open .ch-arrow{transform:rotate(90deg);}
 .case-card.open .case-body{max-height:1400px;opacity:1;}
@@ -459,45 +470,104 @@ c
   border-top:1px solid var(--rule);margin-top:10px;padding-top:10px;}
 .rc-ans strong{color:var(--parchment);}
 
-/* Corpus image gallery */
-.corpus{}
-.corpus-gallery{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-  margin-bottom:12px;
-}
-@media(max-width:600px){.corpus-gallery{grid-template-columns:1fr;}}
-.corpus-fig{
-  border:1px solid rgba(107,45,139,0.4);
-  border-radius:5px;overflow:hidden;
-  background:var(--grape-bg);
-  position:relative;
-  cursor:pointer;transition:border-color 0.2s, transform 0.2s;
-}
-.corpus-fig:hover{border-color:var(--amber-lt);transform:translateY(-2px);}
-.corpus-fig-img{
-  width:100%;display:block;
-  object-fit:cover;max-height:280px;
-  filter:saturate(0.85) contrast(1.1);
-  transition:filter 0.3s;
-}
-.corpus-fig:hover .corpus-fig-img{filter:saturate(1.0) contrast(1.15);}
-.corpus-fig-cap{
-  padding:12px 14px;
-  border-top:1px solid rgba(107,45,139,0.3);
-  background:rgba(18,8,26,0.7);
-}
-.corpus-fig-num{
-  font-family:'IBM Plex Mono',monospace;font-size:9px;
-  letter-spacing:0.14em;text-transform:uppercase;color:var(--);margin-bottom:3px;
-}
-.corpus-fig-title{
-  font-family:'EB Garamond',serif;font-size:13px;
-  line-height:1.5;color:var(--parchment);
+/* ────────────────────────────────────────────
+   CORPUS — full-bleed image viewer (REVISED)
+──────────────────────────────────────────── */
+.corpus-fullbleed {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  /* tight vertical rhythm — just enough breathing room */
+  padding: 18px 0 12px;
+  border-bottom: 1px solid var(--rule);
 }
 
-  
+/* eyebrow label sits inside the normal wrapper indent */
+.corpus-fullbleed .section-label {
+  max-width: 960px;
+  margin: 0 auto 12px;
+  padding: 0 36px 0 52px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--parchment-dim);
+}
+
+/* single-image gallery — full viewport width, no side gutters */
+.corpus-gallery {
+  display: block;          /* no grid: one image fills the space */
+  width: 100%;
+  margin: 0;
+}
+
+/* the clickable figure wrapper */
+.corpus-fig {
+  display: block;
+  width: 100%;
+  border: none;             /* no decorative border at full-bleed scale */
+  border-top: 1px solid rgba(200,168,48,0.22);
+  border-bottom: 1px solid rgba(200,168,48,0.22);
+  background: var(--ivb-bg);   /* corrected: was var(--grape-bg) which is undefined here */
+  overflow: hidden;
+  cursor: pointer;
+  transition: filter 0.3s;
+  text-decoration: none;
+}
+
+.corpus-fig:hover { filter: brightness(1.05) contrast(1.06); }
+
+/* the image — fills width, auto height preserves natural aspect ratio */
+.corpus-fig-img {
+  width: 100%;
+  height: auto;            /* was max-height:280px — now unconstrained */
+  display: block;
+  object-fit: cover;
+  filter: saturate(0.88) contrast(1.08);
+  transition: filter 0.3s;
+}
+.corpus-fig:hover .corpus-fig-img {
+  filter: saturate(1.0) contrast(1.14);
+}
+
+/* fallback placeholder at full width */
+.corpus-fig-fallback {
+  display: none;
+  min-height: 280px;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: var(--ivb-bg);
+}
+
+/* caption bar */
+.corpus-fig-cap {
+  padding: 12px 52px;      /* left-aligned with wrapper indent */
+  border-top: 1px solid rgba(200,168,48,0.18);
+  background: rgba(14,12,10,0.7);
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.corpus-fig-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--amber);     /* corrected: was var(--) — broken */
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.corpus-fig-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--parchment-dim);
+}
+
 /* ── SYNTHESIS TABLE ── */
 .synth-table{width:100%;border-collapse:collapse;margin:32px 0;min-width:540px;}
 .synth-table th{
@@ -588,31 +658,38 @@ footer{
   </p>
 </section>
 
+</div><!-- /wrapper — corpus section breaks out of wrapper for full bleed -->
 
-<!-- CORPUS IMAGES -->
-<section class="corpus" id="corpus">
-  <div class="section-label" style="margin-bottom:12px;">Corpus images · Interregnum Nullificans</div>
+
+<!-- ══════════════════════════════════════════
+     CORPUS — full-bleed image viewer
+══════════════════════════════════════════ -->
+<section class="corpus-fullbleed" id="corpus">
+  <div class="section-label">Corpus images · Interregnum Nullificans</div>
+
   <div class="corpus-gallery">
-    <a class="corpus-fig" href="https://dr-crunch.github.io/redundancy-awareness/OR-governance-cohomology-Ireland.png">
+    <a class="corpus-fig" href="https://dr-crunch.github.io/redundancy-awareness/OR-governance-cohomology-Ireland.png" target="_blank">
       <img class="corpus-fig-img"
-        src="https://dr-crunch.github.io/redundancy-awareness/OR-governance-cohomology-Ireland.png?raw=true"
-        alt="Operations Research Governance Map — Mapping the Agency Gaps"
+        src="https://dr-crunch.github.io/redundancy-awareness/OR-governance-cohomology-Ireland.png"
+        alt="Operations Research Governance Cohomology Map — Mapping the Agency Gaps"
         loading="lazy"
         onerror="this.style.display='none';this.parentElement.querySelector('.corpus-fig-fallback').style.display='flex'">
-      <div class="corpus-fig-fallback" style="display:none;min-height:200px;align-items:center;justify-content:center;padding:20px;background:var(--grape-bg);">
+      <div class="corpus-fig-fallback">
         <div style="text-align:center;">
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber);margin-bottom:8px;">FIG 01.1</div>
-          <div style="font-family:'EB Garamond',serif;font-size:14px;color:var(--parchment-dim);line-height:1.5;">Information Reception vs Government Dysfunction<br><span style="font-size:11px;color:var(--);">Click to open in repository</span></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber);margin-bottom:8px;">FIG 1</div>
+          <div style="font-family:'EB Garamond',serif;font-size:14px;color:var(--parchment-dim);line-height:1.5;">Information Reception vs Government Dysfunction<br><span style="font-size:11px;color:var(--amber);">Click to open in repository</span></div>
         </div>
       </div>
       <div class="corpus-fig-cap">
         <div class="corpus-fig-num">FIG 1 · Ethical Cohomology and Merit Attribution Network</div>
-        <div class="corpus-fig-title">Information Reception vs Government Dysfunction - Applying ECRM diagnostics to the corpus</div>
+        <div class="corpus-fig-title">Information Reception vs Government Dysfunction — Applying ECRM diagnostics to the corpus</div>
       </div>
     </a>
   </div>
 </section>
 
+
+<div class="wrapper"><!-- re-open wrapper for remaining content -->
 
   
 <!-- ══════════════════════════════════════════
@@ -856,7 +933,7 @@ footer{
     impossibility into constitutional roles.
   </p>
 
-  <div class="accent-block reveal" style="color:var(--hab);background:var(--hab-bg,#14101e);border-color:var(--hab);">
+  <div class="accent-block reveal" style="color:var(--hab);background:rgba(160,144,200,0.06);border-color:var(--hab);">
     <div class="ab-label">Bateson's Canonical Structure</div>
     <div class="ab-italic">The double bind is not simple contradiction. It is logical imprisonment: all available responses are by definition wrong, yet response is still demanded. Escape requires changing either the preconditions or the behaviour patterns — which constitutes self-learning.</div>
   </div>
@@ -1376,7 +1453,6 @@ function filterTriggers(domain,btn){
 function toggleCase(id){
   const card=document.getElementById(id);
   const wasOpen=card.classList.contains('open');
-  // close all
   document.querySelectorAll('.case-card').forEach(c=>c.classList.remove('open'));
   if(!wasOpen) card.classList.add('open');
 }
