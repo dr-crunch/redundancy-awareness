@@ -6,7 +6,7 @@
 
 This repository documents a governance matter that has remained unresolved for nineteen years. It is not a polemic. It is a record — of submissions made, of acknowledgements received, and of determinations never issued. The materials here are presented plainly, for anyone who wishes to look.
 
-A structured, navigable version of the full evidentiary corpus is available at **[dr-crunch.github.io/sitemap](https://dr-crunch.github.io/sitemap)**. An introduction to the matter in its current state is here: **[x.com/BroekMeinhardt](https://x.com/BroekMeinhardt/status/2045286354343305692?s=20)**. The web version of this document is at **[dr-crunch.github.io/redundancy-awareness](https://dr-crunch.github.io/redundancy-awareness/)**.
+A structural browser-enabled view of the full evidentiary corpus is available at **[dr-crunch.github.io/sitemap](https://dr-crunch.github.io/sitemap)**. Follow the Twitter account for timely posts regarding the matter: **[x.com/BroekMeinhardt](https://x.com/BroekMeinhardt/status/2045286354343305692?s=20)**. The web version of this document is at **[dr-crunch.github.io/redundancy-awareness](https://dr-crunch.github.io/redundancy-awareness/)**.
 
 ---
 
