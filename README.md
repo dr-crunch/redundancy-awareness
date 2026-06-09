@@ -4,7 +4,7 @@
 
 ---
 
-This repository documents a governance matter that has remained unresolved for nineteen years. It is not a polemic. It is a record — of submissions made, of acknowledgements received, and of determinations never issued. The materials here are presented plainly, for anyone who wishes to look.
+This repository documents a governance matter that has remained unresolved for twenty years. It is not a polemic. It is a record — of submissions made, of acknowledgements received, and of determinations never issued. The materials here are presented plainly, for anyone who wishes to look.
 
 A structural browser-enabled view of the full evidentiary corpus is available at **[dr-crunch.github.io/sitemap](https://dr-crunch.github.io/sitemap)**. Follow the Twitter account for timely posts regarding the matter: **[x.com/BroekMeinhardt](https://x.com/BroekMeinhardt/status/2045286354343305692?s=20)**. The web version of this document is at **[dr-crunch.github.io/redundancy-awareness](https://dr-crunch.github.io/redundancy-awareness/)**.
 
@@ -12,7 +12,7 @@ A structural browser-enabled view of the full evidentiary corpus is available at
 
 ## Overview
 
-This repository serves as the **Redundancy & Oversight Record**. While the primary canon establishes the theoretical and statutory basis of the complaint, the materials archived here provide the granular documentary evidence of how the matter was processed — or deflected — across the highest levels of the Irish Executive and Parliament across nineteen years (2006–2026).
+This repository serves as the **Redundancy & Oversight Record**. While the primary canon establishes the theoretical and statutory basis of the complaint, the materials archived here provide the granular documentary evidence of how the matter was processed — or deflected — across the highest levels of the Irish Executive and Parliament across twenty years (2006–2026).
 
 These documents demonstrate the jurisdictional gap in which complex strategic signals are absorbed without generating corrective action. They are organised to highlight the overlap between ministerial offices and the redundancy of oversight requests.
 
@@ -166,7 +166,7 @@ The Meinhardt Initiative corpus is deployed across several thematic repositories
 - **Note**: Research material for future development; not part of the diagnostic record (formal complaint, petition, etc.).
 
 ### Governmentality 2025 — Core Canon
-- **Description**: The structural indictment of the Irish State. Documents the nineteen-year gap between expert submission and state response, framing the failure to adopt Operations Research not as an error but as a constitutional default. Establishes the theoretical framework of *Séachanachas* (Evasocracy) and provides the statutory blueprints for institutional recovery through the AI/OR Governance Charters.
+- **Description**: The structural indictment of the Irish State. Documents the twenty-year gap between expert submission and state response, framing the failure to adopt Operations Research not as an error but as a constitutional default. Establishes the theoretical framework of *Séachanachas* (Evasocracy) and provides the statutory blueprints for institutional recovery through the AI/OR Governance Charters.
 - **GitHub**: <https://github.com/dr-wojak/governmentality-2025>
 - **Placement**: Conceptual hub; anchors all repositories; core theoretical foundation for the entire evidential ecosystem.
 
@@ -197,9 +197,9 @@ This record is grounded in the following statutory pillars:
 1. **Constitutional Petitions**: The right to petition the State under **Article 15.10** of *Bunreacht na hÉireann*.
 2. **Collective Responsibility**: The requirement under **Article 28** for the Government to act on strategic risks known to its members.
 3. **The Ministers and Secretaries Acts**: Defining the legal obligation of Ministers to manage the business of their departments with necessary foresight.
-4. **EU Regulation 2021/821** (recast of 428/2009): Dual-use export control regulation. O.R. methodologies fall within Annex I, Category 4 (Computers), subsection 4.E.1 (Software). DFA held National Competent Authority designation 2008–2024; designation transferred to DETE on 22 August 2024 under the Control of Exports Act 2023. Zero evaluations or statutory determinations across the full period. No public mechanism exists to confirm that the nineteen-year record of unprocessed submissions was disclosed to, or reviewed by, the incoming competent authority upon transfer — a hand-off without discharge constituting a further independent governance breach.
-5. **Article 2 TEU / Article 41 CFR / Article 47 CFR**: Rule of law, right to good administration, right to effective remedy — each independently engaged by the nineteen-year non-determination record. Art. 41 is breached by the nineteen-year non-determination and non-functional public contact channels. Art. 47 is breached by the Section 8(3) "unreviewable" determination and suppression of rebuttals.
-6. **Commission Evaluation Window — Reg. 2021/821**: The Commission is required to conduct a full evaluation of Regulation 2021/821 between **10 September 2026** and **10 September 2028**. A nineteen-year Member State competent authority vacancy is precisely the class of compliance failure that evaluation is designed to surface. The matter will enter the evaluation record regardless of domestic resolution.
+4. **EU Regulation 2021/821** (recast of 428/2009): Dual-use export control regulation. O.R. methodologies fall within Annex I, Category 4 (Computers), subsection 4.E.1 (Software). DFA held National Competent Authority designation 2008–2024; designation transferred to DETE on 22 August 2024 under the Control of Exports Act 2023. Zero evaluations or statutory determinations across the full period. No public mechanism exists to confirm that the twenty-year record of unprocessed submissions was disclosed to, or reviewed by, the incoming competent authority upon transfer — a hand-off without discharge constituting a further independent governance breach.
+5. **Article 2 TEU / Article 41 CFR / Article 47 CFR**: Rule of law, right to good administration, right to effective remedy — each independently engaged by the twenty-year non-determination record. Art. 41 is breached by the twenty-year non-determination and non-functional public contact channels. Art. 47 is breached by the Section 8(3) "unreviewable" determination and suppression of rebuttals.
+6. **Commission Evaluation Window — Reg. 2021/821**: The Commission is required to conduct a full evaluation of Regulation 2021/821 between **10 September 2026** and **10 September 2028**. A twenty-year Member State competent authority vacancy is precisely the class of compliance failure that evaluation is designed to surface. The matter will enter the evaluation record regardless of domestic resolution.
 7. **Data Sovereignty Dimension**: Ireland is the lead data protection regulator for the world's largest data-processing entities (Meta, Google, Apple, Microsoft). Without O.R. integration, the Irish Data Protection Commission cannot model systemic risks in complex cross-border data transfers, adequacy determinations under GDPR Article 45 cannot be quantitatively verified, and surveillance exposure under FISA 702 / EO 12333 cannot be properly assessed. The data sovereignty Ireland exercises on behalf of 450 million EU citizens rests on analytic foundations it has declined to build across two decades.
 8. **Redacted Personal Dispatches**: Documents within this repository have been redacted to remove sensitive personal identifiers of non-public figures while maintaining evidential integrity.[^1]
 
